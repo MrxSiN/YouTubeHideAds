@@ -17,10 +17,9 @@ The decisions are Brainfuck. The Android glue is a verified semantic graph. Nobo
 ---
 
 > [!WARNING]
-> **Work in progress.** The module loads in YouTube, installs its ad hooks and adds its own page to
-> YouTube's Settings. No ad has yet been seen removed on a device, because none was served while
-> testing. SponsorBlock is not connected. See the [compatibility](#compatibility) table for what has
-> actually been tested.
+> **Work in progress.** Video ads and feed ad components are removed on a real device, and the
+> settings page works. Shorts, search and shopping have policies but no hooks yet, and SponsorBlock is
+> not connected. See the [compatibility](#compatibility) table for what has actually been tested.
 
 ## Why Brainfuck?
 
@@ -43,15 +42,15 @@ Brainfuck enforces that boundary, because it literally cannot call Android, Xpos
 bytes and writes bytes.
 
 This one goes a step further than its siblings. There is no Java host either. The Android side —
-the package guard, the libxposed hooks, the settings entry, the page — is built from
-XAX semantic graphs, compiled and verified, then lowered to DEX.
-Project-authored Java, Kotlin, C or Python never ships in the APK. Python exists only as the build
-toolchain and test harness, and it is honest about it.
+the package guard, the libxposed hooks, DexKit, the settings entry, the page — is one verified
+[XAX](https://github.com/MrxSiN/XAX) program. The repository holds exactly two languages: `.bf`
+files and one `.xax` store. No Java, Kotlin, C, Python or shell, not even a build script. The
+compilers live in their own repositories and are welcome to be written in whatever they like.
 
 |  | |
 |---|---|
-| 🧠 **Policy in Brainfuck, compiled** | Twelve hand-written eight-command programs, compiled ahead of time. No interpreter in the APK. |
-| 🧬 **Host in XAX** | Hooks and UI are canonical XAX graphs, store-verified before they are lowered to DEX. |
+| 🧠 **Policy in Brainfuck, compiled** | Hand-written eight-command programs, compiled to AArch64 shared objects by [brainfuckC](https://github.com/MrxSiN/brainfuckC), whose compiler is itself Brainfuck. No interpreter in the APK. |
+| 🧬 **Host in XAX** | One canonical XAX store. XAX lowers it to DEX, writes the manifest and signs the APK itself: no D8, no AAPT2, no apksigner. |
 | 🚪 **No launcher** | The module opens its page from inside YouTube Settings. No companion app, no manager Activity. |
 | 🛟 **Fails closed on seeks, open on content** | A malformed or stale request never seeks the player and never hides anything. |
 | 🧪 **Proven identical** | Every policy is checked against the reference interpreter, exhaustively where the input space allows. 4,463 comparisons passed on an arm64 phone. |
@@ -60,9 +59,9 @@ toolchain and test harness, and it is honest about it.
 
 ## What it will remove
 
-Each feature is one Brainfuck program in `source/brainfuck/`. All twelve compile and pass their
-tests. Video slots, Premium upsells and the component classifier (`brainfuck-runtime/ad_component`)
-are wired to DexKit-resolved hooks; the rest wait for theirs.
+Each feature is one Brainfuck program in `source/brainfuck/`. Video slots, Premium upsells and the
+component classifier (`brainfuck-runtime/ad_component`) ship as compiled libraries behind
+DexKit-resolved hooks; the rest wait for theirs.
 
 | Program | Decides |
 |---|---|
@@ -85,6 +84,13 @@ runtime. No Morphe source is copied.
 ---
 
 ## Status
+
+**v0.4.0-dev.** Brainfuck and XAX only. The repository lost every line of Python, Java, C and shell;
+the module is one XAX store plus the `.bf` programs. XAX builds the APK itself (DEX, manifest,
+signature), the policies are Brainfuck compiled to AArch64 by brainfuckC, and the two meet through
+one JNI call. Built and run on a Pixel 8 Pro: hooks install, the page works, and YouTube logged a
+suppressed video ad and a replaced ad component while a video played
+([evidence](evidence/xax_only_20261016/)).
 
 **v0.3.0-dev.** Settings, built to look like YouTube's own. **YouTubeHideAds** is a row in the
 Settings list, with a YouTube outline icon, and opens a full-screen page laid out like *General*:
@@ -110,22 +116,24 @@ adding a row.
 
 | Device | Android | Framework | YouTube | Module | Result | Tester | Date |
 |---|---|---|---|---|---|---|---|
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 0.4.0-dev (code 27) | XAX-built APK, brainfuckC policies: hooks and page work, Brainfuck self-check and snapshot pass, toggles persist; `Video ad suppressed` and `Ad component replaced` logged during playback ([evidence](evidence/xax_only_20261016/)) | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 0.3.0-dev (code 26) | Settings row and page; switches persist, reset works, Back and arrow close; one row only, none on subpages; 5 ad hooks installed; BF self-check passes. No ad served, so no live removal yet ([evidence](evidence/settings_20261016/)) | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 0.2.0-dev (code 21) | Loads in YouTube; Settings entry, page, Back and duplicate checks pass over three cycles; BF router self-check passes. No ad removed — not wired yet | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | — (ADB shell) | — | — | 12 policies via native BrainfuckC: 4,463 comparisons against the reference interpreter | @MrxSiN | 2026-10 |
 
 ### Known limits
 
-- **No live ad removal observed yet, and no SponsorBlock.** The page says so too. No switch pretends
-  otherwise.
+- **No SponsorBlock, and no Shorts, search or shopping hooks yet.** The page says so for SponsorBlock.
+- Live removals are proven by the hooks' log lines, not yet by a before/after screenshot.
+- The XAX `android-libxposed` profile and the XAX-MCP tools that build this module live on branches
+  of those repositories until they are merged.
+- brainfuckC's DSO compiler runs its stages on an arm64 phone when the build host is not Linux x86-64.
 - Settings live in YouTube's own preferences. libxposed RemotePreferences need a module-side writer,
   and this module has no Activity of its own. Clearing YouTube's data resets them.
 - The Settings row sits above YouTube's list rather than inside it, so it stays at the top while the
   list scrolls.
 - The XAX toolchain is pinned, not vendored; it has no recorded license, so it is not
   redistributed here.
-- The inline router sits close to the JVM 64 KB method limit. More programs need method outlining.
-- Desktop JNI tests need GCC and are skipped on Windows.
 
 ## Requirements
 
@@ -141,7 +149,7 @@ Built against the modern [libxposed API](https://github.com/libxposed/api)
 
 ## Install
 
-There is no release yet. Build the debug APK (below), then:
+There is no release yet. Build the APK (below), then:
 
 ```
 1. Install the APK
@@ -156,12 +164,12 @@ There is no release yet. Build the debug APK (below), then:
 
 ```
 YouTube / Android
-  → libxposed hook (package guard, Activity.onWindowFocusChanged)
-  → XAX host (compiled semantic graphs: hooks, settings entry, page)
-  → BFH1 request frame: selector + raw bytes
-  → dispatch_all.run([B)[B  (AOT-compiled Brainfuck router)
-  → BFR1 reply frame: action + payload
-  → XAX host validates generation and action, then acts
+  → libxposed hook (package guard, Activity focus, five DexKit-resolved ad hooks)
+  → XAX host (one verified store: hooks, settings row and page, DexKit queries)
+  → raw input bytes
+  → Bfp1Bridge.run → lib<policy>.so  (brainfuckC: Brainfuck compiled to AArch64)
+  → raw output bytes
+  → XAX host accepts exactly the authorized reply, then acts
 ```
 
 One rule decides where code goes: **if it needs Android, Xposed, DexKit or the network, XAX does it;
@@ -173,18 +181,16 @@ if it decides what to do with what XAX read, Brainfuck decides.**
 
 Every `.bf` file carries a header of `# @feature`, `# @abi`, `# @inputs`, `# @outputs` and
 `# @cells` metadata. A line starting with `#` is a comment; every other line may hold only the eight
-commands and whitespace. The checker strips comments with a source map, so an error points at the
-annotated line, and a comment-only change never changes the compiled output.
+commands and whitespace. brainfuckC drops the comment lines and compiles what is left, so a
+comment-only change never changes the compiled output.
 
-The dialect: 8-bit wrapping cells, a 4,096-byte tape, zero at end of input, bounds-checked pointer,
-64-byte output cap and a fuel budget (100,000 commands, 2,000,000 for the 64-bit timestamp policy).
-The reference interpreter and the AOT compiler share these semantics, and the tests hold them to it.
+Each policy that ships is its own shared object exporting `bfc_call_v1`: 8-bit wrapping cells, a
+4,096-byte tape, zero at end of input, a bounds-checked pointer, a 64-byte output buffer and a
+loop-entry budget. Any nonzero status reaches XAX as an empty reply, and an empty reply never matches
+an authorized action. Shipped today: `settings_snapshot`, `ad_component`, `suppress_video_slot` and
+`suppress_premium_upsell`.
 
-`generated/router.bf` pastes all twelve command streams verbatim behind a Brainfuck selector, so
-there is no host-side switch. An unknown selector produces no output, which the host rejects.
-
-The frame format is in [`contracts/bf_host_v1.md`](contracts/bf_host_v1.md); the style rules in
-[`docs/BRAINFUCK_SOURCE_STYLE.md`](docs/BRAINFUCK_SOURCE_STYLE.md).
+Style rules are in [`docs/BRAINFUCK_SOURCE_STYLE.md`](docs/BRAINFUCK_SOURCE_STYLE.md).
 
 </details>
 
@@ -192,14 +198,15 @@ The frame format is in [`contracts/bf_host_v1.md`](contracts/bf_host_v1.md); the
 <summary><b>The XAX host</b></summary>
 <br>
 
-XAX programs are semantic graphs, not text files. `toolchain/xax/module_graph.py` constructs them,
-the pinned XAX compiler verifies the canonical store and compiles them, and `module_build.py`
-emits a minimal DEX forwarder from `Module.onPackageReady` into the verified entry, builds the
-router, runs D8, checks the Vector module contract and signs the APK. The forwarder holds no
-policy and no UI.
+XAX programs are semantic graphs, not text. [`source/xax/youtubehideads.xax`](source/xax/) is the
+module's canonical store: 21 verified functions plus an `android-libxposed` module record (package,
+scope, signer, and the BLAKE3 digests of every DEX and `.so` it packages). XAX compiles the
+functions to JVM class files, lowers them to DEX, adds the `Module` lifecycle forwarder, the
+`Bfp1Bridge` native declaration and the `AdBindings` holder, writes the manifest and libxposed
+metadata, and signs the APK with APK Signature Scheme v2.
 
-Details in [`docs/XAX_ANDROID_INTEGRATION.md`](docs/XAX_ANDROID_INTEGRATION.md) and
-[`docs/LANGUAGE_BOUNDARY.md`](docs/LANGUAGE_BOUNDARY.md).
+To change the module, open the store in [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), export its
+carrier, edit, construct, and export the new store. The carrier is transport; the store is source.
 
 </details>
 
@@ -207,39 +214,33 @@ Details in [`docs/XAX_ANDROID_INTEGRATION.md`](docs/XAX_ANDROID_INTEGRATION.md) 
 
 ## Build
 
-```bash
-./scripts/build_fresh.sh                                   # policies, router, linkage and the test suite
-PYTHONPATH=. python3 -m unittest discover -s tests -v      # tests only
-PYTHONPATH=. python3 -m toolchain.brainfuck.cli validate source/brainfuck/ads/player/suppress_video_slot.bf
-python -B -m toolchain.xax.module_build --xax-source build/xax-pinned --java-home <jdk> --sdk <android-sdk> --api-aar <api-102.0.0.aar>
+Everything runs through XAX-MCP's tools; the repository has no build script. See
+[`docs/BUILD.md`](docs/BUILD.md) for the one-time inputs and the exact calls.
+
+```text
+brainfuckC   source/**/*.bf          → lib<policy>.so   (stages run on an arm64 phone over ADB)
+xax-mcp      xax_workspace open      source/xax/youtubehideads.xax
+             xax_build               → signed APK (inputs and key granted by the host)
+             xax_export              → YouTubeHideAds.apk
 ```
-
-The last command writes `build/module/YouTubeHideAds-debug.apk`, signed with a local debug key.
-`scripts/verify_module_device.py` checks it on a connected phone.
-
-You need Python 3.11+, JDK 21, Android SDK with D8, the libxposed API 102 AAR and a pinned XAX
-checkout. No pip packages.
 
 ## Design
 
 ```
-source/brainfuck/   the twelve hand-written programs: every decision and limit
-source/xax/         notes on the XAX sources
-contracts/          the BF host ABI and host operations
-toolchain/brainfuck/ checker, reference interpreter, AOT JVM compiler, router builder
-toolchain/xax/      XAX graph construction, module build, D8 linkage, APK checks
-app/                manifest and module metadata
-tests/              Python suite, plus JNI and Android probes (tests only, never shipped)
-testdata/           golden ABI byte vectors
-evidence/           device and build logs behind every claim in this README
-docs/               architecture, ABI, testing, limits; docs/history/ for past iterations
+source/brainfuck/          the policy programs, one decision each
+source/brainfuck-runtime/  the programs that ship as .so: settings snapshot and component classifier
+source/xax/                youtubehideads.xax, the whole Android side
+contracts/                 the Brainfuck byte ABI and the component fact order
+testdata/                  golden ABI byte vectors
+evidence/                  device and build records behind every claim in this README
+docs/                      architecture, build, limits; docs/history/ for the Python-era iterations
 ```
 
 ## Troubleshooting
 
 | Problem | Try |
 |---|---|
-| Ads still appear | Expected. Ad suppression is not wired yet. |
+| Ads still appear | Check **Hooks installed** and **Removed this session** on the page. Only video slots, feed components, Premium offers and pop-ups are hooked so far. |
 | No YouTubeHideAds entry in Settings | Check the module is enabled and scoped to YouTube, then force-stop YouTube once. |
 | Entry appears twice | Should not happen; report it with the Vector log and the YouTube version. |
 | A switch seems to do nothing | Check **Hooks installed** on the page. A `0` means that hook did not resolve on your YouTube build. |
@@ -251,8 +252,9 @@ docs/               architecture, ABI, testing, limits; docs/history/ for past i
 |---|---|
 | [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | The behaviour reference for what counts as an ad. No source copied. |
 | [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector) | The hooking API and the framework the module runs on. |
-| [DexKit](https://github.com/LuckyPray/DexKit) by LuckyPray | Planned structural resolution of obfuscated classes. |
-| [XAX](https://github.com/MrxSiN/XAX) | The semantic-graph language and compiler behind the Android host. |
+| [DexKit](https://github.com/LuckyPray/DexKit) by LuckyPray | Structural resolution of YouTube's obfuscated ad classes (LGPL-3.0). |
+| [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP) | The semantic-graph language, its compiler, APK lowering and signing, and the tools that build this module. |
+| [brainfuckC](https://github.com/MrxSiN/brainfuckC) | The Brainfuck-written compiler that turns the policies into AArch64 shared objects, and its JNI bridge. |
 | [ThreadsHideAds](https://github.com/MrxSiN/ThreadsHideAds), [TwitterHideAds](https://github.com/MrxSiN/TwitterHideAds), [GmailHideAds](https://github.com/MrxSiN/GmailHideAds) | The idea, and the scar tissue. |
 
 Licensed under GPL-3.0-or-later. Third-party terms are in [`NOTICE`](NOTICE) and

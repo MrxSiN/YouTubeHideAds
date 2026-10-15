@@ -9,7 +9,7 @@
   Windows path executes upstream BF stages using upstream `seed.exe`.
   Generated native instruction templates originate in that compiler. A copy
   of its license accompanies the build/evidence; this is not the newer dynamic
-  DSO backend. See `docs/BRAINFUCKC_ANDROID.md` for scope and limits.
+  DSO backend. See `docs/BUILD.md` for scope and limits.
 
 - XAX: [MrxSiN/XAX](https://github.com/MrxSiN/XAX), research read at SHA `9e44eedfc241d25bb5062b38af105f75234000e2`. Its normative no-text-syntax spec and compiler source were inspected remotely. **No XAX source/assets/runtime were copied.** No root `LICENSE` was found via GitHub contents at this SHA: do not assume redistribution permission.
 - Morphe: [MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches), code inspected at `e5464395441e916b643af4e2175c4e253e6df487`. The `HideAdsPatch`, `AdsFilter`, SponsorBlock, fingerprints, and ChannelWhitelist sources were read as behavior references. Morphe is GPL-3.0 and its NOTICE includes GPL section-7 notices. **No implementation source was copied** into this independent repository; those notices must accompany any future actual adaptations under their terms.
