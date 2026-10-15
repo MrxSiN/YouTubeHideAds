@@ -42,8 +42,17 @@ def record(j, b, index):
     return done
 
 
-def classify(j, b, value):
-    facts = [b.const(j.type_('B'), 1), b.const(j.type_('B'), 1)]
+# Slot 5 holds settings_snapshot.bf output; bytes 5..8 are the master-gated switches.
+SNAPSHOT = 5
+VIDEO, COMPONENTS, PREMIUM, FULLSCREEN = 5, 6, 7, 8
+
+
+def switch(j, b, index):
+    return j.element(b, slot(j, b, SNAPSHOT, '[B'), '[B', index)
+
+
+def classify(j, b, value, enabled):
+    facts = [switch(j, b, enabled), b.const(j.type_('B'), 1)]
     from xax_compiler import Operation as O
     for probe in PROBES:
         found = j.virtual(b, 'java/lang/String', 'contains(Ljava/lang/CharSequence;)Z', value,
@@ -58,8 +67,8 @@ def make_ad_install(j):
     b = j.block(CHAIN)
     chain = b.params[0]
     reply = j.static(b, 'org/youtubehideads/bf/dispatch_all', 'run([B)[B',
-        j.array(b, 'B', tuple(b.const(j.type_('B'), n) for n in
-                            (selector_map()['suppress_video_slot'], 1, 1, 1, 0))))
+        j.array(b, 'B', (b.const(j.type_('B'), selector_map()['suppress_video_slot']), switch(j, b, VIDEO),
+                         *(b.const(j.type_('B'), n) for n in (1, 1, 0)))))
     allowed = j.static(b, 'java/util/Arrays', 'equals([B[B)Z', reply, j.array(b, 'B', (b.const(j.type_('B'), 1),)))
     suppress, passthrough = j.block(), j.block()
     b.cbr(allowed, suppress, (), passthrough, ())
@@ -78,7 +87,7 @@ def make_ad_install(j):
     inspect, done = j.block(), j.block()
     b.cbr(have_path, inspect, (), done, ())
     path_string = j.static(inspect, 'java/lang/String', 'valueOf(Ljava/lang/Object;)Ljava/lang/String;', path)
-    allowed = classify(j, inspect, path_string)
+    allowed = classify(j, inspect, path_string, COMPONENTS)
     suppress = j.block()
     inspect.cbr(allowed, suppress, (), done, ())
     original_context = j.interface(suppress, API + 'XposedInterface$Chain', 'getArg(I)Ljava/lang/Object;', chain, j.integer(suppress, 0))
@@ -96,7 +105,8 @@ def make_ad_install(j):
     result = j.interface(b, API + 'XposedInterface$Chain', 'proceed()Ljava/lang/Object;', chain)
     receiver = j.interface(b, API + 'XposedInterface$Chain', 'getThisObject()Ljava/lang/Object;', chain)
     reply = j.static(b, 'org/youtubehideads/bf/dispatch_all', 'run([B)[B', j.array(b, 'B',
-        tuple(b.const(j.type_('B'), n) for n in (selector_map()['suppress_premium_upsell'], 1, 1, 1))))
+        (b.const(j.type_('B'), selector_map()['suppress_premium_upsell']), switch(j, b, PREMIUM),
+         *(b.const(j.type_('B'), n) for n in (1, 1)))))
     allowed = j.static(b, 'java/util/Arrays', 'equals([B[B)Z', reply, j.array(b, 'B', (b.const(j.type_('B'), 1),)))
     suppress, done = j.block(), j.block()
     b.cbr(allowed, suppress, (), done, ())
@@ -118,7 +128,7 @@ def make_ad_install(j):
     inspect, done = j.block(), j.block()
     b.cbr(exists, inspect, (), done, ())
     payload = j.new(inspect, 'java/lang/String', '([BLjava/lang/String;)V', raw, j.text(inspect, 'ISO-8859-1'))
-    allowed = classify(j, inspect, payload)
+    allowed = classify(j, inspect, payload, FULLSCREEN)
     suppress = j.block()
     inspect.cbr(allowed, suppress, (), done, ())
     end = record(j, suppress, 3)
@@ -134,6 +144,10 @@ def make_ad_install(j):
     j.special(b, 'jvm-putstatic', STATE, 'values:[Ljava/lang/Object;', ('[Ljava/lang/Object;',), 'V', state)
     counters = j.new(b, 'java/util/concurrent/atomic/AtomicLongArray', '(I)V', j.integer(b, 8))
     store(j, b, 3, counters, 'Ljava/util/concurrent/atomic/AtomicLongArray;')
+    # Until YouTube shows an Activity, hooks use Brainfuck's defaults (every preference absent).
+    defaults = j.static(b, 'org/youtubehideads/bf/settings_snapshot', 'run([B)[B',
+                        j.special(b, 'jvm-newarray', 'B', 'newarray', ('I',), '[B', j.integer(b, 10)))
+    store(j, b, SNAPSHOT, defaults, '[B')
 
     info = j.interface(b, API + 'XposedInterface', 'getModuleApplicationInfo()Landroid/content/pm/ApplicationInfo;', module)
     apk = j.special(b, 'jvm-getfield', 'android/content/pm/ApplicationInfo', 'sourceDir:Ljava/lang/String;',

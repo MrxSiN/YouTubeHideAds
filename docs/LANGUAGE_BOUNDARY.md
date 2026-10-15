@@ -84,3 +84,17 @@ The generated `dispatch_all` class consists only of genuine eight-command BF wit
 ## Iteration 9 — isolated test-native JNI proof
 
 The actual JDK JNI smoke test compiles `tests/jni/jni_router_probe.c` and `tests/jni/JniRouterProbe.java` only inside a temporary test directory. The C function performs JNI class/method lookup and calls the BF-compiled static method directly; **it does not implement a single BF policy**, is never included in the JAR/D8 packaging command, and is forbidden as the Android feature fallback. `toolchain/xax/router_call_plan.py` authors an external-XAX-dependent internal semantic graph source with no executable Android caller. That graph has not been constructed or validated against the missing XAX compiler. See `docs/JNI_ROUTER_BOUNDARY.md`.
+
+## Settings (2026-10-16)
+
+| Responsibility | Owner |
+|---|---|
+| Defaults (every switch ON) and the master gate | Brainfuck, `source/brainfuck-runtime/settings_snapshot.bf` |
+| Each hook's `enabled` input | Brainfuck snapshot bytes 5..8, read by XAX from `AdBindings.values[5]` |
+| Reading and writing `SharedPreferences`, the Settings row, the page, listeners | XAX, `toolchain/xax/module_graph.py` |
+| Labels and summaries | Presentation strings in the XAX graph; they encode no behaviour |
+
+XAX passes `(present, value)` for each stored key and never substitutes a default itself. The
+pinned JVM lowering cannot bind a `boolean` callback parameter, so switches use
+`View.OnClickListener` and read `isChecked()` instead of `OnCheckedChangeListener`. Its `ldc`
+constants are ASCII-only, so the middle dot in summaries is built from code point `0xB7`.

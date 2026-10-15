@@ -17,10 +17,10 @@ The decisions are Brainfuck. The Android glue is a verified semantic graph. Nobo
 ---
 
 > [!WARNING]
-> **Work in progress. This build does not remove ads yet.** The module loads inside YouTube, adds
-> its own page to YouTube's Settings and runs the Brainfuck router in the YouTube process. Ad
-> suppression and SponsorBlock are not connected to any YouTube hook yet. See the
-> [compatibility](#compatibility) table for what has actually been tested.
+> **Work in progress.** The module loads in YouTube, installs its ad hooks and adds its own page to
+> YouTube's Settings. No ad has yet been seen removed on a device, because none was served while
+> testing. SponsorBlock is not connected. See the [compatibility](#compatibility) table for what has
+> actually been tested.
 
 ## Why Brainfuck?
 
@@ -61,7 +61,8 @@ toolchain and test harness, and it is honest about it.
 ## What it will remove
 
 Each feature is one Brainfuck program in `source/brainfuck/`. All twelve compile and pass their
-tests; none of them is wired to a live YouTube hook yet.
+tests. Video slots, Premium upsells and the component classifier (`brainfuck-runtime/ad_component`)
+are wired to DexKit-resolved hooks; the rest wait for theirs.
 
 | Program | Decides |
 |---|---|
@@ -85,10 +86,19 @@ runtime. No Morphe source is copied.
 
 ## Status
 
-**v0.2.0-dev.** The module loads in YouTube, adds **YouTubeHideAds** to the Settings toolbar and
-opens its page there. Opening the page calls the real Brainfuck router inside the YouTube process
-as an engine self-check. Ad hooks, the DexKit resolver, settings and SponsorBlock networking are
-next.
+**v0.3.0-dev.** Settings, built to look like YouTube's own. **YouTubeHideAds** is a row in the
+Settings list, with a YouTube outline icon, and opens a full-screen page laid out like *General*:
+section headers, title-and-summary rows, switches on the right, the theme's own colours.
+
+<p align="center"><img src="docs/images/settings.png" width="300" alt="Settings page"></p>
+
+The switches are stored in YouTube's own preferences. Defaults and the master switch are not host
+code: `settings_snapshot.bf` turns the stored bits into the effective switches, and every hook reads
+its `enabled` byte from that snapshot. The snapshot is rebuilt when a YouTube screen gains focus or a
+switch changes, never on a hook's hot path.
+
+Five DexKit-resolved hooks install on YouTube 21.41.525. SponsorBlock networking and the player
+seek hook are next.
 
 Earlier milestones, from the first JVM-only policies onwards, are kept in
 [`docs/history/`](docs/history/).
@@ -100,13 +110,19 @@ adding a row.
 
 | Device | Android | Framework | YouTube | Module | Result | Tester | Date |
 |---|---|---|---|---|---|---|---|
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 0.3.0-dev (code 26) | Settings row and page; switches persist, reset works, Back and arrow close; one row only, none on subpages; 5 ad hooks installed; BF self-check passes. No ad served, so no live removal yet ([evidence](evidence/settings_20261016/)) | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 0.2.0-dev (code 21) | Loads in YouTube; Settings entry, page, Back and duplicate checks pass over three cycles; BF router self-check passes. No ad removed — not wired yet | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | — (ADB shell) | — | — | 12 policies via native BrainfuckC: 4,463 comparisons against the reference interpreter | @MrxSiN | 2026-10 |
 
 ### Known limits
 
-- **No ad removal and no SponsorBlock yet.** The page says so too. No switch pretends otherwise.
-- The XAX toolchain is pinned but not vendored; its upstream has no recorded license, so it is not
+- **No live ad removal observed yet, and no SponsorBlock.** The page says so too. No switch pretends
+  otherwise.
+- Settings live in YouTube's own preferences. libxposed RemotePreferences need a module-side writer,
+  and this module has no Activity of its own. Clearing YouTube's data resets them.
+- The Settings row sits above YouTube's list rather than inside it, so it stays at the top while the
+  list scrolls.
+- The XAX toolchain is pinned, not vendored; it has no recorded license, so it is not
   redistributed here.
 - The inline router sits close to the JVM 64 KB method limit. More programs need method outlining.
 - Desktop JNI tests need GCC and are skipped on Windows.
@@ -226,6 +242,7 @@ docs/               architecture, ABI, testing, limits; docs/history/ for past i
 | Ads still appear | Expected. Ad suppression is not wired yet. |
 | No YouTubeHideAds entry in Settings | Check the module is enabled and scoped to YouTube, then force-stop YouTube once. |
 | Entry appears twice | Should not happen; report it with the Vector log and the YouTube version. |
+| A switch seems to do nothing | Check **Hooks installed** on the page. A `0` means that hook did not resolve on your YouTube build. |
 | Broken after a YouTube update | Report the YouTube version and the module log lines. |
 
 ## Credits
@@ -235,7 +252,7 @@ docs/               architecture, ABI, testing, limits; docs/history/ for past i
 | [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | The behaviour reference for what counts as an ad. No source copied. |
 | [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector) | The hooking API and the framework the module runs on. |
 | [DexKit](https://github.com/LuckyPray/DexKit) by LuckyPray | Planned structural resolution of obfuscated classes. |
-| XAX | The semantic-graph language and compiler behind the Android host. |
+| [XAX](https://github.com/MrxSiN/XAX) | The semantic-graph language and compiler behind the Android host. |
 | [ThreadsHideAds](https://github.com/MrxSiN/ThreadsHideAds), [TwitterHideAds](https://github.com/MrxSiN/TwitterHideAds), [GmailHideAds](https://github.com/MrxSiN/GmailHideAds) | The idea, and the scar tissue. |
 
 Licensed under GPL-3.0-or-later. Third-party terms are in [`NOTICE`](NOTICE) and

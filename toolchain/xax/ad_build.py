@@ -37,12 +37,15 @@ def ad_dependencies(output, cache):
                             (('values', '[Ljava/lang/Object;', 0x0049),))
     policy = load(ROOT / 'source/brainfuck-runtime/ad_component.bf')
     image = compile_class(policy, 'org/youtubehideads/bf/classify_ad_component', optimize=True)
+    settings = load(ROOT / 'source/brainfuck-runtime/settings_snapshot.bf')
+    settings_image = compile_class(settings, 'org/youtubehideads/bf/settings_snapshot', optimize=True)
     jar = output / 'ad-policy-and-bindings.jar'
     with zipfile.ZipFile(jar, 'w') as archive:
         for name, data in (('org/youtubehideads/module/AdBindings.class', storage),
-                           ('org/youtubehideads/bf/classify_ad_component.class', image)):
+                           ('org/youtubehideads/bf/classify_ad_component.class', image),
+                           ('org/youtubehideads/bf/settings_snapshot.class', settings_image)):
             info = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
             archive.writestr(info, data)
     jars.append(jar)
     return jars, native, {'dependencies': evidence, 'component_policy_sha256': policy.digest,
-                           'component_policy_commands': len(policy.code), 'storage_abi': 'public static volatile Object[] values'}
+                           'component_policy_commands': len(policy.code), 'settings_policy_sha256': settings.digest, 'storage_abi': 'public static volatile Object[] values'}
