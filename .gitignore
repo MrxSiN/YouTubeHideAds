@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.class
+.gradle/
+build/
+dist/
+generated*/
+
+*.apk
+*.keystore

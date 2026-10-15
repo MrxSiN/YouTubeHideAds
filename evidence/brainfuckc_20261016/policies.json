@@ -1,0 +1,602 @@
+{
+  "authorize_seek": {
+    "android_executed": false,
+    "artifact": "authorize_seek.elf",
+    "artifact_bytes": 1600,
+    "artifact_sha256": "6da6020bc5951059205c44b031f063a017b543454fa468bbf624600f89da1701",
+    "commands": 209,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\sponsorblock\\authorize_seek.bf",
+    "source_sha256": "a42a2d8a69450b02c2abe2f5ff9609d9fc6bb27d8376194f2794da4813b8ac66",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "collapse_filtered_container": {
+    "android_executed": false,
+    "artifact": "collapse_filtered_container.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "dbfb84f7cfba2d2f9ecd8cc7035ae044b5953529823a4540177a83afb46464c8",
+    "commands": 65,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ui\\collapse_filtered_container.bf",
+    "source_sha256": "3d33dfe26cbea7a8f5692215b7010159c666ea05de7e9e1bffd4056e7a4b5bf6",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "reject_ambiguous": {
+    "android_executed": false,
+    "artifact": "reject_ambiguous.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "84eae361e52dacb65d7523121df97080b594cefc7030c55a781ce6745d96a3fe",
+    "commands": 66,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\resolver\\reject_ambiguous.bf",
+    "source_sha256": "1bd719ffe51369d9adaa5584c710bc03adaa624d7e46bc5ec289ad95f62fb50e",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "select_sponsor_category": {
+    "android_executed": false,
+    "artifact": "select_sponsor_category.elf",
+    "artifact_bytes": 1392,
+    "artifact_sha256": "7cce6b4ed9a1433e077896df8f1775dded7b8d38bed0cbb5fdfe2350886ecd32",
+    "commands": 164,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\sponsorblock\\select_sponsor_category.bf",
+    "source_sha256": "4c7743c111306898ee914baaf7e84dfd3ec41f01838abe3a33a7b3545e6c938f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "sponsor_skip_pipeline": {
+    "android_executed": false,
+    "artifact": "sponsor_skip_pipeline.elf",
+    "artifact_bytes": 2700,
+    "artifact_sha256": "9e0769c59c9af73f4a892d0e7c0776cb80457f934be197d2e535d9d089260676",
+    "commands": 370,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\sponsorblock\\sponsor_skip_pipeline.bf",
+    "source_sha256": "710d02b489f84b3c379e9ce2c4d61f3ad095baa19ffa945aef2d13881376e88e",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "sponsor_time_window": {
+    "android_executed": false,
+    "artifact": "sponsor_time_window.elf",
+    "artifact_bytes": 5652,
+    "artifact_sha256": "91b17b02fbe04c707aad92151b1a7d7c6a0f8fc8398a7822d8e810f1f8401616",
+    "commands": 4815,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\sponsorblock\\sponsor_time_window.bf",
+    "source_sha256": "023dc994583351aecaf9464d9e9ba6010a264bea3c867379f9547d017b08b079",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_feed_item": {
+    "android_executed": false,
+    "artifact": "suppress_feed_item.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "60f8a3ff90a7e22f25165957005e218550d2c8842c6144a4eecf644cfcd988bf",
+    "commands": 64,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\feed\\suppress_feed_item.bf",
+    "source_sha256": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_paid_shelf": {
+    "android_executed": false,
+    "artifact": "suppress_paid_shelf.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "60f8a3ff90a7e22f25165957005e218550d2c8842c6144a4eecf644cfcd988bf",
+    "commands": 64,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\shopping\\suppress_paid_shelf.bf",
+    "source_sha256": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_premium_upsell": {
+    "android_executed": false,
+    "artifact": "suppress_premium_upsell.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "60f8a3ff90a7e22f25165957005e218550d2c8842c6144a4eecf644cfcd988bf",
+    "commands": 64,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\promotions\\suppress_premium_upsell.bf",
+    "source_sha256": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_search_result": {
+    "android_executed": false,
+    "artifact": "suppress_search_result.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "60f8a3ff90a7e22f25165957005e218550d2c8842c6144a4eecf644cfcd988bf",
+    "commands": 64,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\feed\\suppress_search_result.bf",
+    "source_sha256": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_shorts_slot": {
+    "android_executed": false,
+    "artifact": "suppress_shorts_slot.elf",
+    "artifact_bytes": 620,
+    "artifact_sha256": "60f8a3ff90a7e22f25165957005e218550d2c8842c6144a4eecf644cfcd988bf",
+    "commands": 64,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\shorts\\suppress_shorts_slot.bf",
+    "source_sha256": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  },
+  "suppress_video_slot": {
+    "android_executed": false,
+    "artifact": "suppress_video_slot.elf",
+    "artifact_bytes": 888,
+    "artifact_sha256": "c0191898528b4626e96c0feb6038f1d08af30966315ebd14d80a345a8fad0102",
+    "commands": 107,
+    "compiler_sha256": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+    "entry_offset": 128,
+    "format": "BFP1_BOUNDED_CALLABLE_AARCH64",
+    "source": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\source\\brainfuck\\ads\\player\\suppress_video_slot.bf",
+    "source_sha256": "0bbe35491d9f3867708804acb38534fd349460ba2e791b94b80068ce2557ac6f",
+    "stages": {
+      "policy_affine": {
+        "source_sha256": "7ddd77dc6401f3abaff0af37c65be75768987ef17be71ea2eb8410d61e75c892"
+      },
+      "policy_clear56": {
+        "source_sha256": "069fd93964a2dc6081d6f3f92041b6d79808594a7cf7b5ae7d8d74eed15b8504"
+      },
+      "policy_codegen": {
+        "source_sha256": "330a458bc598e73078c369a75ee76f29012e20728d27c2c7e43cb4a792e7fbd1"
+      },
+      "policy_codegen55": {
+        "source_sha256": "e232a8650310839d9f51a60c24e4644ff0e54c7735c184772f28ed87920d6d7f"
+      },
+      "policy_elf": {
+        "source_sha256": "fab65513af7951f23f61d438a947397978239d9e69f311f5a88e903b40c53416"
+      },
+      "policy_oneshot": {
+        "source_sha256": "8d9a838e71cee3369d761a951bfad220956634d3d463ffe18584fd2389af071a"
+      },
+      "policy_oneshot55": {
+        "source_sha256": "987622eb8b8124810ae1bf0960e91c10b77de47b72ba82d3ab845a7b82054ea8"
+      },
+      "policy_operands": {
+        "source_sha256": "28fc3ac7257ea4a02c5c3ba6fcfadc645bc5bc56ffe2a46b270cab205a43ecbf"
+      },
+      "policy_optimize": {
+        "source_sha256": "fb48b0e82c28e41d2b29e3e0026adb57bc7ba59c1f72876990d741f5d36f8f8f"
+      },
+      "policy_resolve": {
+        "source_sha256": "6fffbc5bf34336db48a1a305eed5b7ad114990e157300d3d99ec8e7c91c09594"
+      },
+      "policy_rle": {
+        "source_sha256": "ae283a888ba052040ee6efe78809c46843444927e2effa904390d3c53c8cc483"
+      },
+      "policy_valuefold55": {
+        "source_sha256": "50e820aaab4079a272dcf6c6f09b5b4a7a0fa3da0bf8969e65cb032d79e2d51e"
+      }
+    }
+  }
+}

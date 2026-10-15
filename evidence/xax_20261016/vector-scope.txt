@@ -1,0 +1,3 @@
+APP_PACKAGE         USER_ID
+---------------------------
+com.example.target  0

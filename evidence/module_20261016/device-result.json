@@ -1,0 +1,42 @@
+{
+  "advertisement_suppression_tested": false,
+  "android_sdk": "37",
+  "apk_sha256": "b39e1139cc2f4c8a42126b2bacd65e28a172beb0f75783baaede1b9187b28722",
+  "build": {
+    "advertisement_hooks": false,
+    "api_aar_sha256": "423484a6e1807e7a423c4b88fcd8176d104318259d91791877fed88fe91479d0",
+    "apk": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\build\\module\\YouTubeHideAds-debug.apk",
+    "apk_sha256": "b39e1139cc2f4c8a42126b2bacd65e28a172beb0f75783baaede1b9187b28722",
+    "launcher_activity": false,
+    "lifecycle_adapter": "PROJECT_DEX_FORWARDER_TO_CANONICAL_XAX",
+    "module_class": "org.youtubehideads.module.Module",
+    "scope": [
+      "com.google.android.youtube"
+    ],
+    "signing": "LOCAL_DEBUG_KEY",
+    "sponsorblock": false,
+    "status": "MODULE_BUILT",
+    "store_root": "cf84a9dfe083c375e2c6078435fdc33fe354be2bcaa172e960d17d9df46ce7c5",
+    "store_sha256": "a5f3289ba28ab9ea692120be50dbffecf14a7dd553ade6c2a68c5214634b062d",
+    "xax_class": "xax/P9a56b88fc78d5ffc",
+    "xax_commit": "9e44eedfc241d25bb5062b38af105f75234000e2",
+    "xax_entry": "entry",
+    "youtube_device_tested": false
+  },
+  "checks": {
+    "brainfuck_executed_in_youtube": true,
+    "lifecycle_hook_installed": true,
+    "module_loaded_in_youtube": true,
+    "no_brainfuck_self_check_failure": true,
+    "one_toolbar_entry_after_each_cycle": true,
+    "page_open_close_cycles": 3,
+    "system_back_works": true,
+    "youtube_process_survived": true
+  },
+  "launcher_resolution": "No activity found",
+  "module_left_installed": true,
+  "page_owned_by": "com.google.android.youtube",
+  "sponsorblock_tested": false,
+  "status": "PASS",
+  "youtube_version": "21.41.525"
+}

@@ -1,0 +1,8 @@
+test_real_store_and_callback_interfaces_compile (tests.test_module_graph.ModuleGraphTests.test_real_store_and_callback_interfaces_compile) ... ok
+test_wrong_api_aar_rejected_without_stale_success_evidence (tests.test_module_graph.ModuleGraphTests.test_wrong_api_aar_rejected_without_stale_success_evidence) ... ok
+test_no_standalone_components (tests.test_module_graph.ModuleManifestTests.test_no_standalone_components) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.456s
+
+OK

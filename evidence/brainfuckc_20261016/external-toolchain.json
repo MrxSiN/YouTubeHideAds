@@ -1,0 +1,6 @@
+{
+  "bootstrap/run_policy_native.py": "188c433cd46115ed22d0ab2b6e1142e455414388bb799bb3befd860e5752c6b3",
+  "experiments/android_source_scan.bf": "c9a6b7c9d3e4f17f0802fa64b382cc5bfda37027aaf6ee277cc1432787b18bf2",
+  "build/android_optimization/seed.exe": "9d512e4de59468a6bce101c84d85c3688c7021de08e59ec12c19e0aa85db31b2",
+  "LICENSE": "dff5abe7dac49292b466472a304d53ab3fa92c87e6fe1f60581ff07ac3ed3a5a"
+}

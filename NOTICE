@@ -1,0 +1,9 @@
+YouTubeHideAds — independently implemented experimental project.
+Morphe and ReVanced are separate upstream projects and are not the authors
+or publishers of this new repository. No Morphe code is included here.
+Morphe's GPLv3 Section 7 NOTICE must be preserved if portions of that
+implementation are incorporated in the future.
+No XAX redistribution rights are asserted; no XAX code was copied.
+The optional external BrainfuckC compiler was used to generate native test
+artifacts. Its MIT notice is preserved in LICENSES/brainfuckC-MIT.txt.
+No BrainfuckC compiler source or executable is bundled with the project.

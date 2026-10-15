@@ -1,0 +1,9 @@
+test_no_unproven_integration_completion (tests.test_android_probe.ProbeTests.test_no_unproven_integration_completion) ... ok
+test_windows_sdk_executable_suffixes_are_detected (tests.test_android_probe.ProbeTests.test_windows_sdk_executable_suffixes_are_detected) ... ok
+test_real_compile_is_deterministic_and_rejects_tampered_bf (tests.test_managed_dispatch.ManagedDispatchBuildTests.test_real_compile_is_deterministic_and_rejects_tampered_bf) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.896s
+
+OK
+12 BF-owned branches -> C:\Users\SiN\AppData\Local\Temp\tmptf64_x2d\policies\brainfuck-router.jar sha256=5de0c5878444975a838bd3ef2e834c912a65f4ccd2dfad34c31c651e8cf154d1

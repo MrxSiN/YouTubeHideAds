@@ -1,0 +1,10 @@
+test_real_store_and_callback_interfaces_compile (tests.test_module_graph.ModuleGraphTests.test_real_store_and_callback_interfaces_compile) ... ok
+test_wrong_api_aar_rejected_without_stale_success_evidence (tests.test_module_graph.ModuleGraphTests.test_wrong_api_aar_rejected_without_stale_success_evidence) ... ok
+test_no_standalone_components (tests.test_module_graph.ModuleManifestTests.test_no_standalone_components) ... ok
+test_no_unproven_integration_completion (tests.test_android_probe.ProbeTests.test_no_unproven_integration_completion) ... ok
+test_windows_sdk_executable_suffixes_are_detected (tests.test_android_probe.ProbeTests.test_windows_sdk_executable_suffixes_are_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.608s
+
+OK

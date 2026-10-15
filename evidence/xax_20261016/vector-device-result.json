@@ -1,0 +1,29 @@
+{
+  "android_release": "17",
+  "android_sdk": 37,
+  "brainfuck_called_from_xposed": false,
+  "checks": {
+    "controlled_scope": true,
+    "module_class_loaded": true,
+    "module_loaded_in_controlled_target": true,
+    "module_native_library_loaded": true,
+    "one_module_instance": true,
+    "process_survived": true
+  },
+  "heap_sha256": "ba893f20145bc1f6544edff57dc835c9054c7aaad87125095c42e2e0d9d46f05",
+  "hook_installed": false,
+  "libxposed_api": 102,
+  "lifecycle_callback_count_measured": false,
+  "loaded_module_classes": 1,
+  "model": "Pixel 8 Pro",
+  "module_apk_sha256": "788b8a2695ef8c03ed9ef5af4dbe6308bb6f855a5ddc44fb7cdca0886db8f522",
+  "module_instances": 1,
+  "module_package": "org.youtubehideads.module",
+  "signer": "UPSTREAM_PUBLIC_TEST_KEY_NOT_RELEASE",
+  "status": "PASS",
+  "target_apk_sha256": "d280833569e9a50200f2de2ade2201413a42e54b83884ee83c8e95cc15b69a99",
+  "target_package": "com.example.target",
+  "test_packages_removed": true,
+  "vector_version": "2.2",
+  "youtube_hooks": false
+}

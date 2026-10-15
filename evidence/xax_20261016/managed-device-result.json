@@ -1,0 +1,37 @@
+{
+  "android_release": "17",
+  "android_sdk": "37",
+  "apk_installed": false,
+  "comparisons": 4463,
+  "d8_sha256": "4097ff9c46c185c6e7214da7fe9b1befb5adeea5cc9ca349270e0249904f9240",
+  "dex_sha256": "233223e9dd073c77a15f1ab8755e536bac71d815af6eef51c819335c5c178eef",
+  "harness_sha256": "c1af950da989ca38a4b18f29d39a413cdcbe00e5e780176df41b365f9404518f",
+  "jni_required": false,
+  "model": "Pixel 8 Pro",
+  "scope": "RAW_POLICY_CALL_ONLY_NOT_A_VALIDATED_HOST_ABI",
+  "status": "PASS",
+  "stdout": "PASS managed_xax_bf=4463 invalid=4 recovery=1 native_libraries=0",
+  "vectors_sha256": "164cd9715c128dedb6f15cb3bf6daae396989421f92e741670f84f32f9802d31",
+  "xax_build": {
+    "android_executed": false,
+    "artifacts": {
+      "dispatch.jar": "8fa82474f6b4d894a21b9039631f721910d1cb432ed8888b62348f810513b062",
+      "dispatch.xax-store": "aec664a22e0b5b0e3dd94a067df1dcf0f73ff16913624f029fca876ac4438512"
+    },
+    "bf_router_sha256": "5de0c5878444975a838bd3ef2e834c912a65f4ccd2dfad34c31c651e8cf154d1",
+    "class_name": "xax.P52ac7999d1df7bb9",
+    "compiler_execution": "UPSTREAM_BOOTSTRAP",
+    "descriptor": "([B)[B",
+    "function_cid": "52ac7999d1df7bb9e55da7eb7a3cf34ecba3b577b2d9b8ecb67606a5d110414b",
+    "invocation": "JVM_INVOKESTATIC",
+    "jni_required": false,
+    "method": "entry",
+    "status": "XAX_MANAGED_DISPATCH_COMPILED",
+    "store_root": "3318fa7162cb3a7b9169d50c6c451cbf8c82b57c6df2234859436a9cfd210f22",
+    "target_class": "org/youtubehideads/bf/dispatch_all",
+    "target_method": "run([B)[B",
+    "xax_commit": "9e44eedfc241d25bb5062b38af105f75234000e2",
+    "youtube_hooks": false
+  },
+  "youtube_hooks": false
+}

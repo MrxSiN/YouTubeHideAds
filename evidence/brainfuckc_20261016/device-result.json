@@ -1,0 +1,29 @@
+{
+  "abi": "arm64-v8a",
+  "android_release": "17",
+  "android_sdk": "37",
+  "art_jni_tested": false,
+  "bionic_dlopen_tested": false,
+  "comparisons": {
+    "authorize_seek": 256,
+    "collapse_filtered_container": 8,
+    "reject_ambiguous": 8,
+    "select_sponsor_category": 2048,
+    "sponsor_skip_pipeline": 2080,
+    "sponsor_time_window": 7,
+    "suppress_feed_item": 8,
+    "suppress_paid_shelf": 8,
+    "suppress_premium_upsell": 8,
+    "suppress_search_result": 8,
+    "suppress_shorts_slot": 8,
+    "suppress_video_slot": 16
+  },
+  "policy_manifest_sha256": "5a8a7518cc845ba0f80afaebb2df9ace11aea88144aa68fd95194986b4a1bffa",
+  "probe_sha256": "27a9fa6b822a1e82e8efee4dfe46fd55b8c0de65bd0d74cbfc04695980453d31",
+  "scope": "ANDROID_SHELL_MMAP_CALLABLE_ONLY",
+  "status": "PASS",
+  "stdout": "PASS 4463 native/reference comparisons",
+  "vectors_sha256": "f9e444f8adc06045074d0f4fc53480ab3129ed283860527261e967503cdf10a3",
+  "xposed_tested": false,
+  "youtube_ad_removal_tested": false
+}
