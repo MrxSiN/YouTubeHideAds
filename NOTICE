@@ -8,7 +8,7 @@ portions of that implementation are incorporated in the future.
 No XAX redistribution rights are asserted; external compiler source is not vendored.
 The independently authored XAX store is application source, not copied compiler source.
 
-The external brainfuckC compiler generates packaged native policy libraries. Its generic
+The external BrainfuckCC compiler (formerly brainfuckC) generates packaged native policy libraries. Its generic
 JNI bridge is also an external binary input. The inspected MIT notice is preserved in
 LICENSES/brainfuckC-MIT.txt. Compiler source and seed executables are not bundled here.
 DexKit and other prebuilt dependencies retain their separate upstream terms; see

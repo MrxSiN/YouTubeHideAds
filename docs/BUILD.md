@@ -9,7 +9,7 @@ repository build script.
 
 | Tool | Recorded location / role |
 | --- | --- |
-| brainfuckC | Original checkout D:/GitHub/brainfuckC; later native-build evidence uses D:/GitHub/BrainfuckCC; BF stages produce AArch64 policy libraries and its generic JNI bridge supplies transport |
+| [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) (formerly brainfuckC) | Checkout D:/GitHub/BrainfuckCC (the original D:/GitHub/brainfuckC checkout produced the earliest builds); BF stages produce AArch64 policy libraries and its generic JNI bridge supplies transport |
 | XAX | D:/GitHub/XAX is the active checkout; build 77 uses the isolated snapshot described below |
 | XAX-MCP | D:/GitHub/XAX-MCP; external workspace/carrier/build/export tooling, when configured with the compatible XAX profile |
 | Android SDK | AAPT2 build-tools 36.0.0 and android-37.0/android.jar for static branding only |
@@ -46,7 +46,7 @@ this application repository.
 
 ## Other pinned inputs
 
-- Generic `libbrainfuckc_bridge.so`, built externally from brainfuckC's JNI bridge with the Android
+- Generic `libbrainfuckc_bridge.so`, built externally from BrainfuckCC's JNI bridge with the Android
   NDK for AArch64/API 28, 16 KiB maximum page size and `-ldl`.
 - DexKit 2.3.0 arm64 `libdexkit.so` from its AAR.
 - A prebuilt third-party `classes.dex` combining DexKit, flatbuffers-java 23.5.26 and kotlin-stdlib

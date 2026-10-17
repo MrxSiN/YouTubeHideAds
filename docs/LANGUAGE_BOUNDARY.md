@@ -24,7 +24,7 @@ feed, AI and player preferences use XAX/Android defaults; final authorization re
 
 ## External contributions
 
-- brainfuckC compiles BF into AArch64 bfc_call_v1 libraries. Its external generic C JNI bridge loads
+- BrainfuckCC compiles BF into AArch64 bfc_call_v1 libraries. Its external generic C JNI bridge loads
   a library, moves byte buffers and calls the policy; it contains no YouTube feature classification.
 - XAX emits application JVM/DEX and the libxposed lifecycle/native declarations and state holders.
   The branding-v2 profile packages a digest-pinned resource archive, metadata and native inputs and

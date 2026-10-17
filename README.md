@@ -10,7 +10,7 @@ Ads, sponsored Shorts and promotions are taken out before YouTube shows them, an
 
 <br>
 
-[![Release](https://img.shields.io/github/v/release/MrxSiN/YouTubeHideAds?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/YouTubeHideAds/releases)
+[![Release](https://img.shields.io/github/v/release/MrxSiN/YouTubeHideAds?color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/YouTubeHideAds/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/YouTubeHideAds/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/YouTubeHideAds/releases)
 [![Android](https://img.shields.io/badge/Android-9.0%2B-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](#requirements)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-E8A33D?style=for-the-badge)](https://github.com/libxposed/api)
@@ -47,7 +47,7 @@ languages out of the repository altogether.**
   shell application source in this repository.
 
 It is not slow either. The nine policies are compiled ahead of time to AArch64 shared libraries by
-[brainfuckC](https://github.com/MrxSiN/brainfuckC). There is no interpreter in the APK.
+[BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC). There is no interpreter in the APK.
 
 |  | |
 |---|---|
@@ -227,7 +227,7 @@ unknown playback types never seek. See [`docs/SPONSORBLOCK_API_RESEARCH.md`](doc
 There is no build script in this repository. A release is built with external tools:
 
 ```text
-brainfuckC   source/**/*.bf  ->  lib<policy>.so (AArch64)
+BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -273,7 +273,7 @@ The layering is in [`docs/ARCHITECTURE_BRAINFUCK_XAX.md`](docs/ARCHITECTURE_BRAI
 |---|---|
 | [DexKit](https://github.com/LuckyPray/DexKit) by LuckyPray | Structural discovery of obfuscated classes and methods (Apache-2.0). |
 | [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed) | The hooking API and frameworks the module runs on. |
-| [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [brainfuckC](https://github.com/MrxSiN/brainfuckC) | External compilers for the store and the policies. |
+| [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) | External compilers for the store and the policies. |
 | [SponsorBlock](https://sponsor.ajay.app) | Community segment data. |
 | [Override92/AiSList](https://github.com/Override92/AiSList) | Optional AI-channel lists, CC BY-NC 4.0, not bundled ([aisloplist.com](https://aisloplist.com)). |
 | [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | Behavior reference; no implementation copied. |
