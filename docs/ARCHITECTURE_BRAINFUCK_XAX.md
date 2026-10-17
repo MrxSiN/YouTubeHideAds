@@ -13,8 +13,8 @@ YouTube's typed identifier helper instead of protobuf text. Brainfuck owns final
 ad/SponsorBlock defaults and master gating, and timestamp-window comparisons. Independent content/
 player preference defaults and structural string/context classification are XAX operations.
 
-Fifteen policy library paths ship, plus the external JNI bridge and DexKit; identical AND3
-policies share pinned input bytes under separate semantic names. There is no on-device BF
+Nine policy libraries ship, plus the external JNI bridge and DexKit. The seven AND3 gates
+share `liband3.so` and keep separate semantic call sites. There is no on-device BF
 interpreter. Startup runs 531 checks: 70 ad, 277 SponsorBlock, 24 Playables, 28 swipe, 72 feed and 60 AI/audio
 cases through the actual packaged libraries/JNI and host classifiers. Failed checks disable the
 corresponding feature.
