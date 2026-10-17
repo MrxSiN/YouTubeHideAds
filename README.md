@@ -26,17 +26,6 @@ Ads, sponsored Shorts and promotions are taken out before YouTube shows them, an
 
 ## Why Brainfuck? And what is XAX?
 
-Surely nobody would write the decision logic of an ad blocker in Brainfuck.
-
-Brainfuck was chosen for its thriving ecosystem, its world-class IDE support and its famously
-self-documenting syntax. XAX was chosen because Kotlin felt too mainstream.
-
-Just joking.
-
-The idea is the same as in [Threads Hide Ads](https://github.com/MrxSiN/ThreadsHideAds), taken one
-step further: **keep every decision out of the code that touches YouTube, and keep conventional
-languages out of the repository altogether.**
-
 - **Brainfuck decides.** Whether this component is an ad, whether Premium marketing may go, whether
   the player may seek to the end of this sponsor segment, whether a swipe is a brightness change.
   Brainfuck cannot call Android, Xposed, DexKit or JNI. It reads bytes and writes bytes, and the host
@@ -61,10 +50,6 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 ---
 
 ## What it removes
-
-<div align="center">
-<img src="docs/images/settings.png" width="300" alt="YoutubeHideAds settings page inside YouTube">
-</div>
 
 | Group | Setting | Default |
 |---|---|---|
