@@ -1,9 +1,19 @@
-YouTubeHideAds — independently implemented experimental project.
-Morphe and ReVanced are separate upstream projects and are not the authors
-or publishers of this new repository. No Morphe code is included here.
-Morphe's GPLv3 Section 7 NOTICE must be preserved if portions of that
-implementation are incorporated in the future.
-No XAX redistribution rights are asserted; no XAX code was copied.
-The optional external BrainfuckC compiler was used to generate native test
-artifacts. Its MIT notice is preserved in LICENSES/brainfuckC-MIT.txt.
-No BrainfuckC compiler source or executable is bundled with the project.
+YoutubeHideAds — independently implemented experimental project.
+Newly authored project material is GPL-3.0-or-later; third-party terms remain separate.
+
+Morphe and ReVanced are separate projects and do not author or publish this repository.
+No Morphe implementation is included. Preserve applicable GPLv3 Section 7 notices if
+portions of that implementation are incorporated in the future.
+
+No XAX redistribution rights are asserted; external compiler source is not vendored.
+The independently authored XAX store is application source, not copied compiler source.
+
+The external brainfuckC compiler generates packaged native policy libraries. Its generic
+JNI bridge is also an external binary input. The inspected MIT notice is preserved in
+LICENSES/brainfuckC-MIT.txt. Compiler source and seed executables are not bundled here.
+DexKit and other prebuilt dependencies retain their separate upstream terms; see
+https://github.com/LuckyPray/DexKit and docs/UPSTREAM_PROVENANCE.md.
+
+Optional AiSList downloads: Override92 and contributors, CC BY-NC 4.0.
+https://github.com/Override92/AiSList — https://aisloplist.com
+List data is not bundled. Its terms are separate from this project's source license.

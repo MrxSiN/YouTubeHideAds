@@ -1,0 +1,417 @@
+{
+  "format": "feed-content-runtime-v1",
+  "cases": 72,
+  "path_kind": [
+    {
+      "path": "horizontal_shelf.eml-fe|abc|ContainerType|",
+      "payload": "Discover videos with Previews",
+      "kind": 1
+    },
+    {
+      "path": "horizontal_shelf_content.eml-fe|abc|ContainerType|CollectionType|",
+      "payload": "Discover videos with preview",
+      "kind": 1
+    },
+    {
+      "path": "horizontal_shelf.eml|abc|CellType|",
+      "payload": "DISCOVER VIDEOS WITH PREVIEWS",
+      "kind": 1
+    },
+    {
+      "path": "horizontal_shelf.eml-fe|abc|ContainerType|",
+      "payload": "Recommended videos",
+      "kind": 0
+    },
+    {
+      "path": "horizontal_shelf.eml-fe|abc|ContainerType|",
+      "payload": "Previews",
+      "kind": 0
+    },
+    {
+      "path": "video_lockup.eml|abc|CellType|",
+      "payload": "Discover videos with Previews",
+      "kind": 0
+    },
+    {
+      "path": "horizontal_shelf.eml|abc|ContainerType|video_lockup.eml|CellType|",
+      "payload": "Discover videos with Previews",
+      "kind": 0
+    },
+    {
+      "path": "chips_shelf.eml|abc|CellType|",
+      "payload": "Explore more topics",
+      "kind": 2
+    },
+    {
+      "path": "post_shelf.eml|abc|ContainerType|",
+      "payload": "Posts",
+      "kind": 3
+    },
+    {
+      "path": "post_base_wrapper_slim.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "shorts_shelf.eml|abc|ContainerType|",
+      "payload": "Shorts",
+      "kind": 4
+    },
+    {
+      "path": "inline_shorts.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 4
+    },
+    {
+      "path": "shorts_grid.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 4
+    },
+    {
+      "path": "shorts_video_cell.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 4
+    },
+    {
+      "path": "reel_player_overlay.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 0
+    },
+    {
+      "path": "reel_action_bar.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 0
+    },
+    {
+      "path": "video_lockup_with_attachment.eml|abc|CellType|",
+      "payload": "ordinary video",
+      "kind": 0
+    },
+    {
+      "path": "comment_thread|text_post_root.eml|CellType|",
+      "payload": "post",
+      "kind": 0
+    },
+    {
+      "path": "library_recent_shelf|shorts_shelf.eml|CellType|",
+      "payload": "Shorts",
+      "kind": 0
+    },
+    {
+      "path": "video_description|post_base_wrapper_slim.eml|CellType|",
+      "payload": "quiz",
+      "kind": 0
+    },
+    {
+      "path": "more_drawer.eml|abc|CellType|",
+      "payload": "Shorts",
+      "kind": 0
+    },
+    {
+      "path": "images_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "images_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "images_post_root_slim.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "images_post_slim.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "options_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "options_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "poll_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "poll_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "shared_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "shared_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "text_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "text_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "text_post_root_slim.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "videos_post_responsive_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "videos_post_root.eml|abc|CellType|",
+      "payload": "Post",
+      "kind": 3
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "\u0006Shorts",
+      "kind": 4
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "Discover videos with Previews",
+      "kind": 1
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "Explore more topics",
+      "kind": 2
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "\u0005Posts",
+      "kind": 3
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "Recommended videos",
+      "kind": 0
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|",
+      "payload": "Shorts creators",
+      "kind": 0
+    },
+    {
+      "path": "shelf_header.eml-fe|abc|CellType|video_lockup.eml|CellType|",
+      "payload": "\u0006Shorts",
+      "kind": 0
+    },
+    {
+      "path": "video_lockup.eml-fe|abc|CellType|",
+      "payload": "\u0006Shorts",
+      "kind": 0
+    },
+    {
+      "path": "chips_shelf.eml-js-fe|abc|CellType|",
+      "payload": "History controls",
+      "kind": 0
+    },
+    {
+      "path": "chips_shelf.eml-js-fe|abc|CellType|",
+      "payload": "EXPLORE MORE TOPICS",
+      "kind": 2
+    }
+  ],
+  "native_gate": [
+    {
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "reply": [
+        1
+      ]
+    }
+  ],
+  "defaults": [
+    {
+      "kind": 0,
+      "default": false
+    },
+    {
+      "kind": 1,
+      "default": true
+    },
+    {
+      "kind": 2,
+      "default": true
+    },
+    {
+      "kind": 3,
+      "default": true
+    },
+    {
+      "kind": 4,
+      "default": false
+    },
+    {
+      "kind": 5,
+      "default": false
+    }
+  ],
+  "feed_scope": [
+    {
+      "touch_guard_null": false,
+      "height_constraint_null": false,
+      "feed": false
+    },
+    {
+      "touch_guard_null": false,
+      "height_constraint_null": true,
+      "feed": true
+    },
+    {
+      "touch_guard_null": true,
+      "height_constraint_null": false,
+      "feed": true
+    },
+    {
+      "touch_guard_null": true,
+      "height_constraint_null": true,
+      "feed": true
+    }
+  ],
+  "decision": [
+    {
+      "kind": 1,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 1
+    },
+    {
+      "kind": 2,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 1
+    },
+    {
+      "kind": 3,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 1
+    },
+    {
+      "kind": 4,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 1
+    },
+    {
+      "kind": 4,
+      "enabled": 0,
+      "feed": 1,
+      "remove": 0
+    },
+    {
+      "kind": 3,
+      "enabled": 1,
+      "feed": 0,
+      "remove": 0
+    },
+    {
+      "kind": 0,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 0
+    },
+    {
+      "kind": 5,
+      "enabled": 1,
+      "feed": 1,
+      "remove": 0
+    }
+  ],
+  "execution": "All 72 cases execute in feed_selfcheck in the canonical build 74; startup passes on Pixel 8 Pro / YouTube 21.41.525."
+}

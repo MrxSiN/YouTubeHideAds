@@ -1,18 +1,33 @@
-# Morphe ad-related patch inventory — investigated subset
+# Morphe behavior-reference inventory
 
-Pinned source commit: `e5464395441e916b643af4e2175c4e253e6df487`, from [MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches). Paths below are actual inspected paths at this commit. Morphe's patch code modifies APK bytecode/resources; it is **not automatically reusable** as runtime-Xposed hooking. This is a verified **subset**, NOT a completed recursive inventory.
+This is the inspected subset used by this project, not a complete recursive inventory or a claim
+of Morphe parity. Most references were inspected at commit
+`e5464395441e916b643af4e2175c4e253e6df487` of
+[Morphe Patches](https://github.com/MorpheApp/morphe-patches/tree/e5464395441e916b643af4e2175c4e253e6df487).
+The earlier swipe/Playables pass read moving-main files; see [provenance](UPSTREAM_PROVENANCE.md).
+Morphe modifies APK bytecode/resources. Its implementation cannot be assumed reusable as runtime
+libxposed hooks. No Morphe Java/Kotlin implementation was copied.
 
-| Exact upstream patch | Inspected sources | Real source mechanism/dependencies | Runtime equivalent / owner | Status |
-| --- | --- | --- | --- | --- |
-| `Hide ads` (`hideAdsPatch`) | `patches/src/main/kotlin/app/morphe/patches/youtube/ad/HideAdsPatch.kt`, `Fingerprints.kt`; `extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/components/AdsFilter.java` | Bytecode hooks; `LoadVideoAdsFingerprint` and `PlayerBytesAdLayoutFingerprint` early returns; client-context flag hook; renderer/Litho filters; engagement panel; Premium view measurement; `ad_attribution` view resource; endpoint OS-name hooks. Dependencies include `lithoFilterPatch`, `settingsPatch`, `clientContextHookPatch`, `engagementPanelHookPatch`, `hideHorizontalShelvesPatch`, `elementProtoParserHookPatch`, `versionCheckPatch`, `sharedExtensionPatch`, `hideFullscreenAdsPatch`. | Planned typed Xposed hooks + DexKit; compiled BF `suppress_video_slot`, `suppress_feed_item`, `suppress_search_result`, `suppress_premium_upsell`, `suppress_paid_shelf` | **Policy only; hooks blocked** |
-| `SponsorBlock` (`sponsorBlockPatch`) | `patches/src/main/kotlin/app/morphe/patches/youtube/layout/sponsorblock/SponsorBlockPatch.kt`, `Fingerprints.kt` | Video-time and video-ID hooks, seekbar rendering/UI, player overlay, preferences; depends on video ID, video info, player type, controls, settings/resources, version check and extension. | Future Xposed player callbacks and HTTPS client; BF `authorize_seek` now emits a 64-bit endpoint, still lacks full time window policy | **Incomplete; no network or seek** |
-| `Channel whitelist` (`channelWhitelistPatch`) | `patches/src/main/kotlin/app/morphe/patches/youtube/misc/whitelist/ChannelWhitelistPatch.kt` | Adds advertising channel-list preferences, flyout item, dependencies on `hideAdsPatch`, `flyoutPatch`, `rememberPlaybackSpeedPatch`, settings. | BF-owned whitelist inversion in `suppress_video_slot`, per-video context to be provided by host | **BF decision only; no persistence** |
+| Reference | Inspected mechanisms | Independent runtime equivalent / status |
+| --- | --- | --- |
+| Hide ads / AdsFilter | Video-ad fingerprints, component groups and exceptions, Premium measurement, panel identifiers, client/endpoint hooks | Typed XAX hooks and BF policies; live video/search/product removal, controlled Premium/fullscreen/panel tests; no client/OS spoofing |
+| HideFullscreenAdsPatch | Serialized _interstitial fact plus existing component classification | Shared XAX extractor and BF ad_fullscreen; controlled real-hook positive passes |
+| Shorts ad selection | ReelPageAdsInterface and minTsla diagnostics, native video/image ad helpers | Native facts authorize BF suppression and pre-pager entry removal; live removal and advancing video verified |
+| SponsorBlock | Video/progress/type hooks, typed seeks, categories, resource/UI dependencies | Bounded privacy-prefix client and BF window/category/pipeline policies; live sponsor/outro seeks; no overlay/submission UI |
+| Channel whitelist | Channel preferences, flyout item and ad-patch dependencies | Standalone policy has a whitelist input; no shipped whitelist persistence/UI |
+| LayoutComponentsFilter / ShortsFilter / HorizontalShelvesFilter | Games components, selected feed sections and context exclusions | Playables, previews, topics, posts and feed Shorts controls; own payload and typed context guard |
+| SwipeControlsConfigurationProvider / ClassicSwipeController / PlayerType | Separate brightness/volume switches, fullscreen state and native gesture coexistence | Window-local brightness and media volume with independent toggles; actual Pixel calibration; advanced options omitted |
+| AiSListFilter / AiSListRequester / AiSListPatch | Whole-handle lists, block/warn choices and four-hour refresh | Exact Unicode-handle own-card filter and bounded persistent caches; live high-confidence search off/on; no in-app reports/statistics or full per-scope configuration |
+| ForceOriginalAudioPatch and shared audio-track fingerprints | Original .4 track convention and typed selection for newer playback | Typed SABR update/controller setter, unique non-dubbed original and BF gate; Hindi off / English original on verified |
 
-### Concrete research observations
+The pinned ad sources include HideAdsPatch.kt, its Fingerprints.kt, AdsFilter.java and the shared
+engagement-panel/fullscreen helpers. AdsFilter's ordinary-content exceptions informed fact
+extraction; hiding attribution alone is not implemented. PAproduct/jumpahead roles use the typed
+request-to-ID helper, not protobuf toString. No label-only disguise or endpoint OS-name rewrite ships.
 
-- `HideAdsPatch.kt` injects early return calls at the video-ad fingerprints and touches `Endpoint.BROWSE`, `SEARCH`, `NEXT`, `GET_WATCH`, `PLAYER`, `REEL`, and `GUIDE` with string-changing helper calls. A runtime equivalent cannot assume rewriting `osName` is safe or possible.
-- `AdsFilter.java` has exceptions for ordinary comments, related videos and other UI components; its `isFiltered` logic also checks certain byte buffers (including shopping and Shorts context) and not only renderer path words. Its paid-promotion-label setting can hide attribution alone, **which this new project must not use to disguise still-visible paid content**.
-- `GetPremiumViewFingerprint` has a concrete named onMeasure method and instruction signature; future resolver must validate both.
-- SponsorBlock `Fingerprints.kt` uses resource IDs `total_time` and `inset_overlay_view_layout` and an ad-progress visibility reference; verified against source, **not tested against current YouTube DEX**.
+Actual YouTube 21.41.525 DEX supplied the unique runtime member roles. Earlier notes that player
+anchors or Premium measurement were future work are superseded by the recorded hook/device tests.
+Not all upstream dependencies, settings or version differences have been inspected.
 
-Uninspected extensions, settings details, complete fingerprint dependency trees, and version-compatibility differences remain research work. No statement above asserts that any Morphe behavior has been ported to a working Xposed module. Upstream provenance and license requirements are recorded separately.
+[Current feature coverage](FEATURE_COVERAGE.md) · [Resolver contracts](DEXKIT_RESOLUTION.md) ·
+[Evidence](../evidence/README.md)

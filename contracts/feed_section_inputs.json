@@ -1,0 +1,43 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "inputs": [
+    "section_enabled",
+    "structural_section_component",
+    "validated_feed_context"
+  ],
+  "output": "exactly 01 suppresses the component; every other reply preserves it",
+  "preferences": [
+    {
+      "key": "hide_feed_previews",
+      "default": true,
+      "section": "Discover videos with previews"
+    },
+    {
+      "key": "hide_feed_topics",
+      "default": true,
+      "section": "Explore more topics"
+    },
+    {
+      "key": "hide_feed_posts",
+      "default": true,
+      "section": "Posts"
+    },
+    {
+      "key": "hide_feed_shorts",
+      "default": false,
+      "section": "Shorts in feeds"
+    }
+  ],
+  "ad_master_dependency": false,
+  "preview_identification": "Root horizontal shelf or its root header with the English heading Discover videos with previews; ordinary horizontal shelves preserve their content",
+  "effect": "Use the existing typed EmptyComponent replacement; apply when feed components load",
+  "preserve": [
+    "ordinary video cards",
+    "comments",
+    "Shorts player",
+    "Shorts navigation tab"
+  ],
+  "header_cleanup": "Only root shelf_header components, using their own serialized protobuf; exact length-prefixed Shorts/Posts text or the requested preview/topics headings",
+  "scope": "Native ConversionContext guard discovered through its diagnostic formatter and RecyclerView touch interface; missing or ambiguous roles preserve content",
+  "topic_identification": "chips_shelf or root shelf header whose own payload has the English heading Explore more topics; History controls are preserved"
+}

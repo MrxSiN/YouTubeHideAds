@@ -1,26 +1,85 @@
-# Provenance and licenses
+# Upstream provenance and terms
 
-- BrainfuckC: external local checkout `D:\GitHub\brainfuckC`, used on
-  2026-10-16 through `bootstrap.run_policy_native.PolicyCompiler`. Its inspected
-  `LICENSE` is MIT, copyright 2026 brainfuck-native contributors. No upstream
-  compiler source or seed binary was copied into this project or modified.
-  The compiler manifest records SHA-256 hashes for its adapter and BF stage
-  sources; this local snapshot has no verified Git revision. The selected
-  Windows path executes upstream BF stages using upstream `seed.exe`.
-  Generated native instruction templates originate in that compiler. A copy
-  of its license accompanies the build/evidence; this is not the newer dynamic
-  DSO backend. See `docs/BUILD.md` for scope and limits.
+This guide describes the recorded sources used through build 77, not a fresh upstream-version or
+license audit. Exact local compiler/input identities are in
+[current toolchain evidence](../evidence/ai_audio_branding_20261018/toolchain.json).
+No conventional-language compiler or application source is vendored in this repository.
 
-- XAX: [MrxSiN/XAX](https://github.com/MrxSiN/XAX), research read at SHA `9e44eedfc241d25bb5062b38af105f75234000e2`. Its normative no-text-syntax spec and compiler source were inspected remotely. **No XAX source/assets/runtime were copied.** No root `LICENSE` was found via GitHub contents at this SHA: do not assume redistribution permission.
-- Morphe: [MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches), code inspected at `e5464395441e916b643af4e2175c4e253e6df487`. The `HideAdsPatch`, `AdsFilter`, SponsorBlock, fingerprints, and ChannelWhitelist sources were read as behavior references. Morphe is GPL-3.0 and its NOTICE includes GPL section-7 notices. **No implementation source was copied** into this independent repository; those notices must accompany any future actual adaptations under their terms.
-- DexKit: [LuckyPray/DexKit](https://github.com/LuckyPray/DexKit); upstream README describes C++ DEX resolver, LGPL-3.0 and Maven `org.luckypray:dexkit`. Research only; not bundled.
-- libxposed/Vector: specific integration assertions above come from the pinned XAX `xax_libxposed.py` and Android integration documentation, not from a local framework test.
-- SponsorBlock: mentioned by user specification; no client code copied, no API calls verified.
+## XAX and XAX-MCP
 
-The new project's Brainfuck programs, standalone direct bytecode emitter, test infrastructure and docs were authored independently for this greenfield project. GPL-3.0-or-later governs newly authored material here. License compatibility and notices must be re-audited before integrating binary or adapted third-party components.
+The application host is an independently authored XAX semantic store. Current builds use an isolated
+external extraction of compiler/src from XAX commit
+`0876b591f39908e98aa31f746ae2e26bb88c837e`, with local branding-v2 changes to xax_construct.py and
+xax_android_libxposed_jvm.py. Their hashes and temporary path are recorded. The active D:/GitHub/XAX
+checkout was not changed by the branding task; the isolated snapshot was changed. The clean base
+commit alone cannot rebuild the branded store. Preserve the compatible snapshot.
 
-## Iteration 2 (2026-10-15) — XAX licensing and runtime verification gate
+The earlier integration recorded XAX-MCP commit
+`e3f450fa08c6bb2aa0032d59a3007f8c465138a8` and existing local compiler modifications. Those identities
+are historical, not proof that a clean or newer MCP checkout supports branding-v2. The external
+compiler supplies generic APK/DEX/signing support, not YouTube feature decisions.
 
-Queried the GitHub REST repository metadata and pinned revision file listing for `MrxSiN/XAX`: the repository metadata returns `license: null` and a `LICENSE` lookup returned 404. Neither observation grants redistribution or adaptation permission. XAX sources were **not** copied, vendored, redistributed, or treated as an implicit new project license. Any future use must distinguish use of an externally provisioned permitted compiler from redistribution of compiler/runtime pieces. The pinned candidate remains `9e44eedfc241d25bb5062b38af105f75234000e2` until a licensed, locally testable build is available.
+Initial research at XAX revision `9e44eedfc241d25bb5062b38af105f75234000e2` found no root LICENSE
+and repository metadata with no identified license. That dated observation does not assert current
+upstream licensing or redistribution permission. Compiler source is not redistributed here.
 
-The new v1 host framing is independent work: no Morphe or XAX runtime code has been copied into its codec, JVM linkage test, or golden fixtures.
+## brainfuckC
+
+The external original checkout was D:/GitHub/brainfuckC; later dynamic-build evidence uses
+D:/GitHub/BrainfuckCC. The inspected notice is MIT, copyright 2026 brainfuck-native contributors;
+a copy is in [LICENSES/brainfuckC-MIT.txt](../LICENSES/brainfuckC-MIT.txt).
+BF-owned compiler stages generate the AArch64 policy libraries. The external generic C JNI bridge
+supplies loading and byte transport; it contains no application classification policy.
+
+Initial native tests used bootstrap.run_policy_native.PolicyCompiler and seed.exe. Production
+DSO builds use android_device_stages/android_dynamic_callable59 with BF stages on the arm64 phone.
+These are different historical backends; do not describe the initial seed test as the current build.
+No compiler source or seed executable is bundled as project implementation. Generated libraries
+and the external bridge are pinned binary inputs in the APK.
+
+## Morphe behavior references
+
+Most inspected sources are pinned to
+[e5464395441e916b643af4e2175c4e253e6df487](https://github.com/MorpheApp/morphe-patches/tree/e5464395441e916b643af4e2175c4e253e6df487):
+
+- HideAdsPatch, AdsFilter, shared fullscreen/engagement helpers and fingerprints.
+- SponsorBlock and channel whitelist patch/fingerprint sources.
+- ContextInterface, LayoutComponentsFilter, ShortsFilter and HorizontalShelvesFilter.
+- AiSListFilter, AiSListRequester and AiSListPatch.
+- Shared/YouTube ForceOriginalAudioPatch and shared audio-track fingerprints.
+
+The earlier Playables/swipe pass read moving-main LayoutComponentsFilter,
+SwipeControlsConfigurationProvider, ClassicSwipeController and PlayerType. Those reads are behavior
+references, not pinned implementation dependencies. No Java/Kotlin implementation was copied.
+Runtime discovery, BF authorization and Android effects were independently authored. The inspected
+Morphe repository uses GPL-3.0 and Section 7 notices; preserve applicable notices for any future
+actual incorporation. [Inspected subset](MORPHE_AD_PATCH_INVENTORY.md).
+
+Generic preview discussion in [Morphe issue 2746](https://github.com/MorpheApp/morphe-patches/issues/2746)
+did not justify hiding all horizontal shelves. The Pixel supplied the actual preview root/title.
+YouTube DEX supplied the independently discovered typed component and SABR audio roles.
+
+## AiSList data
+
+Optional lists come from [Override92/AiSList](https://github.com/Override92/AiSList), paths
+AiSList/aislist_blocklist.txt and AiSList/aislist_warnlist.txt. Their inspected headers specify
+**CC BY-NC 4.0**. Settings credit **Override92 and contributors** and link to
+[aisloplist.com](https://aisloplist.com) for lists/reports. No list data is bundled with the app;
+user-enabled public downloads are cached in YouTube's private preferences. No report is submitted.
+The lists are mutable community data and can misclassify channels. Their terms are separate from
+the project's source license.
+
+## Other dependencies and services
+
+- DexKit 2.3.0: prebuilt DEX/native input; inspected upstream terms identify LGPL-3.0.
+- flatbuffers-java 23.5.26 and kotlin-stdlib 2.4.10: prebuilt third-party DEX inputs, not authored app code.
+- libxposed API 102 / Vector 2.2: actual tested framework on the Pixel; no other framework is certified.
+- SponsorBlock: read-only privacy-prefix API; no copied client implementation, votes or submissions.
+  [Recorded request behavior](SPONSORBLOCK_API_RESEARCH.md).
+- Android AAPT2 36.0.0: compiles static branding resources only. D8 was used for third-party DEX.
+- ThreadsHideAds and TwitterHideAds: locally inspected branding style. The YouTube shield/strike
+  vector is independently drawn; no sibling runtime source is included.
+
+Newly authored project material is GPL-3.0-or-later. This does not replace separate third-party
+terms or grant rights to external compiler source. See [NOTICE](../NOTICE), [build requirements](BUILD.md)
+and [dated evidence](../evidence/README.md) for the recorded scope.

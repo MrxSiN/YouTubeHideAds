@@ -1,5 +1,5 @@
 {
-  "abi": "bf-component-bits-v1",
+  "abi": "bf-component-bits-v2",
   "inputs": [
     "enabled",
     "validated_context",
@@ -48,7 +48,13 @@
     "subscription_promo",
     "paid_product_shelf",
     "statement_banner",
-    "EgliaWd5b29kbGU"
+    "EgliaWd5b29kbGU",
+    "premium_enabled",
+    "product_carousel",
+    "shopping_carousel.e",
+    "stickers_layer.e",
+    "product_item",
+    "products_in_video"
   ],
   "output": "exactly one byte: 0 PASS or 1 SUPPRESS"
 }

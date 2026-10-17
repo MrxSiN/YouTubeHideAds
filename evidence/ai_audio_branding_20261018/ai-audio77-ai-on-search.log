@@ -1,0 +1,47 @@
+10-17 23:47:50.092 29232 29232 I YouTubeHideAds: Playables self-check (16 cases)=true
+10-17 23:47:50.093 29232 29232 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+10-17 23:47:50.095 29232 29232 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+10-17 23:47:50.097 29232 29232 I YouTubeHideAds: Feed content self-check (72 cases)=true
+10-17 23:47:50.097 29232 29232 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+10-17 23:47:50.103 29232 29232 I YouTubeHideAds: Video ad activation hook installed
+10-17 23:47:50.124 29232 29232 I YouTubeHideAds: Player ad layout hook installed
+10-17 23:47:50.154 29232 29232 I YouTubeHideAds: Ad component hook installed
+10-17 23:47:50.156 29232 29232 I YouTubeHideAds: Premium offer hook installed
+10-17 23:47:50.267 29232 29232 I YouTubeHideAds: Fullscreen dialog hook installed
+10-17 23:47:50.324 29232 29232 I YouTubeHideAds: Typed engagement panel identifier resolved
+10-17 23:47:50.324 29232 29232 I YouTubeHideAds: Engagement ad panel hook installed
+10-17 23:47:50.352 29232 29232 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+10-17 23:47:50.378 29232 29232 I YouTubeHideAds: SponsorBlock player hook installed
+10-17 23:47:50.405 29232 29232 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+10-17 23:47:50.405 29232 29232 I YouTubeHideAds: Player video ID and seek bridge resolved
+10-17 23:47:50.406 29232 29232 I YouTubeHideAds: Player duration and active-generation bridge resolved
+10-17 23:47:50.427 29232 29232 I YouTubeHideAds: Shorts ad selection hook installed
+10-17 23:47:50.427 29232 29232 I YouTubeHideAds: Ad hook discovery finished
+10-17 23:47:50.535 29232 29232 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+10-17 23:47:50.563 29232 29232 I YouTubeHideAds: Playables typed element serializer resolved
+10-17 23:47:50.582 29232 29232 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+10-17 23:47:50.647 29232 29232 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+10-17 23:47:50.652 29232 29232 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+10-17 23:47:50.693 29232 29232 I YouTubeHideAds: Original audio hook installed: public final void armt.a(aovk)
+10-17 23:47:50.704 29232 29232 I YouTubeHideAds: YouTube lifecycle hook installed
+10-17 23:47:51.734 29232 29404 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|44492178d04d6b63|
+10-17 23:47:52.015 29232 29404 I YouTubeHideAds: Component replaced: horizontal_shelf.eml-fe|8d0c325d458c4a8c|CellType|
+10-17 23:47:52.029 29232 29404 I YouTubeHideAds: Component replaced: horizontal_shelf.eml-fe|8d0c325d458c4a8c|CellType|
+10-17 23:47:52.505 29232 29369 I YouTubeHideAds: Video ad suppressed
+10-17 23:47:52.589 29232 29232 I YouTubeHideAds: Player calibration playbackType=1 durationMs=980996
+10-17 23:47:52.589 29232 29232 I YouTubeHideAds: SponsorBlock playback generation changed
+10-17 23:47:52.590 29232 29232 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-17 23:47:53.517 29232 29419 I YouTubeHideAds: SponsorBlock response segments=0
+10-17 23:47:53.562 29232 29373 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|44492178d04d6b63|video_display_button_group_layout.eml-fe|44492178d04d6b63|
+10-17 23:47:54.029 29232 29405 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.036 29232 29405 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.044 29232 29373 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.048 29232 29405 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.052 29232 29373 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.056 29232 29373 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|
+10-17 23:47:54.057 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|ContainerType|
+10-17 23:47:54.059 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|ContainerType|
+10-17 23:47:54.061 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|
+10-17 23:47:54.067 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|ContainerType|
+10-17 23:47:54.069 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|ContainerType|
+10-17 23:47:54.072 29232 29405 I YouTubeHideAds: Component replaced: shorts_video_cell.eml-fe|213aeccf1b10c1b7|CellType|

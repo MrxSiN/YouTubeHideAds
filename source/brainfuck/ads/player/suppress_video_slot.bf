@@ -1,6 +1,6 @@
 # @feature suppress_video_slot
 # @purpose Suppress a verified player ad slot only when playback transition is safe.
-# @abi bf-host-v1
+# @abi bfc_call_v1
 # @inputs 0=enabled (0 or 1); 1=structural_ad_slot (0 or 1); 2=safe_player_transition (0 or 1); 3=channel_whitelisted (0 or 1)
 # @outputs 1 byte; 0=PASS; 1=SUPPRESS_COMPONENT
 # @cells 0=accumulator; 1=next input; 2=product and action; all 8bit wrapping

@@ -1,6 +1,6 @@
 # @feature settings_snapshot
 # @purpose Turn stored preference bits into effective feature switches, owning defaults and the master gate.
-# @abi bf-host-v1
+# @abi bfc_call_v1
 # @inputs 10 Boolean bytes as (present, value) pairs in order: master, video_ads, component_ads, premium_promotions, fullscreen_promotions
 # @outputs 9 bytes: raw effective master, video, component, premium, fullscreen; then master-gated video, component, premium, fullscreen
 # @cells 0..4=raw effective switches; 9=else flag for the master gate; 10=present; 11=value; 12=result under construction

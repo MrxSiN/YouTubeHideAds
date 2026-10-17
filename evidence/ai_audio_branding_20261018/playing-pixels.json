@@ -1,0 +1,10 @@
+{
+  "roi": [
+    100,
+    200,
+    1200,
+    750
+  ],
+  "mean_absolute_difference": 69.772008815427,
+  "fraction_changed_above_8": 0.9812578512396695
+}

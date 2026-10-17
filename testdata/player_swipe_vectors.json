@@ -1,0 +1,250 @@
+{
+  "format": "player-swipe-runtime-v1",
+  "execution": "Packaged XAX swipe_selfcheck, on Pixel build 67",
+  "native_policy": [
+    {
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "reply": [
+        1
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "baseline": 50,
+      "dy": 0,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 50
+    },
+    {
+      "baseline": 50,
+      "dy": 250,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 99
+    },
+    {
+      "baseline": 50,
+      "dy": 500,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 100
+    },
+    {
+      "baseline": 50,
+      "dy": -250,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 1
+    },
+    {
+      "baseline": 50,
+      "dy": -500,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 1
+    },
+    {
+      "baseline": 7,
+      "dy": 100,
+      "minimum": 0,
+      "maximum": 15,
+      "height": 1000,
+      "expected": 10
+    },
+    {
+      "baseline": 7,
+      "dy": -100,
+      "minimum": 0,
+      "maximum": 15,
+      "height": 1000,
+      "expected": 4
+    },
+    {
+      "baseline": 7,
+      "dy": 1000,
+      "minimum": 0,
+      "maximum": 15,
+      "height": 1000,
+      "expected": 15
+    },
+    {
+      "baseline": 7,
+      "dy": -1000,
+      "minimum": 0,
+      "maximum": 15,
+      "height": 1000,
+      "expected": 0
+    },
+    {
+      "baseline": 70,
+      "dy": 10,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 0,
+      "expected": 70
+    },
+    {
+      "baseline": 0,
+      "dy": 0,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 1
+    },
+    {
+      "baseline": 200,
+      "dy": 0,
+      "minimum": 1,
+      "maximum": 100,
+      "height": 1000,
+      "expected": 100
+    }
+  ],
+  "intents": [
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 0,
+      "dy": 60,
+      "slop": 20,
+      "expected": 1
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 40,
+      "dy": 60,
+      "slop": 20,
+      "expected": 0
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 15,
+      "dy": 40,
+      "slop": 20,
+      "expected": 1
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 0,
+      "dy": -60,
+      "slop": 20,
+      "expected": 1
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 0,
+      "dy": 20,
+      "slop": 20,
+      "expected": 1
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 1,
+      "dx": 0,
+      "dy": 19,
+      "slop": 20,
+      "expected": 0
+    },
+    {
+      "enabled": 1,
+      "fullscreen": 0,
+      "dx": 0,
+      "dy": 60,
+      "slop": 20,
+      "expected": 0
+    },
+    {
+      "enabled": 0,
+      "fullscreen": 1,
+      "dx": 0,
+      "dy": 60,
+      "slop": 20,
+      "expected": 0
+    }
+  ]
+}

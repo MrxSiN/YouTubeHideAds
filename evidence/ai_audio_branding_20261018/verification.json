@@ -1,0 +1,23 @@
+{
+  "canonical_store_root_verified": true,
+  "legacy74_identity_unchanged_by_external_extension": true,
+  "new_fixture_case_counts": {
+    "native_gates": 16,
+    "original_audio": 10,
+    "ai_handles": 13,
+    "ai_match": 13,
+    "ai_cards": 8
+  },
+  "new_bf_normalized_sha256": {
+    "source/brainfuck/ui/filter_ai_channel.bf": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f",
+    "source/brainfuck/player/select_original_audio.bf": "3363ee8c1a92f118b6843482e95cce9185a300855d03b602d24eecb0e0e47f9f"
+  },
+  "new_bf_required_headers": true,
+  "static_xml_parse": true,
+  "apk_title_version_icon_description_verified": true,
+  "final_cold_start_531_checks": true,
+  "language_audit_including_ignored_files": "22 BF files and one source XAX store; zero conventional-language source files",
+  "new_evidence_local_links": "pass",
+  "git_diff_check": "pass",
+  "installed_digest_matches_promoted_apk": true
+}

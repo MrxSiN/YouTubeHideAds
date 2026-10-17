@@ -1,0 +1,13 @@
+Binary APK
+Package name=org.youtubehideads.module id=7f
+  type drawable id=01 entryCount=1
+    resource 0x7f010000 drawable/ic_module_foreground
+      () (file) res/drawable/ic_module_foreground.xml type=XML
+  type mipmap id=02 entryCount=1
+    resource 0x7f020000 mipmap/ic_module
+      (anydpi) (file) res/mipmap-anydpi-v26/ic_module.xml type=XML
+  type string id=03 entryCount=2
+    resource 0x7f030000 string/app_name
+      () "YoutubeHideAds"
+    resource 0x7f030001 string/module_description
+      () "Minimal LSPosed module that hides YouTube ads and unwanted feed content."

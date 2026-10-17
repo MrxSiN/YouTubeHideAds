@@ -1,0 +1,8 @@
+10-17 23:43:53.485 27460 27636 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|44492178d04d6b63|video_display_button_group_layout.eml-fe|44492178d04d6b63|
+10-17 23:46:00.522 27460 27460 I YouTubeHideAds: Player calibration playbackType=1 durationMs=807682
+10-17 23:46:00.522 27460 27460 I YouTubeHideAds: SponsorBlock playback generation changed
+10-17 23:46:00.522 27460 27460 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-17 23:46:00.802 27460 27635 I YouTubeHideAds: Component replaced: video_display_carousel_button_group_layout.eml-fe|7ae96adb10f29ae6|
+10-17 23:46:01.033 27460 27460 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|video_lockup_attachments.eml-fe|9960213c76022280|ContainerType|expandable_metadata.eml-fe|60c44ec48fc82541|inline_expansion.eml-fe|c506bc3bc8b223a0|ContainerType|inline_expander.eml-fe|ba4a6c2bd
+10-17 23:46:01.034 27460 27460 I YouTubeHideAds: Component replaced: video_lockup_with_attachment.eml-fe|bcda1353fcd2af26|CellType|video_lockup_attachments.eml-fe|9960213c76022280|ContainerType|expandable_metadata.eml-fe|60c44ec48fc82541|inline_expansion.eml-fe|c506bc3bc8b223a0|ContainerType|inline_expander.eml-fe|ba4a6c2bd
+10-17 23:46:01.652 27460 27683 I YouTubeHideAds: SponsorBlock response segments=1

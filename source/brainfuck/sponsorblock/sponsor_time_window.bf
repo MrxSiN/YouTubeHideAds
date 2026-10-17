@@ -1,6 +1,6 @@
 # @feature sponsor_time_window
 # @purpose Brainfuck-owned unsigned 63-bit playback window validation start <= current < end; no host-supplied window-valid Boolean.
-# @abi bf-host-v1
+# @abi bfc_call_v1
 # @fuel 2000000
 # @inputs 24 bytes: little-endian 64-bit unsigned start, current, end. Host must attest all three values are nonnegative signed longs, same player generation and timeline.
 # @outputs TIME_WINDOW_VALID (06) if start <= current < end; PASS (00) otherwise.

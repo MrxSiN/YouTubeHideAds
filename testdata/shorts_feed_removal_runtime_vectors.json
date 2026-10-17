@@ -1,0 +1,203 @@
+{
+  "format": "shorts-feed-removal-device-v1",
+  "device": "Pixel 8 Pro, Android 17, YouTube 21.41.525",
+  "evidence": "evidence/shorts_sponsored_20261017/removal59-fixtures.log (removed before 1.0.0)",
+  "notes": "Controlled real protobuf fixtures and native constructor hooks; full feeds are never substituted. Every case checks retained data and source preservation as applicable. This is a recorded execution ledger, not an independently executable harness.",
+  "cases": [
+    {
+      "case": "mixed",
+      "endpoints": [
+        "organic",
+        "video-ad",
+        "organic",
+        "image-ad",
+        "organic"
+      ],
+      "tracking": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "enabled": 1,
+      "kept_indices": [
+        0,
+        2,
+        4
+      ],
+      "removed": 2,
+      "observed_pass": true
+    },
+    {
+      "case": "off",
+      "endpoints": [
+        "organic",
+        "video-ad",
+        "image-ad"
+      ],
+      "tracking": [
+        "a",
+        "b",
+        "c"
+      ],
+      "enabled": 0,
+      "kept_indices": [
+        0,
+        1,
+        2
+      ],
+      "removed": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "allads",
+      "endpoints": [
+        "video-ad",
+        "image-ad"
+      ],
+      "tracking": [
+        "a",
+        "b"
+      ],
+      "enabled": 1,
+      "kept_indices": [],
+      "removed": 2,
+      "observed_pass": true
+    },
+    {
+      "case": "lastad",
+      "endpoints": [
+        "organic",
+        "image-ad"
+      ],
+      "tracking": [
+        "a",
+        "b"
+      ],
+      "enabled": 1,
+      "kept_indices": [
+        0
+      ],
+      "removed": 1,
+      "observed_pass": true
+    },
+    {
+      "case": "empty",
+      "endpoints": [],
+      "tracking": [],
+      "enabled": 1,
+      "kept_indices": [],
+      "removed": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "single",
+      "endpoints": [
+        "video-ad",
+        "organic",
+        "image-ad"
+      ],
+      "tracking": null,
+      "enabled": 1,
+      "kept_indices": [
+        1
+      ],
+      "removed": 2,
+      "observed_pass": true
+    },
+    {
+      "case": "mismatch",
+      "endpoints": [
+        "video-ad",
+        "organic"
+      ],
+      "tracking": [
+        "a"
+      ],
+      "enabled": 1,
+      "kept_indices": [
+        0,
+        1
+      ],
+      "removed": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "response-copy",
+      "records": [
+        "organic",
+        "video-ad",
+        "image-ad",
+        "organic"
+      ],
+      "enabled": 1,
+      "kept_indices": [
+        0,
+        3
+      ],
+      "removed": 2,
+      "original_count_after": 4,
+      "observed_pass": true
+    },
+    {
+      "case": "response-off",
+      "records": [
+        "organic",
+        "video-ad",
+        "image-ad",
+        "organic"
+      ],
+      "enabled": 0,
+      "original_identity_preserved": true,
+      "removed": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "seed-video",
+      "endpoint": "video-ad",
+      "enabled": 1,
+      "endpoint_count": 0,
+      "tracking_count": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "seed-image",
+      "endpoint": "image-ad",
+      "enabled": 1,
+      "endpoint_count": 0,
+      "tracking_count": 0,
+      "observed_pass": true
+    },
+    {
+      "case": "seed-organic",
+      "endpoint": "organic-video",
+      "enabled": 1,
+      "endpoint_count": 1,
+      "tracking_count": 1,
+      "observed_pass": true
+    },
+    {
+      "case": "real-pair-constructor",
+      "endpoints": [
+        "organic-video",
+        "video-ad",
+        "image-ad",
+        "organic-video"
+      ],
+      "tracking": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "enabled": 1,
+      "kept_indices": [
+        0,
+        3
+      ],
+      "removed": 2,
+      "observed_pass": true
+    }
+  ]
+}

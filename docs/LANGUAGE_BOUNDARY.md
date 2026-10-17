@@ -1,40 +1,51 @@
 # Language boundary
 
-The repository is Brainfuck and XAX. Nothing else is authored here: no Java, Kotlin, C, Python, shell
-or CI script. The Python-era toolchain and its reports are in [`history/`](history/) and git history.
+All application implementation is **Brainfuck and XAX**. The source tree contains 22 BF files,
+one canonical XAX store, and static XML branding. JSON contracts/fixtures and prose are data.
+No Java, Kotlin, C, Python, shell or CI implementation source is retained, including ignored build
+folders. Earlier conventional-language implementations remain in Git history.
 
-| What | Language | Where |
-|---|---|---|
-| Ad decisions, component classification, settings defaults and the master gate, SponsorBlock rules | Brainfuck | `source/brainfuck/`, `source/brainfuck-runtime/` |
-| Hooks, DexKit queries, reflection, preferences, the Settings row and page, calling Brainfuck | XAX | `source/xax/youtubehideads.xax` |
-| Byte layouts between them | prose contracts | `contracts/`, each `.bf` header |
+| Responsibility | Owner |
+| --- | --- |
+| Native removal/gesture/selection authorization, ad/SponsorBlock snapshots, category/window rules | Authored BF policies |
+| Hook lifecycle, structural discovery, fact extraction, typed Android effects, preferences, bounded HTTPS/JSON and caches | Canonical XAX store |
+| Title, description, adaptive/monochrome icon and manifest resources | Static XML in source/branding |
+| Byte contracts and expected vectors | contracts/ and testdata/ |
+| BF compilation, JNI transport, third-party libraries, APK lowering/signing | External tools and pinned prebuilt inputs |
 
-## What the toolchains contribute
+XAX validates shape, identity, scope, thread and freshness, derives bounded structural/membership
+facts and calls the appropriate BF library. Only status zero and an exact expected reply authorize
+an effect. Failure preserves content or declines a seek/gesture/selection. This is a validation
+boundary, not a claim that string parsing or structural classification happens inside BF.
 
-The compilers are other repositories and may use any language; they contribute no feature behaviour.
+Ad and SponsorBlock defaults and master gating are computed by BF snapshots. Independent Playables,
+feed, AI and player preferences use XAX/Android defaults; final authorization remains in BF.
+[All defaults and master dependencies](README.md#settings-and-defaults).
 
-- **brainfuckC** compiles each policy. Its native code, ELF headers and relocations come from
-  Brainfuck stages; its Python only moves bytes. Its `Bfp1Bridge` JNI bridge is C: it `dlopen`s a
-  policy, calls `bfc_call_v1`, and copies buffers. It never reads policy bytes.
-- **XAX** turns the store into an APK: JVM class files, its own JVM→DEX lowering, the `Module`
-  forwarder (`onPackageReady` → the XAX entry, nothing else), a `Bfp1Bridge` class with one
-  `static native` method, an `AdBindings` class with one `static volatile Object[]` field, the
-  manifest, libxposed metadata and the v2 signature.
-- **DexKit** is a third-party library packaged as prebuilt DEX and `.so`.
+## External contributions
 
-## Rules the store follows
+- brainfuckC compiles BF into AArch64 bfc_call_v1 libraries. Its external generic C JNI bridge loads
+  a library, moves byte buffers and calls the policy; it contains no YouTube feature classification.
+- XAX emits application JVM/DEX and the libxposed lifecycle/native declarations and state holders.
+  The branding-v2 profile packages a digest-pinned resource archive, metadata and native inputs and
+  signs the APK. No app Java/Kotlin source is generated into this repo.
+- DexKit, flatbuffers and Kotlin runtime are prebuilt third-party dependencies, not application
+  implementation source. The APK's native bridge and DexKit are external binary dependencies.
+- AAPT2 compiles static XML branding only. D8 was used once for third-party DEX, not XAX app code.
 
-- XAX never decides whether something is an ad. It reads facts, sends bytes to Brainfuck, and acts
-  only on an exact authorized reply. Any other reply, including the empty reply of a failed call, is a
-  pass.
-- XAX never supplies a default. It sends each stored preference as `(present, value)`;
-  `settings_snapshot.bf` decides.
-- Presentation strings (titles, summaries) live in the store as text and encode no behaviour.
+The external profile adds no YouTube policy. Its two local compiler modifications and snapshot
+requirement are recorded in [BUILD.md](BUILD.md) and [toolchain evidence](../evidence/ai_audio_branding_20261018/toolchain.json).
+A clean base compiler checkout cannot rebuild the branded store by itself.
 
-## Known constraints
+## State and constraints
 
-- The pinned JVM lowering cannot bind a `boolean` callback parameter, so switches use
-  `View.OnClickListener` and read `isChecked()`.
-- `ldc` constants are ASCII-only, so the middle dot in summaries is built from code point `0xB7`.
-- The bridge `dlopen`s per call; the module `System.load`s every policy at start so that is a
-  reference count, not a load.
+Generated AdBindings, PlayerBindings, SponsorBindings, ShortsBindings, PlayablesBindings,
+SwipeBindings, FeedBindings and ExtraBindings hold the typed host state. They do not replace the
+BF authorization checks. The parser/dialog share component fact extraction; panels use a typed ID
+helper. AI reads only the candidate's own bounded payload; audio uses validated current bindings.
+
+The pinned lowering cannot bind a boolean callback parameter, so switches use View.OnClickListener
+and isChecked(). Its ldc text is ASCII-only; non-ASCII values use constructed code points/decoded
+UTF-8 data. Policy libraries are loaded at startup; per-call bridge loading retains references.
+[Native byte ABI](BRAINFUCK_ABI.md) and [source conventions](BRAINFUCK_SOURCE_STYLE.md) describe
+current behavior.

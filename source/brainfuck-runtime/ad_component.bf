@@ -1,9 +1,9 @@
 # @feature classify_ad_component
 # @purpose Classify paid components and promotions while protecting organic content and comments
-# @abi bf-host-v1
-# @inputs enabled and validated context followed by Boolean substring facts in contracts/ad_component_inputs.json order
+# @abi bf-component-bits-v2
+# @inputs 54 Boolean bytes in contracts/ad_component_inputs.json order, including the independent premium switch
 # @outputs 1 byte; 0=PASS; 1=SUPPRESS_COMPONENT
-# @cells 0=enabled; 1=context; 2=exception; 3=match; 4=scratch; 5=doodle; 6=product
+# @cells 0=enabled; 1=context; 2=exception; 3=match; 4=scratch; 5=doodle; 6=product; 7=premium enabled; 8=premium match
 # @invariant every input is consumed once; all decisions are executable Brainfuck; output is Boolean
 # @safety typed host validates exact Boolean input and exact one byte reply; unknown context is PASS
 # @section enabled_and_context
@@ -89,19 +89,35 @@
 # @note positive substring cta_shelf_card
 >,[[-]<[-]+>]<
 # @note positive substring premium_upsell
->,[[-]<[-]+>]<
+>>>>>>,[[-]<[-]+>]<<<<<<
 # @note positive substring premium_promo
->,[[-]<[-]+>]<
+>>>>>>,[[-]<[-]+>]<<<<<<
 # @note positive substring subscription_promo
->,[[-]<[-]+>]<
+>>>>>>,[[-]<[-]+>]<<<<<<
 # @note positive substring paid_product_shelf
 >,[[-]<[-]+>]<
 # @section statement_banner_except_doodle
->,>,[[-]<[-]>]<[[-]<[-]+>]<
+>,>,[[-]<[-]>]<[[-]>>>>[-]+<<<<]<
+# @section independent_premium_switch
+# A Premium switch that only changes the native offer view is a very optimistic switch
+>>>>,<<<<
+# @section merchandise_and_product_components
+# @note product_carousel
+>,[[-]<[-]+>]<
+# @note shopping_carousel.e
+>,[[-]<[-]+>]<
+# @note stickers_layer.e
+>,[[-]<[-]+>]<
+# @note product_item
+>,[[-]<[-]+>]<
+# @note products_in_video
+>,[[-]<[-]+>]<
+# @section gate_general_and_premium_then_combine
+<<<[->>>[->>>+<<<]<<<]>>>[-]>>>[-<<<+>>>]<<<
+>>>>[->[-<<<<<[-]+>>>>>]<]<<<<
 # @section exceptions_win
 <[[-]>[-]<]>
-# @section require_enabled_and_validated_context
-<<<[->>>[->>>+<<<]<<<]>>>>>>[-<<<+>>>]<<<
-<<[->>[->>>+<<<]<<]>>>>>[-<<<+>>>]<<<
+# @section require_validated_context
+<<[->>[->>>+<<<]<<]>>[-]>>>[-<<<+>>>]<<<
 # @section emit
 .

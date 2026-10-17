@@ -1,0 +1,26 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "policy": "filter_ai_channel",
+  "inputs": [
+    "selected_list_enabled",
+    "whole_handle_in_selected_list",
+    "validated_own_video_component"
+  ],
+  "output": "exactly 01 replaces the component; every other result preserves it",
+  "preferences": {
+    "ai_block_enabled": false,
+    "ai_warn_enabled": false
+  },
+  "ad_master_dependency": false,
+  "match": "Whole Unicode handle, Locale.ROOT case fold; no UC channel-ID or substring match",
+  "scope": "Supported root Home/related/search video and Shorts cards; protected library/subscription contexts preserve content",
+  "cache_hours": 4,
+  "source": "https://github.com/Override92/AiSList",
+  "attribution": "Override92 and contributors, CC BY-NC 4.0; https://aisloplist.com",
+  "limits": {
+    "own_payload_bytes": 1048576,
+    "download_bytes": 5242880,
+    "handles_per_list": 50000
+  },
+  "failure": "Preserve prior cache and content; never cancel old ad/feed authorization"
+}

@@ -1,74 +1,105 @@
 # Build
 
-The repository holds Brainfuck (`.bf`) and one XAX store (`source/xax/youtubehideads.xax`). It has no
-build script. Three outside toolchains do the work, each from its own repository.
+These instructions describe release 1.0.0 (versionCode 100) ([identity](../evidence/release_20261018/build.json)); the compiler and native/DEX inputs are unchanged from 77; branding.apk was rebuilt for the new package. [Current artifact/input identities and compiler hashes](../evidence/ai_audio_branding_20261018/toolchain.json)
+and the [build record](../evidence/ai_audio_branding_20261018/build.json) take precedence over older
+milestones. Application source is BF plus one XAX store; branding XML is static data. There is no
+repository build script.
 
-| Toolchain | Where | Role |
-|---|---|---|
-| brainfuckC | `D:\GitHub\brainfuckC` | Brainfuck → AArch64 `bfc_call_v1` shared objects; the `Bfp1Bridge` JNI bridge |
-| XAX | `D:\GitHub\XAX`, branch `android-libxposed-jvm` | the `android-libxposed` profile: JVM → DEX, manifest, metadata, APK v2 signing |
-| XAX-MCP | `D:\GitHub\XAX-MCP`, branch `android-libxposed` | the tools an agent uses: open, build, export, construct |
+## Required external tools
 
-## 1. Brainfuck policies
+| Tool | Recorded location / role |
+| --- | --- |
+| brainfuckC | Original checkout D:/GitHub/brainfuckC; later native-build evidence uses D:/GitHub/BrainfuckCC; BF stages produce AArch64 policy libraries and its generic JNI bridge supplies transport |
+| XAX | D:/GitHub/XAX is the active checkout; build 77 uses the isolated snapshot described below |
+| XAX-MCP | D:/GitHub/XAX-MCP; external workspace/carrier/build/export tooling, when configured with the compatible XAX profile |
+| Android SDK | AAPT2 build-tools 36.0.0 and android-37.0/android.jar for static branding only |
+| Android platform-tools | D:/Android/platform-tools/adb.exe for arm64 compiler stages and device checks |
 
-brainfuckC's DSO compiler is a chain of Brainfuck stages. On a host without Linux x86-64 it builds
-those stages for arm64 and runs them on a phone over ADB:
+The retained XAX snapshot starts from commit
+`0876b591f39908e98aa31f746ae2e26bb88c837e` and adds the **branding-v2 extension** to
+`xax_construct.py` and `xax_android_libxposed_jvm.py`. Its path and used-file hashes are in the
+current toolchain record. The active checkout removed its Android profile during earlier work;
+do not assume it or a clean base checkout can build this store. Preserve the compatible snapshot.
+Re-extracting the base commit alone does not reproduce the extension. No compiler source or private
+signing capability is vendored here.
 
-```bash
-python -m bootstrap.android_device_stages --serial SERIAL --annotated D:/Android/AndroidStudioProjects/YouTubeHideAds/source/brainfuck-runtime/settings_snapshot.bf -o build/inputs/libsettings_snapshot.so
+Branded metadata uses `android-libxposed-jvm-module-v2` followed by NUL. The module record includes
+an optional 32-byte branding digest and input closure. Unbranded v1 identities remain unchanged;
+an older compiler must reject the branded store rather than silently discard branding.
+
+## Policy inputs
+
+Run the external compiler from its own checkout, keeping generated inputs under ignored
+`build/inputs`. The recorded dynamic backend is `bootstrap.android_device_stages`, with whole-line
+annotations stripped by `--annotated`. Example invocation from the external checkout:
+
+```text
+python -m bootstrap.android_device_stages --serial SERIAL --annotated D:/Android/AndroidStudioProjects/YouTubeHideAds/source/brainfuck-runtime/settings_snapshot.bf -o D:/Android/AndroidStudioProjects/YouTubeHideAds/build/inputs/libsettings_snapshot.so
 ```
 
-Run it from the brainfuckC checkout for `settings_snapshot`, `ad_component`
-(`source/brainfuck-runtime/`), `suppress_video_slot` and `suppress_premium_upsell`
-(`source/brainfuck/ads/...`). `--annotated` drops whole-line `#` comments first. The first run
-compiles 17 stages on the phone (about two minutes); later runs reuse them.
+Compile the nine `.bf` files under `source/` (`and3.bf` to `liband3.so`). All seven AND3 gates call
+that one library; after editing `and3.bf`, verify all eight Boolean inputs through the packaged JNI boundary.
 
-## 2. One-time inputs
+On hosts without Linux x86-64, BF compiler stages run on the arm64 phone over ADB. Those external
+tools may use Python/C; neither their source nor generated conventional-language source belongs in
+this application repository.
 
-Put these in one directory, the build-inputs root (any names; XAX matches them by BLAKE3):
+## Other pinned inputs
 
-- the four policy `.so` files from step 1;
-- `libbrainfuckc_bridge.so`, built from brainfuckC `tools/android_bfp1_bridge/bfp1_jni_bridge.c` with
-  the NDK (`aarch64-linux-android28-clang -shared -fPIC -O2 -Wl,-z,max-page-size=16384 ... -ldl`);
-- `libdexkit.so` from the DexKit 2.3.0 AAR (`jni/arm64-v8a/`);
-- the DexKit, flatbuffers-java 23.5.26 and kotlin-stdlib 2.4.10 classes as one `classes.dex`, made once
-  with D8 (`--release --min-api 28`). This is the only third-party bytecode; XAX does not transcode it.
+- Generic `libbrainfuckc_bridge.so`, built externally from brainfuckC's JNI bridge with the Android
+  NDK for AArch64/API 28, 16 KiB maximum page size and `-ldl`.
+- DexKit 2.3.0 arm64 `libdexkit.so` from its AAR.
+- A prebuilt third-party `classes.dex` combining DexKit, flatbuffers-java 23.5.26 and kotlin-stdlib
+  2.4.10. D8 was used once with release/min-api 28 for these dependencies; application DEX is XAX-generated.
+- Static `branding.apk`, compiled below. It is an input archive, not the installable module.
 
-The store names each input's digest, so a different file is a build error, not a different APK.
-The current digests are in [`evidence/xax_only_20261016/`](../evidence/xax_only_20261016/README.md).
+Every input is pinned by BLAKE3 in the canonical store. The toolchain record lists the input digests;
+`build.json` lists final packaged native SHA-256 values. A mismatched input must fail the build.
 
-## 3. Build the APK
+## Branding input
 
-Register XAX-MCP with the inputs root, the private signing capability and an output directory:
+Create ignored `build/branding` and `build/inputs` directories. Run from the application root with
+AAPT2 36.0.0 available:
 
-```bash
-xax-mcp --store-root D:/Android/AndroidStudioProjects/YouTubeHideAds/source/xax --android-inputs D:/Android/AndroidStudioProjects/YouTubeHideAds/build/inputs --android-signing C:/Users/SiN/.xax/signing/youtubehideads.cap --output-root D:/Android/AndroidStudioProjects/YouTubeHideAds/build/out
+```text
+aapt2 compile --dir source/branding/res -o build/branding/compiled.zip
+aapt2 link -I C:/Users/SiN/AppData/Local/Android/Sdk/platforms/android-37.0/android.jar --manifest source/branding/AndroidManifest.xml -o build/inputs/branding.apk build/branding/compiled.zip
 ```
 
-Then, as tool calls:
+The external profile permits only AndroidManifest.xml, resources.arsc and res/*, rejects duplicate
+entries and uncompressed totals above 2 MiB, validates binary manifest chunk bounds, and replaces the
+single integer versionCode placeholder with the module record's value. XAX then packages its DEX,
+metadata and native inputs and signs the final APK. The static manifest adds no launcher or permissions.
 
-1. `xax_workspace` `{"action": "open", "store": "youtubehideads.xax"}`
-2. `xax_build` `{"workspace": WS}` — the signed APK
-3. `xax_export` `{"kind": "artifact", "handle": ART, "name": "YouTubeHideAds.apk"}`
+## Construct, build and export
 
-The signing capability never enters the store or the repository; only the certificate's SHA-256 does.
+The canonical source is `source/xax/youtubehideads.xax`. Ignored JSON carriers are editing transport.
+The tested external APIs are `xax_construct.construct`, `xax_compiler.StoreReader` / `write_store`
+and `xax_android_libxposed_jvm.build_module`. Configure external tooling to import the compatible
+snapshot and resolve the pinned input closure. Signing uses the external private capability; never
+copy it into the repo, carrier, evidence or logs.
 
-## 4. Change the module
+With a compatible XAX-MCP server, the equivalent flow is workspace open → carrier export/edit →
+construct → build → artifact/store export. Compatibility of a different server/compiler version is
+not established by the local build evidence. The module configuration is `package.android` in the
+construct carrier; bump its `version_code` for each device install.
 
-Transactions edit what exists. To add calls or functions:
+After a behavioral edit, verify semantic construction, native policy/source correspondence and
+input digests, then test the candidate on the device. Promote the exact tested store and signed APK.
+Do not substitute temporary probe builds or rebuild with different inputs after device acceptance.
+Current production 1.0.0 (versionCode 100) has 123 functions, 11 native paths, no topics probe or automatic Shorts navigation,
+and passes 531 startup checks. Store/APK identities belong in the dated build record.
 
-1. `xax_export` `{"kind": "carrier", "handle": WS, "name": "carrier.json"}` — tooling, not source
-2. edit the carrier
-3. `xax_construct` with the edited carrier
-4. `xax_build`, test on a device
-5. `xax_export` `{"kind": "store", ...}` over `source/xax/youtubehideads.xax`, and commit the store
+## Install and validate
 
-Bump `version_code` in the carrier's `android` record for each install; Vector reloads on it.
-
-## 5. Install
-
-```bash
-adb install -r build/out/YouTubeHideAds.apk
+```text
+D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.0.0.apk
 ```
 
-Enable it in Vector, scoped to YouTube, and force-stop YouTube once.
+Enable **YoutubeHideAds** in Vector for YouTube, allow the package update to settle, then force-stop
+and reopen YouTube. Verify the installed version/digest, startup checks and targeted behavior.
+A transient old APK-path cache occurred after build 74; a later force-stop/reopen resolved it.
+Do not uninstall or clear user data to work around an unverified older version.
+
+See [testing](TESTING.md), [current evidence](../evidence/ai_audio_branding_20261018/README.md), and
+[dated milestones](../evidence/README.md). Documentation edits alone do not require a new build/install.

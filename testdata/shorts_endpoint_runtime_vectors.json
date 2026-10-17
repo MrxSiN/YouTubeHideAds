@@ -1,0 +1,93 @@
+{
+  "format": "shorts-endpoint-device-v1",
+  "device": "Pixel 8 Pro, Android 17, YouTube 21.41.525",
+  "notes": "Historical viewport-only checks for the removed auto-skip fallback. They did not validate playback; the user reported frozen video. Do not use as removal/playback acceptance.",
+  "gates": [
+    {
+      "case": "video",
+      "enabled": 0,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "video",
+      "enabled": 1,
+      "expected_skip": true,
+      "observed_skip": true,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "image",
+      "enabled": 0,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "image",
+      "enabled": 1,
+      "expected_skip": true,
+      "observed_skip": true,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "organic-empty",
+      "enabled": 0,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "organic-empty",
+      "enabled": 1,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "case": "video-unrecognized-type",
+      "enabled": 0,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe50-runtime.log"
+    },
+    {
+      "case": "video-unrecognized-type",
+      "enabled": 1,
+      "expected_skip": false,
+      "observed_skip": false,
+      "evidence": "probe50-runtime.log"
+    }
+  ],
+  "movement": [
+    {
+      "kind": "video",
+      "position": 0,
+      "next_loaded": true,
+      "expected_position": 1,
+      "observed_position": 1,
+      "suppression_delta": 1,
+      "evidence": "probe54-runtime.log"
+    },
+    {
+      "kind": "image",
+      "position": 0,
+      "next_loaded": true,
+      "expected_position": 1,
+      "observed_position": 1,
+      "suppression_delta": 1,
+      "evidence": "probe50-runtime.log"
+    },
+    {
+      "kind": "image",
+      "position": 1,
+      "next_loaded": false,
+      "expected_position": 1,
+      "observed_position": 1,
+      "suppression_delta": 0,
+      "evidence": "probe54-runtime.log"
+    }
+  ],
+  "status": "rejected-pager-navigation-experiment"
+}

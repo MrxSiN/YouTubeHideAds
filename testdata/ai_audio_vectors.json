@@ -1,0 +1,343 @@
+{
+  "native_gates": [
+    {
+      "policy": "ai_authorize",
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        0,
+        0,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        0,
+        1,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        1,
+        0,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "ai_authorize",
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "reply": 1
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        0,
+        0,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        0,
+        1,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        1,
+        0,
+        1
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "reply": 0
+    },
+    {
+      "policy": "audio_authorize",
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "reply": 1
+    }
+  ],
+  "original_audio": [
+    {
+      "id": "en.4",
+      "auto_dubbed": 0,
+      "original": true
+    },
+    {
+      "id": "ms.4",
+      "auto_dubbed": 0,
+      "original": true
+    },
+    {
+      "id": "en-US.4",
+      "auto_dubbed": 0,
+      "original": true
+    },
+    {
+      "id": "en.3",
+      "auto_dubbed": 0,
+      "original": false
+    },
+    {
+      "id": "en.10",
+      "auto_dubbed": 0,
+      "original": false
+    },
+    {
+      "id": "en.4",
+      "auto_dubbed": 1,
+      "original": false
+    },
+    {
+      "id": "",
+      "auto_dubbed": 0,
+      "original": false
+    },
+    {
+      "id": ".4",
+      "auto_dubbed": 0,
+      "original": false
+    },
+    {
+      "id": "en.4extra",
+      "auto_dubbed": 0,
+      "original": false
+    },
+    {
+      "id": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.4",
+      "auto_dubbed": 0,
+      "original": false
+    }
+  ],
+  "ai_handles": [
+    {
+      "line": "@alpha",
+      "valid": true
+    },
+    {
+      "line": "@alpha.beta",
+      "valid": true
+    },
+    {
+      "line": "@alpha-beta",
+      "valid": true
+    },
+    {
+      "line": "@alpha_beta",
+      "valid": true
+    },
+    {
+      "line": "@alpha\u00b7beta",
+      "valid": true
+    },
+    {
+      "line": "@ALPHA",
+      "valid": true
+    },
+    {
+      "line": "@\u65e5\u672c\u8a9e",
+      "valid": true
+    },
+    {
+      "line": "! comment",
+      "valid": false
+    },
+    {
+      "line": "UCchannelID",
+      "valid": false
+    },
+    {
+      "line": "alpha",
+      "valid": false
+    },
+    {
+      "line": "@a",
+      "valid": false
+    },
+    {
+      "line": "@alpha/beta",
+      "valid": false
+    },
+    {
+      "line": "@alpha beta",
+      "valid": false
+    }
+  ],
+  "ai_match": [
+    {
+      "payload": "https://youtube.com/@alpha",
+      "matched": true
+    },
+    {
+      "payload": "@ALPHA",
+      "matched": true
+    },
+    {
+      "payload": "owner=@alpha\u0000video",
+      "matched": true
+    },
+    {
+      "payload": "@alpha.beta",
+      "matched": false
+    },
+    {
+      "payload": "@alpha-beta",
+      "matched": false
+    },
+    {
+      "payload": "@alpha_beta",
+      "matched": false
+    },
+    {
+      "payload": "@alpha\u00b7beta",
+      "matched": false
+    },
+    {
+      "payload": "@alphabeta",
+      "matched": false
+    },
+    {
+      "payload": "@name.dot",
+      "matched": true
+    },
+    {
+      "payload": "@name.dotextra",
+      "matched": false
+    },
+    {
+      "payload": "@\u65e5\u672c\u8a9e",
+      "matched": true
+    },
+    {
+      "payload": "@\u65e5\u672c\u8a9e\u5225",
+      "matched": false
+    },
+    {
+      "payload": "ordinary video",
+      "matched": false
+    }
+  ],
+  "ai_cards": [
+    {
+      "path": "video_lockup_with_attachment.eml-fe|abc|CellType|",
+      "card": true
+    },
+    {
+      "path": "search_video_with_context.eml|abc|CellType|",
+      "card": true
+    },
+    {
+      "path": "related_video_with_context.eml|abc|ContainerType|",
+      "card": true
+    },
+    {
+      "path": "shorts_video_cell.eml-fe|abc|CellType|",
+      "card": true
+    },
+    {
+      "path": "comment_thread|video_lockup_with_attachment.eml|abc|CellType|",
+      "card": false
+    },
+    {
+      "path": "video_lockup_with_attachment.eml|abc|CellType|avatar.eml|CellType|",
+      "card": false
+    },
+    {
+      "path": "horizontal_shelf.eml|abc|CellType|",
+      "card": false
+    },
+    {
+      "path": "reel_player_overlay.eml|abc|CellType|",
+      "card": false
+    }
+  ],
+  "cases": 60
+}

@@ -1,0 +1,43 @@
+--------- beginning of main
+10-18 01:38:25.259 15569 15569 D VectorLifecycle: dispatchPackageReady d1@4e9ac9
+10-18 01:38:25.394 15569 15569 I YouTubeHideAds: Playables self-check (16 cases)=true
+10-18 01:38:25.395 15569 15569 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+10-18 01:38:25.396 15569 15569 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+10-18 01:38:25.399 15569 15569 I YouTubeHideAds: Feed content self-check (72 cases)=true
+10-18 01:38:25.399 15569 15569 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+10-18 01:38:25.403 15569 15569 I YouTubeHideAds: Video ad activation hook installed
+10-18 01:38:25.427 15569 15569 I YouTubeHideAds: Player ad layout hook installed
+10-18 01:38:25.459 15569 15569 I YouTubeHideAds: Ad component hook installed
+10-18 01:38:25.459 15569 15569 I YouTubeHideAds: Premium offer hook installed
+10-18 01:38:25.577 15569 15569 I YouTubeHideAds: Fullscreen dialog hook installed
+10-18 01:38:25.645 15569 15569 I YouTubeHideAds: Typed engagement panel identifier resolved
+10-18 01:38:25.646 15569 15569 I YouTubeHideAds: Engagement ad panel hook installed
+10-18 01:38:25.674 15569 15569 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+10-18 01:38:25.694 15569 15569 I YouTubeHideAds: SponsorBlock player hook installed
+10-18 01:38:25.723 15569 15569 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+10-18 01:38:25.723 15569 15569 I YouTubeHideAds: Player video ID and seek bridge resolved
+10-18 01:38:25.724 15569 15569 I YouTubeHideAds: Player duration and active-generation bridge resolved
+10-18 01:38:25.744 15569 15569 I YouTubeHideAds: Shorts ad selection hook installed
+10-18 01:38:25.744 15569 15569 I YouTubeHideAds: Ad hook discovery finished
+10-18 01:38:25.851 15569 15569 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+10-18 01:38:25.880 15569 15569 I YouTubeHideAds: Playables typed element serializer resolved
+10-18 01:38:25.900 15569 15569 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+10-18 01:38:25.947 15569 15569 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+10-18 01:38:25.950 15569 15569 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+10-18 01:38:25.983 15569 15569 I YouTubeHideAds: Original audio hook installed: public final void armt.a(aovk)
+10-18 01:38:25.994 15569 15569 I YouTubeHideAds: YouTube lifecycle hook installed
+10-18 01:38:26.937 15569 15732 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|44492178d04d6b63|
+10-18 01:38:27.127 15569 15733 I YouTubeHideAds: Component replaced: horizontal_shelf.eml-fe|8d0c325d458c4a8c|CellType|
+10-18 01:38:27.143 15569 15733 I YouTubeHideAds: Component replaced: horizontal_shelf.eml-fe|8d0c325d458c4a8c|CellType|
+10-18 01:38:27.726 15569 15687 I YouTubeHideAds: Video ad suppressed
+10-18 01:38:27.853 15569 15569 I YouTubeHideAds: Player calibration playbackType=1 durationMs=78186
+10-18 01:38:27.853 15569 15569 I YouTubeHideAds: SponsorBlock playback generation changed
+10-18 01:38:27.854 15569 15569 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-18 01:38:27.979 15569 15754 D VectorLifecycle: dispatchPackageReady d1@70ceed5
+10-18 01:38:28.753 15569 15754 I YouTubeHideAds: SponsorBlock response segments=0
+10-18 01:38:28.873 15569 15569 I YouTubeHideAds: Player calibration playbackType=1 durationMs=78186
+10-18 01:38:29.887 15569 15569 I YouTubeHideAds: Player calibration playbackType=1 durationMs=78186
+10-18 01:38:33.183 15569 15733 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|fd28177866d5cbbe|CellType|ContainerType|
+10-18 01:38:33.184 15569 15733 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|fd28177866d5cbbe|CellType|
+10-18 01:38:33.185 15569 15733 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|fd28177866d5cbbe|CellType|
+10-18 01:38:46.066 15569 15649 D VectorLifecycle: dispatchPackageReady d1@1e9c8b6

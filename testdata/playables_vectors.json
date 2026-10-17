@@ -1,0 +1,108 @@
+{
+  "format": "playables-runtime-v1",
+  "execution": "Packaged XAX playables_selfcheck: 24 cases pass on Pixel build 65",
+  "native_policy": [
+    {
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        1,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        1
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "reply": [
+        0
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1
+      ],
+      "reply": [
+        1
+      ]
+    }
+  ],
+  "component_markers": [
+    "horizontal_gaming_shelf.e",
+    "mini_game_card.e"
+  ],
+  "drawer": {
+    "path_prefix": "more_drawer.",
+    "required_path_suffix": "|CellType|",
+    "serialized_endpoint": "FEmini_app_destination",
+    "maximum_encoded_element_bytes": 1048576
+  },
+  "negatives": [
+    "video_lockup.eml|CellType|",
+    "home_video_with_context.eml|CellType|",
+    "playables",
+    "mini_game_card_description.eml|TextType|",
+    "drawer parent",
+    "drawer descendants",
+    "FEmusic",
+    "FEgaming"
+  ],
+  "off_result": "pass original content",
+  "invalid_context_result": "pass original content"
+}

@@ -1,0 +1,19 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "inputs": [
+    "feature_enabled",
+    "watch_while_fullscreen",
+    "validated_vertical_intent"
+  ],
+  "output": "exactly 01 authorizes handling; 00 passes to YouTube",
+  "settings": {
+    "swipe_brightness": true,
+    "swipe_volume": true
+  },
+  "scope": "Regular fullscreen player; excludes Shorts, inline, minimized, picture-in-picture, sliding and VR states",
+  "zones": "Outer 40% on each side; center 20% unchanged; exclude 24dp side edges, 48dp top and 80dp bottom",
+  "intent": "One pointer; dominant vertical movement exceeds twice horizontal movement and reaches twice the calibrated Android touch slop",
+  "brightness": "Window only, 1..100%; restore exact original Window.LayoutParams value on fullscreen exit or focus loss",
+  "volume": "STREAM_MUSIC within AudioManager reported min/max; fixed-volume routes pass through",
+  "touch": "Buffer eligible DOWN; replay for taps/horizontal/multi-touch; long-press timeout replays DOWN with original timestamps"
+}

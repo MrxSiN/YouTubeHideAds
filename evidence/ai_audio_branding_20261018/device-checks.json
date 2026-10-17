@@ -1,0 +1,30 @@
+{
+  "preferences_after_cold_start": {
+    "hide_feed_topics": "true",
+    "ai_block_enabled": "false",
+    "hide_feed_posts": "true",
+    "hide_feed_shorts": "false",
+    "hide_feed_previews": "true",
+    "force_original_audio": "true"
+  },
+  "ai_warn_enabled_absent_default": false,
+  "installed_apk_sha256": "97a772bf20b7a23226d51b95b3f60a2e110b9019eb170f2ef12fc97b1f037788",
+  "version_code": 77,
+  "usb_stay_awake_restored": "0",
+  "youtube_data_cleared": false,
+  "device": "Pixel 8 Pro",
+  "android": "17 / API 37",
+  "youtube": "21.41.525",
+  "framework": "Vector 2.2 / API 102",
+  "checks": {
+    "ai_high_confidence_off_on": true,
+    "warnlist_live_positive": false,
+    "original_audio_off_on": true,
+    "advancing_video_pixels": true,
+    "natural_home_topics_shelf_delivered": false,
+    "controlled_actual_topics_hook_build75": true,
+    "branding_app_info_build75": true,
+    "final_build77_startup_checks": 531,
+    "manual_current_video_audio_choice_preserved": true
+  }
+}

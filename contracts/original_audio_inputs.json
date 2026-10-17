@@ -1,0 +1,20 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "policy": "select_original_audio",
+  "inputs": [
+    "enabled",
+    "unique_original_track",
+    "validated_current_audio_context"
+  ],
+  "output": "exactly 01 selects the validated original ID; every other result preserves selection",
+  "preferences": {
+    "force_original_audio": true
+  },
+  "ad_master_dependency": false,
+  "original": "Exactly one ID of length 3..64 ending .4 and isAutoDubbed false",
+  "context": "Main thread, current typed controller and 2..128-element audio track list, successful startup checks",
+  "deduplication": "Weak controller identity and record-array equality prevent repeat selection on the same list",
+  "manual_choice": "Preserved on the current loaded list; new lists/controllers may prefer original",
+  "failure": "Unknown or ambiguous bindings/track lists preserve native audio",
+  "compatibility": "YouTube 21.41.525; upstream .4 convention must be revalidated on format changes"
+}
