@@ -1,39 +1,65 @@
-# SponsorBlock read API and implementation
+# SponsorBlock
 
-Recorded behavior retained in build 77; the live seek evidence was collected on build 39.
-This guide is an implementation record, not a fresh query of the upstream service.
+The player **SB** button opens a compact bottom sheet. Its **Settings** row and the module’s **SponsorBlock settings** entry open the full settings pages. Native YouTube preference rows, named text appearances, navigation icons and theme colors provide the presentation. Back returns to the previous page. Long-press the manual skip prompt to open playback controls.
 
-Official contract: [SponsorBlock API docs](https://wiki.sponsor.ajay.app/w/API_Docs), consulted
-2026-10-16. The shipped XAX client makes read-only requests to the fixed HTTPS endpoint
-https://sponsor.ajay.app/api/skipSegments/{sha256HashPrefix}, using four hexadecimal digits and an
-encoded categories array. It performs no submissions, votes or account operations.
+## Playback and controls
 
-The response is bounded to 256 KiB, 1,024 video records and 100 segments for the exact local ID.
-The accepted VOD duration is at most seven days. Only exact local videoID matches are accepted.
-Segments require two numeric seconds values, a supported category, actionType skip and a bounded
-hex/hyphen UUID. Negative numbers are rejected before conversion. BigDecimal floors seconds to
-integer milliseconds without floating-point multiplication. Missing duration is zero; nonzero
-reported duration must match the current player within 1,000 ms.
+- Ten categories: sponsor, self-promotion, interaction, intro, outro, preview, filler, non-music,
+  highlight and hook. Each has Ignore, Seekbar only, Manual, Automatic once and Automatic modes.
+- Sponsor and self-promotion default to Automatic; other categories default to Ignore. The ad master
+  and SponsorBlock enable switch still gate playback actions through the packaged BF policies.
+- Each category has a visual color picker with a live preview, eight presets, and red, green, blue and opacity sliders. Presets retain the selected opacity. Existing ARGB values and desktop import/export remain compatible. Highlights are point markers. Native
+  track geometry is resolved by DexKit structure; ambiguous roles preserve the native seekbar.
+  Drawing clips the current thumb area. A previewed draft appears in white.
+- Manual skip and undo recheck the player/video/generation. Undo suppresses another automatic skip
+  for that segment during this playback and reverses its local skip/time-saved counters.
+- Minimum segment duration, optional skip/error notices, channel exclusions, refresh, and local
+  statistics are available. Configured exclusions pause skipping when the channel cannot be proven.
 
-Brainfuck owns category eligibility, start <= current < end, raw playback-type authorization and
-duplicate/enablement gates. XAX validates transport, data provenance, types, current player and
-generation, then invokes the resolved typed seek only for an exact BF endpoint reply.
+## Retrieval
 
-Requests use one worker, CompletableFuture exception handling and connection cleanup. Connect/read
-timeouts, byte/read-count/elapsed limits, disabled redirects and one attempt per generation bound
-the work. Errors and absent data produce no synthetic segments or seeks. The first implementation
-has no cross-video cache or retry; a later playback generation permits another request.
+The client sends four hexadecimal SHA-256 prefix digits to the selected HTTPS origin's
+`/api/skipSegments/{prefix}`, requesting all supported categories and skip/poi action types.
+Only the exact local video ID is accepted from the bucket. Limits remain 256 KiB, 1,024 video records,
+100 segments and seven-day VOD duration. Numeric seconds convert with BigDecimal; malformed,
+negative or inconsistent times, UUIDs, categories and player identities are rejected. A reported
+duration must match within 1,000 ms. Live/unknown player types preserve playback.
 
-The Pixel retrieved real segments and accepted seeks to 68,509 ms (sponsor, JogMQGLmps8) and
-76,737 ms (outro, M7FIvfx5J10). The latter category was initially off and enabled for testing.
-The real four-digit bucket held 123 video records; a packaged regression prevents the former
-64-record limit from returning empty data. Live playback type 9 was observed without a fetch/seek.
+One worker owns retrieval. IO failures, HTTP 408 and 5xx permit at most three attempts, with 2/4-second
+delays driven by playback updates. HTTP 404 is authoritative empty data; other client errors are
+terminal. Errors are never cached. An origin/video-scoped 32-entry LRU retains valid responses for
+10 minutes and valid empty responses for one minute, across playback generations. Redirects are off;
+connect/read timeouts are four seconds, with byte/read-count/elapsed limits and connection cleanup.
 
-See [architecture](ARCHITECTURE_BRAINFUCK_XAX.md) and
-evidence (`remaining_20261016`, removed before 1.0.0). Colored seekbar/overlay UI, submission controls,
-channel whitelists and complete upstream SponsorBlock parity are not implemented.
+## Community actions and settings
 
-[All setting defaults](README.md#settings-and-defaults): the ad master gates SponsorBlock effective
-enablement; its own enable/sponsor/self-promotion defaults are on and other categories default off.
-The original-audio feature does not spoof or refetch player responses and adds no SponsorBlock API
-operation. AI list caching is independent; it does not imply a SponsorBlock cache.
+The segment editor sets or adjusts boundaries, previews the exact range, then opens a review showing
+video, category, range and server. Only the final **Submit this segment** action publishes. The reviewed
+video/generation/server must still match. Automatic skipping is suspended during preview. Start/end
+changes require another preview. Highlights require equal boundaries; range segments require start < end.
+
+Segment controls provide upvote, downvote, undo vote and category correction. Public username changes
+and community statistics use a private random identity, created only for an explicit community write
+or supplied by the user. Optional skipped-segment view reporting defaults off. These operations use
+documented API routes, bounded UTF-8 JSON, one operation at a time, no redirects and no automatic
+POST retry. Successful submissions/votes invalidate retrieval data.
+
+Import/export uses desktop categorySelections/barTypes JSON, modes, color/opacity, server, minimum
+duration, notices and view tracking. Unknown categories are ignored. Duplicate known categories and
+invalid known values reject the import. A worker validates the entire document before one preference
+commit; invalid imports preserve existing settings. Input is limited to 64 KiB. Exports omit the
+private identity unless explicitly requested; do not share exports containing it. Channel exclusions
+and editor adjustment step remain local application settings.
+
+## References and verification
+
+Primary contract: [SponsorBlock API documentation](https://wiki.sponsor.ajay.app/w/API_Docs) and
+[category/submission guidelines](https://wiki.sponsor.ajay.app/w/Guidelines), consulted 2026-10-21.
+The user's [j-hc module reference](https://github.com/j-hc/revanced-magisk-module) points to
+[Morphe patches](https://github.com/MorpheApp/morphe-patches/tree/e5464395441e916b643af4e2175c4e253e6df487).
+The XAX implementation uses Android platform APIs and the existing BF/JNI boundary; no upstream
+Java/Kotlin implementation was copied. Complete upstream patch parity is not claimed.
+
+Runtime checks and device evidence are recorded in [testing](TESTING.md) and the
+[2026-10-21 feature evidence](../evidence/sponsorblock_20261021/README.md) and [2026-10-22 UI evidence](../evidence/sponsorblock_ui_20261022/README.md). Test data is never published to the
+community service: segment/vote/username POSTs are implemented but not exercised against production.

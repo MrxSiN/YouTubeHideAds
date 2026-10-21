@@ -1,0 +1,15 @@
+{
+  "original_module_preferences": "absent",
+  "checked_test_keys": [
+    "sb_color_sponsor",
+    "sb_mode_sponsor",
+    "sb_sponsor",
+    "sponsorblock_enabled"
+  ],
+  "module_preference_absence_restored": true,
+  "original_appearance": "Use device theme",
+  "appearance_restored_and_checked_via_UI": true,
+  "final_after_confirmed_light_test": true,
+  "final_module_preference_absence_checked": true,
+  "final_cleanup": "already absent; no removal needed after final light UI check"
+}

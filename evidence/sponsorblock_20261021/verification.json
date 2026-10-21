@@ -1,0 +1,45 @@
+{
+  "build": 111,
+  "total": 636,
+  "passed": true,
+  "groups": {
+    "ad": 70,
+    "sponsorblock_existing": 277,
+    "playables": 24,
+    "swipe": 28,
+    "feed": 72,
+    "ai_audio": 60,
+    "sponsorblock_network": 18,
+    "sponsorblock_controls": 20,
+    "sponsorblock_integration": 67
+  },
+  "device_pid": 21893,
+  "startup_time_local": "2026-10-21 20:22:49",
+  "seekbar_roles": {
+    "constructor": 1,
+    "draw": 1,
+    "track_rectangle": 1
+  },
+  "live_production_writes_performed": false,
+  "language_audit": "BF/XAX executable source only; no conventional-language source extensions or inline workflow shell remain",
+  "device_coverage": {
+    "menu_child_dismissal": "verified final 111",
+    "settings_export": "verified final 111; valid JSON, default private-ID exclusion",
+    "preview_and_review": "verified 110, shared logic retained in 111",
+    "actual_track_draft_marker": "verified 110, drawing unchanged in 111",
+    "invalid_import": "verified malformed INVALID input on 111; exact preference-file SHA256 preserved; error notice displayed",
+    "valid_import_preference_commit": "verified final 111; all ten modes/colors, opacity, exact re-export equality; original preference absence restored",
+    "community_color_manual_skip_undo": "not naturally exercised on final device; runtime drawing/policy checks pass"
+  },
+  "post_restore_cold_start": {
+    "device_pid": 30084,
+    "local_time": "2026-10-21 23:33:29",
+    "all_636_checks_pass": true,
+    "original_preference_absence_restored": true,
+    "youtube": "21.42.243"
+  },
+  "initial_youtube": "21.41.525",
+  "latest_youtube": "21.42.243",
+  "youtube_update_time_local": "2026-10-21 21:17:26",
+  "settings_transfer_youtube": "21.42.243"
+}

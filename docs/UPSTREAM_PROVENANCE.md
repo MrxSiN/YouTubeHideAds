@@ -76,7 +76,7 @@ the project's source license.
 - DexKit 2.3.0: prebuilt DEX/native input; inspected upstream terms identify LGPL-3.0.
 - flatbuffers-java 23.5.26 and kotlin-stdlib 2.4.10: prebuilt third-party DEX inputs, not authored app code.
 - libxposed API 102 / Vector 2.2: actual tested framework on the Pixel; no other framework is certified.
-- SponsorBlock: read-only privacy-prefix API; no copied client implementation, votes or submissions.
+- SponsorBlock: independently authored XAX prefix client and explicit community actions; API docs and pinned Morphe references are recorded in the SponsorBlock guide. No upstream client implementation was copied.
   [Recorded request behavior](SPONSORBLOCK_API_RESEARCH.md).
 - Android AAPT2 36.0.0: compiles static branding resources only. D8 was used for third-party DEX.
 - ThreadsHideAds and TwitterHideAds: locally inspected branding style. The YouTube shield/strike

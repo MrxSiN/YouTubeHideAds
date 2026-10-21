@@ -1,0 +1,11 @@
+{
+  "original_module_preferences": "absent",
+  "test_only_keys_checked": [
+    "sb_color_sponsor",
+    "sb_mode_sponsor",
+    "sb_sponsor"
+  ],
+  "module_preference_file_absence_restored": true,
+  "youtube_appearance_restored_via_UI": "Use device theme",
+  "draft_discarded_by_cold_start": true
+}

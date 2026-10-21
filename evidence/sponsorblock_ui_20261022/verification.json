@@ -1,0 +1,15 @@
+{
+  "canonical_semantic_construct": "passed",
+  "installed_apk_digest_matches": true,
+  "native_byte_comparison_with_1_1_0": "11 of 11 identical",
+  "packaged_startup_cases_passed": 636,
+  "live_context_UI_cases_passed": 28,
+  "UI_hook_static_guard": "present in final container",
+  "JSON_files_parsed": 30,
+  "Markdown_files_checked": 23,
+  "local_file_links": "passed",
+  "source_language_audit": "BF/XAX only; no conventional executable source tracked or untracked outside ignored build output",
+  "git_diff_check": "passed",
+  "landscape_check": "interrupted; not accepted",
+  "production_POSTs_sent": false
+}

@@ -1,0 +1,20 @@
+{
+  "semantic_construction": "passed",
+  "resource_compile_and_link": "passed",
+  "slider_XML_geometry_assertions": "passed",
+  "all_four_callers_use_shared_factory": true,
+  "native_byte_comparison": "11 of 11 identical to code 123",
+  "libxposed_API102_static_acceptance": true,
+  "APK_v2_signature": "passed",
+  "version_label_matches_manifest": true,
+  "Android9_track_sizing": "XML attributes; no API29 sizing calls",
+  "packaged_UI_checks": 64,
+  "runtime_checks_run": false,
+  "device_installation": "deferred at user request",
+  "device_visual_validation": "pending",
+  "production_POSTs_sent": false,
+  "JSON_parsing": "passed",
+  "changed_document_local_links": "passed",
+  "source_language_audit": "BF/XAX executable source only; XML resources are static data",
+  "git_diff_check": "passed"
+}

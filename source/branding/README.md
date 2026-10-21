@@ -11,6 +11,12 @@ for manifest placeholder 1, and packages/signs it with XAX-generated DEX. See [b
 
 The description is “Minimal LSPosed module that hides YouTube ads and unwanted feed content.”
 The manifest declares package io.github.mrxsin.youtubehideads, minSdk 28 and targetSdk 37. Placeholder
-versionCode 1 is not the final module version; the current store supplies 100.
+versionCode 1 is not the final module version; the current tested build supplies 127.
 [Packaged resource proof](../../evidence/ai_audio_branding_20261018/apk-resources.txt) and
 [current branding evidence](../../evidence/ai_audio_branding_20261018/README.md) record the tested result.
+
+The static resource archive also carries the shared SponsorBlock slider layout, track and thumb.
+Its dimensions follow the modern slider tokens bundled in YouTube 21.42.243. XAX supplies the
+current YouTube theme colors and retains native SeekBar interaction. XML sizing supports API 28
+without calling API 29 ProgressBar sizing methods. This is declarative resource data, not an
+additional implementation language. [Resource and phone checks](../../evidence/sponsorblock_slider_device_20261022/README.md) record accepted dark/light rendering.

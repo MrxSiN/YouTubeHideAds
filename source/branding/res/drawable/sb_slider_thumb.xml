@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The transparent width reserves the handle's 6dp gap on each side. -->
+    <item>
+        <shape>
+            <size android:width="16dp" android:height="44dp" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+    <item android:width="4dp" android:height="44dp" android:gravity="center">
+        <shape>
+            <corners android:radius="2dp" />
+            <solid android:color="#ff000000" />
+        </shape>
+    </item>
+</layer-list>

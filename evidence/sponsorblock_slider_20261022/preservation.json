@@ -1,0 +1,22 @@
+{
+  "baseline_root": "5cb642d998ebbd2f039ab7ff687e6a5bdb54726d12a21fcccb524911c48288d5",
+  "root": "f928e2f030166043cec69223097a66daeb82ef0bcbc102e2c825291ae4db6c3a",
+  "unchanged_functions": 257,
+  "baseline_functions": 261,
+  "changed_functions": [
+    "sb_ui_color_picker",
+    "sb_ui_selfcheck",
+    "sb_ui_check_once",
+    "f20"
+  ],
+  "new_functions": [
+    "sb_ui_slider"
+  ],
+  "f20_change": "version label only",
+  "native_pins_and_bytes_unchanged": true,
+  "third_party_DEX_pin_unchanged": true,
+  "signer_pin_unchanged": true,
+  "startup_selfcheck_graphs_unchanged": true,
+  "existing_color_ARGB_and_save_helpers_unchanged": true,
+  "UI_once_hook_retained": true
+}

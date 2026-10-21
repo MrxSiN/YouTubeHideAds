@@ -1,8 +1,10 @@
 # Feature coverage
 
-Current module: **1.0.0, versionCode 100**. The [current build record](../evidence/ai_audio_branding_20261018/build.json)
-pins identity and counts. Evidence below retains the build on which each behavior was exercised;
-531 final-build startup checks do not turn controlled cases into server-delivered positives.
+Current source and installed device-tested build: **1.2.1, versionCode 127**.
+[Slider phone checks](../evidence/sponsorblock_slider_device_20261022/README.md) cover 636 startup + 64 UI cases,
+dark/light rendering, endpoints, keyboard and saved-color persistence.
+Evidence below retains the build on which each behavior was exercised;
+636 final-build startup checks do not turn controlled cases into server-delivered positives.
 
 | Surface | Implemented behavior and proof |
 | --- | --- |
@@ -21,7 +23,7 @@ pins identity and counts. Evidence below retains the build on which each behavio
 | AI channels | Two independent AiSList switches, whole Unicode handles and persistent cache; high-confidence live search off/on |
 | Force original audio | Typed multi-language original selection; native Hindi when off / English original when on; video advances |
 | Fullscreen controls | Brightness/media volume, HUDs, restoration, disabled toggles and native tap/hold tested |
-| SponsorBlock | Privacy-prefix retrieval and typed sponsor/outro seeks; BF defaults/window/category/type/duplicate gates |
+| SponsorBlock | Bounded retry, origin-scoped cache, ten category modes/colors, seekbar markers, manual skip/undo, preview/review/submission, votes, exclusions, statistics and settings transfer; production POSTs untested |
 | Settings and branding | In-YouTube page, persistent/reset preferences, exact YoutubeHideAds title and static shield/strike adaptive/monochrome icon |
 
 [Settings/defaults and master dependencies](README.md#settings-and-defaults) are listed centrally.
@@ -50,10 +52,10 @@ window-local and restores its prior value; volume uses the media stream. Control
 horizontal movement pass through, with native tap/hold replay. Advanced gesture options, persisted
 brightness, real multi-pointer cases and fixed-volume routes are not certified.
 
-SponsorBlock attempts once per playback generation with no cross-video cache/retry. Unknown player
-types fail closed; live type 9 and a no-data public video continued without seek. There is no colored
-seekbar, submission UI or channel whitelist. Client/OS spoofing, attribution-only hiding, end-screen
-interception and complete Morphe parity are not implemented. Standalone feed/search/shopping,
+SponsorBlock's implemented controls, API boundaries and validation limits are listed in
+[the SponsorBlock guide](SPONSORBLOCK_API_RESEARCH.md). Unknown player types fail closed. Production
+community writes and full upstream patch parity are not certified. Client/OS spoofing,
+attribution-only hiding and end-screen interception are not implemented. Standalone feed/search/shopping,
 cleanup and resolver BF programs are building blocks, not additional installed runtime hooks.
 
 ## Evidence

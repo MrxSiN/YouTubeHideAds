@@ -1,3 +1,33 @@
+# YouTube Hide Ads v1.2.1 — device-tested build 127
+
+SponsorBlock's four color sliders now share modern track and handle geometry, endpoint markers
+and YouTube theme colors. Existing settings, presets and opacity behavior are preserved.
+
+Installed as versionCode 127 on the Pixel 8 Pro with YouTube 21.42.243. All 636 startup and 64 UI
+cases pass. Touch endpoints, keyboard, presets, save/reopen and dark/light rendering were checked;
+original settings were restored. [Phone evidence and limits](evidence/sponsorblock_slider_device_20261022/README.md).
+
+# YouTube Hide Ads v1.2.0
+
+## 1.2.0 — 2026-10-22
+
+SponsorBlock uses YouTube-native preference rows, text styles, themed pages and a compact player bottom sheet. Category colors use a live visual picker with presets and red, green, blue and opacity sliders. Back navigation, keyboard handling and accessible touch targets are shared across the forms. Existing settings, playback policies and API behavior are preserved.
+
+[Device checks and limits](evidence/sponsorblock_ui_20261022/README.md). The package remains an XAX host plus unchanged BF/native policies.
+
+# YouTube Hide Ads v1.1.0
+
+## 1.1.0 — 2026-10-21
+
+SponsorBlock now has bounded retry, a cross-video cache, native player/settings controls, ten
+category modes and colors, manual skip/undo, preview/review/submission, voting/category correction,
+channel exclusions, local/community statistics, private identity, and desktop settings transfer.
+Community POSTs are explicit and never automatically retried; view reporting defaults off.
+
+Targets YouTube 21.41.525. XAX-only host; existing BF/native inputs preserved. The shell release
+mirror was removed; mirroring is now manual. See [current evidence](evidence/sponsorblock_20261021/README.md)
+for checks and remaining validation limits.
+
 # YouTube Hide Ads v1.0.0
 
 ## First public release

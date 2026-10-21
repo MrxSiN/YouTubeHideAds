@@ -1,0 +1,24 @@
+{
+  "baseline_root": "5cb642d998ebbd2f039ab7ff687e6a5bdb54726d12a21fcccb524911c48288d5",
+  "root": "ef980f783604f44edb65d5985fc919aa7cffc3372f6e153b34afb69c8834e6df",
+  "unchanged_existing_functions": 256,
+  "baseline_functions": 261,
+  "changed_functions": [
+    "sb_ui_color_picker",
+    "sb_ui_selfcheck",
+    "sb_ui_check_once",
+    "f20",
+    "module"
+  ],
+  "new_functions": [
+    "sb_ui_slider",
+    "sb_ui_resources"
+  ],
+  "module_change": "capture public getModuleApplicationInfo into static ApplicationInfo field",
+  "native_pins_and_packaged_bytes_unchanged": true,
+  "third_party_DEX_pin_unchanged": true,
+  "signer_pin_unchanged": true,
+  "startup_selfcheck_graphs_unchanged": true,
+  "ARGB_and_save_helpers_unchanged": true,
+  "UI_once_hook_retained": true
+}

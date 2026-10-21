@@ -1,9 +1,9 @@
 # Documentation
 
-Current guides describe **YoutubeHideAds 1.0.0, versionCode 100**, verified on
-2026-10-18 (Asia/Kuala_Lumpur). The [build record](../evidence/release_20261018/build.json)
-owns artifact digests and source counts; [release 1.0.0](../evidence/release_20261018/README.md) and
-[build 77](../evidence/ai_audio_branding_20261018/README.md) device evidence own test claims. Dated evidence describes its named build, not the current checkout.
+Current source and device-tested build: **YoutubeHideAds 1.2.1, versionCode 127**.
+[Build identity](../evidence/sponsorblock_slider_device_20261022/build.json) owns artifact digests and counts;
+[phone evidence](../evidence/sponsorblock_slider_device_20261022/README.md) owns validation claims.
+Dated evidence describes its named build, not the current checkout.
 
 | Guide | Contents |
 | --- | --- |
@@ -16,7 +16,7 @@ owns artifact digests and source counts; [release 1.0.0](../evidence/release_202
 | [BF source style](BRAINFUCK_SOURCE_STYLE.md) | Annotations, commands and runtime limits |
 | [DexKit resolution](DEXKIT_RESOLUTION.md) | Structural anchors, typed roles and failure behavior |
 | [Testing](TESTING.md) | Startup checks, fixtures and device acceptance |
-| [SponsorBlock](SPONSORBLOCK_API_RESEARCH.md) | Read-only requests, validation and seek rules |
+| [SponsorBlock](SPONSORBLOCK_API_RESEARCH.md) | Retrieval, playback controls, community actions and settings transfer |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |

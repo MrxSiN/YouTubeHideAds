@@ -1,0 +1,8 @@
+{
+  "before": "module preference file absent",
+  "test_color": "#B3A970FF",
+  "preset": "Purple",
+  "opacity_retained": true,
+  "mode_unchanged": 4,
+  "preference_keys_only_test_created": true
+}

@@ -1,0 +1,17 @@
+{
+  "youtube": "21.42.243",
+  "reference_type": "bundled resources, NOT live UI comparison",
+  "apk_sha256": "de3bff8506b525c8c153457752c3ec983c93baac7ad1acf756a8e1e0231ae36a",
+  "aapt_resource_dump_sha256": "49627d68328f2c928db279d1b79d81216061435b9f84059ca9df62c9c730548e",
+  "style": "Widget.Material3.Slider",
+  "dimensions": {
+    "m3_comp_slider_active_handle_height": "44.000000dp",
+    "m3_comp_slider_active_handle_leading_space": "6.000000dp",
+    "m3_comp_slider_active_handle_width": "4.000000dp",
+    "m3_comp_slider_inactive_track_height": "16.000000dp",
+    "m3_comp_slider_stop_indicator_size": "4.000000dp"
+  },
+  "color_source": "current YouTube yt_sys_color_baseline_text_primary",
+  "inactive_track_alpha": 51,
+  "device_visual_comparison": "pending"
+}

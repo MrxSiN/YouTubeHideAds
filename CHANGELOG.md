@@ -1,6 +1,33 @@
 # Changelog
 
-## Unreleased
+## 1.2.1 — 2026-10-22 (device-tested build 127)
+
+The color picker's four sliders share a rounded 16 dp track, a vertical 4 × 44 dp handle,
+handle spacing and an endpoint marker, using the geometry in YouTube 21.42.243's bundled
+modern slider style. Colors follow YouTube's active theme; native dragging, keyboard input,
+accessibility and the existing 48 dp touch targets remain in place.
+
+Fixed module resource visibility, binary XML initialization and range-reset keyboard increments
+found by phone testing. The inactive-track tint is applied once for proper contrast.
+[Build and phone verification](evidence/sponsorblock_slider_device_20261022/README.md): 636 startup + 64 UI cases,
+dark/light rendering, endpoints, keyboard and saved-color persistence pass.
+
+## 1.2.0 — 2026-10-22
+
+SponsorBlock uses YouTube-native preference rows, text styles, themed pages and a compact player bottom sheet. Category colors use a live visual picker with presets and red, green, blue and opacity sliders. Back navigation, keyboard handling and accessible touch targets are shared across the forms. Existing settings, playback policies and API behavior are preserved.
+
+[Device checks and limits](evidence/sponsorblock_ui_20261022/README.md). The package remains an XAX host plus unchanged BF/native policies.
+
+## 1.1.0 — 2026-10-21
+
+SponsorBlock now has bounded retry, a cross-video cache, native player/settings controls, ten
+category modes and colors, manual skip/undo, preview/review/submission, voting/category correction,
+channel exclusions, local/community statistics, private identity, and desktop settings transfer.
+Community POSTs are explicit and never automatically retried; view reporting defaults off.
+
+Targets YouTube 21.41.525. XAX-only host; existing BF/native inputs preserved. The shell release
+mirror was removed; mirroring is now manual. See [current evidence](evidence/sponsorblock_20261021/README.md)
+for checks and remaining validation limits.
 
 ## 1.0.0 — 2026-10-18
 

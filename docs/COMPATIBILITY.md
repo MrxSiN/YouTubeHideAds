@@ -1,11 +1,17 @@
 # Tested compatibility
 
-Canonical module: **1.0.0, versionCode 100**. Tested through 2026-10-18.
+Canonical source and installed build: **1.2.1, versionCode 127**. Targeted slider/UI checks passed
+2026-10-22 on YouTube **21.42.243**: 636 startup and 64 UI cases, dark/light rendering, touch,
+keyboard and saved-color persistence. [Exact phone evidence and limits](../evidence/sponsorblock_slider_device_20261022/README.md).
+The rows below retain earlier feature proof and do not certify 21.20.405.
 The declared minSdk 28 and libxposed API 102 requirement do not certify untested Android/framework combinations.
 
 | Device | Android | YouTube | Framework | Observed |
 | --- | --- | --- | --- | --- |
-| Pixel 8 Pro, arm64 | 17 / API 37 | 21.41.525 | Vector 2.2 / API 102 | 531 startup checks; final 77 AI/audio off/on, advancing video and artifact identity; earlier live ad/Shorts/Playables/feed removal, SponsorBlock seeks and fullscreen swipes; controlled Premium/fullscreen/panel/topics cases |
+| Pixel 8 Pro, arm64 | 17 / API 37 | 21.42.243 | Vector 2.2 / API 102 | Build 127: modern sliders, 636 startup + 64 UI checks; dark/light, endpoints, one-step keyboard and save/reopen pass. |
+| Pixel 8 Pro, arm64 | 17 / API 37 | 21.42.243 | Vector 2.2 / API 102 | Build 123: YouTube-native SponsorBlock UI and color picker; 636 startup + 28 UI checks. See current evidence for device coverage. |
+| Pixel 8 Pro, arm64 | 17 / API 37 | 21.41.525 | Vector 2.2 / API 102 | Build 111: 636 startup checks, installed digest and native menu/transfer navigation; preview/review and track markers on 110. Earlier feature proofs remain attached to their historical builds. |
+| Pixel 8 Pro, arm64 | 17 / API 37 | 21.42.243 | Vector 2.2 / API 102 | Same build 111: 636 post-restore startup checks, native player/menu controls, valid settings round trip and malformed-import preservation. Community writes and natural manual skip/undo remain untested. |
 
 The Pixel's factory YouTube 21.18.164 APK was copied and inspected. Its current player-progress and
 seek-anchor strings differ; it is not certified compatible. Android rejected an in-place downgrade

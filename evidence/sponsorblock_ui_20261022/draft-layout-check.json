@@ -1,0 +1,43 @@
+{
+  "version_code": 122,
+  "minimum_touch_size_px": 144,
+  "screen_width_px": 1344,
+  "controls": [
+    {
+      "control": "Adjust start backward",
+      "bounds": [
+        48,
+        1218,
+        192,
+        1362
+      ]
+    },
+    {
+      "control": "Adjust start forward",
+      "bounds": [
+        1152,
+        1218,
+        1296,
+        1362
+      ]
+    },
+    {
+      "control": "Adjust end backward",
+      "bounds": [
+        48,
+        1515,
+        192,
+        1659
+      ]
+    },
+    {
+      "control": "Adjust end forward",
+      "bounds": [
+        1152,
+        1515,
+        1296,
+        1659
+      ]
+    }
+  ]
+}

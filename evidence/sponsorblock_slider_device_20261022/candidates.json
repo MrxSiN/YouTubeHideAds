@@ -1,0 +1,25 @@
+{
+  "rejected": [
+    {
+      "version_code": 124,
+      "source_root": "f928e2f030166043cec69223097a66daeb82ef0bcbc102e2c825291ae4db6c3a",
+      "apk_sha256": "ffd21f29143585cd0f2c51098872bfd7633d3c22de853162b186120c65df4d65",
+      "failure": "NameNotFoundException from host createPackageContext; no UI result accepted",
+      "log": "crash124.log"
+    },
+    {
+      "version_code": 125,
+      "source_root": "3f33f688a663388831a9067694b903dcc2dd52ff691c0f7f6c508072a582f0c2",
+      "apk_sha256": "36784aac2a11feaa5e707f73888ef685f719119107db738603b0b859aa6e5090",
+      "failure": "Module resources loaded; XML cursor encountered START_DOCUMENT in nextTag; no UI result accepted",
+      "log": "crash125.log"
+    },
+    {
+      "version_code": 126,
+      "source_root": "e94f66bbefa53afdd803c595ca481080bc443da7020f1f9f5a1460a4bdd34f2c",
+      "apk_sha256": "35aac59a0647de0e36149138fb6fb8c0263590dca1eaefac366f7b073e63faaf",
+      "failure": "Picker opens; combined 64-case UI result false. setMax resets the keyboard increment; inactive shape alpha also compounded its tint. Neither accepted.",
+      "log": "runtime126.log"
+    }
+  ]
+}

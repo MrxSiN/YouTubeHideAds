@@ -1,0 +1,38 @@
+{
+  "source_root": "f928e2f030166043cec69223097a66daeb82ef0bcbc102e2c825291ae4db6c3a",
+  "build_key": "51545089dcba335d7fabe9c3cded2033339ec9bcedbcfe0cdfdc0cd044ccc6ce",
+  "apk_sha256": "ffd21f29143585cd0f2c51098872bfd7633d3c22de853162b186120c65df4d65",
+  "apk_bytes": 4192909,
+  "artifact": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\build\\port\\SponsorBlock-slider.apk",
+  "version_name": "1.2.1",
+  "version_code": 124,
+  "status": "local candidate; not installed or device validated",
+  "functions": 262,
+  "source_path": "source/xax/youtubehideads.xax",
+  "store_sha256": "edcbe6cbd476b4fb925df30037b86a27e736e421679c22cb4a5e15cae8cd4d4f",
+  "native_paths": 11,
+  "packaged_startup_checks": 636,
+  "packaged_live_context_UI_checks": 64,
+  "startup_checks_run": false,
+  "UI_checks_run": false,
+  "phone_operations": false,
+  "release_artifact": "D:\\Android\\AndroidStudioProjects\\YouTubeHideAds\\build\\port\\YouTubeHideAds-v1.2.1.apk",
+  "packaged_native_sha256": {
+    "lib/arm64-v8a/libad_component.so": "77c0ce86dfc83bb1261d339dd641d16c831c2b554882e45103edfa5f710b53d2",
+    "lib/arm64-v8a/libad_fullscreen.so": "d589ca3f59b45878e24b9ba479e42a117f0f2cd1b09e6ac807e8dfe45cab92a3",
+    "lib/arm64-v8a/libad_panel.so": "97ad2098ef52685827f7c1da7dfb7c0b98e1223dfb0ff8c68e09567254c537b0",
+    "lib/arm64-v8a/liband3.so": "2e9b7041f35b42f8a5d0ee6f189a958088cebb0ee5f8de25059115a354b30e00",
+    "lib/arm64-v8a/libbrainfuckc_bridge.so": "14aa3024d76a29a836d51f8443e657fcb5725bfcb7f426121c1054dfb8e0c7e2",
+    "lib/arm64-v8a/libdexkit.so": "0444cf15146c256e8bbd2154ae8b120130dab47e9226c7e853a7d653737a95cd",
+    "lib/arm64-v8a/libsettings_snapshot.so": "e8370d3c7917769a47bf6ef731ac92096e7cee91bb88a10a20e68e7a19d72d3f",
+    "lib/arm64-v8a/libsponsor_settings.so": "a758fd1d9748e039eb5aa4ac32190b2bc79d93bdf88191d16b85f8cd86bff77e",
+    "lib/arm64-v8a/libsponsor_skip_pipeline.so": "e3d2c5502dbb1b0935d651eb673d8af4dee1d1acb3b7aac2bf55f487b1346961",
+    "lib/arm64-v8a/libsponsor_time_window.so": "701e447f3b76c4bcf798d7b9aa4ef470f862af75d199c980d6225d9ddbcafba5",
+    "lib/arm64-v8a/libsuppress_video_slot.so": "ca5d70a11aaabb2cab92b7735a57d4830c2bb04eabf1b78c19033d07a767467c"
+  },
+  "last_device_accepted_build": {
+    "version_name": "1.2.0",
+    "version_code": 123,
+    "evidence": "../sponsorblock_ui_20261022/build.json"
+  }
+}

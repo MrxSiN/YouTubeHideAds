@@ -1,0 +1,26 @@
+10-21 20:22:49.672 21893 21893 I YouTubeHideAds: Playables self-check (16 cases)=true
+10-21 20:22:49.674 21893 21893 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+10-21 20:22:49.678 21893 21893 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+10-21 20:22:49.684 21893 21893 I YouTubeHideAds: Feed content self-check (72 cases)=true
+10-21 20:22:49.745 21893 21893 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+10-21 20:22:49.750 21893 21893 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+10-21 20:22:50.022 21893 21893 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+10-21 20:22:50.024 21893 21893 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+10-21 20:22:50.024 21893 21893 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+10-21 20:22:50.025 21893 21893 I YouTubeHideAds: Video ad activation hook installed
+10-21 20:22:50.085 21893 21893 I YouTubeHideAds: Player ad layout hook installed
+10-21 20:22:50.158 21893 21893 I YouTubeHideAds: Ad component hook installed
+10-21 20:22:50.160 21893 21893 I YouTubeHideAds: Premium offer hook installed
+10-21 20:22:50.222 21893 21893 I YouTubeHideAds: Fullscreen dialog hook installed
+10-21 20:22:50.356 21893 21893 I YouTubeHideAds: Engagement ad panel hook installed
+10-21 20:22:50.420 21893 21893 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+10-21 20:22:50.420 21893 21893 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+10-21 20:22:50.420 21893 21893 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+10-21 20:22:50.422 21893 21893 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+10-21 20:22:50.470 21893 21893 I YouTubeHideAds: SponsorBlock player hook installed
+10-21 20:22:50.573 21893 21893 I YouTubeHideAds: Shorts ad selection hook installed
+10-21 20:22:50.852 21893 21893 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+10-21 20:22:50.968 21893 21893 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+10-21 20:22:50.979 21893 21893 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+10-21 20:22:51.055 21893 21893 I YouTubeHideAds: Original audio hook installed: public final void armt.a(aovk)
+10-21 20:22:51.070 21893 21893 I YouTubeHideAds: YouTube lifecycle hook installed

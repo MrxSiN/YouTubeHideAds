@@ -19,7 +19,7 @@ interpreter. Startup runs 531 checks: 70 ad, 277 SponsorBlock, 24 Playables, 28 
 cases through the actual packaged libraries/JNI and host classifiers. Failed checks disable the
 corresponding feature.
 
-SponsorBlock uses a single worker and CompletableFuture exception handling. A fixed HTTPS endpoint
+SponsorBlock uses a single worker and CompletableFuture exception handling. A validated configurable HTTPS origin
 receives a four-hex-digit SHA-256 prefix. The complete response is bounded to 256 KiB and 1,024 video
 records, with at most 100 segments for the exact local video ID. Read/connect timeouts are four
 seconds; an elapsed deadline and read-count limit bound successful reads. Redirects are disabled.
@@ -27,7 +27,7 @@ Connections disconnect on completion, including errors. Failed or absent data pr
 
 SponsorBlock requests stay disabled until the first saved-preference refresh.
 
-One request is attempted per playback generation; there is no cross-video cache or automatic retry.
+Retrieval permits three bounded attempts and an origin/video-scoped LRU cache; see the [SponsorBlock contract](../contracts/sponsorblock_inputs.json).
 An in-flight request finishes into its original job. The current player never consumes a previous
 job's response. Main-thread checks bind the player instance, video ID and CPn generation token,
 and revalidate the current asset immediately before a BF-authorized seek. Completed UUIDs prevent
@@ -64,3 +64,16 @@ archive alongside XAX-generated DEX. See [BUILD.md](BUILD.md).
 Discovery requires unique typed roles; missing/ambiguous bindings leave that feature unchanged.
 Process-local caches/state are rebuilt on restart; only preferences and AI list caches persist.
 There is no persistent DexKit resolver cache or general dynamic hot-unhook lifecycle.
+
+## SponsorBlock presentation
+
+`sb_ui_slider` loads its static layout and drawables using resources resolved from libxposed's
+public module ApplicationInfo. The binary parser advances to the layout tag, and YouTube's Context
+constructs the native SeekBar from literal XML dimensions. Module drawables are applied separately,
+avoiding host package-visibility lookups and resource-ID collisions. Current YouTube foreground colors
+tint the handle, active track and endpoint; a single translucent tint colors the inactive track.
+The picker finalizes keyboard increments after setting its range. Existing listeners and ARGB/save
+callbacks are retained. XML sizing preserves the declared Android 9 minimum without API-29 sizing calls.
+
+
+Shared XAX view functions resolve YouTube resources by name and build native preference rows, themed actions, fields, selectors and page containers. Page functions own navigation and form layout; existing playback, validation, settings commit and community-action callbacks retain their contracts. The color picker converts Android slider values into the existing ARGB setting at one boundary. Weak dialog references support Back navigation and dismiss the page stack before player preview. The normal player button belongs to YouTube’s controls layout; the manual skip prompt remains on the player overlay. No obfuscated UI resource IDs are pinned.

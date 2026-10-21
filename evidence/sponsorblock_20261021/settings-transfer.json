@@ -1,0 +1,10 @@
+{
+  "build": 111,
+  "equal": true,
+  "characters": 1080,
+  "categories_checked": 10,
+  "private_id_absent": true,
+  "restored_original_preference_absence": true,
+  "malformed_import_preserved_preference_digest": true,
+  "youtube": "21.42.243"
+}

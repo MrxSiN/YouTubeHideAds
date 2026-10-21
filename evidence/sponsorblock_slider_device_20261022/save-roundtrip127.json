@@ -1,0 +1,14 @@
+{
+  "version_code": 127,
+  "saved_ARGB": "#FFA970FF",
+  "saved_mode": 4,
+  "saved_enabled": true,
+  "reopened_labels_match": true,
+  "preference_keys": [
+    "sb_color_sponsor",
+    "sb_mode_sponsor",
+    "sb_sponsor",
+    "sponsorblock_enabled"
+  ],
+  "master_enabled_during_test": "true"
+}

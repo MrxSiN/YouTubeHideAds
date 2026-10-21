@@ -1,0 +1,59 @@
+{
+  "version_code": 127,
+  "results": [
+    {
+      "component": "Opacity",
+      "endpoint": 0,
+      "visible_label": "Opacity: 0%"
+    },
+    {
+      "component": "Opacity",
+      "endpoint": 255,
+      "visible_label": "Opacity: 100%"
+    },
+    {
+      "component": "Red",
+      "endpoint": 0,
+      "visible_label": "Red: 0"
+    },
+    {
+      "component": "Red",
+      "endpoint": 255,
+      "visible_label": "Red: 255"
+    },
+    {
+      "component": "Green",
+      "endpoint": 0,
+      "visible_label": "Green: 0"
+    },
+    {
+      "component": "Green",
+      "endpoint": 255,
+      "visible_label": "Green: 255"
+    },
+    {
+      "component": "Blue",
+      "endpoint": 0,
+      "visible_label": "Blue: 0"
+    },
+    {
+      "component": "Blue",
+      "endpoint": 255,
+      "visible_label": "Blue: 255"
+    },
+    {
+      "preset": "Purple",
+      "opacity_preserved": "100%",
+      "RGB": [
+        169,
+        112,
+        255
+      ]
+    },
+    {
+      "keyboard_right_before": 169,
+      "keyboard_right_after": 170,
+      "one_step": true
+    }
+  ]
+}

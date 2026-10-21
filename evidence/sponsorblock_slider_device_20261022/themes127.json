@@ -1,0 +1,18 @@
+{
+  "version_code": 127,
+  "background_RGB": {
+    "dark": [
+      15,
+      15,
+      15
+    ],
+    "light": [
+      255,
+      255,
+      255
+    ]
+  },
+  "verified_native_light_settings": "native-settings-light127.png",
+  "verified_light_picker": "light-picker127-confirmed.png",
+  "earlier_light_picker127_png": "rejected as visual light proof; dark transition had not settled"
+}

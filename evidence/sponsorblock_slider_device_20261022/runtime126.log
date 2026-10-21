@@ -1,0 +1,9 @@
+--------- beginning of main
+10-22 02:05:31.010 18409 18409 I YouTubeHideAds: SponsorBlock playback generation changed
+10-22 02:05:31.011 18409 18409 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-22 02:05:31.114 18409 19377 I YouTubeHideAds: SponsorBlock transient failure; bounded retry scheduled
+10-22 02:05:34.055 18409 18409 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-22 02:05:34.294 18409 19377 I YouTubeHideAds: SponsorBlock transient failure; bounded retry scheduled
+10-22 02:05:39.019 18409 18409 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-22 02:05:39.160 18409 19377 I YouTubeHideAds: SponsorBlock request failed; no retry for this playback
+10-22 02:05:55.598 18409 18409 I YouTubeHideAds: SponsorBlock native UI self-check (64 cases)=false

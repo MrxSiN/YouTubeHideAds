@@ -1,8 +1,11 @@
 # Build
 
-These instructions describe release 1.0.0 (versionCode 100) ([identity](../evidence/release_20261018/build.json)); the compiler and native/DEX inputs are unchanged from 77; branding.apk was rebuilt for the new package. [Current artifact/input identities and compiler hashes](../evidence/ai_audio_branding_20261018/toolchain.json)
-and the [build record](../evidence/ai_audio_branding_20261018/build.json) take precedence over older
-milestones. Application source is BF plus one XAX store; branding XML is static data. There is no
+The canonical source and installed device-tested build is 1.2.1 (versionCode 127).
+[Build/input identities](../evidence/sponsorblock_slider_device_20261022/build.json),
+[compiler hashes](../evidence/sponsorblock_slider_device_20261022/toolchain.json) and
+[phone verification](../evidence/sponsorblock_slider_device_20261022/README.md) identify the exact accepted APK.
+Compiler and native/DEX inputs are unchanged; the static archive includes shared slider XML.
+These records take precedence over older milestones. Application source is BF plus one XAX store; branding XML is static data. There is no
 repository build script.
 
 ## Required external tools
@@ -22,6 +25,12 @@ current toolchain record. The active checkout removed its Android profile during
 do not assume it or a clean base checkout can build this store. Preserve the compatible snapshot.
 Re-extracting the base commit alone does not reproduce the extension. No compiler source or private
 signing capability is vendored here.
+
+The 2026-10-21 inspection also checked `D:/GitHub/Ballsdeep_Brainfuck_Compiler` and
+`D:/GitHub/XAX-MCP`. The current compiler uses a BFX/native path with a 65,536-cell ABI; this app's
+pinned JNI inputs use `bfc_call_v1` and 4,096 cells. The current XAX checkout has no compatible JVM
+module backend, and the native MCP construct operation is unavailable. This release therefore uses
+the retained compatible SDK and unchanged native inputs. [Inspection identities](../evidence/sponsorblock_ui_20261022/toolchain.json).
 
 Branded metadata uses `android-libxposed-jvm-module-v2` followed by NUL. The module record includes
 an optional 32-byte branding digest and input closure. Unbranded v1 identities remain unchanged;
@@ -68,7 +77,8 @@ aapt2 link -I C:/Users/SiN/AppData/Local/Android/Sdk/platforms/android-37.0/andr
 
 The external profile permits only AndroidManifest.xml, resources.arsc and res/*, rejects duplicate
 entries and uncompressed totals above 2 MiB, validates binary manifest chunk bounds, and replaces the
-single integer versionCode placeholder with the module record's value. XAX then packages its DEX,
+single integer versionCode placeholder with the module record's value. The versionName stays in the
+static manifest; update and repin the branding archive when changing it. XAX then packages its DEX,
 metadata and native inputs and signs the final APK. The static manifest adds no launcher or permissions.
 
 ## Construct, build and export
@@ -87,13 +97,13 @@ construct carrier; bump its `version_code` for each device install.
 After a behavioral edit, verify semantic construction, native policy/source correspondence and
 input digests, then test the candidate on the device. Promote the exact tested store and signed APK.
 Do not substitute temporary probe builds or rebuild with different inputs after device acceptance.
-Current production 1.0.0 (versionCode 100) has 123 functions, 11 native paths, no topics probe or automatic Shorts navigation,
-and passes 531 startup checks. Store/APK identities belong in the dated build record.
+The tested 1.2.1/code 127 build has 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
+and packages 636 startup checks plus 64 UI checks when the first SponsorBlock page opens. Both suites pass in the accepted dark and light device processes. Store/APK identities belong in the dated build record.
 
 ## Install and validate
 
 ```text
-D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.0.0.apk
+D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.2.1.apk
 ```
 
 Enable **YoutubeHideAds** in Vector for YouTube, allow the package update to settle, then force-stop
@@ -101,5 +111,5 @@ and reopen YouTube. Verify the installed version/digest, startup checks and targ
 A transient old APK-path cache occurred after build 74; a later force-stop/reopen resolved it.
 Do not uninstall or clear user data to work around an unverified older version.
 
-See [testing](TESTING.md), [current evidence](../evidence/ai_audio_branding_20261018/README.md), and
+See [testing](TESTING.md), [current evidence](../evidence/sponsorblock_slider_device_20261022/README.md), and
 [dated milestones](../evidence/README.md). Documentation edits alone do not require a new build/install.

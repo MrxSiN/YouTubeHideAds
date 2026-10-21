@@ -41,9 +41,9 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 |  | |
 |---|---|
 | 🧹 **Removed, not hidden** | Ad components are replaced before YouTube lays them out, and sponsored Shorts leave the feed before the pager is built, so there are no blank slots or frozen clips. |
-| ⏭️ **SponsorBlock built in** | A privacy-preserving hash-prefix lookup, and a seek that Brainfuck authorizes and the host checks again against the current video. |
+| ⏭️ **SponsorBlock built in** | Prefix lookups with bounded retry/cache, category modes and colors, manual skip/undo, segment creation and voting, exclusions, statistics and settings transfer. |
 | 🔎 **Survives renames** | DexKit finds every hook by structure at each start. A missing or ambiguous role installs nothing for that feature. |
-| 🧠 **Policy in Brainfuck, compiled** | Nine hand-written programs compiled to native code, and 531 self-checks against the packaged libraries at every start. |
+| 🧠 **Policy in Brainfuck, compiled** | Nine hand-written programs compiled to native code; packaged policies and SponsorBlock controls are checked at every start. |
 | 🛟 **Fails closed** | If a self-check fails, that feature stays off. Network errors and unknown playback types never seek. |
 | ⚙️ **Native-looking settings** | A YouTube-style page under **You → Settings → YoutubeHideAds**, with every switch independent. |
 
@@ -78,7 +78,7 @@ Full table: [settings and defaults](docs/README.md#settings-and-defaults).
 | **Sponsored Shorts** | Shorts response, insertion and pager seed | Removes video/image ad entries together with their tracking data, before the pager exists. |
 | **Premium, fullscreen, panels** | offer view, fullscreen dialog, engagement panel by typed identifier | Hides marketing surfaces without touching entitlement or subscription management. |
 | **Feed sections, Playables, AI channels** | the same component hook | Removes only the matched section or card; channel rows and playlists stay. |
-| **SponsorBlock** | player seek and duration bridges | Fetches by hash prefix once per playback, then seeks to the segment end after Brainfuck authorizes it. |
+| **SponsorBlock** | player seek/duration bridges and native seekbar | Bounded prefix retrieval, category modes, colored markers, manual controls and explicit community actions. |
 
 </details>
 
@@ -86,7 +86,10 @@ Full table: [settings and defaults](docs/README.md#settings-and-defaults).
 
 ## Status
 
-**v1.0.0**, the first public release. The seven three-input gates share one native library, and the
+**v1.2.1** updates all four color sliders to modern track and vertical-handle geometry.
+[Phone verification](evidence/sponsorblock_slider_device_20261022/README.md) covers dark/light rendering,
+endpoints, keyboard and saved-color persistence, with 636 startup + 64 UI checks passed.
+**v1.2.0** restyled SponsorBlock with YouTube-native rows, themed pages and a visual color picker. Version 1.1.0 added the controls described above. The original 1.0.0 release established the baseline. The seven three-input gates share one native library, and the
 package is now `io.github.mrxsin.youtubehideads`. Earlier development builds are summarized in the
 [changelog](CHANGELOG.md).
 
@@ -97,7 +100,10 @@ adding a row.
 
 | Device | Android | Framework | YouTube | Module | Result | Tester | Date |
 |---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 1.0.0 | 531 self-checks pass, every hook installed, installed digest matches | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.2.1 | Modern sliders; dark/light, touch, keyboard, save/reopen; 636 startup + 64 UI checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.2.0 | Native SponsorBlock UI, color picker, 636 startup + 28 UI checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 1.1.0 | 636 startup checks; current evidence records device results and installed digest | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | 636 checks, native controls and settings round-trip/malformed-import checks | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | dev 77 | AI/audio off/on, advancing video, live ad, Shorts, Playables and feed removal, SponsorBlock seeks, swipes | @MrxSiN | 2026-10 |
 
 ### Known limits
@@ -106,7 +112,7 @@ adding a row.
   positives have not been seen yet.
 - Preview-video and Explore-more-topics headings are matched in English only.
 - AI lists are community-maintained and can misclassify channels, which is why they default off.
-- SponsorBlock has no retry, no cross-video cache, no submissions and no colored seekbar.
+- SponsorBlock controls are available through the player’s **SB** button and the module settings. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
 - arm64-v8a only. No other YouTube version, device or LSPatch setup has been tried.
 
 Details: [feature coverage](docs/FEATURE_COVERAGE.md) and [compatibility](docs/COMPATIBILITY.md).
@@ -198,10 +204,12 @@ off, and the log says so. See [`docs/DEXKIT_RESOLUTION.md`](docs/DEXKIT_RESOLUTI
 <summary><b>SponsorBlock without leaking what you watch</b></summary>
 <br>
 
-Only a four-hex-digit SHA-256 prefix of the video ID leaves the device. The response is bounded to
+Automatic segment retrieval sends a four-hex-digit SHA-256 prefix of the video ID. The response is bounded to
 256 KiB, 1,024 records and 100 segments, with 4-second timeouts and redirects disabled. Before a seek,
 the main thread checks the player instance, video ID and playback generation again. Live streams and
-unknown playback types never seek. See [`docs/SPONSORBLOCK_API_RESEARCH.md`](docs/SPONSORBLOCK_API_RESEARCH.md).
+unknown playback types never seek. Manual submissions and votes send their required video/segment data
+and private identity to the selected server. View reporting defaults off; settings exports exclude the
+private ID by default. See [`docs/SPONSORBLOCK_API_RESEARCH.md`](docs/SPONSORBLOCK_API_RESEARCH.md).
 
 </details>
 
@@ -222,9 +230,8 @@ requires the retained XAX snapshot with the branding-v2 extension; a clean check
 is not enough. Steps and identities are in [`docs/BUILD.md`](docs/BUILD.md) and
 [`evidence/release_20261018`](evidence/release_20261018/README.md).
 
-Publishing a GitHub release mirrors its APK to
-[Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads) through
-[`xposed-sync.yml`](.github/workflows/xposed-sync.yml).
+Release mirroring to [Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads)
+is manual. The former shell workflow was removed to keep executable repository source in BF and XAX.
 
 ## Design
 

@@ -1,7 +1,7 @@
 # Language boundary
 
 All application implementation is **Brainfuck and XAX**. The source tree contains 22 BF files,
-one canonical XAX store, and static XML branding. JSON contracts/fixtures and prose are data.
+one canonical XAX store, and static XML resources. JSON contracts/fixtures and prose are data.
 No Java, Kotlin, C, Python, shell or CI implementation source is retained, including ignored build
 folders. Earlier conventional-language implementations remain in Git history.
 
@@ -9,7 +9,7 @@ folders. Earlier conventional-language implementations remain in Git history.
 | --- | --- |
 | Native removal/gesture/selection authorization, ad/SponsorBlock snapshots, category/window rules | Authored BF policies |
 | Hook lifecycle, structural discovery, fact extraction, typed Android effects, preferences, bounded HTTPS/JSON and caches | Canonical XAX store |
-| Title, description, adaptive/monochrome icon and manifest resources | Static XML in source/branding |
+| Title, description, adaptive/monochrome icon, slider shapes/layout and manifest resources | Static XML in source/branding |
 | Byte contracts and expected vectors | contracts/ and testdata/ |
 | BF compilation, JNI transport, third-party libraries, APK lowering/signing | External tools and pinned prebuilt inputs |
 
@@ -40,7 +40,7 @@ A clean base compiler checkout cannot rebuild the branded store by itself.
 ## State and constraints
 
 Generated AdBindings, PlayerBindings, SponsorBindings, ShortsBindings, PlayablesBindings,
-SwipeBindings, FeedBindings and ExtraBindings hold the typed host state. They do not replace the
+SwipeBindings, FeedBindings, ExtraBindings and SponsorUiBindings hold the typed host state. They do not replace the
 BF authorization checks. The parser/dialog share component fact extraction; panels use a typed ID
 helper. AI reads only the candidate's own bounded payload; audio uses validated current bindings.
 

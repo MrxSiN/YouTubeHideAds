@@ -1,0 +1,49 @@
+{
+  "base_commit": "0876b591f39908e98aa31f746ae2e26bb88c837e",
+  "snapshot_path": "C:\\Users\\SiN\\AppData\\Local\\Temp\\youtubehideads-xax-0876b59-ofps9wgk\\compiler\\src",
+  "profile_extension": "android-libxposed-jvm-module-v2 with optional branding digest; unbranded v1 remains supported",
+  "modified_compiler_files_sha256": {
+    "xax_android_libxposed_jvm.py": "0c62a71af65eb75550131e5c4f122169336e69562b1779dab81643ec9d47e6e3",
+    "xax_construct.py": "2a35f657ba48cbf3ac86355733f9649d6c4d0ed8c1642082a92067532ce9692a"
+  },
+  "build_input_blake3": {
+    "branding.apk": "2989653f074325e232e6c1479794046a5c25707048e11b49a47ae33c8570244d",
+    "libad_component.so": "3ef4eeb64a1af8aa33c3aef67d6b8b5551a6aa1288324852ebd9292f188a46d2",
+    "libad_fullscreen.so": "865c192fb2e36a6301c0a961755ff98531f7e1945d068ca2a7e8ae12ec14357b",
+    "libad_panel.so": "bdbaca2798bc02ef2c66046c2c1f2575fcb17a0437017cc4da4dbabe360118aa",
+    "libbrainfuckc_bridge.so": "679a9d8af91999cdd556d9032596686774e853186ebcc30d1167b5042390a319",
+    "libdexkit.so": "69e142100d6599c48b7315941ce4c3fea72784a55f6ed013177efb5ec015a159",
+    "libsettings_snapshot.so": "174f1a556d05d0f30319ecfc436e26e5dfc323435d3f1dce29373c8b3ded0ac3",
+    "libsponsor_settings.so": "17017fe54e5399cd29845848e14856bac8fa3aa558431c0c1e3b3024612696ef",
+    "libsponsor_skip_pipeline.so": "70e67af9a119ffae598f651654f522cb2178801aecc5934dd24906c83cd9d1f4",
+    "libsponsor_time_window.so": "a18767e9583587cf6315234ac4976e2ddc99c7cb83e116ab62547f17c1428428",
+    "libsuppress_shorts_slot.so": "3c31b9d7b4ca123f12c8ed714309763484587b8ed10907680ad8e5061dc1c598",
+    "libsuppress_video_slot.so": "34cb3b55ba4d10a0ff20c71e8edc2ed5ab2f0bdb239d2e67d41fc280f0ff9c22",
+    "classes.dex": "07f22ff643ac6c650036550355084f3b02034493201a2e5a8c8e487a393d4b90"
+  },
+  "clean_base_checkout_sufficient": false,
+  "note": "Retained compatible SDK; native/third-party DEX/signer unchanged. Static 1.2.1 resources include shared slider layout/track/thumb. No phone build/test operations.",
+  "inspection_date": "2026-10-21",
+  "inspected_checkouts": {
+    "D:/GitHub/XAX": {
+      "commit": "ae85b8d13d9a9ee7bb4d2f77cc4420f63ef2b1d1",
+      "finding": "Native/BFX architecture has no compatible android-libxposed JVM module backend"
+    },
+    "D:/GitHub/Ballsdeep_Brainfuck_Compiler": {
+      "commit": "e394c50b35bb2643d08c8bc2d8fcb4ce64206a88",
+      "finding": "Current BFX/native path uses 65536-cell ABI; incompatible with pinned bfc_call_v1/4096-cell JNI inputs"
+    },
+    "D:/GitHub/XAX-MCP": {
+      "commit": "8c4a4b16b711b825b78b3667346380d8c226ad27",
+      "finding": "Native protocol construct unavailable; retained generic export_carrier/construct path used"
+    }
+  },
+  "editing_route": "Retained SDK export_carrier -> typed graph editing -> construct -> verified canonical XAX store -> build_module; all transport outside repository",
+  "retained_native_inputs_unchanged": true,
+  "canonical_branding_blake3": "2989653f074325e232e6c1479794046a5c25707048e11b49a47ae33c8570244d",
+  "ui_build_date": "2026-10-22",
+  "verification_pin": {
+    "source": "XAX 0876b591f39908e98aa31f746ae2e26bb88c837e:compiler/integration/android/vector/vector_runtime_pin.json",
+    "sha256": "45c4daa3fa06820148453acde8e888f0ad00d18a391d3fc3f0ef2ce2691b0175"
+  }
+}

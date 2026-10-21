@@ -1,0 +1,7 @@
+<SeekBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="48dp"
+    android:minHeight="16dp" android:maxHeight="16dp"
+    android:paddingStart="8dp" android:paddingEnd="8dp"
+    android:paddingTop="0dp" android:paddingBottom="0dp"
+    android:mirrorForRtl="true" android:splitTrack="true"
+    android:thumbOffset="8dp" />

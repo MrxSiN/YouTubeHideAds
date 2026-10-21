@@ -1,0 +1,47 @@
+--------- beginning of main
+10-22 02:11:15.036 22429 22429 I YouTubeHideAds: Playables self-check (16 cases)=true
+10-22 02:11:15.036 22429 22429 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+10-22 02:11:15.038 22429 22429 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+10-22 02:11:15.041 22429 22429 I YouTubeHideAds: Feed content self-check (72 cases)=true
+10-22 02:11:15.062 22429 22429 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+10-22 02:11:15.065 22429 22429 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+10-22 02:11:15.189 22429 22429 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+10-22 02:11:15.191 22429 22429 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+10-22 02:11:15.191 22429 22429 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+10-22 02:11:15.191 22429 22429 I YouTubeHideAds: Video ad activation hook installed
+10-22 02:11:15.211 22429 22429 I YouTubeHideAds: Player ad layout hook installed
+10-22 02:11:15.240 22429 22429 I YouTubeHideAds: Ad component hook installed
+10-22 02:11:15.242 22429 22429 I YouTubeHideAds: Premium offer hook installed
+10-22 02:11:15.267 22429 22429 I YouTubeHideAds: Fullscreen dialog hook installed
+10-22 02:11:15.318 22429 22429 I YouTubeHideAds: Typed engagement panel identifier resolved
+10-22 02:11:15.318 22429 22429 I YouTubeHideAds: Engagement ad panel hook installed
+10-22 02:11:15.345 22429 22429 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+10-22 02:11:15.345 22429 22429 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+10-22 02:11:15.345 22429 22429 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+10-22 02:11:15.346 22429 22429 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+10-22 02:11:15.367 22429 22429 I YouTubeHideAds: SponsorBlock player hook installed
+10-22 02:11:15.387 22429 22429 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+10-22 02:11:15.387 22429 22429 I YouTubeHideAds: Player video ID and seek bridge resolved
+10-22 02:11:15.388 22429 22429 I YouTubeHideAds: Player duration and active-generation bridge resolved
+10-22 02:11:15.409 22429 22429 I YouTubeHideAds: Shorts ad selection hook installed
+10-22 02:11:15.409 22429 22429 I YouTubeHideAds: Ad hook discovery finished
+10-22 02:11:15.518 22429 22429 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+10-22 02:11:15.547 22429 22429 I YouTubeHideAds: Playables typed element serializer resolved
+10-22 02:11:15.567 22429 22429 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+10-22 02:11:15.568 22429 22429 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+10-22 02:11:15.571 22429 22429 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+10-22 02:11:15.603 22429 22429 I YouTubeHideAds: Original audio hook installed: public final void arpo.a(aoxy)
+10-22 02:11:15.614 22429 22429 I YouTubeHideAds: YouTube lifecycle hook installed
+10-22 02:11:16.598 22429 22642 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|5e4675cc2c50e87a|CellType|
+10-22 02:11:16.600 22429 22642 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|5e4675cc2c50e87a|CellType|ContainerType|
+10-22 02:11:16.601 22429 22642 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|5e4675cc2c50e87a|CellType|
+10-22 02:11:17.795 22429 22577 I YouTubeHideAds: Video ad suppressed
+10-22 02:11:17.963 22429 22429 I YouTubeHideAds: Player calibration playbackType=1 durationMs=376209
+10-22 02:11:17.963 22429 22429 I YouTubeHideAds: SponsorBlock playback generation changed
+10-22 02:11:17.966 22429 22429 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-22 02:11:18.263 22429 22656 I YouTubeHideAds: SponsorBlock transient failure; bounded retry scheduled
+10-22 02:11:18.992 22429 22429 I YouTubeHideAds: Player calibration playbackType=1 durationMs=376209
+10-22 02:11:20.004 22429 22429 I YouTubeHideAds: Player calibration playbackType=1 durationMs=376209
+10-22 02:11:21.033 22429 22429 I YouTubeHideAds: SponsorBlock hash-prefix request started
+10-22 02:11:21.260 22429 22656 I YouTubeHideAds: SponsorBlock transient failure; bounded retry scheduled
+10-22 02:11:41.693 22429 22429 I YouTubeHideAds: SponsorBlock native UI self-check (64 cases)=true

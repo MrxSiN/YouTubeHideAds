@@ -1,0 +1,36 @@
+--------- beginning of crash
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: FATAL EXCEPTION: main
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: Process: com.google.android.youtube, PID: 13094
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:585)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: Caused by: java.lang.reflect.InvocationTargetException
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	... 1 more
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: Caused by: android.content.pm.PackageManager$NameNotFoundException: Application package io.github.mrxsin.youtubehideads not found
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.app.ContextImpl.createPackageContextAsUser(ContextImpl.java:3150)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.app.ContextImpl.createPackageContext(ContextImpl.java:3117)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.content.ContextWrapper.createPackageContext(ContextWrapper.java:1157)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.content.ContextWrapper.createPackageContext(ContextWrapper.java:1157)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.content.ContextWrapper.createPackageContext(ContextWrapper.java:1157)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f221(dex-id-0000000000000000000000000000000000000000:7)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f43(dex-id-0000000000000000000000000000000000000000:277)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f158(dex-id-0000000000000000000000000000000000000000:439)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f188(dex-id-0000000000000000000000000000000000000000:20)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f140(dex-id-0000000000000000000000000000000000000000:37)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f52(dex-id-0000000000000000000000000000000000000000:3)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f237(dex-id-0000000000000000000000000000000000000000:6)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.f233(dex-id-0000000000000000000000000000000000000000:5)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at xax.P149cb013fa93cff2.onClick(dex-id-0000000000000000000000000000000000000000:258)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.view.View.performClick(View.java:8220)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:8197)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.view.View.-$$Nest$mperformClickInternal(View.java:0)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:32040)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1082)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:295)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:398)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+10-22 01:53:48.741 13094 13094 E AndroidRuntime: 	... 3 more

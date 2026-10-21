@@ -1,0 +1,25 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <size android:height="16dp" />
+            <corners android:radius="8dp" />
+            <solid android:color="#ff000000" />
+        </shape>
+    </item>
+    <item android:id="@+id/sb_slider_stop" android:width="4dp" android:height="4dp"
+        android:gravity="right|center_vertical" android:right="6dp">
+        <shape android:shape="oval">
+            <solid android:color="#ff000000" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <!-- SeekBar mirrors the entire track for RTL, including the end marker. -->
+        <clip android:gravity="left" android:clipOrientation="horizontal">
+            <shape>
+                <size android:height="16dp" />
+                <corners android:radius="8dp" />
+                <solid android:color="#ff000000" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

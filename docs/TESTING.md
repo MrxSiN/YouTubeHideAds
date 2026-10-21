@@ -1,6 +1,11 @@
 # Testing
 
-Current acceptance is release 1.0.0 (versionCode 100) ([cold start](../evidence/release_20261018/README.md)) on the environment in [COMPATIBILITY.md](COMPATIBILITY.md).
+Current acceptance is **1.2.1/code 127** on the environment in [COMPATIBILITY.md](COMPATIBILITY.md).
+All 636 startup cases and 64 UI cases pass in dark and confirmed light contexts. Phone checks cover
+all four touch endpoints, Tab/one-step keyboard adjustment, opacity-preserving presets, save/reopen,
+process-restart persistence and restoration of original settings.
+[Exact build, rejected candidates and remaining limits](../evidence/sponsorblock_slider_device_20261022/README.md).
+
 The table combines current startup checks with explicitly dated earlier device experiments; it is
 not a claim that every historical test was repeated on 1.0.0. [Evidence index](../evidence/README.md).
 
@@ -10,7 +15,7 @@ not a claim that every historical test was repeated on 1.0.0. [Evidence index](.
 | Requested ad surfaces | 24 new native/reference cases; controlled real Premium view and actual fullscreen/panel/Shorts hook calls pass |
 | SponsorBlock policies | 14 window + 768 pipeline + 1,026 settings cases, reference and AArch64 emulation (fixture files removed before 1.0.0) |
 | Settings exhaustive reference check | 39,366 valid present/value/default/master states |
-| Current packaged startup | 70 ad + 277 SponsorBlock + 24 Playables + 28 swipe + 72 feed + 60 AI/audio = 531 pass on Pixel |
+| Current packaged startup | Original 531 + 18 network + 20 controls + 67 integration = 636 checks; device results in the current evidence |
 | Actual retrieval | Four-hex-digit prefix response with 123 video records; exact local ID yields one segment |
 | Actual seek | Sponsor end 68,509 ms; outro end 76,737 ms; successful typed player result logged |
 | Category defaults | Outro off initially; enabling it permits the same video's skip |
@@ -99,3 +104,15 @@ contracts/fixtures still parse, compare stated identities with dated build recor
 --check. Keep runtime source, native inputs, logs, measurements and the APK unchanged. Do not claim
 a device rerun from a documentation check. The earlier Python/JVM conformance harness is absent;
 its paths in the legacy contract identify historical tooling, not runnable repository commands.
+
+## SponsorBlock presentation (1.2.0)
+
+The existing 636 startup checks are unchanged. A separate 28-case check runs once with a live YouTube Context when the first SponsorBlock page opens. It checks named native resources, preference children and IDs, contrast, action touch targets, private-ID masking, selection state, color/opacity round trips, slider height, preset updates and weak-dialog cleanup. Device navigation, theme, keyboard and saved-color evidence is in [the UI session](../evidence/sponsorblock_ui_20261022/README.md). Production writes are not part of UI testing.
+
+## Slider phone checks (1.2.1/code 127)
+
+The 64 UI cases include the previous 28 presentation cases plus 36 slider geometry/range checks.
+Phone failures in resource visibility, binary XML positioning and keyboard increments were fixed
+before accepting code 127. Real light rendering was checked after YouTube's theme transition
+settled; an interim dark screenshot was not counted as light proof. Landscape, RTL, TalkBack,
+Android 9 and other devices remain untested. [Evidence](../evidence/sponsorblock_slider_device_20261022/README.md).

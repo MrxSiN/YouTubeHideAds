@@ -1,0 +1,146 @@
+{
+  "source": "source/xax/youtubehideads.xax",
+  "category_keys": [
+    "sponsor",
+    "selfpromo",
+    "interaction",
+    "intro",
+    "outro",
+    "preview",
+    "filler",
+    "music_offtopic",
+    "poi_highlight",
+    "hook"
+  ],
+  "mode_values": {
+    "0": "ignore",
+    "1": "seekbar",
+    "2": "manual",
+    "3": "automatic_once",
+    "4": "automatic"
+  },
+  "retrieval": {
+    "hash_prefix_hex_digits": 4,
+    "action_types": [
+      "skip",
+      "poi"
+    ],
+    "maximum_attempts_per_generation": 3,
+    "retry_delays_ms": [
+      2000,
+      4000
+    ],
+    "retryable": [
+      "IO failure",
+      "HTTP 408",
+      "HTTP 5xx"
+    ],
+    "authoritative_empty": "HTTP 404 or valid exact-video result with no accepted segments",
+    "cache_entries": 32,
+    "cache_scope": [
+      "HTTPS origin",
+      "video ID"
+    ],
+    "positive_ttl_ms": 600000,
+    "negative_ttl_ms": 60000,
+    "cache_errors": false,
+    "redirects": false,
+    "connect_timeout_ms": 4000,
+    "read_timeout_ms": 4000,
+    "maximum_response_bytes": 262144,
+    "maximum_video_records": 1024,
+    "maximum_segments": 100,
+    "maximum_vod_duration_ms": 604800000,
+    "reported_duration_tolerance_ms": 1000
+  },
+  "playback": {
+    "authorization": "Existing BF enable/category/window/type policies; XAX validates current player, video and generation before each typed seek",
+    "unknown_or_live_player": "preserve playback",
+    "unknown_channel_with_configured_exclusions": "preserve playback",
+    "undo": "one current skip; suppress its UUID for this generation; reverse local counters",
+    "preview": "temporarily suspend automatic skips; exact signature required before review",
+    "seekbar": "unique structural Canvas/Rect role; integer-pixel markers; native thumb area clipped; white draft range"
+  },
+  "community_actions": {
+    "POST_routes": [
+      "/api/skipSegments",
+      "/api/voteOnSponsorTime",
+      "/api/viewedVideoSponsorTime",
+      "/api/setUsername"
+    ],
+    "GET_routes": [
+      "/api/userInfo?userID={privateID}"
+    ],
+    "maximum_concurrent_operations": 1,
+    "maximum_UTF8_request_bytes": 32768,
+    "maximum_response_bytes": 16384,
+    "automatic_POST_retry": false,
+    "view_reporting_default": false,
+    "submission_gate": [
+      "valid current VOD",
+      "valid category and numeric range",
+      "exact preview signature",
+      "explicit review",
+      "unchanged video/generation/server",
+      "explicit final Submit click"
+    ],
+    "production_write_tested": false
+  },
+  "settings_transfer": {
+    "maximum_input_characters": 65536,
+    "format": "desktop categorySelections/barTypes plus supported scalar settings",
+    "unknown_categories": "ignore",
+    "duplicate_known_categories": "reject entire import",
+    "invalid_known_values": "reject entire import",
+    "commit": "validate all values on worker before one preference commit",
+    "private_ID_export_default": false
+  },
+  "runtime_self_checks": {
+    "existing": 531,
+    "network": 18,
+    "controls": 20,
+    "integration": 67,
+    "total": 636
+  },
+  "presentation": {
+    "resource_lookup": "YouTube named resources with platform fallbacks; module static resources via framework-provided ApplicationInfo",
+    "navigation": "native preference pages and player bottom sheet",
+    "color_picker": {
+      "components": [
+        "red",
+        "green",
+        "blue",
+        "opacity"
+      ],
+      "component_range": [
+        0,
+        255
+      ],
+      "presets": 8,
+      "preset_preserves_opacity": true,
+      "visible_hex_editor": false,
+      "minimum_slider_height_dp": 48,
+      "save_callback_color_text": "#AARRGGBB",
+      "preference_color_type": "32-bit ARGB integer",
+      "slider": {
+        "factory": "sb_ui_slider",
+        "resource_context": "Module Resources from ApplicationInfo; SeekBar constructed with YouTube Context and literal XML dimension attributes",
+        "reference": "YouTube 21.42.243 bundled Widget.Material3.Slider tokens; dark/light phone rendering verified on code 127",
+        "track_height_dp": 16,
+        "track_outer_radius_dp": 8,
+        "handle_width_dp": 4,
+        "handle_height_dp": 44,
+        "handle_gap_dp": 6,
+        "stop_indicator_dp": 4,
+        "keyboard_increment": 1,
+        "native_widget": "android.widget.SeekBar",
+        "minimum_Android_API": 28
+      }
+    },
+    "normal_player_control": "native controls_layout visibility",
+    "manual_skip_prompt": "player overlay during eligible segment",
+    "UI_context_self_checks": 64,
+    "UI_context_self_checks_device_passed": 64,
+    "device_tested_version_code": 127
+  }
+}
