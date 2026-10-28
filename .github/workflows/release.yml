@@ -98,7 +98,9 @@ jobs:
           [ "v$name" = "$TAG" ] || { echo "versionName $name does not match $TAG" >&2; exit 1; }
           [ "$(basename "$apk")" = "YouTubeHideAds-$TAG.apk" ] || { echo "Unexpected APK name $(basename "$apk")" >&2; exit 1; }
 
-          signer=$("$tools/apksigner" verify --print-certs "$apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          echo "build-tools: $tools"
+          "$tools/apksigner" verify --verbose --print-certs "$apk" 2>&1 | tee certs.txt
+          signer=$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' certs.txt)
           [ "$signer" = "$SIGNER_SHA256" ] || { echo "Signer $signer is not the release key" >&2; exit 1; }
 
           actual=$(sha256sum "$apk" | cut -d' ' -f1)
