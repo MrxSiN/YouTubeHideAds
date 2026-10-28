@@ -25,7 +25,7 @@ The following architecture history describes the original release:
 Release 1.0.0 (versionCode 100): 123 functions, 11 native paths (9 policy libraries plus JNI bridge and DexKit), one pinned
 branding input. [Exact build](../evidence/ai_audio_branding_20261018/build.json) · [Settings/defaults](README.md#settings-and-defaults)
 
-Annotated Brainfuck is compiled by external [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) into AArch64 bfc_call_v1 libraries.
+Annotated Brainfuck is compiled by external [BBC](https://github.com/MrxSiN/BBC) (formerly BrainfuckCC) into AArch64 bfc_call_v1 libraries.
 The canonical XAX store becomes DEX, manifest, libxposed metadata and a signed APK.
 YouTube hooks supply facts through XAX/Bfp1Bridge; exact Brainfuck replies authorize typed actions.
 

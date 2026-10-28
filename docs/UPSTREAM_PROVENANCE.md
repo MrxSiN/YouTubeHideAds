@@ -34,9 +34,9 @@ Initial research at XAX revision `9e44eedfc241d25bb5062b38af105f75234000e2` foun
 and repository metadata with no identified license. That dated observation does not assert current
 upstream licensing or redistribution permission. Compiler source is not redistributed here.
 
-## BrainfuckCC (formerly brainfuckC)
+## BBC (formerly BrainfuckCC, originally brainfuckC)
 
-Source: https://github.com/MrxSiN/BrainfuckCC.
+Source: https://github.com/MrxSiN/BBC (renamed from BrainfuckCC; the old address redirects).
 
 The external original checkout was D:/GitHub/brainfuckC; later dynamic-build evidence uses
 D:/GitHub/BrainfuckCC. The inspected notice is MIT, copyright 2026 brainfuck-native contributors;

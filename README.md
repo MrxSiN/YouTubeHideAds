@@ -38,7 +38,7 @@ Ads, sponsored Shorts and promotions are taken out before YouTube shows them, an
   shell application source in this repository.
 
 It is not slow either. The nine policies are compiled ahead of time to AArch64 shared libraries by
-[BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC). There is no interpreter in the APK.
+[BBC](https://github.com/MrxSiN/BBC). There is no interpreter in the APK.
 
 |  | |
 |---|---|
@@ -103,28 +103,24 @@ Development builds between the two releases (111 to 153) are listed in the [chan
 
 ### Compatibility
 
-Each row is one setup somebody has actually run. If you try another, please open a pull request
-adding a row.
+Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Tried another setup? Please open a pull request adding a row.
 
-| Device | Android | Framework | YouTube | Module | Result | Tester | Date |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | Ads, Shorts ad removal, SponsorBlock, original audio, background playback from feed and link (Home, screen off, switch off); 11 startup checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | Settings section, diagnostics, Shorts components, SponsorBlock icon/menu, live skips; 11 startup + 64 UI checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | Modern sliders; dark/light, touch, keyboard, save/reopen; 636 startup + 64 UI checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | Native SponsorBlock UI, color picker, 636 startup + 28 UI checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | dev 111 | 636 startup checks; current evidence records device results and installed digest | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 111 | 636 checks, native controls and settings round-trip/malformed-import checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | dev 77 | AI/audio off/on, advancing video, live ad, Shorts, Playables and feed removal, SponsorBlock seeks, swipes | @MrxSiN | 2026-10 |
+| YouTube | Module | Status |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ Working |
+| 21.41.525 | 1.0.0 | ✅ Working |
 
 ### Known limits
 
-- Premium, fullscreen and panel promotions passed controlled hook tests. Naturally delivered
-  positives have not been seen yet.
-- Preview-video and Explore-more-topics headings are matched in English only.
-- AI lists are community-maintained and can misclassify channels, which is why they default off.
-- SponsorBlock controls are available through the SponsorBlock icon in the player’s top bar and the module settings. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
-- Skip live Shorts has not yet met a real live Short on the test phone; its page check is verified with a development probe.
-- arm64-v8a only. No other YouTube version, device or LSPatch setup has been tried.
+- Premium, fullscreen and engagement-panel promotions have only been removed in controlled hook tests; naturally delivered ones have not appeared yet.
+- Preview-video and Explore-more-topics shelves are matched by their English headings only.
+- AI channel lists are community-maintained and can misclassify channels, which is why they default off.
+- Background playback needs a YouTube restart after its switch changes and leaves Shorts to YouTube. Bluetooth controls and incoming calls are untested.
+- SponsorBlock submission and voting have not been tried against the live server. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
+- Skip live Shorts has not met a real live Short yet; it, the swipe pill and YouTube language switching were checked with development probes.
+- Module pages were checked in dark theme only. Light theme, tablets and right-to-left layouts are untested.
+- The first launch after a YouTube or module update rebuilds the hook cache and starts about 0.4 s slower.
+- arm64-v8a only. Only the setup and YouTube versions above have been tried; LSPatch has not.
 
 Details: [feature coverage](docs/FEATURE_COVERAGE.md) and [compatibility](docs/COMPATIBILITY.md).
 
@@ -231,7 +227,7 @@ private ID by default. See [`docs/SPONSORBLOCK_API_RESEARCH.md`](docs/SPONSORBLO
 There is no build script in this repository. A release is built with external tools:
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -279,7 +275,7 @@ The layering is in [`docs/ARCHITECTURE_BRAINFUCK_XAX.md`](docs/ARCHITECTURE_BRAI
 |---|---|
 | [DexKit](https://github.com/LuckyPray/DexKit) by LuckyPray | Structural discovery of obfuscated classes and methods (Apache-2.0). |
 | [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed) | The hooking API and frameworks the module runs on. |
-| [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) | External compilers for the store and the policies. |
+| [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BBC](https://github.com/MrxSiN/BBC) | External compilers for the store and the policies. |
 | [SponsorBlock](https://sponsor.ajay.app) | Community segment data. |
 | [Override92/AiSList](https://github.com/Override92/AiSList) | Optional AI-channel lists, CC BY-NC 4.0, not bundled ([aisloplist.com](https://aisloplist.com)). |
 | [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | Background behavior and fingerprint reference, adapted natively in XAX; [preserved notice](LICENSES/Morphe-NOTICE.txt). |

@@ -29,7 +29,7 @@
 - **Brainfuck 負責判斷。** 這個元件是不是廣告、Premium 行銷能否移除、播放器能否跳到贊助片段結尾、某次滑動是否在調整亮度。Brainfuck 無法呼叫 Android、Xposed、DexKit 或 JNI，只能讀寫位元組；只有收到完全正確的回覆時，主程式才會執行動作。
 - **其餘一切由 XAX 完成。** Hook、DexKit 搜尋、反射、設定頁面、SponsorBlock 的 HTTPS 和 JSON 都在一個標準的 [XAX](https://github.com/MrxSiN/XAX) 語意儲存區中。外部 XAX 編譯器將其編譯為 DEX 並簽署 APK。本存放區沒有 Java、Kotlin、C、Python 或 shell 應用程式原始碼。
 
-它也不慢。九個策略由 [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) 預先編譯為 AArch64 共用程式庫，APK 中沒有直譯器。
+它也不慢。九個策略由 [BBC](https://github.com/MrxSiN/BBC) 預先編譯為 AArch64 共用程式庫，APK 中沒有直譯器。
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@
 
 ### 相容性
 
-每一列都是有人實際執行過的環境。如果你試過其他環境，歡迎提交 PR 新增一列。
+在 Pixel 8 Pro（Android 17、Vector 2.2，libxposed API 102）上測試。試過其他環境？歡迎提交 PR 新增一列。
 
-| 裝置 | Android | 框架 | YouTube | 模組 | 結果 | 測試者 | 日期 |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | 廣告、Shorts 廣告移除、SponsorBlock、原始音軌、從動態和連結開啟的背景播放（主畫面、關閉螢幕、關閉開關）；11 項啟動檢查 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | 設定區段、診斷、Shorts 元件、SponsorBlock 圖示/選單、實際略過；11 項啟動 + 64 項介面檢查 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | 新版滑桿；深色/淺色、觸控、鍵盤、儲存/重新開啟；636 項啟動 + 64 項介面檢查 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | 原生 SponsorBlock 介面、取色器、636 項啟動 + 28 項介面檢查 | @MrxSiN | 2026-10 |
+| YouTube | 模組 | 狀態 |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ 正常 |
+| 21.41.525 | 1.0.0 | ✅ 正常 |
 
 ### 已知限制
 
-- Premium、全螢幕和面板宣傳通過了受控 Hook 測試，但尚未看到實際推送的案例。
-- 預覽影片和「探索更多主題」標題僅以英文比對。
-- AI 清單由社群維護，可能誤判頻道，因此預設關閉。
-- SponsorBlock 控制項可透過播放器頂列的 SponsorBlock 圖示和模組設定使用。請見[功能和限制](docs/SPONSORBLOCK_API_RESEARCH.md)。
-- 略過直播 Shorts 尚未在測試手機上遇到真正的直播 Short；其頁面檢查已透過開發探針驗證。
-- 僅支援 arm64-v8a。尚未測試其他 YouTube 版本、裝置或 LSPatch。
+- Premium、全螢幕和互動面板推廣只在受控 Hook 測試中移除過，尚未見到真實推送的案例。
+- 預覽影片和「探索更多主題」欄目僅依英文標題比對。
+- AI 頻道清單由社群維護，可能誤判頻道，因此預設關閉。
+- 背景播放的開關變更後需要重新啟動 YouTube，Shorts 仍由 YouTube 自行處理。藍牙控制和來電中斷尚未測試。
+- SponsorBlock 的提交和投票尚未在正式伺服器上試過。請見[功能和限制](docs/SPONSORBLOCK_API_RESEARCH.md)。
+- 略過直播 Shorts 尚未遇到真實的直播 Short；它、滑動膠囊和 YouTube 語言切換都是用開發探針檢查的。
+- 模組頁面只在深色主題下檢查過。淺色主題、平板和由右至左版面尚未測試。
+- YouTube 或模組更新後的第一次啟動會重建 Hook 快取，大約慢 0.4 秒。
+- 僅支援 arm64-v8a。只試過上面的環境和 YouTube 版本，尚未試過 LSPatch。
 
 詳情：[功能涵蓋範圍](docs/FEATURE_COVERAGE.md)和[相容性](docs/COMPATIBILITY.md)。
 
@@ -163,7 +164,7 @@ YouTube process
 本存放區沒有建置指令碼，發行版本使用外部工具建置：
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 
 ## 致謝
 
-[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed API](https://github.com/libxposed/api)、[Vector](https://github.com/JingMatrix/Vector)、[LSPosed](https://github.com/LSPosed/LSPosed)、[XAX](https://github.com/MrxSiN/XAX)、[XAX-MCP](https://github.com/MrxSiN/XAX-MCP)、[BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC)、[SponsorBlock](https://sponsor.ajay.app)、[Override92/AiSList](https://github.com/Override92/AiSList)、[Morphe Patches](https://github.com/MorpheApp/morphe-patches)（[保留的聲明](LICENSES/Morphe-NOTICE.txt)）。新撰寫的專案材料採用 GPL-3.0-or-later，第三方條款請見 [NOTICE](NOTICE)。
+[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed API](https://github.com/libxposed/api)、[Vector](https://github.com/JingMatrix/Vector)、[LSPosed](https://github.com/LSPosed/LSPosed)、[XAX](https://github.com/MrxSiN/XAX)、[XAX-MCP](https://github.com/MrxSiN/XAX-MCP)、[BBC](https://github.com/MrxSiN/BBC)、[SponsorBlock](https://sponsor.ajay.app)、[Override92/AiSList](https://github.com/Override92/AiSList)、[Morphe Patches](https://github.com/MorpheApp/morphe-patches)（[保留的聲明](LICENSES/Morphe-NOTICE.txt)）。新撰寫的專案材料採用 GPL-3.0-or-later，第三方條款請見 [NOTICE](NOTICE)。
 
 ## 免責聲明
 

@@ -29,7 +29,7 @@
 - **판단은 Brainfuck이 합니다.** 이 구성요소가 광고인지, Premium 마케팅을 없애도 되는지, 플레이어가 스폰서 세그먼트 끝으로 이동해도 되는지, 스와이프가 밝기 조절인지. Brainfuck은 Android, Xposed, DexKit, JNI를 호출할 수 없고 바이트를 읽고 쓸 뿐입니다. 호스트는 정확히 성공한 응답을 받을 때만 동작합니다.
 - **나머지는 모두 XAX가 합니다.** 후크, DexKit 탐색, 리플렉션, 설정 페이지, SponsorBlock의 HTTPS와 JSON은 하나의 표준 [XAX](https://github.com/MrxSiN/XAX) 시맨틱 저장소에 있습니다. 외부 XAX 컴파일러가 이를 DEX로 바꾸고 APK에 서명합니다. 이 저장소에는 Java, Kotlin, C, Python, 셸 앱 소스가 없습니다.
 
-느리지도 않습니다. 9개의 정책은 [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC)로 미리 AArch64 공유 라이브러리로 컴파일됩니다. APK에는 인터프리터가 없습니다.
+느리지도 않습니다. 9개의 정책은 [BBC](https://github.com/MrxSiN/BBC)로 미리 AArch64 공유 라이브러리로 컴파일됩니다. APK에는 인터프리터가 없습니다.
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@
 
 ### 호환성
 
-각 행은 누군가 실제로 실행해 본 환경입니다. 다른 환경을 시도했다면 행을 추가하는 pull request를 보내 주세요.
+Pixel 8 Pro(Android 17, Vector 2.2, libxposed API 102)에서 테스트했습니다. 다른 환경에서 써 봤다면 행을 추가하는 pull request를 보내 주세요.
 
-| 기기 | Android | 프레임워크 | YouTube | 모듈 | 결과 | 테스터 | 날짜 |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | 광고, Shorts 광고 제거, SponsorBlock, 원본 오디오, 피드와 링크에서 연 동영상의 백그라운드 재생(홈, 화면 꺼짐, 스위치 끔), 시작 11개 점검 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | 설정 섹션, 진단, Shorts 구성요소, SponsorBlock 아이콘/메뉴, 실제 건너뛰기, 시작 11개 + UI 64개 점검 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | 새 슬라이더, 다크/라이트, 터치, 키보드, 저장/다시 열기, 636 + 64개 점검 | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | 네이티브 SponsorBlock UI, 색상 선택기, 636 + 28개 점검 | @MrxSiN | 2026-10 |
+| YouTube | 모듈 | 상태 |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ 작동 |
+| 21.41.525 | 1.0.0 | ✅ 작동 |
 
 ### 알려진 한계
 
-- Premium, 전체 화면, 패널 프로모션은 통제된 후크 테스트를 통과했지만 실제로 전달된 사례는 아직 보지 못했습니다.
-- 미리보기 동영상과 '다른 주제 탐색' 제목은 영어로만 인식합니다.
-- AI 목록은 커뮤니티가 관리하며 잘못 분류할 수 있어 기본으로 꺼져 있습니다.
-- SponsorBlock 컨트롤은 플레이어 상단의 SponsorBlock 아이콘과 모듈 설정에서 쓸 수 있습니다. [기능과 한계](docs/SPONSORBLOCK_API_RESEARCH.md)를 보세요.
-- 실시간 Shorts 건너뛰기는 테스트 휴대전화에서 아직 실제 실시간 Short를 만나지 못했습니다. 페이지 판정은 개발용 프로브로 확인했습니다.
-- arm64-v8a만 지원합니다. 다른 YouTube 버전, 기기, LSPatch는 테스트하지 않았습니다.
+- Premium, 전체 화면, 참여 패널 프로모션은 통제된 훅 테스트에서만 제거를 확인했고, 실제로 전달된 사례는 아직 없습니다.
+- 미리보기 동영상과 '다른 주제 탐색' 선반은 영어 제목으로만 판별합니다.
+- AI 채널 목록은 커뮤니티가 관리해 잘못 분류할 수 있으므로 기본값은 꺼짐입니다.
+- 백그라운드 재생은 스위치를 바꾼 뒤 YouTube를 다시 시작해야 하며, Shorts는 YouTube 동작을 그대로 따릅니다. 블루투스 컨트롤과 수신 전화는 테스트하지 않았습니다.
+- SponsorBlock 제출과 투표는 실제 서버에서 시험하지 않았습니다. [기능과 제한](docs/SPONSORBLOCK_API_RESEARCH.md)을 참고하세요.
+- 실시간 Shorts 건너뛰기는 아직 실제 실시간 Short를 만나지 못했고, 이 기능과 스와이프 알약, YouTube 언어 전환은 개발용 프로브로 확인했습니다.
+- 모듈 페이지는 다크 테마에서만 확인했습니다. 라이트 테마, 태블릿, 오른쪽에서 왼쪽 레이아웃은 테스트하지 않았습니다.
+- YouTube나 모듈을 업데이트한 뒤 첫 실행은 훅 캐시를 다시 만들기 때문에 약 0.4초 느립니다.
+- arm64-v8a 전용입니다. 위의 환경과 YouTube 버전만 시험했고, LSPatch는 시험하지 않았습니다.
 
 자세히: [기능 범위](docs/FEATURE_COVERAGE.md), [호환성](docs/COMPATIBILITY.md).
 
@@ -163,7 +164,7 @@ YouTube process
 이 저장소에는 빌드 스크립트가 없습니다. 릴리스는 외부 도구로 빌드합니다.
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 
 ## 크레딧
 
-[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList), [Morphe Patches](https://github.com/MorpheApp/morphe-patches)([보존한 고지](LICENSES/Morphe-NOTICE.txt)). 새로 작성한 프로젝트 자료는 GPL-3.0-or-later이며, 제3자 조건은 [NOTICE](NOTICE)를 보세요.
+[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BBC](https://github.com/MrxSiN/BBC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList), [Morphe Patches](https://github.com/MorpheApp/morphe-patches)([보존한 고지](LICENSES/Morphe-NOTICE.txt)). 새로 작성한 프로젝트 자료는 GPL-3.0-or-later이며, 제3자 조건은 [NOTICE](NOTICE)를 보세요.
 
 ## 면책 조항
 

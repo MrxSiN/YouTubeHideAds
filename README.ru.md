@@ -29,7 +29,7 @@
 - **Brainfuck принимает решения.** Реклама ли этот компонент, можно ли убрать маркетинг Premium, можно ли перемотать плеер в конец спонсорского сегмента, меняет ли жест яркость. Brainfuck не может вызывать Android, Xposed, DexKit или JNI: он читает и пишет байты, а хост действует только при точном успешном ответе.
 - **XAX делает всё остальное.** Хуки, поиск через DexKit, рефлексия, страница настроек и HTTPS/JSON для SponsorBlock — это одно каноническое семантическое хранилище [XAX](https://github.com/MrxSiN/XAX). Внешний компилятор XAX превращает его в DEX и подписывает APK. Исходного кода приложения на Java, Kotlin, C, Python или shell в репозитории нет.
 
-И это не медленно. Девять политик заранее компилируются в общие библиотеки AArch64 с помощью [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC). Интерпретатора в APK нет.
+И это не медленно. Девять политик заранее компилируются в общие библиотеки AArch64 с помощью [BBC](https://github.com/MrxSiN/BBC). Интерпретатора в APK нет.
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@
 
 ### Совместимость
 
-Каждая строка — реально проверенная конфигурация. Если вы попробовали другую, откройте pull request и добавьте строку.
+Проверено на Pixel 8 Pro с Android 17 и Vector 2.2 (libxposed API 102). Попробовали другую конфигурацию? Откройте pull request и добавьте строку.
 
-| Устройство | Android | Фреймворк | YouTube | Модуль | Результат | Тестировщик | Дата |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | Реклама, удаление рекламы в Shorts, SponsorBlock, оригинальная дорожка, фоновое воспроизведение из ленты и по ссылке (домашний экран, выключенный экран, выключенный переключатель); 11 проверок при запуске | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | Раздел настроек, диагностика, элементы Shorts, значок/меню SponsorBlock, реальные пропуски; 11 проверок при запуске + 64 проверки интерфейса | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | Новые ползунки; тёмная/светлая тема, касания, клавиатура, сохранение; 636 + 64 проверки | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | Нативный интерфейс SponsorBlock, выбор цвета, 636 + 28 проверок | @MrxSiN | 2026-10 |
+| YouTube | Модуль | Статус |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ Работает |
+| 21.41.525 | 1.0.0 | ✅ Работает |
 
 ### Известные ограничения
 
-- Реклама Premium, полноэкранная и в панелях прошла контролируемые тесты хуков; реальных случаев пока не встречалось.
-- Заголовки видео с превью и «Другие темы» распознаются только на английском.
-- Списки ИИ ведёт сообщество, они могут ошибаться — поэтому выключены по умолчанию.
-- Управление SponsorBlock доступно через значок SponsorBlock в верхней панели плеера и в настройках модуля. См. [возможности и ограничения](docs/SPONSORBLOCK_API_RESEARCH.md).
-- Пропуск прямых Shorts ещё не встретил настоящий прямой Short на тестовом телефоне; проверка страницы подтверждена отладочной пробой.
-- Только arm64-v8a. Другие версии YouTube, устройства и LSPatch не проверялись.
+- Промо Premium, полноэкранные и в панелях удалялись только в контролируемых тестах перехватчиков; реальные показы пока не встречались.
+- Полки с превью-видео и «Другие темы» распознаются только по английским заголовкам.
+- Списки ИИ-каналов ведёт сообщество, они могут ошибаться, поэтому по умолчанию выключены.
+- Фоновое воспроизведение требует перезапуска YouTube после изменения переключателя и не трогает Shorts. Bluetooth-управление и входящие звонки не проверялись.
+- Отправка сегментов и голосование SponsorBlock не проверялись на реальном сервере. См. [возможности и ограничения](docs/SPONSORBLOCK_API_RESEARCH.md).
+- Пропуск прямых Shorts ещё не встречал настоящий прямой Short; эта функция, плашка жестов и смена языка YouTube проверены отладочными пробами.
+- Страницы модуля проверены только в тёмной теме. Светлая тема, планшеты и раскладки справа налево не проверялись.
+- Первый запуск после обновления YouTube или модуля заново строит кеш перехватчиков и длится примерно на 0,4 с дольше.
+- Только arm64-v8a. Проверены лишь конфигурация и версии YouTube из таблицы; LSPatch — нет.
 
 Подробнее: [покрытие функций](docs/FEATURE_COVERAGE.md) и [совместимость](docs/COMPATIBILITY.md).
 
@@ -163,7 +164,7 @@ YouTube process
 Скрипта сборки в репозитории нет. Выпуски собираются внешними инструментами:
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 
 ## Благодарности
 
-[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) и [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([сохранённое уведомление](LICENSES/Morphe-NOTICE.txt)). Новые материалы проекта распространяются по GPL-3.0-or-later; условия третьих сторон — в [NOTICE](NOTICE).
+[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BBC](https://github.com/MrxSiN/BBC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) и [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([сохранённое уведомление](LICENSES/Morphe-NOTICE.txt)). Новые материалы проекта распространяются по GPL-3.0-or-later; условия третьих сторон — в [NOTICE](NOTICE).
 
 ## Отказ от ответственности
 

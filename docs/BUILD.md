@@ -36,7 +36,7 @@ and bundled Morphe notice. No ABI, native dependency or signing-capability migra
 
 | Tool | Recorded location / role |
 | --- | --- |
-| [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) (formerly brainfuckC) | Checkout D:/GitHub/BrainfuckCC (the original D:/GitHub/brainfuckC checkout produced the earliest builds); BF stages produce AArch64 policy libraries and its generic JNI bridge supplies transport |
+| [BBC](https://github.com/MrxSiN/BBC) (formerly BrainfuckCC, originally brainfuckC) | Checkout D:/GitHub/BBC. The shipped policy libraries come from its earlier BrainfuckCC stages (D:/GitHub/BrainfuckCC, and D:/GitHub/brainfuckC for the earliest builds); their generic JNI bridge was the transport until build 135 |
 | XAX | D:/GitHub/XAX is the active checkout; build 77 uses the isolated snapshot described below |
 | XAX-MCP | D:/GitHub/XAX-MCP; external workspace/carrier/build/export tooling, when configured with the compatible XAX profile |
 | Android SDK | AAPT2 build-tools 36.0.0 and android-37.0/android.jar for static branding only |
@@ -82,7 +82,7 @@ this application repository.
 - From build 135, `libbrainfuckc_bridge.so` is a drop-in rebuild that caches resolved libraries and
   uses a native tape; its external source and flags are in the [build 135 record](../evidence/device_perf_20261028/build.json).
   Earlier builds used the generic bridge below.
-- Generic `libbrainfuckc_bridge.so`, built externally from BrainfuckCC's JNI bridge with the Android
+- Generic `libbrainfuckc_bridge.so`, built externally from the JNI bridge of BrainfuckCC (now BBC) with the Android
   NDK for AArch64/API 28, 16 KiB maximum page size and `-ldl`.
 - DexKit 2.3.0 arm64 `libdexkit.so` from its AAR.
 - A prebuilt third-party `classes.dex` combining DexKit, flatbuffers-java 23.5.26 and kotlin-stdlib

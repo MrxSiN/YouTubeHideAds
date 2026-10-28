@@ -29,7 +29,7 @@ Iklan, Shorts tajaan dan promosi dibuang sebelum YouTube memaparkannya, dan segm
 - **Brainfuck yang membuat keputusan.** Sama ada komponen ini iklan, sama ada pemasaran Premium boleh dibuang, sama ada pemain boleh melompat ke hujung segmen tajaan, sama ada leretan menukar kecerahan. Brainfuck tidak boleh memanggil Android, Xposed, DexKit atau JNI; ia hanya membaca dan menulis bait, dan hos hanya bertindak apabila jawapannya tepat dan berjaya.
 - **XAX melakukan semua yang lain.** Hook, carian DexKit, refleksi, halaman tetapan serta HTTPS dan JSON untuk SponsorBlock berada dalam satu storan semantik [XAX](https://github.com/MrxSiN/XAX) yang kanonik. Pengkompil XAX luaran menukarkannya kepada DEX dan menandatangani APK. Tiada kod aplikasi Java, Kotlin, C, Python atau shell dalam repositori ini.
 
-Ia juga tidak perlahan. Sembilan polisi dikompil lebih awal kepada pustaka kongsi AArch64 oleh [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC). Tiada penterjemah dalam APK.
+Ia juga tidak perlahan. Sembilan polisi dikompil lebih awal kepada pustaka kongsi AArch64 oleh [BBC](https://github.com/MrxSiN/BBC). Tiada penterjemah dalam APK.
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@ Binaan pembangunan antara kedua-dua keluaran (111 hingga 153) disenaraikan dalam
 
 ### Keserasian
 
-Setiap baris ialah persediaan yang benar-benar pernah dijalankan oleh seseorang. Jika anda mencuba yang lain, sila buka pull request untuk menambah baris.
+Diuji pada Pixel 8 Pro dengan Android 17 dan Vector 2.2 (libxposed API 102). Pernah mencuba persediaan lain? Sila buka pull request untuk menambah baris.
 
-| Peranti | Android | Rangka kerja | YouTube | Modul | Keputusan | Penguji | Tarikh |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | Iklan, pembuangan iklan Shorts, SponsorBlock, audio asal, main balik latar belakang dari suapan dan pautan (Laman utama, skrin mati, suis mati); 11 semakan permulaan | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | Bahagian tetapan, diagnostik, komponen Shorts, ikon/menu SponsorBlock, langkau sebenar; 11 semakan permulaan + 64 UI | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | Peluncur moden; gelap/cerah, sentuhan, papan kekunci, simpan/buka semula; 636 + 64 semakan | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | UI SponsorBlock asli, pemilih warna, 636 + 28 semakan | @MrxSiN | 2026-10 |
+| YouTube | Modul | Status |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ Berfungsi |
+| 21.41.525 | 1.0.0 | ✅ Berfungsi |
 
 ### Had yang diketahui
 
-- Promosi Premium, skrin penuh dan panel lulus ujian hook terkawal; kes sebenar belum dilihat.
-- Tajuk video pratonton dan "Teroka lebih banyak topik" hanya dikenali dalam bahasa Inggeris.
-- Senarai AI diselenggara oleh komuniti dan boleh tersalah kelaskan saluran, sebab itu ia dimatikan secara lalai.
-- Kawalan SponsorBlock tersedia melalui ikon SponsorBlock pada bar atas pemain dan tetapan modul. Lihat [ciri dan had](docs/SPONSORBLOCK_API_RESEARCH.md).
-- Langkau Shorts langsung belum bertemu Short langsung sebenar pada telefon ujian; semakan halamannya disahkan dengan probe pembangunan.
-- arm64-v8a sahaja. Versi YouTube lain, peranti lain dan LSPatch belum dicuba.
+- Promosi Premium, skrin penuh dan panel penglibatan hanya dibuang dalam ujian hook terkawal; kes yang dihantar secara sebenar belum muncul.
+- Rak video pratonton dan "Terokai lebih banyak topik" hanya dikenali melalui tajuk bahasa Inggeris.
+- Senarai saluran AI diselenggara komuniti dan boleh tersalah kelaskan saluran, sebab itu ia dimatikan secara lalai.
+- Main balik latar belakang memerlukan YouTube dimulakan semula selepas suisnya diubah dan membiarkan Shorts kepada YouTube. Kawalan Bluetooth dan panggilan masuk belum diuji.
+- Penghantaran dan undian SponsorBlock belum dicuba pada pelayan sebenar. Lihat [ciri dan had](docs/SPONSORBLOCK_API_RESEARCH.md).
+- Langkau Shorts langsung belum menemui Short langsung sebenar; ciri ini, pil leret dan penukaran bahasa YouTube disemak dengan probe pembangunan.
+- Halaman modul hanya disemak dalam tema gelap. Tema cerah, tablet dan susun atur kanan-ke-kiri belum diuji.
+- Pelancaran pertama selepas YouTube atau modul dikemas kini membina semula cache hook dan lebih perlahan kira-kira 0.4 saat.
+- arm64-v8a sahaja. Hanya persediaan dan versi YouTube di atas yang pernah dicuba; LSPatch belum.
 
 Butiran: [liputan ciri](docs/FEATURE_COVERAGE.md) dan [keserasian](docs/COMPATIBILITY.md).
 
@@ -163,7 +164,7 @@ Pengambilan segmen automatik hanya menghantar awalan SHA-256 empat digit perenam
 Repositori ini tiada skrip binaan. Keluaran dibina dengan alat luaran:
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ Setiap input dipaku dengan BLAKE3 dalam storan, jadi input yang tidak sepadan me
 
 ## Penghargaan
 
-[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) dan [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([notis yang dikekalkan](LICENSES/Morphe-NOTICE.txt)). Bahan projek yang baharu ditulis berlesen GPL-3.0-or-later; lihat [NOTICE](NOTICE) untuk terma pihak ketiga.
+[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BBC](https://github.com/MrxSiN/BBC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) dan [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([notis yang dikekalkan](LICENSES/Morphe-NOTICE.txt)). Bahan projek yang baharu ditulis berlesen GPL-3.0-or-later; lihat [NOTICE](NOTICE) untuk terma pihak ketiga.
 
 ## Penafian
 

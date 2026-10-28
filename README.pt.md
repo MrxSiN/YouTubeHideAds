@@ -29,7 +29,7 @@ Anúncios, Shorts patrocinados e promoções são removidos antes de o YouTube e
 - **Brainfuck decide.** Se um componente é anúncio, se o marketing do Premium pode sair, se o player pode pular para o fim de um segmento patrocinado, se um deslize muda o brilho. Brainfuck não pode chamar Android, Xposed, DexKit nem JNI: ele lê e escreve bytes, e o host só age diante de uma resposta exata e bem-sucedida.
 - **XAX faz todo o resto.** Hooks, busca com DexKit, reflexão, a página de configurações e o HTTPS/JSON do SponsorBlock formam um único armazenamento semântico canônico do [XAX](https://github.com/MrxSiN/XAX). O compilador externo do XAX o transforma em DEX e assina o APK. Não há código de aplicativo em Java, Kotlin, C, Python ou shell neste repositório.
 
-Também não é lento. As nove políticas são compiladas antecipadamente para bibliotecas compartilhadas AArch64 pelo [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC). O APK não tem interpretador.
+Também não é lento. As nove políticas são compiladas antecipadamente para bibliotecas compartilhadas AArch64 pelo [BBC](https://github.com/MrxSiN/BBC). O APK não tem interpretador.
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@ As versões de desenvolvimento entre as duas versões (111 a 153) estão no [reg
 
 ### Compatibilidade
 
-Cada linha é uma configuração que alguém realmente usou. Se você testar outra, abra um pull request adicionando uma linha.
+Testado em um Pixel 8 Pro com Android 17 e Vector 2.2 (libxposed API 102). Testou outra configuração? Abra um pull request adicionando uma linha.
 
-| Dispositivo | Android | Framework | YouTube | Módulo | Resultado | Testador | Data |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | Anúncios, remoção de anúncios dos Shorts, SponsorBlock, áudio original, reprodução em segundo plano pelo feed e por link (tela inicial, tela desligada, opção desligada); 11 verificações de inicialização | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | Seção de configurações, diagnóstico, componentes dos Shorts, ícone/menu do SponsorBlock, pulos reais; 11 verificações de inicialização + 64 de interface | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | Controles deslizantes modernos; tema escuro/claro, toque, teclado, salvar/reabrir; 636 + 64 verificações | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | Interface nativa do SponsorBlock, seletor de cor, 636 + 28 verificações | @MrxSiN | 2026-10 |
+| YouTube | Módulo | Status |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ Funciona |
+| 21.41.525 | 1.0.0 | ✅ Funciona |
 
 ### Limites conhecidos
 
-- Promoções do Premium, em tela cheia e em painéis passaram em testes controlados dos hooks; casos reais ainda não foram vistos.
-- Os títulos de vídeos de prévia e de "Explorar mais temas" só são reconhecidos em inglês.
-- As listas de IA são mantidas pela comunidade e podem classificar canais errado; por isso vêm desligadas.
-- Os controles do SponsorBlock ficam no ícone do SponsorBlock na barra superior do player e nas configurações do módulo. Veja [recursos e limites](docs/SPONSORBLOCK_API_RESEARCH.md).
-- Pular Shorts ao vivo ainda não encontrou um Short ao vivo real no telefone de teste; a verificação de página foi confirmada com uma sonda de desenvolvimento.
-- Somente arm64-v8a. Outras versões do YouTube, dispositivos e LSPatch não foram testados.
+- Promoções do Premium, em tela cheia e de painéis só foram removidas em testes controlados dos hooks; casos reais ainda não apareceram.
+- As seções de vídeos de prévia e de “Explorar mais temas” só são reconhecidas pelos títulos em inglês.
+- As listas de canais de IA são mantidas pela comunidade e podem classificar canais errado; por isso vêm desligadas.
+- A reprodução em segundo plano exige reiniciar o YouTube após mudar a opção e deixa os Shorts com o YouTube. Controles Bluetooth e chamadas recebidas não foram testados.
+- Envio e votação do SponsorBlock não foram testados no servidor real. Veja [funções e limites](docs/SPONSORBLOCK_API_RESEARCH.md).
+- Pular Shorts ao vivo ainda não encontrou um Short ao vivo real; essa função, a pílula de deslize e a troca de idioma do YouTube foram verificadas com sondas de desenvolvimento.
+- As páginas do módulo só foram verificadas no tema escuro. Tema claro, tablets e layouts da direita para a esquerda não foram testados.
+- A primeira abertura após atualizar o YouTube ou o módulo reconstrói o cache de hooks e demora cerca de 0,4 s a mais.
+- Somente arm64-v8a. Só a configuração e as versões do YouTube acima foram testadas; o LSPatch não.
 
 Detalhes: [cobertura de recursos](docs/FEATURE_COVERAGE.md) e [compatibilidade](docs/COMPATIBILITY.md).
 
@@ -163,7 +164,7 @@ A busca automática de segmentos envia só um prefixo SHA-256 de quatro dígitos
 Este repositório não tem script de compilação. As versões são compiladas com ferramentas externas:
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ Cada entrada é fixada com BLAKE3 no armazenamento, então uma entrada diferente
 
 ## Créditos
 
-[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) e [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([aviso preservado](LICENSES/Morphe-NOTICE.txt)). O material novo do projeto é GPL-3.0-or-later; veja [NOTICE](NOTICE) para os termos de terceiros.
+[DexKit](https://github.com/LuckyPray/DexKit), [libxposed API](https://github.com/libxposed/api), [Vector](https://github.com/JingMatrix/Vector), [LSPosed](https://github.com/LSPosed/LSPosed), [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BBC](https://github.com/MrxSiN/BBC), [SponsorBlock](https://sponsor.ajay.app), [Override92/AiSList](https://github.com/Override92/AiSList) e [Morphe Patches](https://github.com/MorpheApp/morphe-patches) ([aviso preservado](LICENSES/Morphe-NOTICE.txt)). O material novo do projeto é GPL-3.0-or-later; veja [NOTICE](NOTICE) para os termos de terceiros.
 
 ## Aviso legal
 

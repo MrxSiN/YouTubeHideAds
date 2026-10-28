@@ -29,7 +29,7 @@
 - **判断は Brainfuck。** このコンポーネントは広告か、Premium の宣伝を消してよいか、プレーヤーをスポンサー部分の終わりまで進めてよいか、スワイプは明るさの変更か。Brainfuck は Android、Xposed、DexKit、JNI を呼び出せず、バイトを読んで書くだけです。ホストは完全に正しい応答を受け取ったときだけ動作します。
 - **それ以外はすべて XAX。** フック、DexKit による探索、リフレクション、設定ページ、SponsorBlock の HTTPS と JSON は、1 つの正規の [XAX](https://github.com/MrxSiN/XAX) セマンティック ストアにまとまっています。外部の XAX コンパイラが DEX に変換し、APK に署名します。このリポジトリには Java、Kotlin、C、Python、シェルのアプリ ソースはありません。
 
-遅くもありません。9 つのポリシーは [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) で事前に AArch64 共有ライブラリへコンパイルされます。APK にインタプリタはありません。
+遅くもありません。9 つのポリシーは [BBC](https://github.com/MrxSiN/BBC) で事前に AArch64 共有ライブラリへコンパイルされます。APK にインタプリタはありません。
 
 |  | |
 |---|---|
@@ -90,23 +90,24 @@
 
 ### 互換性
 
-各行は誰かが実際に動かした構成です。ほかの構成を試したら、行を追加する pull request をお願いします。
+Pixel 8 Pro（Android 17、Vector 2.2、libxposed API 102）で確認しています。ほかの構成で試したら、行を追加する pull request をお願いします。
 
-| 端末 | Android | フレームワーク | YouTube | モジュール | 結果 | テスター | 日付 |
-|---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | 広告、ショート広告の除去、SponsorBlock、元の音声、フィードとリンクから開いた動画のバックグラウンド再生（ホーム、画面オフ、スイッチオフ）。起動時 11 のチェック | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | 設定セクション、診断、ショートの要素、SponsorBlock のアイコン/メニュー、実際のスキップ。起動時 11 + UI 64 のチェック | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | 新しいスライダー。ダーク/ライト、タッチ、キーボード、保存/再表示。636 + 64 のチェック | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | ネイティブの SponsorBlock UI、カラーピッカー、636 + 28 のチェック | @MrxSiN | 2026-10 |
+| YouTube | モジュール | 状態 |
+|---|---|---|
+| 21.42.243 | 1.1.0 | ✅ 動作 |
+| 21.41.525 | 1.0.0 | ✅ 動作 |
 
 ### 既知の制限
 
-- Premium、全画面、パネルのプロモーションは制御されたフック テストに合格しましたが、実際の配信例はまだ見ていません。
-- プレビュー動画と「他のトピックを見る」の見出しは英語でのみ判定します。
-- AI のリストはコミュニティが管理しており誤判定がありうるため、既定でオフです。
-- SponsorBlock の操作は、プレーヤー上部の SponsorBlock アイコンとモジュール設定から使えます。[機能と制限](docs/SPONSORBLOCK_API_RESEARCH.md)をご覧ください。
-- ライブのショートのスキップは、テスト端末でまだ実際のライブ ショートに出会っていません。ページの判定は開発用プローブで確認済みです。
-- arm64-v8a のみ。他の YouTube バージョン、端末、LSPatch は試していません。
+- Premium、全画面、エンゲージメント パネルのプロモーションは、制御したフック テストでしか除去を確認していません。実際の配信例はまだ見ていません。
+- プレビュー動画と「他のトピックを見る」の棚は英語の見出しでのみ判定します。
+- AI チャンネルのリストはコミュニティが管理しており誤判定がありうるため、既定でオフです。
+- バックグラウンド再生はスイッチを変えたあと YouTube の再起動が必要で、ショートは YouTube の動作のままです。Bluetooth 操作と着信による中断は未確認です。
+- SponsorBlock の送信と投票は本番サーバーでは試していません。[機能と制限](docs/SPONSORBLOCK_API_RESEARCH.md)をご覧ください。
+- ライブのショートのスキップはまだ実際のライブ ショートに出会っていません。この機能、スワイプのピル、YouTube の言語切り替えは開発用プローブで確認しました。
+- モジュールのページはダーク テーマでのみ確認しました。ライト テーマ、タブレット、右から左のレイアウトは未確認です。
+- YouTube またはモジュールの更新後の最初の起動ではフックのキャッシュを作り直すため、約 0.4 秒遅くなります。
+- arm64-v8a のみ。上の構成と YouTube バージョン以外は試していません。LSPatch も未確認です。
 
 詳細：[機能の対応範囲](docs/FEATURE_COVERAGE.md)と[互換性](docs/COMPATIBILITY.md)。
 
@@ -163,7 +164,7 @@ YouTube process
 このリポジトリにビルド スクリプトはありません。リリースは外部ツールでビルドします。
 
 ```text
-BrainfuckCC  source/**/*.bf  ->  lib<policy>.so (AArch64)
+BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
 AAPT2        source/branding ->  branding.apk (static resources only)
 XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
@@ -182,7 +183,7 @@ XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 
 ## クレジット
 
-[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed API](https://github.com/libxposed/api)、[Vector](https://github.com/JingMatrix/Vector)、[LSPosed](https://github.com/LSPosed/LSPosed)、[XAX](https://github.com/MrxSiN/XAX)、[XAX-MCP](https://github.com/MrxSiN/XAX-MCP)、[BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC)、[SponsorBlock](https://sponsor.ajay.app)、[Override92/AiSList](https://github.com/Override92/AiSList)、[Morphe Patches](https://github.com/MorpheApp/morphe-patches)（[保持している通知](LICENSES/Morphe-NOTICE.txt)）。新たに書かれたプロジェクト素材は GPL-3.0-or-later です。第三者の条件は [NOTICE](NOTICE) をご覧ください。
+[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed API](https://github.com/libxposed/api)、[Vector](https://github.com/JingMatrix/Vector)、[LSPosed](https://github.com/LSPosed/LSPosed)、[XAX](https://github.com/MrxSiN/XAX)、[XAX-MCP](https://github.com/MrxSiN/XAX-MCP)、[BBC](https://github.com/MrxSiN/BBC)、[SponsorBlock](https://sponsor.ajay.app)、[Override92/AiSList](https://github.com/Override92/AiSList)、[Morphe Patches](https://github.com/MorpheApp/morphe-patches)（[保持している通知](LICENSES/Morphe-NOTICE.txt)）。新たに書かれたプロジェクト素材は GPL-3.0-or-later です。第三者の条件は [NOTICE](NOTICE) をご覧ください。
 
 ## 免責事項
 

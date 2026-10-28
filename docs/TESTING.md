@@ -42,7 +42,7 @@ JSON checks reject wrong video identity, unsupported category/action, string tim
 ranges, negative and sub-millisecond-negative starts, wrong arity and invalid UUIDs. Decimal endpoint
 conversion is checked exactly. Packaged BF replies must match both action and endpoint bytes.
 
-External BrainfuckCC tests.reference.execute and Unicorn are test tooling, not repository source.
+External BrainfuckCC (now BBC) tests.reference.execute and Unicorn are test tooling, not repository source.
 Fixtures contain data only. The XAX graph contains the actual startup self-checks; no fallback
 implementation ships. Build via BUILD.md, install, force-stop YouTube and capture ADB logcat.
 Hook installation alone does not prove positive removal of every surface.
