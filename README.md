@@ -241,8 +241,11 @@ uses the [XAX](https://github.com/MrxSiN/XAX) checkout with its Android libxpose
 compatible branding-v2 snapshot). Steps and identities are in [`docs/BUILD.md`](docs/BUILD.md) and
 [`evidence/release_20261018`](evidence/release_20261018/README.md).
 
-Release mirroring to [Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads)
-is manual. The former shell workflow was removed to keep executable repository source in BF and XAX.
+Releases are published by hand with the locally built APK. GitHub Actions then checks it
+([`release.yml`](.github/workflows/release.yml): package, version, release signing certificate and the
+SHA-256 in `RELEASE_NOTES.md`) and mirrors it to
+[Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads)
+([`xposed-sync.yml`](.github/workflows/xposed-sync.yml)), which feeds modules.lsposed.org.
 
 ## Design
 

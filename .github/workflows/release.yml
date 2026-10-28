@@ -1,0 +1,108 @@
+name: Release CI
+
+# The APK is built and signed locally with the external XAX toolchain (docs/BUILD.md); its inputs and
+# signing capability are not in this repository. CI checks the repository on every push and verifies
+# each published release APK before xposed-sync.yml mirrors it to Xposed-Modules-Repo.
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
+  pull_request:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to verify (e.g. v1.1.0)
+        required: false
+
+concurrency:
+  group: release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PACKAGE: io.github.mrxsin.youtubehideads
+  # SHA-256 of the release signing certificate (CN=YouTubeHideAds), shared by v1.0.0 and v1.1.0.
+  SIGNER_SHA256: 3c4644a021b4e1994d4f31c36d41854f86bf6a471a8f3d667fbfc62b7e42926b
+
+jobs:
+  check:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Contracts and fixtures are valid JSON
+        run: |
+          for f in contracts/*.json testdata/*.json; do
+            python3 -m json.tool "$f" > /dev/null || { echo "Invalid JSON: $f" >&2; exit 1; }
+          done
+
+      - name: Canonical store and policies are present
+        run: |
+          test -s source/xax/youtubehideads.xax
+          test -n "$(find source -name '*.bf' | head -1)"
+
+      - name: Application source stays in Brainfuck and XAX
+        run: |
+          found=$(git ls-files | grep -vE '^\.github/' | grep -E '\.(java|kt|kts|gradle|c|cc|cpp|h|py|sh)$' || true)
+          if [ -n "$found" ]; then
+            printf 'Conventional-language source is not allowed here (docs/LANGUAGE_BOUNDARY.md):\n%s\n' "$found" >&2
+            exit 1
+          fi
+
+      - name: Versions agree with the tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          manifest=$(sed -n 's/.*android:versionName="\([^"]*\)".*/\1/p' source/branding/AndroidManifest.xml)
+          [ "$manifest" = "$version" ] || { echo "Manifest versionName $manifest != $version" >&2; exit 1; }
+          grep -q "^# YouTube Hide Ads v$version\$" RELEASE_NOTES.md || { echo "RELEASE_NOTES.md has no v$version section" >&2; exit 1; }
+          grep -q "^## $version — " CHANGELOG.md || { echo "CHANGELOG.md has no $version section" >&2; exit 1; }
+
+  verify-release:
+    name: Verify release APK
+    if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.tag != '')
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TAG: ${{ inputs.tag || github.event.release.tag_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out the tagged source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Download release APK
+        run: |
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p '*.apk' -D apk
+          test "$(ls apk/*.apk | wc -l)" = 1 || { echo "Release $TAG must have exactly one APK" >&2; exit 1; }
+
+      - name: Package, version, signature and checksum match
+        run: |
+          apk=$(ls apk/*.apk)
+          tools=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          badging=$("$tools/aapt" dump badging "$apk" | head -1)
+          pkg=$(sed -n "s/.* name='\([^']*\)'.*/\1/p" <<<"$badging")
+          name=$(sed -n "s/.*versionName='\([^']*\)'.*/\1/p" <<<"$badging")
+          [ "$pkg" = "$PACKAGE" ] || { echo "Package $pkg != $PACKAGE" >&2; exit 1; }
+          [ "v$name" = "$TAG" ] || { echo "versionName $name does not match $TAG" >&2; exit 1; }
+          [ "$(basename "$apk")" = "YouTubeHideAds-$TAG.apk" ] || { echo "Unexpected APK name $(basename "$apk")" >&2; exit 1; }
+
+          signer=$("$tools/apksigner" verify --print-certs "$apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          [ "$signer" = "$SIGNER_SHA256" ] || { echo "Signer $signer is not the release key" >&2; exit 1; }
+
+          actual=$(sha256sum "$apk" | cut -d' ' -f1)
+          noted=$(awk -v h="# YouTube Hide Ads $TAG" '$0==h{f=1;next} /^# /{f=0} f' RELEASE_NOTES.md \
+                  | sed -n 's/.*APK SHA-256: `\([0-9a-f]*\)`.*/\1/p' | head -1)
+          [ "$actual" = "$noted" ] || { echo "APK SHA-256 $actual != RELEASE_NOTES.md $noted" >&2; exit 1; }
+          echo "Verified $pkg $name ($actual), signed by $signer"

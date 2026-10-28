@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- GitHub Actions: `Release CI` checks contracts, the source boundary and tag/version agreement on
+  every push, and verifies each published release APK (package, version, release signing certificate,
+  SHA-256 in the release notes). `xposed-sync` then mirrors the verified release to
+  Xposed-Modules-Repo automatically again.
+
 ## 1.1.0 — 2026-10-28 (versionCode 153)
 
 The first release since 1.0.0. It collects development builds 111 to 153, listed below.

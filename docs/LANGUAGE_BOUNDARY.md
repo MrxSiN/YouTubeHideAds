@@ -7,8 +7,12 @@ inputs are unchanged. [Design](BACKGROUND_PLAYBACK.md).
 
 All application implementation is **Brainfuck and XAX**. The source tree contains 22 BF files,
 one canonical XAX store, and static XML resources. JSON contracts/fixtures and prose are data.
-No Java, Kotlin, C, Python, shell or CI implementation source is retained, including ignored build
-folders. Earlier conventional-language implementations remain in Git history.
+No Java, Kotlin, C, Python or shell application source is tracked; `Release CI` fails if one appears.
+The two GitHub Actions workflows only check the repository and verify and mirror the published APK;
+they build nothing and take no part in the module. External tool sources used for build 153 (the
+JNI bridge rebuild and carrier-edit transport) are kept outside Git in the ignored `build/` folder,
+recorded by hash in the [build 153 record](../evidence/device_perf_20261028/build.json). Earlier
+conventional-language implementations remain in Git history.
 
 | Responsibility | Owner |
 | --- | --- |
