@@ -1,0 +1,28 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "policy": "authorize_background_playback",
+  "source": "source/brainfuck/and3.bf",
+  "library": "liband3.so",
+  "inputs": ["background_playback_enabled", "validated_background_restriction_gate", "validated_context"],
+  "input_validation": "XAX b1 values only, extended to bytes 00/01; unknown facts never authorize",
+  "output": "Status zero and exactly one byte 01 authorizes the scoped override; all other replies preserve native behavior",
+  "preferences": {"background_playback": true},
+  "ad_master_dependency": false,
+  "sponsorblock_dependency": false,
+  "settings_page": "YouTube > You > Settings > YoutubeHideAds > Player controls",
+  "setting_name": "Background playback",
+  "setting_description": "Allow videos to continue playing when YouTube is in the background or the screen is off, including Made for Kids videos.",
+  "reset": "Existing preference clear restores the true default",
+  "lifecycle": "Hooks read the saved preference on each eligible evaluation. Restart YouTube after changing the setting to discard native cached capabilities and experiment values. No automatic restart or play command.",
+  "readiness": "All required roles must resolve uniquely, match typed structural relationships, pass startup checks and install successfully before any override is active",
+  "playback_context": "Main thread, validated regular player enum, live weak player-view reference and no visible reel_watch_player in its root. Unknown, hidden, inline or dismissing players preserve native behavior.",
+  "effects": {
+    "manager": "Preserve native true; authorize false-to-true only for a non-null typed argument and validated regular player context",
+    "kids": "Skip only the uniquely identified kids background-policy controller, with both typed object arguments present and validated regular player context",
+    "settings": "Allow the uniquely identified background settings capability when preferences and the complete binding set are ready",
+    "foreground_resume_flag": "Disable only experiment 45770945, namespace 288 for the verified int/long/boolean accessor, or the verified legacy long/boolean accessor; all other keys pass through"
+  },
+  "excluded": ["Premium entitlement spoofing", "age verification", "DRM", "account security", "play/pause/stop interception", "audio-focus interception", "services", "wake locks", "resume loops", "Shorts background-playback enablement"],
+  "failure": "Discovery runs once on a worker. Missing, ambiguous or changed roles and policy failures leave readiness false. Protective hooks preserve native behavior on callback errors.",
+  "reference_commit": "f3acc10e2691ffc4db29c6a6a651ee61fb54c047"
+}

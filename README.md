@@ -4,6 +4,8 @@
 
 # YouTube Hide Ads
 
+**English** · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [Español](README.es.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Bahasa Indonesia](README.id.md) · [Bahasa Melayu](README.ms.md)
+
 **An Xposed module that removes ads from YouTube, with every decision written in Brainfuck and the rest in XAX. Yes, really.**
 
 Ads, sponsored Shorts and promotions are taken out before YouTube shows them, and SponsorBlock segments are skipped.
@@ -45,7 +47,11 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | 🔎 **Survives renames** | DexKit finds every hook by structure at each start. A missing or ambiguous role installs nothing for that feature. |
 | 🧠 **Policy in Brainfuck, compiled** | Nine hand-written programs compiled to native code; packaged policies and SponsorBlock controls are checked at every start. |
 | 🛟 **Fails closed** | If a self-check fails, that feature stays off. Network errors and unknown playback types never seek. |
-| ⚙️ **Native-looking settings** | A YouTube-style page under **You → Settings → YoutubeHideAds**, with every switch independent. |
+| ⚙️ **Native-looking settings** | Its own **YouTubeHideAds** section in **You → Settings**, above Account, built from YouTube's own rows, with every switch independent and a Compatibility & diagnostics page. |
+| 🎛️ **Player-native SponsorBlock** | A SponsorBlock icon beside autoplay opens the same floating menu as the player's settings gear; segments are colored on the seekbar. |
+| 📱 **Cleaner Shorts** | Hide individual Shorts buttons and panels, and move past live streams in the Shorts feed. |
+| 👆 **Swipe controls that read at a glance** | Brightness on the left, volume on the right, shown as a pill with an icon, a level and the value. |
+| 🌐 **Your language** | Follows YouTube's language: English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu. |
 
 ---
 
@@ -62,10 +68,15 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | Feed | AI channels · Likely AI channels ([AiSList](https://github.com/Override92/AiSList)) | Off |
 | Player | Swipe brightness (left) · Swipe volume (right), fullscreen only | On |
 | Player | Force original audio on multi-language videos | On |
+| Player | Background playback, including Made for Kids videos | On |
+| Shorts | Like, comments, share, remix, save, sound, subscribe, title, suggestions and info panels, paused-overlay buttons | Shown (each can be hidden) |
+| Shorts | Skip live Shorts | Off |
 
 Turning **Hide ads** off does not disable the content and player features. Reload a feed after
 changing its switches. Original audio applies to the next track list and respects a manual choice.
 Full table: [settings and defaults](docs/README.md#settings-and-defaults).
+Background playback is independent of Hide ads and SponsorBlock. Restart YouTube after changing
+its switch to discard native cached capabilities. [Implementation and tested limits](docs/BACKGROUND_PLAYBACK.md).
 
 <details open>
 <summary><b>🧱 Where each removal happens</b></summary>
@@ -86,12 +97,9 @@ Full table: [settings and defaults](docs/README.md#settings-and-defaults).
 
 ## Status
 
-**v1.2.1** updates all four color sliders to modern track and vertical-handle geometry.
-[Phone verification](evidence/sponsorblock_slider_device_20261022/README.md) covers dark/light rendering,
-endpoints, keyboard and saved-color persistence, with 636 startup + 64 UI checks passed.
-**v1.2.0** restyled SponsorBlock with YouTube-native rows, themed pages and a visual color picker. Version 1.1.0 added the controls described above. The original 1.0.0 release established the baseline. The seven three-input gates share one native library, and the
-package is now `io.github.mrxsin.youtubehideads`. Earlier development builds are summarized in the
-[changelog](CHANGELOG.md).
+**v1.1.0** (versionCode 153) is the first release since 1.0.0. It adds background playback, the module's own section in YouTube Settings, a Compatibility & diagnostics page, YouTube-style SponsorBlock controls, Shorts component hiding, live-Short skipping, redesigned swipe controls and nine more languages. It is also much lighter on the phone: Brainfuck policy calls no longer reopen the APK, and DexKit results are cached, so YouTube opens about 0.35 s sooner after the first launch. [Device checks](evidence/device_perf_20261028/README.md).
+
+Development builds between the two releases (111 to 153) are listed in the [changelog](CHANGELOG.md), with evidence for each under [evidence](evidence/README.md).
 
 ### Compatibility
 
@@ -100,10 +108,12 @@ adding a row.
 
 | Device | Android | Framework | YouTube | Module | Result | Tester | Date |
 |---|---|---|---|---|---|---|---|
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.2.1 | Modern sliders; dark/light, touch, keyboard, save/reopen; 636 startup + 64 UI checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.2.0 | Native SponsorBlock UI, color picker, 636 startup + 28 UI checks | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | 1.1.0 | 636 startup checks; current evidence records device results and installed digest | @MrxSiN | 2026-10 |
-| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | 636 checks, native controls and settings round-trip/malformed-import checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | 1.1.0 | Ads, Shorts ad removal, SponsorBlock, original audio, background playback from feed and link (Home, screen off, switch off); 11 startup checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 132 | Settings section, diagnostics, Shorts components, SponsorBlock icon/menu, live skips; 11 startup + 64 UI checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 127 | Modern sliders; dark/light, touch, keyboard, save/reopen; 636 startup + 64 UI checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 123 | Native SponsorBlock UI, color picker, 636 startup + 28 UI checks | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | dev 111 | 636 startup checks; current evidence records device results and installed digest | @MrxSiN | 2026-10 |
+| Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.42.243 | dev 111 | 636 checks, native controls and settings round-trip/malformed-import checks | @MrxSiN | 2026-10 |
 | Pixel 8 Pro | 17 | Vector 2.2 (API 102) | 21.41.525 | dev 77 | AI/audio off/on, advancing video, live ad, Shorts, Playables and feed removal, SponsorBlock seeks, swipes | @MrxSiN | 2026-10 |
 
 ### Known limits
@@ -112,7 +122,8 @@ adding a row.
   positives have not been seen yet.
 - Preview-video and Explore-more-topics headings are matched in English only.
 - AI lists are community-maintained and can misclassify channels, which is why they default off.
-- SponsorBlock controls are available through the player’s **SB** button and the module settings. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
+- SponsorBlock controls are available through the SponsorBlock icon in the player’s top bar and the module settings. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
+- Skip live Shorts has not yet met a real live Short on the test phone; its page check is verified with a development probe.
 - arm64-v8a only. No other YouTube version, device or LSPatch setup has been tried.
 
 Details: [feature coverage](docs/FEATURE_COVERAGE.md) and [compatibility](docs/COMPATIBILITY.md).
@@ -130,13 +141,13 @@ Details: [feature coverage](docs/FEATURE_COVERAGE.md) and [compatibility](docs/C
 
 ```
 1. Install the APK from Releases or the Xposed module repository
-2. Enable YoutubeHideAds in Vector or LSPosed, scoped to YouTube
+2. Enable YouTubeHideAds in Vector or LSPosed, scoped to YouTube
 3. Force-stop YouTube once, then open it
 ```
 
 Get it from [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or
 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Settings
-are under **YouTube → You → Settings → YoutubeHideAds**. Preferences and AI caches live in
+are under **YouTube → You → Settings → YouTubeHideAds**. Preferences and AI caches live in
 YouTube's own data, so clearing YouTube data resets them.
 
 If you used a development build (`org.youtubehideads.module`), uninstall it first. Your settings
@@ -226,8 +237,8 @@ XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
 ```
 
 Every input is pinned by BLAKE3 in the store, so a mismatched input fails the build. Rebuilding
-requires the retained XAX snapshot with the branding-v2 extension; a clean checkout of its base commit
-is not enough. Steps and identities are in [`docs/BUILD.md`](docs/BUILD.md) and
+uses the [XAX](https://github.com/MrxSiN/XAX) checkout with its Android libxposed profile (commit `3cca599` or the
+compatible branding-v2 snapshot). Steps and identities are in [`docs/BUILD.md`](docs/BUILD.md) and
 [`evidence/release_20261018`](evidence/release_20261018/README.md).
 
 Release mirroring to [Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads)
@@ -239,7 +250,7 @@ is manual. The former shell workflow was removed to keep executable repository s
 source/brainfuck/          and3, video slot, SponsorBlock window and pipeline
 source/brainfuck-runtime/  settings snapshots, ad component, panel and fullscreen policies
 source/xax/                the canonical XAX store: hooks, discovery, settings, network, actions
-source/branding/           manifest, label and adaptive icon (static XML)
+source/branding/           manifest, icons, shapes and translated strings (static XML)
 contracts/                 input byte orders for the component, feed, swipe, AI and audio gates
 testdata/                  fixtures recorded for the startup self-checks
 evidence/                  dated build identities and device logs
@@ -268,7 +279,7 @@ The layering is in [`docs/ARCHITECTURE_BRAINFUCK_XAX.md`](docs/ARCHITECTURE_BRAI
 | [XAX](https://github.com/MrxSiN/XAX), [XAX-MCP](https://github.com/MrxSiN/XAX-MCP), [BrainfuckCC](https://github.com/MrxSiN/BrainfuckCC) | External compilers for the store and the policies. |
 | [SponsorBlock](https://sponsor.ajay.app) | Community segment data. |
 | [Override92/AiSList](https://github.com/Override92/AiSList) | Optional AI-channel lists, CC BY-NC 4.0, not bundled ([aisloplist.com](https://aisloplist.com)). |
-| [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | Behavior reference; no implementation copied. |
+| [Morphe Patches](https://github.com/MorpheApp/morphe-patches) | Background behavior and fingerprint reference, adapted natively in XAX; [preserved notice](LICENSES/Morphe-NOTICE.txt). |
 
 Newly authored project material is GPL-3.0-or-later. See [NOTICE](NOTICE) and
 [upstream provenance](docs/UPSTREAM_PROVENANCE.md) for third-party terms.

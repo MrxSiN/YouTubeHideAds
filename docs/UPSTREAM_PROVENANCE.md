@@ -1,5 +1,16 @@
 # Upstream provenance and terms
 
+The background playback extension uses Morphe's behavior and structural fingerprints from
+`f3acc10e2691ffc4db29c6a6a651ee61fb54c047`, originally forked from ReVanced. It is a native XAX
+adaptation with the existing BF authorization gate; no Morphe patcher or extension infrastructure
+is bundled. The [Morphe notice](../LICENSES/Morphe-NOTICE.txt) is retained in source and as a raw APK
+resource. [Source paths, history and adaptation scope](BACKGROUND_PLAYBACK.md).
+
+Its existing external JVM SDK checkout is `D:/GitHub/XAX-libxposed-jvm` at
+`52e880895d0f6e57113cf0e74ededf2b7b25cc40`, used without edits. Current input/toolchain evidence is
+in [the development build record](../evidence/background_playback_20261027/README.md).
+The following compiler research describes earlier milestones:
+
 This guide describes the recorded sources used through build 77, not a fresh upstream-version or
 license audit. Exact local compiler/input identities are in
 [current toolchain evidence](../evidence/ai_audio_branding_20261018/toolchain.json).

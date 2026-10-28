@@ -1,5 +1,10 @@
 # Language boundary
 
+Background playback remains in the canonical XAX store and the existing authored AND3 BF policy.
+New contracts, fixtures and packaged attribution are data. Its typed graph transport, BBC/compiler
+invocations and device test drivers were kept outside this repository. Native/JNI/third-party DEX
+inputs are unchanged. [Design](BACKGROUND_PLAYBACK.md).
+
 All application implementation is **Brainfuck and XAX**. The source tree contains 22 BF files,
 one canonical XAX store, and static XML resources. JSON contracts/fixtures and prose are data.
 No Java, Kotlin, C, Python, shell or CI implementation source is retained, including ignored build
@@ -9,7 +14,7 @@ folders. Earlier conventional-language implementations remain in Git history.
 | --- | --- |
 | Native removal/gesture/selection authorization, ad/SponsorBlock snapshots, category/window rules | Authored BF policies |
 | Hook lifecycle, structural discovery, fact extraction, typed Android effects, preferences, bounded HTTPS/JSON and caches | Canonical XAX store |
-| Title, description, adaptive/monochrome icon, slider shapes/layout and manifest resources | Static XML in source/branding |
+| Title, description, adaptive/monochrome icon, slider and menu shapes/layout, translated strings and manifest resources | Static XML in source/branding |
 | Byte contracts and expected vectors | contracts/ and testdata/ |
 | BF compilation, JNI transport, third-party libraries, APK lowering/signing | External tools and pinned prebuilt inputs |
 

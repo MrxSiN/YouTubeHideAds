@@ -1,0 +1,46 @@
+10-27 03:28:49.260 22876 22876 I YouTubeHideAds: Playables self-check (16 cases)=true
+10-27 03:28:49.261 22876 22876 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+10-27 03:28:49.262 22876 22876 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+10-27 03:28:49.265 22876 22876 I YouTubeHideAds: Feed content self-check (72 cases)=true
+10-27 03:28:49.294 22876 22876 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+10-27 03:28:49.298 22876 22876 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+10-27 03:28:49.439 22876 22876 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+10-27 03:28:49.439 22876 22876 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+10-27 03:28:49.439 22876 22876 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+10-27 03:28:49.440 22876 22876 I YouTubeHideAds: Video ad activation hook installed
+10-27 03:28:49.460 22876 22876 I YouTubeHideAds: Player ad layout hook installed
+10-27 03:28:49.496 22876 22876 I YouTubeHideAds: Ad component hook installed
+10-27 03:28:49.497 22876 22876 I YouTubeHideAds: Premium offer hook installed
+10-27 03:28:49.524 22876 22876 I YouTubeHideAds: Fullscreen dialog hook installed
+10-27 03:28:49.575 22876 22876 I YouTubeHideAds: Typed engagement panel identifier resolved
+10-27 03:28:49.577 22876 22876 I YouTubeHideAds: Engagement ad panel hook installed
+10-27 03:28:49.607 22876 22876 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+10-27 03:28:49.608 22876 22876 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+10-27 03:28:49.608 22876 22876 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+10-27 03:28:49.609 22876 22876 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+10-27 03:28:49.629 22876 22876 I YouTubeHideAds: SponsorBlock player hook installed
+10-27 03:28:49.649 22876 22876 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+10-27 03:28:49.649 22876 22876 I YouTubeHideAds: Player video ID and seek bridge resolved
+10-27 03:28:49.650 22876 22876 I YouTubeHideAds: Player duration and active-generation bridge resolved
+10-27 03:28:49.674 22876 22876 I YouTubeHideAds: Shorts ad selection hook installed
+10-27 03:28:49.674 22876 22876 I YouTubeHideAds: Ad hook discovery finished
+10-27 03:28:49.780 22876 22876 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+10-27 03:28:49.809 22876 22876 I YouTubeHideAds: Playables typed element serializer resolved
+10-27 03:28:49.829 22876 22876 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+10-27 03:28:49.830 22876 22876 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+10-27 03:28:49.833 22876 22876 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+10-27 03:28:49.868 22876 22876 I YouTubeHideAds: Original audio hook installed: public final void arpo.a(aoxy)
+10-27 03:28:49.879 22876 22876 I YouTubeHideAds: YouTube lifecycle hook installed
+10-27 03:28:50.167 22876 22894 I YouTubeHideAds: Background playback self-check (28 cases)=true
+10-27 03:28:50.282 22876 22894 I YouTubeHideAds: Background playback candidates: [public static boolean aqug.y(bgww)]
+10-27 03:28:50.312 22876 22894 I YouTubeHideAds: Background playback candidates: [public final void rmo.g(int, jmv, bjeq)]
+10-27 03:28:50.372 22876 22894 I YouTubeHideAds: Background playback candidates: [static void jmv.<clinit>()]
+10-27 03:28:50.405 22876 22894 I YouTubeHideAds: Background playback candidates: [public final java.lang.Object pkh.a(java.lang.Object)]
+10-27 03:28:50.434 22876 22894 I YouTubeHideAds: Background playback candidates: [public final boolean jby.h()]
+10-27 03:28:50.551 22876 22894 I YouTubeHideAds: Background playback candidates: [public final boolean nli.H()]
+10-27 03:28:50.554 22876 22894 I YouTubeHideAds: Background playback candidates: [public final boolean aksp.m(int, long, boolean)]
+10-27 03:28:50.555 22876 22894 I YouTubeHideAds: Background playback candidates: [public final void com.google.android.apps.youtube.app.player.YouTubePlayerViewNotForReflection.ln(jmv)]
+10-27 03:28:50.732 22876 22894 I YouTubeHideAds: Background playback hooks installed (manager, kids, settings, scoped resume flag, player context)
+10-27 03:30:34.388 22876 22876 I YouTubeHideAds: Background playback authorized: foreground resume flag
+10-27 03:30:34.905 22876 22876 I YouTubeHideAds: Background playback authorized: eligibility
+10-27 03:30:35.064 22876 22876 I YouTubeHideAds: Background playback authorized: kids policy

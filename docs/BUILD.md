@@ -1,12 +1,36 @@
 # Build
 
-The canonical source and installed device-tested build is 1.2.1 (versionCode 127).
+Release **1.1.0 (versionCode 153)** was built with the same `D:/GitHub/XAX` `3cca599` compiler SDK and a
+rebuilt `libbrainfuckc_bridge.so` (source and flags in the [build 153 record](../evidence/device_perf_20261028/build.json)).
+Development build 132 was built with `D:/GitHub/XAX` at `3cca599`, which now
+contains the Android libxposed profile. Its `xax_construct.py` and `xax_android_libxposed_jvm.py`
+are byte-identical to the compiler recorded for build 131; the separate `D:/GitHub/XAX-libxposed-jvm`
+checkout no longer exists. XAX-MCP 0.5.0 does not yet implement the Android/JVM target, so the
+compiler SDK is used directly. [Toolchain record](../evidence/ui_redesign_20261027/toolchain.json).
+
+Development build **131**'s compatible external JVM SDK,
+input digests, signed APK and scoped device checks are recorded in
+[background playback evidence](../evidence/background_playback_20261027/README.md).
+Development build 127:
 [Build/input identities](../evidence/sponsorblock_slider_device_20261022/build.json),
 [compiler hashes](../evidence/sponsorblock_slider_device_20261022/toolchain.json) and
 [phone verification](../evidence/sponsorblock_slider_device_20261022/README.md) identify the exact accepted APK.
 Compiler and native/DEX inputs are unchanged; the static archive includes shared slider XML.
 These records take precedence over older milestones. Application source is BF plus one XAX store; branding XML is static data. There is no
 repository build script.
+
+For the background feature, the original temporary snapshot retains only some caches. The existing
+`D:/GitHub/XAX-libxposed-jvm` checkout at `52e880895d0f6e57113cf0e74ededf2b7b25cc40`
+supports the branding-v2 profile and round-trips the baseline store to the exact same root. It was
+used without compiler edits; current source hashes are in the new toolchain record. The active
+`D:/GitHub/XAX` and native `D:/GitHub/XAX-MCP` paths are not replacements for that JVM profile.
+
+The designated `D:/GitHub/BBC/build/bbc.exe` compiled the authored AND3 policy as a standalone
+Windows executable, with all eight inputs passing. Its current shared-library path needs a
+65,536-cell tape and ignores the budget; this app retains the pinned 4,096-cell `bfc_call_v1`
+library and bridge. Only BF annotations change. All 11 packaged native paths and the third-party
+DEX pin remain unchanged; the branding digest intentionally changes for the development version
+and bundled Morphe notice. No ABI, native dependency or signing-capability migration is performed.
 
 ## Required external tools
 
@@ -55,6 +79,9 @@ this application repository.
 
 ## Other pinned inputs
 
+- From build 135, `libbrainfuckc_bridge.so` is a drop-in rebuild that caches resolved libraries and
+  uses a native tape; its external source and flags are in the [build 135 record](../evidence/device_perf_20261028/build.json).
+  Earlier builds used the generic bridge below.
 - Generic `libbrainfuckc_bridge.so`, built externally from BrainfuckCC's JNI bridge with the Android
   NDK for AArch64/API 28, 16 KiB maximum page size and `-ldl`.
 - DexKit 2.3.0 arm64 `libdexkit.so` from its AAR.
@@ -97,16 +124,16 @@ construct carrier; bump its `version_code` for each device install.
 After a behavioral edit, verify semantic construction, native policy/source correspondence and
 input digests, then test the candidate on the device. Promote the exact tested store and signed APK.
 Do not substitute temporary probe builds or rebuild with different inputs after device acceptance.
-The tested 1.2.1/code 127 build has 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
+The release 1.1.0/code 153 build has 342 functions; development build 127 had 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
 and packages 636 startup checks plus 64 UI checks when the first SponsorBlock page opens. Both suites pass in the accepted dark and light device processes. Store/APK identities belong in the dated build record.
 
 ## Install and validate
 
 ```text
-D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.2.1.apk
+D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.1.0.apk
 ```
 
-Enable **YoutubeHideAds** in Vector for YouTube, allow the package update to settle, then force-stop
+Enable **YouTubeHideAds** in Vector for YouTube, allow the package update to settle, then force-stop
 and reopen YouTube. Verify the installed version/digest, startup checks and targeted behavior.
 A transient old APK-path cache occurred after build 74; a later force-stop/reopen resolved it.
 Do not uninstall or clear user data to work around an unverified older version.

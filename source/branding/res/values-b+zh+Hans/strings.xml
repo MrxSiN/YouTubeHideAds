@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"精简的 LSPosed 模块，用于隐藏 YouTube 广告和不需要的动态内容。"</string>
+</resources>

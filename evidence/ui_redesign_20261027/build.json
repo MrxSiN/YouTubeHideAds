@@ -1,0 +1,24 @@
+{
+  "version_name": "1.4.0-dev",
+  "version_code": 132,
+  "source_root": "b34d4b6502b5bfe713bc05a46840782b04098d9abef948df990d419e0fd125db",
+  "apk_sha256": "38f15f0a0f61b7f5fea45154c8ae42fe46f80c67c5b7172e4047c9a009b859de",
+  "apk_bytes": 4409168,
+  "store_sha256": "68e0560a70e1f31b4b9af5ad7c49da5eb152b130f35358d19136135d6ce05fdf",
+  "artifact": "build/port/YouTubeHideAds-132.apk (ignored, retained locally)",
+  "functions": 302,
+  "native_paths": 11,
+  "localized_strings": 259,
+  "languages": [
+    "zh-Hans",
+    "zh-Hant",
+    "es",
+    "pt",
+    "ru",
+    "ja",
+    "ko",
+    "id",
+    "ms"
+  ],
+  "branding_sha256": "b32a9e769befc9138b0eaddcdb5b32b420a64b0024dfedea39487571923bad4a"
+}

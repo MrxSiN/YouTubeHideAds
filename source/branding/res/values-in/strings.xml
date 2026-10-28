@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"Modul LSPosed minimalis yang menyembunyikan iklan YouTube dan konten feed yang tidak diinginkan."</string>
+</resources>

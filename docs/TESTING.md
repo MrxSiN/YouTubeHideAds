@@ -1,6 +1,21 @@
 # Testing
 
-Current acceptance is **1.2.1/code 127** on the environment in [COMPATIBILITY.md](COMPATIBILITY.md).
+Background playback adds 28 packaged startup checks to the existing 636:
+eight native AND3 inputs, fourteen player-name cases and six scoped experiment cases.
+[Fixtures](../testdata/background_playback_vectors.json) include separate integration acceptance
+requirements; fixture presence is not evidence of their execution.
+[Development build 131 evidence](../evidence/background_playback_20261027/README.md) records actual
+device playback/control/settings results, negative development candidates and untested scenarios.
+The existing 64-case SponsorBlock UI suite is a separate live-context check, not part of the 664 startup checks.
+
+Release **1.1.0/code 153** acceptance: all 11 startup suites pass with and without the DexKit cache;
+hook, candidate and self-check log lines match build 143; cached, invalidated and corrupted cache files
+behave correctly; background playback continues from feed and link and stops when switched off.
+[Checks](../evidence/device_perf_20261028/README.md).
+
+The following acceptance history describes development build 127 and earlier milestones:
+
+Acceptance of development build **127** on the environment in [COMPATIBILITY.md](COMPATIBILITY.md):
 All 636 startup cases and 64 UI cases pass in dark and confirmed light contexts. Phone checks cover
 all four touch endpoints, Tab/one-step keyboard adjustment, opacity-preserving presets, save/reopen,
 process-restart persistence and restoration of original settings.
@@ -105,11 +120,11 @@ contracts/fixtures still parse, compare stated identities with dated build recor
 a device rerun from a documentation check. The earlier Python/JVM conformance harness is absent;
 its paths in the legacy contract identify historical tooling, not runnable repository commands.
 
-## SponsorBlock presentation (1.2.0)
+## SponsorBlock presentation (build 123)
 
 The existing 636 startup checks are unchanged. A separate 28-case check runs once with a live YouTube Context when the first SponsorBlock page opens. It checks named native resources, preference children and IDs, contrast, action touch targets, private-ID masking, selection state, color/opacity round trips, slider height, preset updates and weak-dialog cleanup. Device navigation, theme, keyboard and saved-color evidence is in [the UI session](../evidence/sponsorblock_ui_20261022/README.md). Production writes are not part of UI testing.
 
-## Slider phone checks (1.2.1/code 127)
+## Slider phone checks (build 127)
 
 The 64 UI cases include the previous 28 presentation cases plus 36 slider geometry/range checks.
 Phone failures in resource visibility, binary XML positioning and keyboard increments were fixed

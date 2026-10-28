@@ -2,8 +2,10 @@ YoutubeHideAds — independently implemented experimental project.
 Newly authored project material is GPL-3.0-or-later; third-party terms remain separate.
 
 Morphe and ReVanced are separate projects and do not author or publish this repository.
-No Morphe implementation is included. Preserve applicable GPLv3 Section 7 notices if
-portions of that implementation are incorporated in the future.
+Background playback uses a native XAX adaptation of Morphe's scoped behavior and
+structural fingerprints, originally forked from ReVanced. It is not Morphe or ReVanced.
+The applicable Morphe GPLv3 Section 7 notice is preserved in LICENSES/Morphe-NOTICE.txt
+and packaged as res/raw/morphe_notice.txt. No patcher or extension infrastructure is bundled.
 
 No XAX redistribution rights are asserted; external compiler source is not vendored.
 The independently authored XAX store is application source, not copied compiler source.

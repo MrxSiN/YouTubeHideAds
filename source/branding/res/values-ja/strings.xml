@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"YouTube の広告や不要なフィード コンテンツを非表示にするシンプルな LSPosed モジュールです。"</string>
+</resources>

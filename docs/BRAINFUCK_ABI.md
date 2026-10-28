@@ -5,7 +5,9 @@ runtime contract. [Build identity](../evidence/ai_audio_branding_20261018/build.
 
 The shipped XAX host calls external Bfp1Bridge.run(libraryPath,input,output,tape,budget,used).
 Each library exports bfc_call_v1. A call uses a fresh 4,096-byte tape, a 64-byte output buffer
-and a 2,000,000-loop budget. Only status zero and an exact expected reply authorize an action.
+and a 2,000,000-loop budget. Since build 135 the host passes the policy name (`and3`), which the
+bridge resolves to `lib<name>.so` in its own directory and caches; the bridge zeroes a native tape
+of the Java tape's length per call, so the host shares one tape array. [Details](../evidence/device_perf_20261028/README.md). Only status zero and an exact expected reply authorize an action.
 Cells wrap modulo 256. Whole-line annotations are stripped before compilation.
 
 | Policy | Input | Reply |
@@ -25,6 +27,7 @@ Cells wrap modulo 256. Whole-line annotations are stripped before compilation.
 | suppress_feed_section | Own preference, section fact, validated feed context | 01 remove or 00 pass |
 | filter_ai_channel | Selected list enabled, whole-handle membership, validated own card | 01 remove or 00 pass |
 | select_original_audio | Enabled, unique original, current audio context | 01 select or 00 pass |
+| authorize_background_playback | Own switch, validated restriction gate, validated playback/settings/experiment context | 01 permits only the scoped capability override; otherwise native behavior |
 
 Sponsor category order is sponsor, selfpromo, interaction, intro, outro, preview, filler,
 music_offtopic. The 16 bytes interleave configured category and one-hot category selector.
@@ -86,6 +89,12 @@ original audio true, independent of the ad master. Cache/selection state belongs
 program knows Android, networking, strings or YouTube class names.
 
 ## Source and input inventory
+
+Background playback also uses the unchanged `liband3.so` command stream and existing 4,096-cell
+JNI ABI. Its 28 packaged checks cover all eight native Boolean inputs and host context/flag cases.
+The [contract](../contracts/background_playback_inputs.json) defines its independent default and
+validated effects. Current BBC shared libraries require 65,536 cells and ignore the loop budget;
+they must not replace this pinned JNI input without a separate ABI migration.
 
 All 9 libraries above are listed by digest in the canonical store; this is not an on-device BF
 interpreter. There is one authored BF file per library. Unshipped feed/search/shopping, resolver,

@@ -1,0 +1,172 @@
+[
+  {
+    "label": "regular_foreground",
+    "monotonic": 32932.375,
+    "state": "state=PlaybackState {state=PLAYING(3), position=62338, buffered position=0, speed=1.0, updated=485598311, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "62338",
+    "updated": "485598311",
+    "speed": "1.0"
+  },
+  {
+    "label": "regular_background",
+    "monotonic": 32941.171,
+    "state": "state=PlaybackState {state=PLAYING(3), position=62338, buffered position=0, speed=1.0, updated=485598311, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "62338",
+    "updated": "485598311",
+    "speed": "1.0"
+  },
+  {
+    "label": "regular_screen_off",
+    "monotonic": 32959.078,
+    "state": "state=PlaybackState {state=PLAYING(3), position=62338, buffered position=0, speed=1.0, updated=485598311, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "62338",
+    "updated": "485598311",
+    "speed": "1.0"
+  },
+  {
+    "label": "media_pause_locked",
+    "monotonic": 32959.875,
+    "state": "state=PlaybackState {state=PAUSED(2), position=98332, buffered position=0, speed=1.0, updated=485634712, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "98332",
+    "updated": "485634712",
+    "speed": "1.0"
+  },
+  {
+    "label": "paused_after_foreground_return",
+    "monotonic": 32984.281,
+    "state": "state=PlaybackState {state=PAUSED(2), position=98814, buffered position=0, speed=1.0, updated=485636965, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "98814",
+    "updated": "485636965",
+    "speed": "1.0"
+  },
+  {
+    "label": "regular_repeated_transitions_paused",
+    "monotonic": 32991.875,
+    "state": "state=PlaybackState {state=PAUSED(2), position=105982, buffered position=0, speed=1.0, updated=485666806, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "105982",
+    "updated": "485666806",
+    "speed": "1.0"
+  },
+  {
+    "label": "notification_play",
+    "monotonic": 33035.359,
+    "state": "state=PlaybackState {state=PLAYING(3), position=105982, buffered position=0, speed=1.0, updated=485708098, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "105982",
+    "updated": "485708098",
+    "speed": "1.0"
+  },
+  {
+    "label": "notification_pause",
+    "monotonic": 33037.796,
+    "state": "state=PlaybackState {state=PAUSED(2), position=108081, buffered position=0, speed=1.0, updated=485710566, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "108081",
+    "updated": "485710566",
+    "speed": "1.0"
+  },
+  {
+    "label": "disabled_foreground",
+    "monotonic": 33177.89,
+    "state": "state=PlaybackState {state=PLAYING(3), position=110002, buffered position=0, speed=1.0, updated=485852779, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=6, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "110002",
+    "updated": "485852779",
+    "speed": "1.0"
+  },
+  {
+    "label": "disabled_screen_off",
+    "monotonic": 33183.609,
+    "state": "state=PlaybackState {state=STOPPED(1), position=114024, buffered position=0, speed=1.0, updated=485857250, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=6, description=Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film, Blender, Blender",
+    "position": "114024",
+    "updated": "485857250",
+    "speed": "1.0"
+  },
+  {
+    "label": "kids_foreground_independent",
+    "monotonic": 33394.093,
+    "state": "state=PlaybackState {state=PLAYING(3), position=71, buffered position=0, speed=1.0, updated=486068105, actions=8359, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Baby Shark Dance | #babyshark Most Viewed Video | Animal Songs | PINKFONG Songs for Children, Baby Shark - Pinkfong Kids\u2019 Songs & Stories, Baby Shark - Pinkfong Kids\u2019 Songs & Stories",
+    "position": "71",
+    "updated": "486068105",
+    "speed": "1.0"
+  },
+  {
+    "label": "kids_screen_off_independent",
+    "monotonic": 33399.656,
+    "state": "state=PlaybackState {state=PLAYING(3), position=412, buffered position=0, speed=1.0, updated=486074657, actions=8359, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Baby Shark Dance | #babyshark Most Viewed Video | Animal Songs | PINKFONG Songs for Children, Baby Shark - Pinkfong Kids\u2019 Songs & Stories, Baby Shark - Pinkfong Kids\u2019 Songs & Stories",
+    "position": "412",
+    "updated": "486074657",
+    "speed": "1.0"
+  },
+  {
+    "label": "kids_screen_off_later",
+    "monotonic": 33431.453,
+    "state": "state=PlaybackState {state=PLAYING(3), position=291, buffered position=0, speed=1.0, updated=486080569, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Baby Shark Dance | #babyshark Most Viewed Video | Animal Songs | PINKFONG Songs for Children, Baby Shark - Pinkfong Kids\u2019 Songs & Stories, Baby Shark - Pinkfong Kids\u2019 Songs & Stories",
+    "position": "291",
+    "updated": "486080569",
+    "speed": "1.0"
+  },
+  {
+    "label": "kids_pause_locked_independent",
+    "monotonic": 33432.984,
+    "state": "state=PlaybackState {state=PAUSED(2), position=26333, buffered position=0, speed=1.0, updated=486106749, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Baby Shark Dance | #babyshark Most Viewed Video | Animal Songs | PINKFONG Songs for Children, Baby Shark - Pinkfong Kids\u2019 Songs & Stories, Baby Shark - Pinkfong Kids\u2019 Songs & Stories",
+    "position": "26333",
+    "updated": "486106749",
+    "speed": "1.0"
+  },
+  {
+    "label": "post_unlock_before_native_close",
+    "monotonic": 48201.093,
+    "state": "state=PlaybackState {state=PLAYING(3), position=20725, buffered position=0, speed=1.0, updated=500875558, actions=8615, custom actions=[], active item id=-1, error=null}",
+    "active": "true",
+    "metadata": "metadata: size=7, description=Why CS2 Has No Kernel Anti-Cheat (and Probably Never Will), Salut Tech, Salut Tech",
+    "position": "20725",
+    "updated": "500875558",
+    "speed": "1.0"
+  },
+  {
+    "label": "post_unlock_native_player_closed",
+    "monotonic": 48206.39,
+    "state": "state=PlaybackState {state=STOPPED(1), position=0, buffered position=0, speed=1.0, updated=500879943, actions=8192, custom actions=[], active item id=-1, error=null}",
+    "active": "false",
+    "metadata": "metadata: size=6, description=Why CS2 Has No Kernel Anti-Cheat (and Probably Never Will), null, null",
+    "position": "0",
+    "updated": "500879943",
+    "speed": "1.0"
+  },
+  {
+    "label": "post_unlock_closed_after_return",
+    "monotonic": 48217.265,
+    "state": "state=PlaybackState {state=STOPPED(1), position=0, buffered position=0, speed=1.0, updated=500890337, actions=8192, custom actions=[], active item id=-1, error=null}",
+    "active": "false",
+    "metadata": "metadata: size=6, description=Why CS2 Has No Kernel Anti-Cheat (and Probably Never Will), null, null",
+    "position": "0",
+    "updated": "500890337",
+    "speed": "1.0"
+  }
+]

@@ -1,5 +1,14 @@
 # DexKit resolution
 
+Background playback adds five validated runtime roles, with typed opcode/numeric fingerprints,
+dynamic background resource IDs and explicit caller deoptimization. Its full discovery contract,
+runtime contexts, fail-closed publication and observed-version limits are in
+[BACKGROUND_PLAYBACK.md](BACKGROUND_PLAYBACK.md). Obfuscated names in evidence are observations only.
+
+Since build 152, DexKit answers are cached in YouTube's `code_cache` and keyed by DexKit's own
+serialized query bytes; the cache is discarded when YouTube's base.apk or the module APK changes.
+Every role below is still validated on each start. [Design and checks](../evidence/device_perf_20261028/README.md#dexkit-result-cache-build-152).
+
 DexKit 2.3.0 is bundled as third-party DEX/native input. Discovery and reflection are XAX. This guide describes build 77; obfuscated names below are
 observations on YouTube 21.41.525, never hardcoded selectors. [Compatibility](COMPATIBILITY.md).
 

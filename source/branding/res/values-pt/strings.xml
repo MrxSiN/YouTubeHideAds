@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"Módulo LSPosed minimalista que oculta anúncios do YouTube e conteúdo indesejado do feed."</string>
+</resources>

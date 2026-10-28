@@ -1,0 +1,12 @@
+{
+  "original_preference_entries_restored": true,
+  "changed_test_keys": [
+    "background_playback",
+    "hide_ads",
+    "sponsorblock_enabled"
+  ],
+  "restored_raw_sha256": "42fd555b6811157c94b95812f8846f429bc2875be773a6e58d5029b5e0c8d1c3",
+  "backup_transport": "ADB shell CRLF normalized to native XML LF; raw verification uses exec-out",
+  "background_default_restored": true,
+  "other_app_preferences_modified": false
+}

@@ -1,7 +1,22 @@
 # XAX source
 
+Canonical source is release **1.1.0/code 153**, with 342 unique functions and the same 11 native
+paths. Builds 135-153 rebuilt the bridge, cached DexKit results through `dk_*` functions and install the
+background player observer at startup. [Evidence](../../evidence/device_perf_20261028/README.md).
+Build 132 had 302 unique functions and the same
+11 native paths. Build 132 reworks presentation, adds the startup diagnostics event list, Shorts
+component hiding, live-Short skipping, the swipe pill and one localized-string lookup (`tr`);
+new removals reuse the unchanged AND3 policy and native inputs are unchanged. [Evidence](../../evidence/ui_redesign_20261027/README.md).
+Build 131 notes follow. Background playback adds 19 functions and a disjoint typed holder. Only startup,
+saved-preference refresh and the main settings page change among existing function bodies.
+The packaged policy/classifier suite adds 28 checks to the existing 636.
+[Build identities, device results and limitations](../../evidence/background_playback_20261027/README.md) ·
+[Hook and policy design](../../docs/BACKGROUND_PLAYBACK.md).
+
+The following records describe development build 127:
+
 youtubehideads.xax is the canonical binary semantic store for the Android host. Device-tested
-1.2.1/code 127 contains 263 functions and 11 native library paths plus a pinned static resource input.
+build 127 contains 263 functions and 11 native library paths plus a pinned static resource input.
 Package io.github.mrxsin.youtubehideads; scope com.google.android.youtube; API 102.
 All 636 startup and 64 live-context UI checks pass on the Pixel in dark and light contexts.
 [Exact build, phone checks and limits](../../evidence/sponsorblock_slider_device_20261022/README.md).

@@ -1,0 +1,124 @@
+{
+  "Morphe_commit": "f3acc10e2691ffc4db29c6a6a651ee61fb54c047",
+  "YouTube_APK_SHA256": "de3bff8506b525c8c153457752c3ec983c93baac7ad1acf756a8e1e0231ae36a",
+  "YouTube_version": "21.42.243",
+  "observed_methods": [
+    {
+      "dex": "classes.dex",
+      "owner": "Lihe;",
+      "name": "eY",
+      "descriptor": "()Lj$/util/Optional;",
+      "access": 16,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Loao;",
+      "name": "<init>",
+      "descriptor": "(Landroid/app/Activity; Lault; Laasv; Larpi; Lbvsj; Larkn; Lbvsj; Lbteo; Ltbp; Ljls; Lrpv; Ljtd; Loat; Lrqr; Lanll; Lavzp; Lavwb; Ljce; Lqxd; Ljiy; Laksp; Lasim; Lbvsj; Laobe; Lbteo; Lbteo; Ljava/util/concurrent/Executor; Lbteo; Laflj; Lasaa; Landroid/view/ViewGroup; Lcom/google/android/apps/youtube/app/player/YouTubePlayerViewNotForReflection; Lcc; Landroid/os/Bundle;)V",
+      "access": 65537,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Loao;",
+      "name": "b",
+      "descriptor": "(Z Z)V",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Loao;",
+      "name": "g",
+      "descriptor": "(Z)V",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Loao;",
+      "name": "h",
+      "descriptor": "(Z)V",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Loba;",
+      "name": "e",
+      "descriptor": "(Landroid/os/Bundle;)V",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Lrmo;",
+      "name": "g",
+      "descriptor": "(I Ljmv; Lbjeq;)V",
+      "access": 17,
+      "roles": [
+        "kids"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Ljby;",
+      "name": "e",
+      "descriptor": "()V",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "owner": "Ljby;",
+      "name": "h",
+      "descriptor": "()Z",
+      "access": 17,
+      "roles": [
+        "literal:45770945"
+      ]
+    },
+    {
+      "dex": "classes2.dex",
+      "owner": "Laqug;",
+      "name": "y",
+      "descriptor": "(Lbgww;)Z",
+      "access": 9,
+      "roles": [
+        "manager"
+      ]
+    },
+    {
+      "dex": "classes4.dex",
+      "owner": "Lpkh;",
+      "name": "a",
+      "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+      "access": 17,
+      "roles": [
+        "literal:2132019969",
+        "literal:2132019971"
+      ]
+    }
+  ],
+  "settings_capability": "Lnli;->H()Z: settings-model list membership, not global Premium spoof",
+  "settings_resource_ids": {
+    "pref_background_and_offline_category": "0x7f140b01",
+    "pref_background_category": "0x7f140b03"
+  },
+  "numbers_are_not_runtime_resource_selectors": true
+}

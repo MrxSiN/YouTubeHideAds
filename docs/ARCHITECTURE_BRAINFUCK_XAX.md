@@ -1,5 +1,27 @@
 # Architecture
 
+Development build 132 changes presentation only. The settings entry is a section built from
+YouTube's own group-title and icon-row layouts, attached above Account and moved with the list's
+scroll offset. Every module page shares one scaffold, heading and row vocabulary. Startup install,
+resolve and self-check messages also enter one bounded event list that the Compatibility &
+diagnostics page reads; hot paths record nothing. The SponsorBlock control is an icon in the
+player's top bar, and its menu is a floating card matching the player settings menu.
+Shorts components and live-Short skipping reuse the component hook: path names (and, for the
+anonymous comment/share/remix buttons, the existing element serializer) identify a match, a
+snapshot published on settings refresh supplies the switches, and AND3 authorizes. Live Shorts are
+skipped only after the pager settles on a page without the Shorts overlay shortly after a live
+preview was built. Every user-visible literal goes through one lookup, `tr`, which reads the
+module's string resources with YouTube's configuration and falls back to English.
+[Evidence](../evidence/ui_redesign_20261027/README.md).
+
+Background playback in development build 131 follows the same boundary: BF authorizes the final
+override using the unchanged AND3 library, and XAX owns preferences, validated player context,
+asynchronous DexKit discovery and scoped API 102 hooks. It adds no player-control command, service,
+timer, polling loop or wake lock. The background state holder is separate from existing features.
+[Detailed design](BACKGROUND_PLAYBACK.md) · [Evidence](../evidence/background_playback_20261027/README.md).
+
+The following architecture history describes the original release:
+
 Release 1.0.0 (versionCode 100): 123 functions, 11 native paths (9 policy libraries plus JNI bridge and DexKit), one pinned
 branding input. [Exact build](../evidence/ai_audio_branding_20261018/build.json) · [Settings/defaults](README.md#settings-and-defaults)
 
@@ -57,7 +79,7 @@ Unknown bindings preserve native behavior. Settings/reset and persistence reuse 
 ## Static resources and lifecycle
 
 The settings page attaches to YouTube; there is no module Activity or permission request. Static
-branding XML supplies the exact YoutubeHideAds title, short description and adaptive/monochrome
+branding XML supplies the exact YouTubeHideAds title, short description and adaptive/monochrome
 shield icon. AAPT2 compiles these resources; the external branding-v2 profile packages their pinned
 archive alongside XAX-generated DEX. See [BUILD.md](BUILD.md).
 

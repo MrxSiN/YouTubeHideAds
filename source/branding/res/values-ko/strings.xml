@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"YouTube 광고와 원치 않는 피드 콘텐츠를 숨기는 간결한 LSPosed 모듈입니다."</string>
+</resources>

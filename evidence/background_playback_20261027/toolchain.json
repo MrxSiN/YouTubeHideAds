@@ -1,0 +1,23 @@
+{
+  "sdk": "D:\\GitHub\\XAX-libxposed-jvm",
+  "commit": "52e880895d0f6e57113cf0e74ededf2b7b25cc40",
+  "sdk_working_tree_clean": false,
+  "baseline_export_construct_exact_root_roundtrip": true,
+  "compiler_sha256": {
+    "xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+    "xax_android_libxposed_jvm.py": "c00d2e2cfa044806a9b061e9f2803de65e31a4ee897279538f66403b97c0a601"
+  },
+  "bbc": {
+    "path": "D:/GitHub/BBC/build/bbc.exe",
+    "commit": "e8c48d59260336b8f9458a260276712fa6ae847f",
+    "sha256": "ac6ee103d60e303653898d2d033ba719f4ed0ccbb126cb959c15701292b23dbc",
+    "standalone_native_truth_table_passed": 8,
+    "android_shared_library_replacement": false,
+    "reason": "Current 65536-cell shared ABI is incompatible with pinned 4096-cell JNI boundary"
+  },
+  "vector_pin_sha256": "45c4daa3fa06820148453acde8e888f0ad00d18a391d3fc3f0ef2ce2691b0175",
+  "branding_blake3": "c7002d069fe37ad704bc22ba7a1c3a4cb39d1acc8d57ba4abfc3cbe4f128dc7c",
+  "native_dex_signing_pins_unchanged": true,
+  "transport_and_test_driver_location": "C:\\Users\\SiN\\AppData\\Local\\Temp\\youtubehideads-background-20261027",
+  "MCP": "Inspected current native profile; used compatible generic JVM SDK directly"
+}

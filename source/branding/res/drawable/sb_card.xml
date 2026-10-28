@@ -1,0 +1,5 @@
+<!-- Floating menu card; XAX tints it with YouTube's live menu background color. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="12dp" />
+    <solid android:color="#FFFFFFFF" />
+</shape>

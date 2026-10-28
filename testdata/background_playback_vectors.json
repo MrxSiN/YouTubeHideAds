@@ -1,0 +1,57 @@
+{
+  "policy": "authorize_background_playback",
+  "native_gate": [
+    {"input": [0, 0, 0], "output": [0]},
+    {"input": [0, 0, 1], "output": [0]},
+    {"input": [0, 1, 0], "output": [0]},
+    {"input": [0, 1, 1], "output": [0]},
+    {"input": [1, 0, 0], "output": [0]},
+    {"input": [1, 0, 1], "output": [0]},
+    {"input": [1, 1, 0], "output": [0]},
+    {"input": [1, 1, 1], "output": [1]}
+  ],
+  "player_context": [
+    {"name": "NONE", "allowed": false},
+    {"name": "HIDDEN", "allowed": false},
+    {"name": "INLINE_MINIMAL", "allowed": false},
+    {"name": "WATCH_WHILE_MINIMIZED", "allowed": true},
+    {"name": "WATCH_WHILE_MAXIMIZED", "allowed": true},
+    {"name": "WATCH_WHILE_FULLSCREEN", "allowed": true},
+    {"name": "WATCH_WHILE_SLIDING_MAXIMIZED_FULLSCREEN", "allowed": true},
+    {"name": "WATCH_WHILE_SLIDING_MINIMIZED_MAXIMIZED", "allowed": true},
+    {"name": "WATCH_WHILE_SLIDING_MINIMIZED_DISMISSED", "allowed": false},
+    {"name": "VIRTUAL_REALITY_FULLSCREEN", "allowed": true},
+    {"name": "WATCH_WHILE_PICTURE_IN_PICTURE", "allowed": true},
+    {"name": "", "allowed": false},
+    {"name": "UNKNOWN", "allowed": false},
+    {"name": "watch_while_fullscreen", "allowed": false}
+  ],
+  "foreground_resume_flag": [
+    {"namespace": 288, "key": 45770945, "allowed": true},
+    {"namespace": 0, "key": 45770945, "allowed": false},
+    {"namespace": 289, "key": 45770945, "allowed": false},
+    {"namespace": 288, "key": 45770944, "allowed": false},
+    {"namespace": 288, "key": 45770946, "allowed": false},
+    {"namespace": 288, "key": 0, "allowed": false}
+  ],
+  "integration_cases": [
+    {"case": "missing_role", "expected": "native behavior"},
+    {"case": "ambiguous_role", "expected": "native behavior"},
+    {"case": "failed_policy_check", "expected": "native behavior"},
+    {"case": "partial_install_failure", "expected": "all new callbacks inactive"},
+    {"case": "disabled", "expected": "native behavior after process restart"},
+    {"case": "ad_master_off", "expected": "background policy remains independent"},
+    {"case": "sponsorblock_off", "expected": "background policy remains independent"},
+    {"case": "null_manager_argument", "expected": "native result"},
+    {"case": "missing_kids_argument", "expected": "native controller executes"},
+    {"case": "visible_shorts", "expected": "native regular-player restriction"},
+    {"case": "off_main_thread", "expected": "native regular-player restriction"},
+    {"case": "unknown_player_context", "expected": "native regular-player restriction"},
+    {"case": "expired_player_view", "expected": "native regular-player restriction"},
+    {"case": "other_experiment", "expected": "native flag result"},
+    {"case": "wrong_experiment_namespace", "expected": "native flag result"},
+    {"case": "user_pause_stop_or_focus_loss", "expected": "no module play command"},
+    {"case": "reset_defaults", "expected": "background_playback true"}
+  ],
+  "integration_cases_are": "Acceptance requirements; execution results belong in dated evidence, not inferred from this fixture"
+}

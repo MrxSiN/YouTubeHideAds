@@ -1,0 +1,37 @@
+{
+  "baseline_root": "ef980f783604f44edb65d5985fc919aa7cffc3372f6e153b34afb69c8834e6df",
+  "root": "601800dd96ddd149f6e2c2e5203df9dcb97c11c0b858225f9215b341151ccca6",
+  "unchanged_existing_function_bodies": 259,
+  "changed_existing_function_bodies": [
+    "f89",
+    "f174",
+    "f260"
+  ],
+  "new_function_names": [
+    "bg_authorize",
+    "bg_context",
+    "bg_deopt_callers",
+    "bg_flags",
+    "bg_initialize",
+    "bg_install",
+    "bg_invoked",
+    "bg_kids",
+    "bg_manager",
+    "bg_observe",
+    "bg_player_context",
+    "bg_refresh",
+    "bg_report",
+    "bg_resolve",
+    "bg_resolved",
+    "bg_resume_flag",
+    "bg_selfcheck",
+    "bg_settings",
+    "bg_unique"
+  ],
+  "all_native_bytes_and_pins_unchanged": true,
+  "third_party_dex_pin_unchanged": true,
+  "signer_pin_unchanged": true,
+  "all_existing_selfcheck_graphs_unchanged": true,
+  "and3_executable_stream_unchanged": true,
+  "branding_change": "1.3.0-dev metadata and packaged Morphe notice"
+}

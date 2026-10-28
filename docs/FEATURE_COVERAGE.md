@@ -1,6 +1,12 @@
 # Feature coverage
 
-Current source and installed device-tested build: **1.2.1, versionCode 127**.
+Development build 131 adds independent background playback: scoped runtime eligibility and kids
+policy hooks, background settings capability and automatic foreground-resume prevention. Regular
+and Pinkfong screen-off/media-control observations, policy checks, disabled behavior and remaining
+hardware/UI limits are recorded in [dated evidence](../evidence/background_playback_20261027/README.md).
+
+Current release: **1.1.0, versionCode 153**; [device checks](../evidence/device_perf_20261028/README.md). The rows below
+keep the development build on which each behavior was first exercised. Development build **127**:
 [Slider phone checks](../evidence/sponsorblock_slider_device_20261022/README.md) cover 636 startup + 64 UI cases,
 dark/light rendering, endpoints, keyboard and saved-color persistence.
 Evidence below retains the build on which each behavior was exercised;
@@ -22,9 +28,12 @@ Evidence below retains the build on which each behavior was exercised;
 | Explore more topics | Own-heading/context fixtures and controlled actual-hook on/off with History negative; natural Home shelf pending |
 | AI channels | Two independent AiSList switches, whole Unicode handles and persistent cache; high-confidence live search off/on |
 | Force original audio | Typed multi-language original selection; native Hindi when off / English original when on; video advances |
-| Fullscreen controls | Brightness/media volume, HUDs, restoration, disabled toggles and native tap/hold tested |
+| Fullscreen controls | Brightness/media volume, restoration, disabled toggles and native tap/hold tested; the build 132 side pill HUD was rendered through a development probe, a real finger swipe was not captured |
+| Shorts components | Ten switches on the shared component hook; like, comments, share and remix observed hidden on the phone; others fixture/path based |
+| Skip live Shorts | Pager settle detection, current-page check, AND3 authorization and page advance verified with an inverted probe; no real live Short encountered |
+| Languages | 259 strings in nine languages through one lookup; rendering verified with a forced zh-CN probe |
 | SponsorBlock | Bounded retry, origin-scoped cache, ten category modes/colors, seekbar markers, manual skip/undo, preview/review/submission, votes, exclusions, statistics and settings transfer; production POSTs untested |
-| Settings and branding | In-YouTube page, persistent/reset preferences, exact YoutubeHideAds title and static shield/strike adaptive/monochrome icon |
+| Settings and branding | Own section above Account in YouTube Settings, YouTube-style pages, Compatibility & diagnostics, persistent/reset preferences, exact YouTubeHideAds title and static shield/strike adaptive/monochrome icon |
 
 [Settings/defaults and master dependencies](README.md#settings-and-defaults) are listed centrally.
 Playables, feed filters, AI filters, swipes and original audio are independent of the ad master.

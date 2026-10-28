@@ -1,8 +1,9 @@
 # Documentation
 
-Current source and device-tested build: **YoutubeHideAds 1.2.1, versionCode 127**.
-[Build identity](../evidence/sponsorblock_slider_device_20261022/build.json) owns artifact digests and counts;
-[phone evidence](../evidence/sponsorblock_slider_device_20261022/README.md) owns validation claims.
+Current release: **YouTubeHideAds 1.1.0, versionCode 153** (tag `v1.1.0`).
+[Build identity](../evidence/device_perf_20261028/build.json) owns artifact digests and counts;
+[phone evidence](../evidence/device_perf_20261028/README.md) owns its scoped validation claims.
+Development builds 111 to 152 between 1.0.0 and 1.1.0 are named by build number.
 Dated evidence describes its named build, not the current checkout.
 
 | Guide | Contents |
@@ -17,6 +18,7 @@ Dated evidence describes its named build, not the current checkout.
 | [DexKit resolution](DEXKIT_RESOLUTION.md) | Structural anchors, typed roles and failure behavior |
 | [Testing](TESTING.md) | Startup checks, fixtures and device acceptance |
 | [SponsorBlock](SPONSORBLOCK_API_RESEARCH.md) | Retrieval, playback controls, community actions and settings transfer |
+| [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |
@@ -43,6 +45,11 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Swipe brightness | On | No |
 | Player controls | Swipe volume | On | No |
 | Player controls | Force original audio | On | No |
+| Player controls | Background playback | On | No |
+| Shorts | Hide like, comments, share, remix, save, sound, subscribe, title, suggestions/info panels, paused-overlay buttons (ten switches) | Off | No |
+| Shorts | Skip live Shorts | Off | No |
+
+Settings and pages follow YouTube's language: English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu. The diagnostics page is under About → Compatibility & diagnostics.
 
 Ad and SponsorBlock defaults/master gating are computed by their BF snapshots. Independent content
 and player preferences use XAX/Android defaults and final BF authorization. Turning Hide ads off
@@ -50,6 +57,8 @@ does not disable those independent features. Settings and AI caches live in YouT
 Reset uses the existing preference reset; clearing YouTube data also loses preferences/caches.
 Reload feeds for removal changes. Original audio applies to a fresh track list/controller, normally
 the next video; a manual choice on the current loaded list remains usable.
+Background playback reads its independent saved switch on each eligible call. Restart YouTube
+after changing it to discard native cached capabilities. [Implementation and limits](BACKGROUND_PLAYBACK.md).
 
 ## Source and contracts
 
@@ -60,6 +69,7 @@ the next video; a manual choice on the current loaded list remains usable.
 - [Swipes](../contracts/player_swipe_inputs.json)
 - [AI channels](../contracts/ai_channel_inputs.json)
 - [Original audio](../contracts/original_audio_inputs.json)
+- [Background playback](../contracts/background_playback_inputs.json)
 
 ## Documentation changes
 

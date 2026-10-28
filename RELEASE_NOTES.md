@@ -1,32 +1,47 @@
-# YouTube Hide Ads v1.2.1 — device-tested build 127
-
-SponsorBlock's four color sliders now share modern track and handle geometry, endpoint markers
-and YouTube theme colors. Existing settings, presets and opacity behavior are preserved.
-
-Installed as versionCode 127 on the Pixel 8 Pro with YouTube 21.42.243. All 636 startup and 64 UI
-cases pass. Touch endpoints, keyboard, presets, save/reopen and dark/light rendering were checked;
-original settings were restored. [Phone evidence and limits](evidence/sponsorblock_slider_device_20261022/README.md).
-
-# YouTube Hide Ads v1.2.0
-
-## 1.2.0 — 2026-10-22
-
-SponsorBlock uses YouTube-native preference rows, text styles, themed pages and a compact player bottom sheet. Category colors use a live visual picker with presets and red, green, blue and opacity sliders. Back navigation, keyboard handling and accessible touch targets are shared across the forms. Existing settings, playback policies and API behavior are preserved.
-
-[Device checks and limits](evidence/sponsorblock_ui_20261022/README.md). The package remains an XAX host plus unchanged BF/native policies.
-
 # YouTube Hide Ads v1.1.0
 
-## 1.1.0 — 2026-10-21
+## What's new since 1.0.0
 
-SponsorBlock now has bounded retry, a cross-video cache, native player/settings controls, ten
-category modes and colors, manual skip/undo, preview/review/submission, voting/category correction,
-channel exclusions, local/community statistics, private identity, and desktop settings transfer.
-Community POSTs are explicit and never automatically retried; view reporting defaults off.
+- **Background playback**, including Made for Kids videos and videos opened from a link. It has its
+  own switch under Player and does not depend on Hide ads or SponsorBlock. Restart YouTube after
+  changing it.
+- **A YouTubeHideAds section** above Account in YouTube Settings, YouTube-style module pages and a
+  **Compatibility & diagnostics** page with a copyable report.
+- **SponsorBlock**: a player icon beside autoplay with a floating menu like YouTube's own, ten category
+  modes and colors with a visual picker, manual skip/undo, segment preview, submission and voting,
+  channel exclusions, statistics, settings transfer, bounded retry and a cross-video cache.
+- **Shorts**: hide ten individual buttons and panels, and skip live Shorts. Both are off by default.
+- **Swipe controls** shown as a pill with YouTube's brightness or volume icon, a level and the value.
+- **Nine more languages**, following YouTube's language: 简体中文, 繁體中文, Español, Português,
+  Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu.
+- **Lighter and faster.** The Brainfuck bridge used to reopen the module APK on every policy call,
+  which was about 23 % of YouTube's CPU while scrolling and playing; it is now under 0.1 %. DexKit
+  results are cached per YouTube build, so after the first launch YouTube shows its first screen about
+  0.35 s sooner.
 
-Targets YouTube 21.41.525. XAX-only host; existing BF/native inputs preserved. The shell release
-mirror was removed; mirroring is now manual. See [current evidence](evidence/sponsorblock_20261021/README.md)
-for checks and remaining validation limits.
+### Verified
+
+Pixel 8 Pro, Android 17, Vector 2.2 (libxposed API 102), YouTube 21.42.243: all 11 startup self-check
+suites pass and every hook installs, with or without the DexKit cache. Ads and sponsored Shorts were
+removed, SponsorBlock lookups and original audio worked, and background playback continued from the
+feed and from a link (Home and screen off) and stopped when its switch was off.
+[Device checks and limits](evidence/device_perf_20261028/README.md).
+
+Other YouTube versions, devices and 32-bit/x86 ABIs are not certified. The APK is arm64-v8a only.
+
+### Version metadata
+
+- Version name: `1.1.0`
+- Android version code: `153`
+- Package: `io.github.mrxsin.youtubehideads`
+- Git tag: `v1.1.0`
+- APK filename: `YouTubeHideAds-v1.1.0.apk`
+- APK SHA-256: `80029979ada6a92fe1805994f9abe45cc4a4a898027a971adc2e8d297ac66060`
+
+### Installing
+
+Install the APK over 1.0.0; settings are kept in YouTube's data. Keep `com.google.android.youtube` as
+the only scope in Vector or LSPosed, then force-stop and reopen YouTube.
 
 # YouTube Hide Ads v1.0.0
 
@@ -43,7 +58,7 @@ Removes YouTube ads and unwanted feed content, skips SponsorBlock segments, and 
 - Optional AI-channel filters (high and medium confidence AiSList lists).
 - Fullscreen swipes: left edge brightness, right edge media volume.
 - Prefers the original audio track on multi-language videos.
-- Settings under **YouTube → You → Settings → YoutubeHideAds**.
+- Settings under **YouTube → You → Settings → YouTubeHideAds**.
 
 ### Changed since the last development build
 
@@ -68,4 +83,4 @@ Other YouTube versions, devices and 32-bit/x86 ABIs are not certified. The APK i
 
 ### Installing
 
-Install the APK, enable **YoutubeHideAds** in Vector or LSPosed with `com.google.android.youtube` as the only scope, then force-stop and reopen YouTube. If a development build (`org.youtubehideads.module`) is installed, uninstall it first. Your settings are kept in YouTube's data.
+Install the APK, enable **YouTubeHideAds** in Vector or LSPosed with `com.google.android.youtube` as the only scope, then force-stop and reopen YouTube. If a development build (`org.youtubehideads.module`) is installed, uninstall it first. Your settings are kept in YouTube's data.

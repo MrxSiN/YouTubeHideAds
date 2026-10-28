@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Module description shown by the framework manager. -->
+<resources>
+    <string name="module_description">"Минималистичный модуль LSPosed, скрывающий рекламу YouTube и ненужный контент в ленте."</string>
+</resources>

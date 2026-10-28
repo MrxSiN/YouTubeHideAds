@@ -1,0 +1,36 @@
+{
+  "version_name": "1.1.0",
+  "version_code": 153,
+  "base": "installed development build 132 (store sha256 0bb8e2056a2d9adf8fbde85f3dd6cb7410324c5cffa0c440c3b824648981d068)",
+  "source_root": "65c66ccbdf109d42a3a924ae139c9189a9c38e201776399ed06125d655d43003",
+  "store_sha256": "92154bb5b3048fa44d543228ddf0e61340717d1359d2c5b0a885aa2c15ec2aa4",
+  "apk_sha256": "80029979ada6a92fe1805994f9abe45cc4a4a898027a971adc2e8d297ac66060",
+  "apk_bytes": 4409168,
+  "artifact": "build/port/YouTubeHideAds-153.apk (ignored, retained locally)",
+  "bridge": {
+    "path": "lib/arm64-v8a/libbrainfuckc_bridge.so",
+    "sha256": "481b8f8557a425475cf20f9f515ca458ff9802c71236ea4995db54648acd4eb3",
+    "previous_sha256": "14aa3024d76a29a836d51f8443e657fcb5725bfcb7f426121c1054dfb8e0c7e2",
+    "source": "build/bridge/bfp1_bridge.c (external input, ignored; sha256 a716d5ccf604bab43d5e437438bfe75c6a09279118e98d717aa2e10899c4f6f5)",
+    "compiler": "NDK 28.2.13676358 clang --target=aarch64-linux-android28 -O2 -fPIC -shared -fvisibility=hidden -Wl,-z,max-page-size=16384 -Wl,--gc-sections -Wl,--build-id=none -ldl, then llvm-strip --strip-unneeded"
+  },
+  "changed_functions": [
+    "f34 (policy call wrapper)",
+    "bg_authorize (background playback gate)",
+    "f260 (main-thread DexKit bridge: setThreadNum 2 -> 8)",
+    "21 discovery functions route DexKit through 38 added dk_* functions (persistent result cache)",
+    "f260 calls bg_observe_early after bg_initialize",
+    "bg_resolve installs the observer through bg_install_late"
+  ],
+  "added_fields": [
+    "Lio/github/mrxsin/youtubehideads/BfBindings;.tape:[B",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.cache",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.file",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.header",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.dirty",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.session",
+    "Lio/github/mrxsin/youtubehideads/DkBindings;.observer"
+  ],
+  "cache_transport": "build/bridge/dkcache_transport.py (external carrier edit, ignored)",
+  "observer_transport": "build/bridge/edit_observer.py with build/bridge/fb.py (external carrier edit, ignored)"
+}

@@ -1,6 +1,95 @@
 # Changelog
 
-## 1.2.1 — 2026-10-22 (device-tested build 127)
+## 1.1.0 — 2026-10-28 (versionCode 153)
+
+The first release since 1.0.0. It collects development builds 111 to 153, listed below.
+
+- **Background playback**, including Made for Kids videos and videos opened from a link; its own
+  switch, independent of Hide ads and SponsorBlock.
+- **Settings and pages**: a YouTubeHideAds section above Account in YouTube Settings, YouTube-style
+  module pages, and a Compatibility & diagnostics page with a copyable report.
+- **SponsorBlock**: bounded retry and cross-video cache, ten category modes and colors with a visual
+  picker, manual skip/undo, segment preview, submission and voting, channel exclusions, statistics,
+  settings transfer, a player icon beside autoplay and a floating menu like YouTube's own.
+- **Shorts**: hide ten individual buttons and panels, and skip live Shorts.
+- **Swipe controls** shown as a YouTube-style pill with icon, level and value.
+- **Languages**: 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and
+  Bahasa Melayu, following YouTube's language.
+- **Faster**: the Brainfuck bridge no longer reopens the APK on each policy call (it was about 23 %
+  of YouTube's CPU while scrolling and playing), and DexKit results are cached per YouTube build,
+  so YouTube shows its first screen about 0.35 s sooner after the first launch.
+
+Tested on a Pixel 8 Pro, Android 17, Vector 2.2 (API 102), YouTube 21.42.243.
+[Device checks](evidence/device_perf_20261028/README.md).
+
+## Development build 153 — 2026-10-28
+
+Fix: background playback now continues when a video was opened from a link. The player was created
+before the background hooks were ready, so the module never saw it and left YouTube's restriction in
+place. The player observer is now installed at startup; overrides still need every existing check.
+
+## Development build 152 — 2026-10-28
+
+Cold start: DexKit answers are cached per YouTube build in YouTube's `code_cache`, so after the first
+start the hook search takes about 80 ms instead of 460 ms and YouTube's first screen appears about
+0.35 s sooner. The same hooks, checks and diagnostics run; a YouTube or module update, or a damaged
+file, simply rebuilds the cache.
+
+## Development build 143 — 2026-10-28
+
+Cold start: the main-thread hook search runs DexKit on 8 threads instead of 2, so YouTube shows
+its first screen about 0.27 s sooner on a Pixel 8 Pro. The same hooks resolve.
+
+## Development build 135 — 2026-10-28
+
+Faster on the phone, same behaviour. The Brainfuck bridge reopened the module APK on every policy
+call; that path was about 23 % of YouTube's CPU while scrolling and playing, and is now under 0.1 %.
+Policy calls no longer allocate a tape or path string, and the background playback flag hook skips
+the policy call for flags it can never change. All startup self-checks pass and features behave as
+in build 132. [Profile and checks](evidence/device_perf_20261028/README.md).
+
+## Development build 132 — 2026-10-27
+
+The module is named **YouTubeHideAds** throughout. In YouTube Settings it now has its own
+**YouTubeHideAds** section above Account, made from YouTube's own heading and icon-row layouts. It
+scrolls with the list instead of staying pinned. The module page uses the same scaffold, headings
+and rows as the SponsorBlock pages.
+
+New **Compatibility & diagnostics** page under About: module, Android, build, YouTube and framework
+versions; whether each feature's hooks resolved on this YouTube version; self-check totals;
+session counters; and a copyable report for bug reports.
+
+SponsorBlock's "SB" overlay button is replaced by an icon beside autoplay in the player's top bar.
+Its menu matches the player settings menu: floating rounded card, drag handle, icons and chevrons.
+Full-screen pages extend behind the system bars, and segment rows show category and time range.
+New Shorts section: **Hide Shorts components** (ten switches: like, comments, share, remix, save,
+sound, subscribe, title, suggestions and info panels, paused-overlay buttons) and **Skip live
+Shorts**, both off by default. Swipe controls now show a pill on the side being swiped with a
+YouTube icon, a vertical level and the value, held briefly after release.
+
+The module speaks the viewer's YouTube language: 简体中文, 繁體中文, Español, Português, Русский, 日本語,
+한국어, Bahasa Indonesia and Bahasa Melayu join English ([issue #2](https://github.com/MrxSiN/YouTubeHideAds/issues/2)).
+The README is available in the same languages.
+
+Existing policies, hooks, native inputs and preferences are unchanged; new removals use the existing
+AND3 policy. [Build and device checks](evidence/ui_redesign_20261027/README.md).
+
+## Development build 131 — 2026-10-27
+
+Adds **Background playback** under Player controls, enabled by default and independent of Hide ads
+and SponsorBlock. Brainfuck's existing AND3 policy authorizes structurally resolved XAX hooks for
+regular playback eligibility, the Made for Kids controller, background settings and the single
+automatic foreground-resume experiment. No play commands, Premium spoof, services or wake locks.
+
+Discovery runs on a worker, requires unique typed roles, deoptimizes relevant callers and enables
+the complete set only after validation and installation. Settings use existing save/reset behavior;
+restart YouTube after a change to discard native caches. Native dependencies and all existing
+startup suites are unchanged. Morphe attribution is preserved in source and packaged resources.
+
+[Build, verification and device limitations](evidence/background_playback_20261027/README.md) ·
+[Implementation and reference research](docs/BACKGROUND_PLAYBACK.md).
+
+## Development build 127 — 2026-10-22
 
 The color picker's four sliders share a rounded 16 dp track, a vertical 4 × 44 dp handle,
 handle spacing and an endpoint marker, using the geometry in YouTube 21.42.243's bundled
@@ -12,13 +101,13 @@ found by phone testing. The inactive-track tint is applied once for proper contr
 [Build and phone verification](evidence/sponsorblock_slider_device_20261022/README.md): 636 startup + 64 UI cases,
 dark/light rendering, endpoints, keyboard and saved-color persistence pass.
 
-## 1.2.0 — 2026-10-22
+## Development build 123 — 2026-10-22
 
 SponsorBlock uses YouTube-native preference rows, text styles, themed pages and a compact player bottom sheet. Category colors use a live visual picker with presets and red, green, blue and opacity sliders. Back navigation, keyboard handling and accessible touch targets are shared across the forms. Existing settings, playback policies and API behavior are preserved.
 
 [Device checks and limits](evidence/sponsorblock_ui_20261022/README.md). The package remains an XAX host plus unchanged BF/native policies.
 
-## 1.1.0 — 2026-10-21
+## Development build 111 — 2026-10-21
 
 SponsorBlock now has bounded retry, a cross-video cache, native player/settings controls, ten
 category modes and colors, manual skip/undo, preview/review/submission, voting/category correction,

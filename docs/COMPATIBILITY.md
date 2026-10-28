@@ -1,6 +1,16 @@
 # Tested compatibility
 
-Canonical source and installed build: **1.2.1, versionCode 127**. Targeted slider/UI checks passed
+Release **1.1.0, versionCode 153** was exercised on Pixel 8 Pro, Android 17, Vector 2.2/API 102 and
+YouTube 21.42.243: all 11 startup suites, ads and sponsored-Shorts removal, SponsorBlock, original audio,
+and background playback from the feed and from a link (Home, screen off, switch off), with and without
+the DexKit cache. It retains arm64/API 102 requirements and the same native/third-party dependencies.
+No other device, framework or YouTube version is certified. [Checks and limits](../evidence/device_perf_20261028/README.md).
+Background playback was first exercised on development build 131:
+[dated checks and remaining limits](../evidence/background_playback_20261027/README.md).
+
+The following records describe earlier development builds:
+
+Development build **127**. Targeted slider/UI checks passed
 2026-10-22 on YouTube **21.42.243**: 636 startup and 64 UI cases, dark/light rendering, touch,
 keyboard and saved-color persistence. [Exact phone evidence and limits](../evidence/sponsorblock_slider_device_20261022/README.md).
 The rows below retain earlier feature proof and do not certify 21.20.405.

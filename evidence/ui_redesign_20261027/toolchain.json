@@ -1,0 +1,13 @@
+{
+  "sdk": "D:/GitHub/XAX",
+  "commit": "3cca599",
+  "compiler_sha256": {
+    "xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+    "xax_android_libxposed_jvm.py": "c00d2e2cfa044806a9b061e9f2803de65e31a4ee897279538f66403b97c0a601"
+  },
+  "compiler_matches_build_131_record": true,
+  "aapt2": "36.0.0",
+  "native_dex_signing_pins_unchanged": true,
+  "xax_mcp": "0.5.0 inspected; android-libxposed-jvm target UNIMPLEMENTED in the adapter, so the compiler SDK was used directly",
+  "transport_location": "session scratchpad (external; not part of this repository)"
+}
