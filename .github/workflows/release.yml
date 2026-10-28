@@ -100,7 +100,8 @@ jobs:
 
           echo "build-tools: $tools"
           "$tools/apksigner" verify --verbose --print-certs "$apk" 2>&1 | tee certs.txt
-          signer=$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' certs.txt)
+          grep -q '^Number of signers: 1$' certs.txt || { echo "Expected exactly one signer" >&2; exit 1; }
+          signer=$(grep -m1 -E '^(Signer #1|V[0-9.]+ Signer):? certificate SHA-256 digest: ' certs.txt | sed 's/.*digest: //')
           [ "$signer" = "$SIGNER_SHA256" ] || { echo "Signer $signer is not the release key" >&2; exit 1; }
 
           actual=$(sha256sum "$apk" | cut -d' ' -f1)
