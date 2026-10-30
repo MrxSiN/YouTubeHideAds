@@ -1,6 +1,9 @@
 # XAX source
 
-Canonical source is release **1.1.0/code 153**, with 342 unique functions and the same 11 native
+Canonical source is release **1.2.0/code 155** (store SHA-256 `b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c`), with 354 functions and the
+same 11 native paths. Build 154 fixed two YouTube 21.43 discovery filters and the display name; build 155
+added the update check and problem report. [Evidence](../../evidence/release_1_2_0_20261030/README.md).
+Release 1.1.0/code 153 had 342 unique functions and the same 11 native
 paths. Builds 135-153 rebuilt the bridge, cached DexKit results through `dk_*` functions and install the
 background player observer at startup. [Evidence](../../evidence/device_perf_20261028/README.md).
 Build 132 had 302 unique functions and the same

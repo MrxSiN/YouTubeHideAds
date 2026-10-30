@@ -1,10 +1,10 @@
 # Background playback
 
-Released in **1.1.0** (first implemented in development build 131), this feature runs in the stock YouTube process.
+Released in **1.1.0** (first implemented in development build 131; fixed for YouTube 21.43 in 1.2.0), this feature runs in the stock YouTube process.
 It needs the existing API 102 module, not a patched YouTube APK or a Morphe installation.
 [Build and test evidence](../evidence/background_playback_20261027/README.md).
 
-The independent **Background playback** switch is under **You → Settings → YouTubeHideAds →
+The independent **Background playback** switch is under **You → Settings → YouTube Hide Ads →
 Player controls**, defaults on, and uses the existing `youtubehideads` preferences and switch
 callbacks. Its summary is: “Allow videos to continue playing when YouTube is in the background
 or the screen is off, including Made for Kids videos.” The existing reset clears its key and
@@ -102,7 +102,8 @@ Logs include `Background playback self-check (28 cases)=true`, candidate methods
 installation, and the first authorization for each of eligibility, kids policy, settings capability
 and foreground resume. Missing/ambiguous roles and worker exceptions log native preservation.
 
-Runtime acceptance currently covers Pixel 8 Pro, Android 17, Vector 2.2/API 102 and YouTube
+Runtime acceptance currently covers Pixel 8 Pro, Android 17, Vector 2.2/API 102 and YouTube 21.43.523
+(build 154: the settings callee must be declared in a YouTube default-package class) and YouTube
 21.42.243. The 21.41.525 APK and legacy accessor were inspected; this change was not installed
 against that version. Pre-21.23 settings fingerprints are unsupported and fail closed.
 Off-main-thread or unknown player calls preserve native restrictions. Discovery begins after a

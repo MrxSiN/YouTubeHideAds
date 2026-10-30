@@ -1,6 +1,6 @@
 # Static branding resources
 
-App title: YouTubeHideAds. The shield/strike and black/white styling follows the local ThreadsHideAds
+App title: YouTube Hide Ads (YouTubeHideAds before 1.2.0). The shield/strike and black/white styling follows the local ThreadsHideAds
 and TwitterHideAds projects; this YouTube mark is independently drawn. The same foreground serves
 adaptive and monochrome icons. No launcher Activity or extra permission is introduced.
 

@@ -2,6 +2,46 @@
 
 ## Unreleased
 
+## 1.2.0 — 2026-10-30 (versionCode 155)
+
+Collects development builds 154 and 155, listed below, and supports YouTube 21.43.523.
+
+### Development build 155 (1.2.0) — 2026-10-30
+
+- **Check for updates** (About, on by default): once per YouTube start, off the main thread, the module
+  sends one bodiless `HEAD` to `github.com/…/releases/latest` and reads the tag from the redirect (no
+  JSON, no GitHub API rate limit). A newer `vX.Y.Z` shows a dialog in YouTube's own modern style
+  (24 dp rounded raised surface, YouTube text styles, stacked pill buttons); **Update** opens the
+  release page, **Later** closes it. Failures are logged as `Update check failed: …` and never shown.
+- **Report a problem** (Compatibility & diagnostics): opens a new GitHub issue with the compatibility
+  report filled in. Nothing is sent until you submit it on GitHub. The copy button and the issue link
+  share one report builder; constant URL parts are encoded at build time.
+- The per-process "already checked" marker no longer holds the first Activity; only a weak reference is kept.
+- Force original audio was already part of the module (on by default, under Player controls); it was
+  checked again on 21.43.523 (`Original audio selected: en.4`).
+- README: troubleshooting entry for HTTPS-filtering apps (exclude `sponsor.ajay.app` and `github.com`).
+
+Tested on the same Pixel and YouTube 21.43.523: no startup regressions, switch saved and restored, one
+`HEAD` per start, the dialog with both buttons (against a local redirect, since this phone's HTTPS filter
+breaks github.com inside YouTube), the copied report header (`1.2.0 (155)`) and the prefilled issue link.
+New strings are English only.
+
+### Development build 154 (1.1.1) — 2026-10-30
+
+YouTube 21.43.523 support ([issue #3](https://github.com/MrxSiN/YouTubeHideAds/issues/3)).
+
+- Fix: background playback was off on 21.43. The background-settings caller now also calls
+  `Iterator.hasNext()` and `Optional.isPresent()`, so the settings role was ambiguous and the whole
+  feature failed closed. The callee must now be declared in one of YouTube's own classes.
+- Fix: SponsorBlock skipping was off on 21.43. The progress method calls the same accessor twice;
+  discovery counted call sites instead of distinct methods. The player hook installs again.
+- The module is now named **YouTube Hide Ads** (label, settings section, report), like the other modules.
+- The About page and compatibility report showed `1.1.0 (132)`; they now show the real version.
+- A failed SponsorBlock request logs its cause (`SponsorBlock request error: …`).
+
+Tested on Pixel 8 Pro, Android 17, Vector 2.2, YouTube 21.43.523: all startup suites pass, every
+background role resolves, audio continues after Home and with the screen off for a video opened from a link.
+
 - GitHub Actions: `Release CI` checks contracts, the source boundary and tag/version agreement on
   every push, and verifies each published release APK (package, version, release signing certificate,
   SHA-256 in the release notes). `xposed-sync` then mirrors the verified release to

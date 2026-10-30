@@ -1,6 +1,8 @@
 # Build
 
-Release **1.1.0 (versionCode 153)** was built with the same `D:/GitHub/XAX` `3cca599` compiler SDK and a
+Release **1.2.0 (versionCode 155)** was built with the same compiler (`xax_construct.py` and
+`xax_android_libxposed_jvm.py` at the hashes below), native inputs and signing capability as 1.1.0; only
+the store and the branding archive changed. [Build record](../evidence/release_1_2_0_20261030/README.md). Before that, release **1.1.0 (versionCode 153)** was built with the same `D:/GitHub/XAX` `3cca599` compiler SDK and a
 rebuilt `libbrainfuckc_bridge.so` (source and flags in the [build 153 record](../evidence/device_perf_20261028/build.json)).
 Development build 132 was built with `D:/GitHub/XAX` at `3cca599`, which now
 contains the Android libxposed profile. Its `xax_construct.py` and `xax_android_libxposed_jvm.py`
@@ -124,16 +126,16 @@ construct carrier; bump its `version_code` for each device install.
 After a behavioral edit, verify semantic construction, native policy/source correspondence and
 input digests, then test the candidate on the device. Promote the exact tested store and signed APK.
 Do not substitute temporary probe builds or rebuild with different inputs after device acceptance.
-The release 1.1.0/code 153 build has 342 functions; development build 127 had 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
+The release 1.2.0/code 155 build has 9 more functions than 1.1.0 (350 in the exported carrier, against 341); 1.1.0/code 153 has 342 by the earlier count; development build 127 had 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
 and packages 636 startup checks plus 64 UI checks when the first SponsorBlock page opens. Both suites pass in the accepted dark and light device processes. Store/APK identities belong in the dated build record.
 
 ## Install and validate
 
 ```text
-D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.1.0.apk
+D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.2.0.apk
 ```
 
-Enable **YouTubeHideAds** in Vector for YouTube, allow the package update to settle, then force-stop
+Enable **YouTube Hide Ads** in Vector for YouTube, allow the package update to settle, then force-stop
 and reopen YouTube. Verify the installed version/digest, startup checks and targeted behavior.
 A transient old APK-path cache occurred after build 74; a later force-stop/reopen resolved it.
 Do not uninstall or clear user data to work around an unverified older version.

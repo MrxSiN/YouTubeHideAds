@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">YouTubeHideAds</string>
+    <string name="app_name">YouTube Hide Ads</string>
     <string name="module_description">Minimal LSPosed module that hides YouTube ads and unwanted feed content.</string>
 </resources>

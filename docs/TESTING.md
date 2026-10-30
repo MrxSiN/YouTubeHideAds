@@ -8,6 +8,11 @@ requirements; fixture presence is not evidence of their execution.
 device playback/control/settings results, negative development candidates and untested scenarios.
 The existing 64-case SponsorBlock UI suite is a separate live-context check, not part of the 664 startup checks.
 
+Release **1.2.0/code 155** acceptance on YouTube 21.43.523: every startup suite passes and every hook
+installs; background playback from a link (Home, screen off), original audio, the update dialog (local
+redirect), the update switch and the prefilled issue link were exercised.
+[Evidence](../evidence/release_1_2_0_20261030/README.md).
+
 Release **1.1.0/code 153** acceptance: all 11 startup suites pass with and without the DexKit cache;
 hook, candidate and self-check log lines match build 143; cached, invalidated and corrupted cache files
 behave correctly; background playback continues from feed and link and stops when switched off.

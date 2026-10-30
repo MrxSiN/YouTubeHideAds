@@ -1,3 +1,48 @@
+# YouTube Hide Ads v1.2.0
+
+## What's new since 1.1.0
+
+- **Works with YouTube 21.43.523.** Background playback and SponsorBlock skipping had stopped working
+  after the YouTube update; both are back. ([#3](https://github.com/MrxSiN/YouTubeHideAds/issues/3))
+- **Update check.** Once each time YouTube starts, the module asks GitHub whether a newer release
+  exists and, if so, shows a YouTube-style dialog with **Update** (opens the release page) and
+  **Later**. It is on by default; turn it off under **About → Check for updates**.
+- **Report a problem.** **About → Compatibility & diagnostics → Report a problem** opens a new GitHub
+  issue with the compatibility report already filled in. Nothing is sent until you submit it.
+- **New name: YouTube Hide Ads**, matching the other modules. Settings, package and saved preferences
+  are unchanged.
+- The About page and compatibility report show the real version again (1.1.0 showed `1.1.0 (132)`).
+- SponsorBlock request failures are now logged with their cause.
+
+### Known issue: HTTPS filtering apps
+
+AdGuard and similar apps, when their certificate is installed as a system certificate, stop
+SponsorBlock and the update check from connecting (`NOT_ENOUGH_SCTS` in the log). Exclude
+`sponsor.ajay.app` and `github.com` from HTTPS filtering. [Details](README.md#sponsorblock-or-update-check-never-connects).
+
+### Verified
+
+Pixel 8 Pro, Android 17, Vector 2.2 (libxposed API 102), YouTube 21.43.523: every startup self-check
+passes and every hook installs; background playback continued after Home and with the screen off for a
+video opened from a link; original audio was selected on a multi-language video; the update dialog and
+both buttons, the switch and the prefilled issue were checked. [Device checks and limits](evidence/release_1_2_0_20261030/README.md).
+
+Other YouTube versions, devices and 32-bit/x86 ABIs are not certified. The APK is arm64-v8a only.
+
+### Version metadata
+
+- Version name: `1.2.0`
+- Android version code: `155`
+- Package: `io.github.mrxsin.youtubehideads`
+- Git tag: `v1.2.0`
+- APK filename: `YouTubeHideAds-v1.2.0.apk`
+- APK SHA-256: `d984de2fda0ca0e29d1b98823142915f6a54403f9d12a86f687c7950661e6d0d`
+
+### Installing
+
+Install the APK over 1.1.0; settings are kept in YouTube's data. Keep `com.google.android.youtube` as
+the only scope in Vector or LSPosed, then force-stop and reopen YouTube.
+
 # YouTube Hide Ads v1.1.0
 
 ## What's new since 1.0.0

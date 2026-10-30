@@ -38,7 +38,7 @@
 | 🔎 **名前の変更に強い** | DexKit が起動のたびに構造からすべてのフックを探します。役割が欠けているか一意でなければ、その機能には何もインストールしません。 |
 | 🧠 **ポリシーは Brainfuck、しかもコンパイル済み** | 手書きの 9 つのプログラムをネイティブ コードにコンパイル。ポリシーと SponsorBlock の操作は起動のたびにチェックされます。 |
 | 🛟 **失敗したら止める** | セルフチェックに失敗した機能はオフのまま。ネットワーク エラーや不明な再生タイプではシークしません。 |
-| ⚙️ **ネイティブな見た目の設定** | **マイページ → 設定** の「アカウント」の上に専用の **YouTubeHideAds** セクション。YouTube 自身の行を使い、スイッチはすべて独立。「互換性と診断」ページもあります。 |
+| ⚙️ **ネイティブな見た目の設定** | **マイページ → 設定** の「アカウント」の上に専用の **YouTube Hide Ads** セクション。YouTube 自身の行を使い、スイッチはすべて独立。「互換性と診断」ページもあります。 |
 | 🎛️ **プレーヤーになじむ SponsorBlock** | 自動再生の横の SponsorBlock アイコンから、設定の歯車と同じフローティング メニューが開きます。セグメントはシークバーに色付きで表示されます。 |
 | 📱 **すっきりしたショート** | ショートのボタンやパネルを個別に非表示にでき、ショート フィードのライブ配信を飛ばせます。 |
 | 👆 **ひと目でわかるスワイプ操作** | 左で明るさ、右で音量。アイコン、レベル、数値の入ったピルで表示します。 |
@@ -84,6 +84,8 @@
 
 ## 状況
 
+**v1.2.0**（versionCode 155）は YouTube 21.43.523 に対応し、バックグラウンド再生と SponsorBlock のスキップが再び動作します。YouTube 風のダイアログによる更新チェック（既定でオン、「概要」内）と、記入済みの GitHub Issue を開く **問題を報告** ボタンを追加しました。モジュール名は **YouTube Hide Ads** になりました。[変更履歴](CHANGELOG.md)。
+
 **v1.1.0**（versionCode 153）は 1.0.0 以来の最初のリリースです。バックグラウンド再生、YouTube の設定内の専用セクション、「互換性と診断」ページ、YouTube 風の SponsorBlock 操作、ショートの要素の非表示、ライブのショートのスキップ、新しいスワイプ操作、さらに 9 言語を追加しました。スマートフォンでの負荷も大きく下がりました。Brainfuck のポリシー呼び出しは APK を開き直さなくなり、DexKit の結果はキャッシュされるため、初回以降は YouTube が約 0.35 秒早く開きます。[端末での確認](evidence/device_perf_20261028/README.md)。
 
 2 つのリリースの間の開発ビルド（111〜153）は[変更履歴](CHANGELOG.md)に、それぞれの証拠は [evidence](evidence/README.md) にあります。
@@ -94,11 +96,13 @@ Pixel 8 Pro（Android 17、Vector 2.2、libxposed API 102）で確認してい�
 
 | YouTube | モジュール | 状態 |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ 動作 |
 | 21.42.243 | 1.1.0 | ✅ 動作 |
 | 21.41.525 | 1.0.0 | ✅ 動作 |
 
 ### 既知の制限
 
+- HTTPS フィルタリングアプリ（AdGuard など）があると、SponsorBlock と更新チェックが接続できません。`sponsor.ajay.app` と `github.com` を HTTPS フィルタリングの除外に追加してください（[詳細](README.md#sponsorblock-or-update-check-never-connects)）。
 - Premium、全画面、エンゲージメント パネルのプロモーションは、制御したフック テストでしか除去を確認していません。実際の配信例はまだ見ていません。
 - プレビュー動画と「他のトピックを見る」の棚は英語の見出しでのみ判定します。
 - AI チャンネルのリストはコミュニティが管理しており誤判定がありうるため、既定でオフです。
@@ -128,7 +132,7 @@ Pixel 8 Pro（Android 17、Vector 2.2、libxposed API 102）で確認してい�
 3. YouTube を一度強制停止してから開く
 ```
 
-[GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) または [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) から入手できます。設定は **YouTube → マイページ → 設定 → YouTubeHideAds** にあります。設定と AI のキャッシュは YouTube 自身のデータに保存されるため、YouTube のデータを消去するとリセットされます。
+[GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) または [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) から入手できます。設定は **YouTube → マイページ → 設定 → YouTube Hide Ads** にあります。設定と AI のキャッシュは YouTube 自身のデータに保存されるため、YouTube のデータを消去するとリセットされます。
 
 フレームワークのログでは `YouTubeHideAds:` で始まる行で動作を確認できます。
 

@@ -38,7 +38,7 @@ Tampoco es lento. Las nueve políticas se compilan por adelantado a bibliotecas 
 | 🔎 **Resiste los cambios de nombre** | DexKit localiza cada hook por su estructura en cada inicio. Un rol ausente o ambiguo no instala nada para esa función. |
 | 🧠 **Políticas en Brainfuck, compiladas** | Nueve programas escritos a mano y compilados a código nativo; las políticas y los controles de SponsorBlock se comprueban en cada inicio. |
 | 🛟 **Falla de forma segura** | Si una autocomprobación falla, esa función queda desactivada. Los errores de red y los tipos de reproducción desconocidos nunca provocan saltos. |
-| ⚙️ **Configuración con aspecto nativo** | Su propia sección **YouTubeHideAds** en **Tú → Configuración**, encima de Cuenta, con las filas de YouTube, cada interruptor independiente y una página de Compatibilidad y diagnóstico. |
+| ⚙️ **Configuración con aspecto nativo** | Su propia sección **YouTube Hide Ads** en **Tú → Configuración**, encima de Cuenta, con las filas de YouTube, cada interruptor independiente y una página de Compatibilidad y diagnóstico. |
 | 🎛️ **SponsorBlock integrado en el reproductor** | Un icono de SponsorBlock junto a la reproducción automática abre el mismo menú flotante que el engranaje de ajustes; los segmentos se colorean en la barra de progreso. |
 | 📱 **Shorts más limpios** | Oculta botones y paneles concretos de Shorts y pasa de largo las emisiones en directo del feed de Shorts. |
 | 👆 **Controles de deslizamiento claros** | Brillo a la izquierda y volumen a la derecha, en una cápsula con icono, nivel y valor. |
@@ -84,6 +84,8 @@ Desactivar **Ocultar anuncios** no desactiva las funciones de contenido y del re
 
 ## Estado
 
+**v1.2.0** (versionCode 155) es compatible con YouTube 21.43.523: la reproducción en segundo plano y los saltos de SponsorBlock vuelven a funcionar. Añade la búsqueda de actualizaciones con un diálogo al estilo de YouTube (activada por defecto, en Acerca de) y un botón **Informar de un problema** que abre un issue de GitHub ya rellenado. El módulo ahora se llama **YouTube Hide Ads**. [Registro de cambios](CHANGELOG.md).
+
 **v1.1.0** (versionCode 153) es la primera versión desde la 1.0.0. Añade reproducción en segundo plano, una sección propia en la Configuración de YouTube, una página de Compatibilidad y diagnóstico, controles de SponsorBlock con el estilo de YouTube, Ocultar elementos de Shorts, Saltar Shorts en directo, controles de deslizamiento rediseñados y nueve idiomas más. También es mucho más ligera en el teléfono: las políticas de Brainfuck ya no vuelven a abrir el APK y los resultados de DexKit se guardan en caché, así que YouTube se abre unos 0,35 s antes después del primer inicio. [Pruebas en el dispositivo](evidence/device_perf_20261028/README.md).
 
 Las versiones de desarrollo entre ambas versiones (111 a 153) están en el [registro de cambios](CHANGELOG.md), con las pruebas de cada una en [evidence](evidence/README.md).
@@ -94,11 +96,13 @@ Probado en un Pixel 8 Pro con Android 17 y Vector 2.2 (libxposed API 102). ¿Has
 
 | YouTube | Módulo | Estado |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ Funciona |
 | 21.42.243 | 1.1.0 | ✅ Funciona |
 | 21.41.525 | 1.0.0 | ✅ Funciona |
 
 ### Límites conocidos
 
+- Las apps de filtrado HTTPS (AdGuard y similares) impiden que SponsorBlock y la búsqueda de actualizaciones se conecten. Excluye `sponsor.ajay.app` y `github.com` del filtrado HTTPS ([detalles](README.md#sponsorblock-or-update-check-never-connects)).
 - Las promociones de Premium, a pantalla completa y de paneles solo se han eliminado en pruebas controladas de los hooks; todavía no han aparecido casos reales.
 - Las secciones de vídeos de vista previa y de «Explorar más temas» solo se reconocen por sus encabezados en inglés.
 - Las listas de canales de IA las mantiene la comunidad y pueden clasificar mal un canal; por eso vienen desactivadas.
@@ -128,7 +132,7 @@ Detalles: [cobertura de funciones](docs/FEATURE_COVERAGE.md) y [compatibilidad](
 3. Fuerza la detención de YouTube una vez y ábrelo
 ```
 
-Descárgalo en [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) o en [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Los ajustes están en **YouTube → Tú → Configuración → YouTubeHideAds**. Las preferencias y las cachés de IA se guardan en los datos de YouTube, así que borrarlos los restablece.
+Descárgalo en [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) o en [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Los ajustes están en **YouTube → Tú → Configuración → YouTube Hide Ads**. Las preferencias y las cachés de IA se guardan en los datos de YouTube, así que borrarlos los restablece.
 
 El registro del framework muestra lo ocurrido en líneas que empiezan por `YouTubeHideAds:`:
 

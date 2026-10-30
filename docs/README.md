@@ -1,9 +1,9 @@
 # Documentation
 
-Current release: **YouTubeHideAds 1.1.0, versionCode 153** (tag `v1.1.0`).
+Current release: **YouTube Hide Ads 1.2.0, versionCode 155** (tag `v1.2.0`).
 [Build identity](../evidence/device_perf_20261028/build.json) owns artifact digests and counts;
 [phone evidence](../evidence/device_perf_20261028/README.md) owns its scoped validation claims.
-Development builds 111 to 152 between 1.0.0 and 1.1.0 are named by build number.
+Development builds 111 to 152 between 1.0.0 and 1.1.0, and 154 before 1.2.0, are named by build number.
 Dated evidence describes its named build, not the current checkout.
 
 | Guide | Contents |
@@ -48,8 +48,9 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Background playback | On | No |
 | Shorts | Hide like, comments, share, remix, save, sound, subscribe, title, suggestions/info panels, paused-overlay buttons (ten switches) | Off | No |
 | Shorts | Skip live Shorts | Off | No |
+| About | Check for updates | On | No |
 
-Settings and pages follow YouTube's language: English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu. The diagnostics page is under About → Compatibility & diagnostics.
+Settings and pages follow YouTube's language: English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu. The diagnostics page is under About → Compatibility & diagnostics; its **Report a problem** row opens a prefilled GitHub issue. The update check and its strings are English only for now.
 
 Ad and SponsorBlock defaults/master gating are computed by their BF snapshots. Independent content
 and player preferences use XAX/Android defaults and final BF authorization. Turning Hide ads off

@@ -1,5 +1,13 @@
 # Tested compatibility
 
+Release **1.2.0, versionCode 155** (and development build 154 before it) was exercised on the same Pixel 8 Pro, Android 17 and
+Vector 2.2/API 102 with YouTube **21.43.523**: all startup suites, every hook and background role
+resolving, and background playback from a link (Home, screen off). SponsorBlock segment fetching was
+not observed on this phone because an HTTPS-filtering proxy failed Certificate Transparency; the player
+hook, video ID, seek and duration bridges resolve. [Checks and limits](../evidence/release_1_2_0_20261030/README.md).
+
+The following records describe release 1.1.0:
+
 Release **1.1.0, versionCode 153** was exercised on Pixel 8 Pro, Android 17, Vector 2.2/API 102 and
 YouTube 21.42.243: all 11 startup suites, ads and sponsored-Shorts removal, SponsorBlock, original audio,
 and background playback from the feed and from a link (Home, screen off, switch off), with and without

@@ -1,0 +1,22 @@
+{
+  "version_name": "1.2.0",
+  "version_code": 155,
+  "base": "release 1.1.0 store (sha256 92154bb5b3048fa44d543228ddf0e61340717d1359d2c5b0a885aa2c15ec2aa4)",
+  "store_sha256": "b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c",
+  "apk_sha256": "d984de2fda0ca0e29d1b98823142915f6a54403f9d12a86f687c7950661e6d0d",
+  "apk_bytes": 4425572,
+  "artifact": "build/port/YouTubeHideAds-v1.2.0.apk (ignored, retained locally)",
+  "branding_blake3": "de27d9055c9fde3c7cae00168ddd532ab5442f8c6e7e4aa1c70b7ba8bed28a95",
+  "compiler": {
+    "sdk": "D:/GitHub/XAX",
+    "xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+    "xax_android_libxposed_jvm.py": "5760bdb4d75ed7984646f7c18e452901ab41b7bb63c0c2fb11ca7699ff1f1f2e"
+  },
+  "roundtrip": "export_carrier(1.1.0 store) -> construct -> build_module reproduced the 1.1.0 store and APK byte for byte",
+  "native_dex_signer_unchanged": true,
+  "transport": [
+    "build/bridge/edit_154.py",
+    "build/bridge/edit_155.py (external carrier edits, ignored)"
+  ],
+  "youtube": "21.43.523 (versionCode 1561307650)"
+}

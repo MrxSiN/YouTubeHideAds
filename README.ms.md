@@ -38,7 +38,7 @@ Ia juga tidak perlahan. Sembilan polisi dikompil lebih awal kepada pustaka kongs
 | 🔎 **Tahan pertukaran nama** | DexKit mencari setiap hook berdasarkan struktur setiap kali dimulakan. Peranan yang tiada atau tidak jelas tidak memasang apa-apa untuk ciri itu. |
 | 🧠 **Polisi Brainfuck yang dikompil** | Sembilan atur cara yang ditulis sendiri, dikompil kepada kod asli; polisi dan kawalan SponsorBlock disemak setiap kali dimulakan. |
 | 🛟 **Gagal dengan selamat** | Jika semakan kendiri gagal, ciri itu kekal dimatikan. Ralat rangkaian dan jenis main balik yang tidak dikenali tidak sekali-kali menyebabkan lompatan. |
-| ⚙️ **Tetapan bergaya asli** | Bahagian **YouTubeHideAds** sendiri dalam **Anda → Tetapan**, di atas Akaun, menggunakan baris YouTube sendiri, dengan setiap suis berdiri sendiri dan halaman Keserasian & diagnostik. |
+| ⚙️ **Tetapan bergaya asli** | Bahagian **YouTube Hide Ads** sendiri dalam **Anda → Tetapan**, di atas Akaun, menggunakan baris YouTube sendiri, dengan setiap suis berdiri sendiri dan halaman Keserasian & diagnostik. |
 | 🎛️ **SponsorBlock dalam pemain** | Ikon SponsorBlock di sebelah automain membuka menu terapung yang sama seperti gear tetapan pemain; segmen diwarnakan pada bar carian. |
 | 📱 **Shorts lebih kemas** | Sembunyikan butang dan panel Shorts satu demi satu, dan langkau strim langsung dalam suapan Shorts. |
 | 👆 **Kawalan leret yang mudah dibaca** | Kecerahan di kiri, kelantangan di kanan, dipaparkan sebagai kapsul dengan ikon, aras dan nilai. |
@@ -84,6 +84,8 @@ Mematikan **Sembunyikan iklan** tidak mematikan ciri kandungan dan pemain. Muat 
 
 ## Status
 
+**v1.2.0** (versionCode 155) menyokong YouTube 21.43.523: main di latar belakang dan langkauan SponsorBlock berfungsi semula. Versi ini menambah semakan kemas kini dengan dialog gaya YouTube (dihidupkan secara lalai, di Perihal) dan butang **Laporkan masalah** yang membuka isu GitHub yang telah diisi. Modul ini kini dinamakan **YouTube Hide Ads**. [Log perubahan](CHANGELOG.md).
+
 **v1.1.0** (versionCode 153) ialah keluaran pertama sejak 1.0.0. Keluaran ini menambah main balik latar belakang, bahagian sendiri dalam Tetapan YouTube, halaman Keserasian & diagnostik, kawalan SponsorBlock bergaya YouTube, Sembunyikan komponen Shorts, Langkau Shorts langsung, kawalan leret yang direka semula dan sembilan lagi bahasa. Ia juga jauh lebih ringan pada telefon: panggilan dasar Brainfuck tidak lagi membuka semula APK, dan hasil DexKit disimpan dalam cache, jadi YouTube dibuka kira-kira 0.35 saat lebih cepat selepas pelancaran pertama. [Semakan peranti](evidence/device_perf_20261028/README.md).
 
 Binaan pembangunan antara kedua-dua keluaran (111 hingga 153) disenaraikan dalam [log perubahan](CHANGELOG.md), dengan bukti setiap satu dalam [evidence](evidence/README.md).
@@ -94,11 +96,13 @@ Diuji pada Pixel 8 Pro dengan Android 17 dan Vector 2.2 (libxposed API 102). Per
 
 | YouTube | Modul | Status |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ Berfungsi |
 | 21.42.243 | 1.1.0 | ✅ Berfungsi |
 | 21.41.525 | 1.0.0 | ✅ Berfungsi |
 
 ### Had yang diketahui
 
+- Aplikasi penapisan HTTPS (AdGuard dan seumpamanya) menghalang SponsorBlock dan semakan kemas kini daripada bersambung. Kecualikan `sponsor.ajay.app` dan `github.com` daripada penapisan HTTPS ([butiran](README.md#sponsorblock-or-update-check-never-connects)).
 - Promosi Premium, skrin penuh dan panel penglibatan hanya dibuang dalam ujian hook terkawal; kes yang dihantar secara sebenar belum muncul.
 - Rak video pratonton dan "Terokai lebih banyak topik" hanya dikenali melalui tajuk bahasa Inggeris.
 - Senarai saluran AI diselenggara komuniti dan boleh tersalah kelaskan saluran, sebab itu ia dimatikan secara lalai.
@@ -128,7 +132,7 @@ Butiran: [liputan ciri](docs/FEATURE_COVERAGE.md) dan [keserasian](docs/COMPATIB
 3. Paksa henti YouTube sekali, kemudian bukanya
 ```
 
-Muat turun daripada [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) atau [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Tetapan berada di **YouTube → Anda → Tetapan → YouTubeHideAds**. Pilihan dan cache AI disimpan dalam data YouTube sendiri, jadi mengosongkan data YouTube akan menetapkannya semula.
+Muat turun daripada [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) atau [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Tetapan berada di **YouTube → Anda → Tetapan → YouTube Hide Ads**. Pilihan dan cache AI disimpan dalam data YouTube sendiri, jadi mengosongkan data YouTube akan menetapkannya semula.
 
 Log rangka kerja menunjukkan apa yang berlaku dalam baris yang bermula dengan `YouTubeHideAds:`:
 

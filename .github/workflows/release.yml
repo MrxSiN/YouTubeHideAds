@@ -27,7 +27,7 @@ permissions:
 
 env:
   PACKAGE: io.github.mrxsin.youtubehideads
-  # SHA-256 of the release signing certificate (CN=YouTubeHideAds), shared by v1.0.0 and v1.1.0.
+  # SHA-256 of the release signing certificate (CN=YouTubeHideAds), shared by v1.0.0, v1.1.0 and v1.2.0.
   SIGNER_SHA256: 3c4644a021b4e1994d4f31c36d41854f86bf6a471a8f3d667fbfc62b7e42926b
 
 jobs:

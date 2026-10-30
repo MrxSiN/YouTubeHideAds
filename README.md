@@ -47,7 +47,7 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | 🔎 **Survives renames** | DexKit finds every hook by structure at each start. A missing or ambiguous role installs nothing for that feature. |
 | 🧠 **Policy in Brainfuck, compiled** | Nine hand-written programs compiled to native code; packaged policies and SponsorBlock controls are checked at every start. |
 | 🛟 **Fails closed** | If a self-check fails, that feature stays off. Network errors and unknown playback types never seek. |
-| ⚙️ **Native-looking settings** | Its own **YouTubeHideAds** section in **You → Settings**, above Account, built from YouTube's own rows, with every switch independent and a Compatibility & diagnostics page. |
+| ⚙️ **Native-looking settings** | Its own **YouTube Hide Ads** section in **You → Settings**, above Account, built from YouTube's own rows, with every switch independent and a Compatibility & diagnostics page. |
 | 🎛️ **Player-native SponsorBlock** | A SponsorBlock icon beside autoplay opens the same floating menu as the player's settings gear; segments are colored on the seekbar. |
 | 📱 **Cleaner Shorts** | Hide individual Shorts buttons and panels, and move past live streams in the Shorts feed. |
 | 👆 **Swipe controls that read at a glance** | Brightness on the left, volume on the right, shown as a pill with an icon, a level and the value. |
@@ -71,10 +71,15 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | Player | Background playback, including Made for Kids videos | On |
 | Shorts | Like, comments, share, remix, save, sound, subscribe, title, suggestions and info panels, paused-overlay buttons | Shown (each can be hidden) |
 | Shorts | Skip live Shorts | Off |
+| About | Check for updates when YouTube opens | On |
 
 Turning **Hide ads** off does not disable the content and player features. Reload a feed after
 changing its switches. Original audio applies to the next track list and respects a manual choice.
 Full table: [settings and defaults](docs/README.md#settings-and-defaults).
+With **Check for updates** on, the module asks GitHub once each time YouTube starts. If a newer
+release exists, a YouTube-style dialog offers **Update**, which opens the release page, or **Later**. To report a
+problem, use **About → Compatibility & diagnostics → Report a problem**: it opens a new GitHub issue
+with the compatibility report filled in, for you to describe the problem and submit.
 Background playback is independent of Hide ads and SponsorBlock. Restart YouTube after changing
 its switch to discard native cached capabilities. [Implementation and tested limits](docs/BACKGROUND_PLAYBACK.md).
 
@@ -97,9 +102,11 @@ its switch to discard native cached capabilities. [Implementation and tested lim
 
 ## Status
 
-**v1.1.0** (versionCode 153) is the first release since 1.0.0. It adds background playback, the module's own section in YouTube Settings, a Compatibility & diagnostics page, YouTube-style SponsorBlock controls, Shorts component hiding, live-Short skipping, redesigned swipe controls and nine more languages. It is also much lighter on the phone: Brainfuck policy calls no longer reopen the APK, and DexKit results are cached, so YouTube opens about 0.35 s sooner after the first launch. [Device checks](evidence/device_perf_20261028/README.md).
+**v1.2.0** (versionCode 155) supports YouTube 21.43.523, where background playback and SponsorBlock skipping had stopped working. It adds an update check with a YouTube-style dialog (on by default, under About) and a **Report a problem** button that opens a prefilled GitHub issue, and the module is now called **YouTube Hide Ads**. [Device checks](evidence/release_1_2_0_20261030/README.md).
 
-Development builds between the two releases (111 to 153) are listed in the [changelog](CHANGELOG.md), with evidence for each under [evidence](evidence/README.md).
+**v1.1.0** (versionCode 153) was the first release since 1.0.0. It adds background playback, the module's own section in YouTube Settings, a Compatibility & diagnostics page, YouTube-style SponsorBlock controls, Shorts component hiding, live-Short skipping, redesigned swipe controls and nine more languages. It is also much lighter on the phone: Brainfuck policy calls no longer reopen the APK, and DexKit results are cached, so YouTube opens about 0.35 s sooner after the first launch. [Device checks](evidence/device_perf_20261028/README.md).
+
+Development builds between releases (111 to 155) are listed in the [changelog](CHANGELOG.md), with evidence for each under [evidence](evidence/README.md).
 
 ### Compatibility
 
@@ -107,6 +114,7 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 
 | YouTube | Module | Status |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ Working |
 | 21.42.243 | 1.1.0 | ✅ Working |
 | 21.41.525 | 1.0.0 | ✅ Working |
 
@@ -115,6 +123,7 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 - Premium, fullscreen and engagement-panel promotions have only been removed in controlled hook tests; naturally delivered ones have not appeared yet.
 - Preview-video and Explore-more-topics shelves are matched by their English headings only.
 - AI channel lists are community-maintained and can misclassify channels, which is why they default off.
+- HTTPS filtering apps (AdGuard and similar) stop SponsorBlock and the update check from connecting. See [SponsorBlock or update check never connects](#sponsorblock-or-update-check-never-connects).
 - Background playback needs a YouTube restart after its switch changes and leaves Shorts to YouTube. Bluetooth controls and incoming calls are untested.
 - SponsorBlock submission and voting have not been tried against the live server. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
 - Skip live Shorts has not met a real live Short yet; it, the swipe pill and YouTube language switching were checked with development probes.
@@ -137,13 +146,13 @@ Details: [feature coverage](docs/FEATURE_COVERAGE.md) and [compatibility](docs/C
 
 ```
 1. Install the APK from Releases or the Xposed module repository
-2. Enable YouTubeHideAds in Vector or LSPosed, scoped to YouTube
+2. Enable YouTube Hide Ads in Vector or LSPosed, scoped to YouTube
 3. Force-stop YouTube once, then open it
 ```
 
 Get it from [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or
 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads). Settings
-are under **YouTube → You → Settings → YouTubeHideAds**. Preferences and AI caches live in
+are under **YouTube → You → Settings → YouTube Hide Ads**. Preferences and AI caches live in
 YouTube's own data, so clearing YouTube data resets them.
 
 If you used a development build (`org.youtubehideads.module`), uninstall it first. Your settings
@@ -267,7 +276,26 @@ The layering is in [`docs/ARCHITECTURE_BRAINFUCK_XAX.md`](docs/ARCHITECTURE_BRAI
 | `UnsatisfiedLinkError` right after an update | Let the install settle, then force-stop and reopen YouTube. The manager can briefly keep the old APK path. |
 | A self-check reports `false` | That feature stays off. Report the `YouTubeHideAds:` log lines. |
 | A feed switch seems ignored | Reload the feed; removals apply to newly loaded components. |
-| Broken after a YouTube update | YouTube may have changed its internal classes. Report the log lines with the YouTube version. |
+| Broken after a YouTube update | YouTube may have changed its internal classes. Use **Report a problem** on the Compatibility & diagnostics page, or report the log lines with the YouTube version. |
+
+### SponsorBlock or update check never connects
+
+Segments never appear on the seekbar, or no update is ever offered, and the log shows
+`SponsorBlock request error` or `Update check failed` with `NOT_ENOUGH_SCTS`.
+
+An HTTPS-filtering app is intercepting the connection. AdGuard, for example, re-signs secure
+traffic with its own certificate, and when that certificate is installed as a system certificate
+(such as with the AdGuard Certificate Magisk module), Android sends YouTube's traffic through it.
+YouTube enforces Certificate Transparency, which AdGuard's certificate cannot meet, so Android
+refuses the connection. The module does not weaken this check.
+
+**Fix:** in AdGuard, open **Settings → Filtering → Network → HTTPS filtering → Exclusions** (the
+path can differ by version) and add both domains:
+
+- `sponsor.ajay.app` for SponsorBlock
+- `github.com` for the update check
+
+Then force-stop and reopen YouTube. If you use a custom SponsorBlock server, exclude that domain too.
 
 ## Credits
 

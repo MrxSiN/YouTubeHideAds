@@ -5,7 +5,7 @@ policy hooks, background settings capability and automatic foreground-resume pre
 and Pinkfong screen-off/media-control observations, policy checks, disabled behavior and remaining
 hardware/UI limits are recorded in [dated evidence](../evidence/background_playback_20261027/README.md).
 
-Current release: **1.1.0, versionCode 153**; [device checks](../evidence/device_perf_20261028/README.md). The rows below
+Current release: **1.2.0, versionCode 155**; [device checks](../evidence/release_1_2_0_20261030/README.md) (1.1.0: [device checks](../evidence/device_perf_20261028/README.md)). The rows below
 keep the development build on which each behavior was first exercised. Development build **127**:
 [Slider phone checks](../evidence/sponsorblock_slider_device_20261022/README.md) cover 636 startup + 64 UI cases,
 dark/light rendering, endpoints, keyboard and saved-color persistence.

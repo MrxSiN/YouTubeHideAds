@@ -38,7 +38,7 @@
 | 🔎 **이름이 바뀌어도 동작** | DexKit이 시작할 때마다 구조로 모든 후크를 찾습니다. 역할이 없거나 모호하면 해당 기능은 아무것도 설치하지 않습니다. |
 | 🧠 **Brainfuck 정책, 컴파일됨** | 직접 작성한 9개 프로그램을 네이티브 코드로 컴파일했습니다. 정책과 SponsorBlock 컨트롤은 시작할 때마다 검사합니다. |
 | 🛟 **실패하면 꺼짐** | 자체 점검에 실패한 기능은 꺼진 상태로 남습니다. 네트워크 오류나 알 수 없는 재생 유형에서는 이동하지 않습니다. |
-| ⚙️ **네이티브 느낌의 설정** | **나 → 설정**의 '계정' 위에 전용 **YouTubeHideAds** 섹션이 있고, YouTube 자체 행 스타일을 사용합니다. 모든 스위치는 독립적이며 '호환성 및 진단' 페이지도 있습니다. |
+| ⚙️ **네이티브 느낌의 설정** | **나 → 설정**의 '계정' 위에 전용 **YouTube Hide Ads** 섹션이 있고, YouTube 자체 행 스타일을 사용합니다. 모든 스위치는 독립적이며 '호환성 및 진단' 페이지도 있습니다. |
 | 🎛️ **플레이어에 녹아든 SponsorBlock** | 자동재생 옆 SponsorBlock 아이콘은 설정 톱니바퀴와 같은 플로팅 메뉴를 엽니다. 세그먼트는 탐색 막대에 색상으로 표시됩니다. |
 | 📱 **깔끔한 Shorts** | Shorts의 버튼과 패널을 하나씩 숨기고, Shorts 피드의 실시간 스트림을 건너뛸 수 있습니다. |
 | 👆 **한눈에 보이는 스와이프 컨트롤** | 왼쪽은 밝기, 오른쪽은 볼륨. 아이콘, 레벨, 값이 담긴 알약 모양으로 표시합니다. |
@@ -84,6 +84,8 @@
 
 ## 상태
 
+**v1.2.0**(versionCode 155)은 YouTube 21.43.523을 지원하며, 백그라운드 재생과 SponsorBlock 건너뛰기가 다시 작동합니다. YouTube 스타일 대화상자로 알려 주는 업데이트 확인(기본값 켜짐, '정보'에 있음)과, 내용이 채워진 GitHub 이슈를 여는 **문제 신고** 버튼을 추가했습니다. 모듈 이름은 이제 **YouTube Hide Ads**입니다. [변경 내역](CHANGELOG.md).
+
 **v1.1.0**(versionCode 153)은 1.0.0 이후 첫 릴리스입니다. 백그라운드 재생, YouTube 설정의 전용 섹션, '호환성 및 진단' 페이지, YouTube 스타일 SponsorBlock 컨트롤, Shorts 구성요소 숨기기, 실시간 Shorts 건너뛰기, 새로 디자인한 스와이프 컨트롤, 9개 언어를 추가합니다. 휴대전화 부담도 크게 줄었습니다. Brainfuck 정책 호출이 더 이상 APK를 다시 열지 않고 DexKit 결과를 캐시하므로, 처음 실행한 뒤에는 YouTube가 약 0.35초 더 빨리 열립니다. [기기 점검](evidence/device_perf_20261028/README.md).
 
 두 릴리스 사이의 개발 빌드(111~153)는 [변경 기록](CHANGELOG.md)에, 각 빌드의 증거는 [evidence](evidence/README.md)에 있습니다.
@@ -94,11 +96,13 @@ Pixel 8 Pro(Android 17, Vector 2.2, libxposed API 102)에서 테스트했습니�
 
 | YouTube | 모듈 | 상태 |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ 작동 |
 | 21.42.243 | 1.1.0 | ✅ 작동 |
 | 21.41.525 | 1.0.0 | ✅ 작동 |
 
 ### 알려진 한계
 
+- HTTPS 필터링 앱(AdGuard 등)이 있으면 SponsorBlock과 업데이트 확인이 연결되지 않습니다. `sponsor.ajay.app`과 `github.com`을 HTTPS 필터링에서 제외하세요([자세히](README.md#sponsorblock-or-update-check-never-connects)).
 - Premium, 전체 화면, 참여 패널 프로모션은 통제된 훅 테스트에서만 제거를 확인했고, 실제로 전달된 사례는 아직 없습니다.
 - 미리보기 동영상과 '다른 주제 탐색' 선반은 영어 제목으로만 판별합니다.
 - AI 채널 목록은 커뮤니티가 관리해 잘못 분류할 수 있으므로 기본값은 꺼짐입니다.
@@ -128,7 +132,7 @@ Pixel 8 Pro(Android 17, Vector 2.2, libxposed API 102)에서 테스트했습니�
 3. YouTube를 한 번 강제 종료한 뒤 실행
 ```
 
-[GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) 또는 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads)에서 받을 수 있습니다. 설정은 **YouTube → 나 → 설정 → YouTubeHideAds**에 있습니다. 설정과 AI 캐시는 YouTube 자체 데이터에 저장되므로 YouTube 데이터를 지우면 초기화됩니다.
+[GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) 또는 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads)에서 받을 수 있습니다. 설정은 **YouTube → 나 → 설정 → YouTube Hide Ads**에 있습니다. 설정과 AI 캐시는 YouTube 자체 데이터에 저장되므로 YouTube 데이터를 지우면 초기화됩니다.
 
 프레임워크 로그에서 `YouTubeHideAds:`로 시작하는 줄로 동작을 확인할 수 있습니다.
 

@@ -38,7 +38,7 @@
 | 🔎 **不怕重新命名** | DexKit 每次啟動都依結構尋找所有 Hook。角色缺失或不唯一時，該功能不會安裝任何東西。 |
 | 🧠 **策略以 Brainfuck 撰寫並編譯** | 九個手寫程式編譯為原生程式碼；每次啟動都會檢查封裝的策略和 SponsorBlock 控制項。 |
 | 🛟 **失敗即關閉** | 自我檢查失敗時，該功能維持關閉。網路錯誤和未知播放類型絕不會跳轉。 |
-| ⚙️ **原生風格的設定** | 在 **你 → 設定** 中擁有獨立的 **YouTubeHideAds** 區段，位於「帳戶」上方，使用 YouTube 自己的列樣式；每個開關各自獨立，另有「相容性與診斷」頁面。 |
+| ⚙️ **原生風格的設定** | 在 **你 → 設定** 中擁有獨立的 **YouTube Hide Ads** 區段，位於「帳戶」上方，使用 YouTube 自己的列樣式；每個開關各自獨立，另有「相容性與診斷」頁面。 |
 | 🎛️ **融入播放器的 SponsorBlock** | 自動播放旁的 SponsorBlock 圖示會開啟與播放器設定齒輪相同的浮動選單；片段會在進度列上以顏色標示。 |
 | 📱 **更清爽的 Shorts** | 可逐一隱藏 Shorts 的按鈕和面板，並略過 Shorts 動態中的直播。 |
 | 👆 **一眼就懂的滑動控制** | 左側調整亮度，右側調整音量，以含圖示、進度和數值的膠囊顯示。 |
@@ -84,6 +84,8 @@
 
 ## 狀態
 
+**v1.2.0**（versionCode 155）支援 YouTube 21.43.523：背景播放和 SponsorBlock 略過重新可用。新增以 YouTube 風格對話框提示的更新檢查（預設開啟，位於「關於」）和 **回報問題** 按鈕，可開啟已填好內容的 GitHub issue。模組現名為 **YouTube Hide Ads**。[變更記錄](CHANGELOG.md)。
+
 **v1.1.0**（versionCode 153）是 1.0.0 之後的第一個正式版本。它加入背景播放、YouTube 設定中的獨立區段、「相容性與診斷」頁面、YouTube 風格的 SponsorBlock 控制項、隱藏 Shorts 元件、略過直播 Shorts、重新設計的滑動控制，以及另外九種語言。它在手機上也輕快得多：Brainfuck 策略呼叫不再重複開啟 APK，DexKit 結果會被快取，因此首次啟動之後 YouTube 開啟快約 0.35 秒。[裝置檢查](evidence/device_perf_20261028/README.md)。
 
 兩個正式版本之間的開發版本（111 至 153）請見[更新記錄](CHANGELOG.md)，各自的證據請見 [evidence](evidence/README.md)。
@@ -94,11 +96,13 @@
 
 | YouTube | 模組 | 狀態 |
 |---|---|---|
+| 21.43.523 | 1.2.0 | ✅ 正常 |
 | 21.42.243 | 1.1.0 | ✅ 正常 |
 | 21.41.525 | 1.0.0 | ✅ 正常 |
 
 ### 已知限制
 
+- HTTPS 過濾應用程式（如 AdGuard）會讓 SponsorBlock 和更新檢查無法連線。請將 `sponsor.ajay.app` 和 `github.com` 加入 HTTPS 過濾的排除清單（[詳情](README.md#sponsorblock-or-update-check-never-connects)）。
 - Premium、全螢幕和互動面板推廣只在受控 Hook 測試中移除過，尚未見到真實推送的案例。
 - 預覽影片和「探索更多主題」欄目僅依英文標題比對。
 - AI 頻道清單由社群維護，可能誤判頻道，因此預設關閉。
@@ -128,7 +132,7 @@
 3. 強制停止 YouTube 一次，然後開啟
 ```
 
-可從 [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) 或 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) 取得。設定位於 **YouTube → 你 → 設定 → YouTubeHideAds**。偏好設定和 AI 快取儲存在 YouTube 自己的資料中，清除 YouTube 資料會重設它們。
+可從 [GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) 或 [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) 取得。設定位於 **YouTube → 你 → 設定 → YouTube Hide Ads**。偏好設定和 AI 快取儲存在 YouTube 自己的資料中，清除 YouTube 資料會重設它們。
 
 框架記錄中以 `YouTubeHideAds:` 開頭的行會說明發生了什麼：
 
