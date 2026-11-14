@@ -1,0 +1,25 @@
+{
+  "version_name": "1.3.0",
+  "version_code": 157,
+  "base": "build 156 (1.2.1) carrier",
+  "store_sha256": "41c36cb4bc0db56b523d315e21eb624005968c50e8b4ea76a31a2254cabfbee7",
+  "apk_sha256": "3d11356e56eba2e8e329b248b4eaa17903eb9f0db4e64281ea154df9cce70665",
+  "apk_bytes": 4475386,
+  "functions_in_carrier": 473,
+  "branding_blake3": "82268858c9b7ee1de968d89dc0a4d2e200e6926dedbe2dbed3cf236b0c97f03c",
+  "branding_sha256": "87a0e76755d05574cb4af38e3645675677ceaacd131f4109ff669a8133c52f1c",
+  "compiler": {
+    "xax_commit": "affbb535d23c71edca4e932cc2dc4efea813b09c",
+    "xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+    "xax_android_libxposed_jvm.py": "5760bdb4d75ed7984646f7c18e452901ab41b7bb63c0c2fb11ca7699ff1f1f2e",
+    "note": "XAX main unchanged since 1.2.1 (checked 2026-11-14)"
+  },
+  "native_dex_signer_unchanged": true,
+  "transport": "external carrier edit scripts (ignored build directory) applied in order: ui, speed, blacklist, captions, ryd, player, quality, dearrow, polish, release",
+  "youtube": "21.45.88",
+  "superseded": {
+    "store_sha256": "d94bccd9f77e6880cb53a6b203cdee42c2ab3e94e9877e72b150ef0797ccb722",
+    "apk_sha256": "ee423a701fc52a79b35f0b28594b8cfb86479f172390b1688630e397efcd0834",
+    "reason": "More videos sheet swipe fix and runtime polish; see README addendum"
+  }
+}

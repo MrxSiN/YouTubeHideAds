@@ -1,6 +1,6 @@
 # Brainfuck runtime ABI
 
-Current release 1.0.0 packages 9 policy libraries plus the JNI bridge and DexKit. The seven AND3 rows below all call `liband3.so` ([and3.bf](../source/brainfuck/and3.bf)); their names are semantic call sites, not separate libraries. This is the shipped
+Since 1.0.0 the app packages 9 policy libraries (unchanged through 1.3.0) plus the JNI bridge and DexKit. The seven AND3 rows below all call `liband3.so` ([and3.bf](../source/brainfuck/and3.bf)); their names are semantic call sites, not separate libraries. This is the shipped
 runtime contract. [Build identity](../evidence/ai_audio_branding_20261018/build.json).
 
 The shipped XAX host calls external Bfp1Bridge.run(libraryPath,input,output,tape,budget,used).

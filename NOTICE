@@ -3,7 +3,8 @@ Newly authored project material is GPL-3.0-or-later; third-party terms remain se
 
 Morphe and ReVanced are separate projects and do not author or publish this repository.
 Background playback and remembering live stream positions use native XAX adaptations of
-Morphe's behavior (and, for background playback, its structural fingerprints), originally forked from ReVanced. It is not Morphe or ReVanced.
+Morphe's behavior (and, for background playback, its structural fingerprints). The build 157 player, caption, dislike,
+blacklist and DeArrow features follow Morphe's behavior only. Morphe was originally forked from ReVanced. This project is not Morphe or ReVanced.
 The applicable Morphe GPLv3 Section 7 notice is preserved in LICENSES/Morphe-NOTICE.txt
 and packaged as res/raw/morphe_notice.txt. No patcher or extension infrastructure is bundled.
 
@@ -19,3 +20,6 @@ https://github.com/LuckyPray/DexKit and docs/UPSTREAM_PROVENANCE.md.
 Optional AiSList downloads: Override92 and contributors, CC BY-NC 4.0.
 https://github.com/Override92/AiSList — https://aisloplist.com
 List data is not bundled. Its terms are separate from this project's source license.
+
+Optional data services (read only, no data bundled): Return YouTube Dislike (https://returnyoutubedislike.com) and
+DeArrow (https://dearrow.ajay.app). Their terms are separate from this project's source license.

@@ -5,7 +5,7 @@ policy hooks, background settings capability and automatic foreground-resume pre
 and Pinkfong screen-off/media-control observations, policy checks, disabled behavior and remaining
 hardware/UI limits are recorded in [dated evidence](../evidence/background_playback_20261027/README.md).
 
-Current release: **1.2.0, versionCode 155**; [device checks](../evidence/release_1_2_0_20261030/README.md) (1.1.0: [device checks](../evidence/device_perf_20261028/README.md)). The rows below
+Current development build: **1.3.0, versionCode 157**; [device checks](../evidence/release_1_3_0_20261114/README.md). Latest release: **1.2.0, versionCode 155**; [device checks](../evidence/release_1_2_0_20261030/README.md) (1.1.0: [device checks](../evidence/device_perf_20261028/README.md)). The rows below
 keep the development build on which each behavior was first exercised. Development build **127**:
 [Slider phone checks](../evidence/sponsorblock_slider_device_20261022/README.md) cover 636 startup + 64 UI cases,
 dark/light rendering, endpoints, keyboard and saved-color persistence.
@@ -28,10 +28,18 @@ Evidence below retains the build on which each behavior was exercised;
 | Explore more topics | Own-heading/context fixtures and controlled actual-hook on/off with History negative; natural Home shelf pending |
 | AI channels | Two independent AiSList switches, whole Unicode handles and persistent cache; high-confidence live search off/on |
 | Force original audio | Typed multi-language original selection; native Hindi when off / English original when on; video advances |
-| Fullscreen controls | Brightness/media volume, restoration, disabled toggles and native tap/hold tested; the build 132 side pill HUD was rendered through a development probe, a real finger swipe was not captured. Build 156: an `adb` drag on fullscreen live chat scrolls the chat and starts no swipe, a drag on the video still sets volume ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)) |
+| Fullscreen controls | Brightness/media volume, restoration, disabled toggles and native tap/hold tested; the build 132 side pill HUD was rendered through a development probe, a real finger swipe was not captured. Build 156: an `adb` drag on fullscreen live chat scrolls the chat and starts no swipe, a drag on the video still sets volume ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)). Build 157 rebuild: while the end-of-video More videos sheet is shown, left and right drags log no swipe; before opening it and after closing it, swipes work again |
 | Shorts components | Ten switches on the shared component hook; like, comments, share and remix observed hidden on the phone; others fixture/path based |
 | Skip live Shorts | Build 156 keys on the player's live playbackType (9) once per playback and advances the pager with a synthetic drag through AND3; an inverted probe skipped every Short and the next one played. The earlier component-name trigger never fired on 21.45. No real live Short encountered |
 | Remember live stream position | Build 156: saved every 5 s, restored after force-stop and reopen (a 24 s rewind restored within 3 s) on a 24/7 stream; a stream that ends and non-24/7 streams untested |
+| Settings page, build 157 | One page with sections and inline rows; the Player, Feed and About rows rendered and saved on the phone. New strings are English only ([checks](../evidence/release_1_3_0_20261114/README.md)) |
+| Default playback speed | Build 157: `Default speed applied: 1.5, player reports 1.5` on videos, 2 on Shorts (feature build); manual change kept. YouTube's speed menu still reads 1x; music has no own default (BLOCKED) |
+| Default video quality | Build 157: Wi-Fi limit 480p selected 480p (first combined build) and 240p on a 240p-only video, Shorts limit 240p selected 240p on 5 Shorts; mobile data and live streams NOT RUN |
+| Captions | Build 157: automatic selection read (a preferred language was applied on the feature build); blocking automatic captions NOT RUN; bilingual captions BLOCKED |
+| Return YouTube Dislike | Build 157: real fetch BLOCKED by the phone's HTTPS filtering (`NOT_ENOUGH_SCTS`); count drawn under the dislike icon only with a pre-seeded probe build (not shipped); percentage mode NOT RUN |
+| Player tweaks | Build 157: Speed button taps logged 1.25x; Loop and Tap to seek checked on the feature build; fullscreen tap to seek, Shorts and live NOT RUN |
+| Blacklist | Build 157: Save wrote the prefs on the final APK; a blocked channel's item left Home on the feature build; comments, replies, posts, playlists and mixes not covered |
+| DeArrow | Build 157: hook installed, Home thumbnails load, branding cached; titles BLOCKED |
 | Languages | 259 strings in nine languages through one lookup; rendering verified with a forced zh-CN probe |
 | SponsorBlock | Bounded retry, origin-scoped cache, ten category modes/colors, seekbar markers, manual skip/undo, preview/review/submission, votes, exclusions, statistics and settings transfer; production POSTs untested |
 | Settings and branding | Own section above Account in YouTube Settings, YouTube-style pages, Compatibility & diagnostics, persistent/reset preferences, exact YouTubeHideAds title and static shield/strike adaptive/monochrome icon |

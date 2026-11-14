@@ -1,5 +1,5 @@
-<!-- Swipe control pill; XAX tints it with a translucent scrim so it reads over any video. -->
+<!-- Swipe HUD capsule (52dp wide, fully rounded); XAX tints it with a translucent scrim so it reads over any video. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="24dp" />
+    <corners android:radius="26dp" />
     <solid android:color="#FFFFFFFF" />
 </shape>

@@ -1,0 +1,5 @@
+<!-- Swipe HUD slider track and fill (8dp wide, fully rounded); XAX tints it per use. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="4dp" />
+    <solid android:color="#FFFFFFFF" />
+</shape>
