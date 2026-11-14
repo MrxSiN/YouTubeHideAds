@@ -6,11 +6,11 @@ scroll offset. Every module page shares one scaffold, heading and row vocabulary
 resolve and self-check messages also enter one bounded event list that the Compatibility &
 diagnostics page reads; hot paths record nothing. The SponsorBlock control is an icon in the
 player's top bar, and its menu is a floating card matching the player settings menu.
-Shorts components and live-Short skipping reuse the component hook: path names (and, for the
-anonymous comment/share/remix buttons, the existing element serializer) identify a match, a
-snapshot published on settings refresh supplies the switches, and AND3 authorizes. Live Shorts are
-skipped only after the pager settles on a page without the Shorts overlay shortly after a live
-preview was built. Every user-visible literal goes through one lookup, `tr`, which reads the
+Shorts components reuse the component hook: path names (and, for the anonymous
+comment/share/remix buttons, the existing element serializer) identify a match, a snapshot published
+on settings refresh supplies the switches, and AND3 authorizes. Live streams are recognized in the
+player progress hook (playbackType 9): once per playback, live-Short skipping advances a shown Shorts
+pager through AND3, and the remembered live position is saved or restored with the player's own seek. Every user-visible literal goes through one lookup, `tr`, which reads the
 module's string resources with YouTube's configuration and falls back to English.
 [Evidence](../evidence/ui_redesign_20261027/README.md).
 

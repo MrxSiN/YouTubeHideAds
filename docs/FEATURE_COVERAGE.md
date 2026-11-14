@@ -28,9 +28,10 @@ Evidence below retains the build on which each behavior was exercised;
 | Explore more topics | Own-heading/context fixtures and controlled actual-hook on/off with History negative; natural Home shelf pending |
 | AI channels | Two independent AiSList switches, whole Unicode handles and persistent cache; high-confidence live search off/on |
 | Force original audio | Typed multi-language original selection; native Hindi when off / English original when on; video advances |
-| Fullscreen controls | Brightness/media volume, restoration, disabled toggles and native tap/hold tested; the build 132 side pill HUD was rendered through a development probe, a real finger swipe was not captured |
+| Fullscreen controls | Brightness/media volume, restoration, disabled toggles and native tap/hold tested; the build 132 side pill HUD was rendered through a development probe, a real finger swipe was not captured. Build 156: an `adb` drag on fullscreen live chat scrolls the chat and starts no swipe, a drag on the video still sets volume ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)) |
 | Shorts components | Ten switches on the shared component hook; like, comments, share and remix observed hidden on the phone; others fixture/path based |
-| Skip live Shorts | Pager settle detection, current-page check, AND3 authorization and page advance verified with an inverted probe; no real live Short encountered |
+| Skip live Shorts | Build 156 keys on the player's live playbackType (9) once per playback and advances the pager with a synthetic drag through AND3; an inverted probe skipped every Short and the next one played. The earlier component-name trigger never fired on 21.45. No real live Short encountered |
+| Remember live stream position | Build 156: saved every 5 s, restored after force-stop and reopen (a 24 s rewind restored within 3 s) on a 24/7 stream; a stream that ends and non-24/7 streams untested |
 | Languages | 259 strings in nine languages through one lookup; rendering verified with a forced zh-CN probe |
 | SponsorBlock | Bounded retry, origin-scoped cache, ten category modes/colors, seekbar markers, manual skip/undo, preview/review/submission, votes, exclusions, statistics and settings transfer; production POSTs untested |
 | Settings and branding | Own section above Account in YouTube Settings, YouTube-style pages, Compatibility & diagnostics, persistent/reset preferences, exact YouTubeHideAds title and static shield/strike adaptive/monochrome icon |

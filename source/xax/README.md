@@ -1,6 +1,7 @@
 # XAX source
 
-Canonical source is release **1.2.0/code 155** (store SHA-256 `b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c`), with 354 functions and the
+Canonical source is development build **1.2.1/code 156** (store SHA-256 `9e2e191a713cea7efea5caabe02cd1bb979cd7033e5786aeb2a68d4eece64c44`, 350 functions in the exported carrier, the same 11 native paths). Build 156 fixes the fullscreen live chat swipe, rebuilds live-Short skipping on the player's live state and adds Remember live stream position. [Evidence](../../evidence/release_1_2_1_20261114/README.md).
+Before it, the canonical source was release **1.2.0/code 155** (store SHA-256 `b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c`), with 354 functions and the
 same 11 native paths. Build 154 fixed two YouTube 21.43 discovery filters and the display name; build 155
 added the update check and problem report. [Evidence](../../evidence/release_1_2_0_20261030/README.md).
 Release 1.1.0/code 153 had 342 unique functions and the same 11 native

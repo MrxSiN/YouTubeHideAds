@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+### Development build 156 (1.2.1) — 2026-11-14
+
+- **Fullscreen live chat no longer changes the volume** ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)).
+  A touch on a shown fullscreen panel (live chat, comments, description) starts no brightness or volume swipe, and
+  the swipe zones now span only the video beside the panel.
+- **Skip live Shorts works on YouTube 21.45.** Its trigger waited for a Shorts layout component that 21.45 no longer
+  sends, so it never fired. It now uses the player's own live state and moves the pager with a short swipe, so the
+  next Short plays at once.
+- **Remember live stream position** (Player controls, off by default): resumes an ongoing live stream where you
+  left it instead of at the live edge. Behavior after Morphe's patch of the same name; 24/7 streams may not resume.
+- With SponsorBlock off, the progress hook still runs when a live switch is on; SponsorBlock's own work stays off.
+
+Tested on YouTube 21.45.88 (Pixel 8 Pro): all startup checks, the chat swipe, saving and restoring a rewound live
+position, and the skip mechanism with an inverted probe. A real live Short did not appear. New strings are English
+only. [Evidence](evidence/release_1_2_1_20261114/README.md).
+
 ## 1.2.0 — 2026-10-30 (versionCode 155)
 
 Collects development builds 154 and 155, listed below, and supports YouTube 21.43.523.

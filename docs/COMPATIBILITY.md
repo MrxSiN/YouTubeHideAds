@@ -1,5 +1,10 @@
 # Tested compatibility
 
+Development build **156 (1.2.1)** was exercised on the same Pixel 8 Pro, Android 17 and Vector 2.2/API 102 with
+YouTube **21.45.88**: 1.2.0 itself installs every hook there; build 156 passes all startup checks, the live chat
+swipe fix, live-position save/restore and the skip mechanism (inverted probe). A real live Short was not available.
+[Checks and limits](../evidence/release_1_2_1_20261114/README.md).
+
 Release **1.2.0, versionCode 155** (and development build 154 before it) was exercised on the same Pixel 8 Pro, Android 17 and
 Vector 2.2/API 102 with YouTube **21.43.523**: all startup suites, every hook and background role
 resolving, and background playback from a link (Home, screen off). SponsorBlock segment fetching was

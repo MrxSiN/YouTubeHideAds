@@ -61,6 +61,12 @@ Most inspected sources are pinned to
 - AiSListFilter, AiSListRequester and AiSListPatch.
 - Shared/YouTube ForceOriginalAudioPatch and shared audio-track fingerprints.
 
+Remember live stream position (build 156) follows the behavior of Morphe's
+RememberLiveStreamPositionPatch and SkipLiveShortsPatch at
+[44031c5](https://github.com/MorpheApp/morphe-patches/tree/44031c5): save every 5 s, restore by seek with
+retries and a 3 s tolerance, at most 100 entries, and live detection from the player instead of layout.
+The XAX implementation is independent and uses this module's existing player bridges; no code was copied.
+
 The earlier Playables/swipe pass read moving-main LayoutComponentsFilter,
 SwipeControlsConfigurationProvider, ClassicSwipeController and PlayerType. Those reads are behavior
 references, not pinned implementation dependencies. No Java/Kotlin implementation was copied.
