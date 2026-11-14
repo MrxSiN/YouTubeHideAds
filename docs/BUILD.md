@@ -3,7 +3,8 @@
 Development build **1.3.0 (versionCode 157)** was built with XAX `main` at `affbb53`, unchanged since 1.2.1, so the
 compiler files, native inputs, DEX and signer are the same. The branding archive was rebuilt for versionName 1.3.0
 (swipe pill drawables included). The store is the 1.2.1 carrier plus the 1.3.0 feature edits, applied in order: ui,
-speed, blacklist, captions, ryd, player, quality, dearrow, release.
+speed, blacklist, captions, ryd, player, quality, dearrow, polish, release. The `polish` step is the same-day rebuild
+(More videos sheet swipe fix and runtime trimming, 473 functions); the first 157 store is recorded as superseded.
 [Build record](../evidence/release_1_3_0_20261114/build.json).
 
 Development build **1.2.1 (versionCode 156)** was built with XAX `main` at `affbb53`, whose `xax_construct.py` and
@@ -140,16 +141,42 @@ Do not substitute temporary probe builds or rebuild with different inputs after 
 The release 1.2.0/code 155 build has 9 more functions than 1.1.0 (350 in the exported carrier, against 341); 1.1.0/code 153 has 342 by the earlier count; development build 127 had 263 functions, 11 native paths, no topics probe or automatic Shorts navigation,
 and packages 636 startup checks plus 64 UI checks when the first SponsorBlock page opens. Both suites pass in the accepted dark and light device processes. Store/APK identities belong in the dated build record.
 
+## Releases
+
+There is no build script in this repository. A release is built with the external tools above, from `source/**/*.bf`
+(BBC), `source/branding` (AAPT2) and `source/xax/youtubehideads.xax` plus pinned inputs (XAX). Releases are
+published by hand with the locally built APK. Two GitHub Actions workflows then run:
+[`release.yml`](../.github/workflows/release.yml) checks the package, version, release signing certificate and the
+SHA-256 in `RELEASE_NOTES.md`; [`xposed-sync.yml`](../.github/workflows/xposed-sync.yml) mirrors the APK to
+[Xposed-Modules-Repo](https://github.com/Xposed-Modules-Repo/io.github.mrxsin.youtubehideads), which feeds
+modules.lsposed.org.
+
 ## Install and validate
 
 ```text
 D:/Android/platform-tools/adb.exe -s SERIAL install -r YouTubeHideAds-v1.2.0.apk
 ```
 
+Settings are under **You > Settings > YouTube Hide Ads** in YouTube. Preferences and AI caches live in YouTube's own
+data, so clearing YouTube data resets them. A development build named `org.youtubehideads.module` should be
+uninstalled first; its settings carry over.
+
 Enable **YouTube Hide Ads** in Vector for YouTube, allow the package update to settle, then force-stop
 and reopen YouTube. Verify the installed version/digest, startup checks and targeted behavior.
 A transient old APK-path cache occurred after build 74; a later force-stop/reopen resolved it.
 Do not uninstall or clear user data to work around an unverified older version.
+
+The framework log shows what happened, in lines beginning with `YouTubeHideAds:`, for example `Ad policy
+self-check passed (70 cases)`, `SponsorBlock self-check passed (277 cases)`, `Ad component hook installed`,
+`Shorts feed removal hooks installed (paired, insert, response, restore, seed)` and `Video ad suppressed`.
+
+| Problem | Try |
+| --- | --- |
+| No module log lines | Check that the module is enabled with YouTube in scope, then force-stop YouTube. |
+| `UnsatisfiedLinkError` right after an update | Let the install settle, then force-stop and reopen YouTube. The manager can briefly keep the old APK path. |
+| A self-check reports `false` | That feature stays off. Report the `YouTubeHideAds:` log lines. |
+| A feed switch seems ignored | Reload the feed; removals apply to newly loaded components. |
+| Broken after a YouTube update | YouTube may have changed its internal classes. Use **Report a problem** on the Compatibility & diagnostics page, or report the log lines with the YouTube version. |
 
 See [testing](TESTING.md), [current evidence](../evidence/sponsorblock_slider_device_20261022/README.md), and
 [dated milestones](../evidence/README.md). Documentation edits alone do not require a new build/install.

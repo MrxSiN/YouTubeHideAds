@@ -78,6 +78,29 @@ String setter through a single DexKit lifetime. After the update, the main-threa
 controller plus array equality avoids repeated changes and respects a manual choice on the same list.
 Unknown bindings preserve native behavior. Settings/reset and persistence reuse the existing builders.
 
+## Where code goes
+
+```
+YouTube process
+  XAX module (DEX) ------------> Bfp1Bridge.run --JNI--> lib<policy>.so
+  hooks, DexKit roles             input bytes            nine AOT Brainfuck policies
+  settings page, HTTPS/JSON            ^                       |
+  typed actions                        |   exact reply only    |
+                                       +-----------------------+
+```
+
+One rule: if it touches YouTube, Android, the network or JNI, XAX does it; if it decides whether to act on
+what XAX found, Brainfuck decides.
+
+| Surface | Where | What it does |
+| --- | --- | --- |
+| Video ads | player ad activation and ad layout | Suppresses the ad slot when Brainfuck confirms a structural ad fact and a safe transition. |
+| Feed, search and shopping ads | the component parser, found by DexKit | Replaces a confirmed paid component with YouTube's own empty component. |
+| Sponsored Shorts | Shorts response, insertion and pager seed | Removes video/image ad entries with their tracking data, before the pager exists. |
+| Premium, fullscreen, panels | offer view, fullscreen dialog, engagement panel by typed identifier | Hides marketing surfaces without touching entitlement or subscription management. |
+| Feed sections, Playables, AI channels | the same component hook | Removes only the matched section or card; channel rows and playlists stay. |
+| SponsorBlock | player seek/duration bridges and native seekbar | Bounded prefix retrieval, category modes, colored markers, manual controls and explicit community actions. |
+
 ## Static resources and lifecycle
 
 The settings page attaches to YouTube; there is no module Activity or permission request. Static

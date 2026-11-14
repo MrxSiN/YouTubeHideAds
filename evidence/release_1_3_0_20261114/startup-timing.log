@@ -1,0 +1,63 @@
+--------- beginning of main
+11-14 16:08:40.333 29709 29709 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-14 16:08:40.333 29709 29709 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-14 16:08:40.333 29709 29709 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-14 16:08:40.334 29709 29709 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-14 16:08:40.334 29709 29709 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+11-14 16:08:40.337 29709 29709 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+11-14 16:08:40.338 29709 29709 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+11-14 16:08:40.339 29709 29709 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+11-14 16:08:40.340 29709 29709 I YouTubeHideAds: Background playback player observer installed at startup
+11-14 16:08:40.340 29709 29709 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-14 16:08:40.340 29709 29709 I YouTubeHideAds: Video ad activation hook installed
+11-14 16:08:40.340 29709 29709 I YouTubeHideAds: Player ad layout hook installed
+11-14 16:08:40.342 29709 29709 I YouTubeHideAds: Ad component hook installed
+11-14 16:08:40.343 29709 29709 I YouTubeHideAds: Premium offer hook installed
+11-14 16:08:40.343 29709 29709 I YouTubeHideAds: Fullscreen dialog hook installed
+11-14 16:08:40.344 29709 29709 I YouTubeHideAds: Typed engagement panel identifier resolved
+11-14 16:08:40.344 29709 29709 I YouTubeHideAds: Engagement ad panel hook installed
+11-14 16:08:40.346 29709 29709 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-14 16:08:40.346 29709 29709 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-14 16:08:40.347 29709 29709 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-14 16:08:40.348 29709 29709 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-14 16:08:40.349 29709 29709 I YouTubeHideAds: SponsorBlock player hook installed
+11-14 16:08:40.349 29709 29709 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+11-14 16:08:40.349 29709 29709 I YouTubeHideAds: Player video ID and seek bridge resolved
+11-14 16:08:40.349 29709 29709 I YouTubeHideAds: Player duration and active-generation bridge resolved
+11-14 16:08:40.350 29709 29709 I YouTubeHideAds: Shorts ad selection hook installed
+11-14 16:08:40.350 29709 29709 I YouTubeHideAds: Ad hook discovery finished
+11-14 16:08:40.353 29709 29709 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+11-14 16:08:40.353 29709 29709 I YouTubeHideAds: Playables typed element serializer resolved
+11-14 16:08:40.353 29709 29709 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+11-14 16:08:40.353 29709 29709 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+11-14 16:08:40.354 29709 29709 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-14 16:08:40.356 29709 29709 I YouTubeHideAds: Original audio hook installed: public final void asam.a(apho)
+11-14 16:08:40.356 29709 29709 I YouTubeHideAds: Playback speed hook installed
+11-14 16:08:40.357 29709 29709 I YouTubeHideAds: Captions hook installed: public final void asyt.n(armo)
+11-14 16:08:40.357 29709 29709 I YouTubeHideAds: Return YouTube Dislike ready
+11-14 16:08:40.357 29709 29709 I YouTubeHideAds: Speed button hook installed
+11-14 16:08:40.357 29709 29709 I YouTubeHideAds: Loop video hook installed
+11-14 16:08:40.359 29709 29709 I YouTubeHideAds: Tap to seek hook installed
+11-14 16:08:40.360 29709 29709 I YouTubeHideAds: Default video quality hooks installed
+11-14 16:08:40.361 29709 29709 I YouTubeHideAds: DeArrow thumbnail hook installed
+11-14 16:08:40.361 29709 29709 I YouTubeHideAds: YouTube lifecycle hook installed
+11-14 16:08:40.744 29709 29754 I YouTubeHideAds: Background playback self-check (28 cases)=true
+11-14 16:08:40.745 29709 29754 I YouTubeHideAds: Background playback candidates: [public static boolean aquz.C(bhnz)]
+11-14 16:08:40.745 29709 29754 I YouTubeHideAds: Background playback candidates: [public final void rpz.g(int, jlg, bjwl)]
+11-14 16:08:40.745 29709 29754 I YouTubeHideAds: Background playback candidates: [static void jlg.<clinit>()]
+11-14 16:08:40.745 29709 29754 I YouTubeHideAds: Background playback candidates: [public final java.lang.Object oto.a(java.lang.Object)]
+11-14 16:08:40.746 29709 29754 I YouTubeHideAds: Background playback candidates: [public final boolean jap.h()]
+11-14 16:08:40.746 29709 29754 I YouTubeHideAds: Background playback candidates: [public final boolean vaa.r()]
+11-14 16:08:40.747 29709 29754 I YouTubeHideAds: Background playback candidates: [public final boolean albv.m(int, long, boolean)]
+11-14 16:08:40.747 29709 29754 I YouTubeHideAds: Background playback candidates: [public final void com.google.android.apps.youtube.app.player.YouTubePlayerViewNotForReflection.lx(jlg)]
+11-14 16:08:40.755 29709 29754 I YouTubeHideAds: Background playback hooks installed (manager, kids, settings, scoped resume flag, player context)
+11-14 16:08:41.781 29709 29916 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|8af20b3aa7fb79ed|CellType|ContainerType|
+11-14 16:08:41.781 29709 29916 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|8af20b3aa7fb79ed|CellType|
+11-14 16:08:41.782 29709 29916 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|8af20b3aa7fb79ed|CellType|
+11-14 16:08:42.406 29709 29796 I YouTubeHideAds: Video ad suppressed
+11-14 16:08:42.741 29709 29709 I YouTubeHideAds: Player calibration playbackType=1 durationMs=26048
+11-14 16:08:42.741 29709 29709 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 16:08:42.741 29709 29709 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 16:08:43.498 29709 29944 I YouTubeHideAds: SponsorBlock response cached
+11-14 16:08:43.764 29709 29709 I YouTubeHideAds: Player calibration playbackType=1 durationMs=26048
+11-14 16:08:44.816 29709 29709 I YouTubeHideAds: Player calibration playbackType=1 durationMs=26048

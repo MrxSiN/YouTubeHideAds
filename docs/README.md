@@ -82,6 +82,19 @@ after changing it to discard native cached capabilities. [Implementation and lim
 - [Original audio](../contracts/original_audio_inputs.json)
 - [Background playback](../contracts/background_playback_inputs.json)
 
+## Repository layout
+
+```
+source/brainfuck/          and3, video slot, SponsorBlock window and pipeline
+source/brainfuck-runtime/  settings snapshots, ad component, panel and fullscreen policies
+source/xax/                the canonical XAX store: hooks, discovery, settings, network, actions
+source/branding/           manifest, icons, shapes and translated strings (static XML)
+contracts/                 input byte orders for the component, feed, swipe, AI and audio gates
+testdata/                  fixtures recorded for the startup self-checks
+evidence/                  dated build identities and device logs
+docs/                      architecture, ABI, build, testing and compatibility
+```
+
 ## Documentation changes
 
 Keep current behavior in these guides and exact identities in dated build records. Label live

@@ -4,7 +4,9 @@ Development build **157 (1.3.0)** was exercised on the same Pixel 8 Pro, Android
 YouTube **21.45.88**: 22 startup `installed` lines with no unresolved, ambiguous or exception line, the settings page,
 default speed, the speed button, blacklist Save, video quality on Wi-Fi and Shorts, captions, DeArrow thumbnails and the
 swipes, with 0 `FATAL EXCEPTION`. Return YouTube Dislike could not fetch behind the phone's HTTPS filtering. Mobile-data
-quality, live streams and automatic-caption blocking were NOT RUN.
+quality, live streams and automatic-caption blocking were NOT RUN. The same-day rebuild (store `41c36cb4...fabee7`)
+was re-checked for startup (22 `installed` lines), the More videos sheet (no swipe while it is shown) and the speed
+button.
 [Checks and limits](../evidence/release_1_3_0_20261114/README.md).
 
 Development build **156 (1.2.1)** was exercised on the same Pixel 8 Pro, Android 17 and Vector 2.2/API 102 with
@@ -88,3 +90,27 @@ Original audio uses the upstream .4 convention calibrated on 21.41.525. The exte
 compiler snapshot is a build requirement, not broader runtime compatibility.
 
 [Current evidence](../evidence/ai_audio_branding_20261018/README.md) · [All coverage](FEATURE_COVERAGE.md)
+
+## HTTPS-filtering apps
+
+Segments never appear, no update is offered or dislike counts never show, and the log has `SponsorBlock request
+error`, `Update check failed` or `RYD request failed` with `NOT_ENOUGH_SCTS`. An HTTPS-filtering app such as
+AdGuard re-signs secure traffic with its own certificate, and when that certificate is installed as a system
+certificate, Android sends YouTube's traffic through it. YouTube enforces Certificate Transparency, which that
+certificate cannot meet, so Android refuses the connection. The module does not weaken this check.
+
+Fix: in AdGuard, open Settings > Filtering > Network > HTTPS filtering > Exclusions (the path can differ by
+version) and add `sponsor.ajay.app` (SponsorBlock), `github.com` (update check), `returnyoutubedislikeapi.com`
+(Return YouTube Dislike) and `dearrow-thumb.ajay.app` (DeArrow thumbnails; its branding lookup uses
+`sponsor.ajay.app`). Also exclude a custom SponsorBlock server's domain. Then force-stop and reopen YouTube.
+
+## Known limits (summary)
+
+- Premium, fullscreen and engagement-panel promotions were removed in controlled hook tests only; naturally
+  delivered ones have not appeared yet. Preview-video and Explore-more-topics shelves match English headings only.
+- AI channel lists are community-maintained and can misclassify channels, which is why they default off.
+- SponsorBlock submission and voting have not been tried against the live server.
+- Background playback needs a YouTube restart after its switch changes and leaves Shorts to YouTube.
+- The first launch after a YouTube or module update rebuilds the hook cache and starts about 0.4 s slower.
+- Module pages were checked in dark theme only. Light theme, tablets and right-to-left layouts are untested.
+- arm64-v8a only. Only the setups listed here were tried; LSPatch was not.

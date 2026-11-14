@@ -6,189 +6,95 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [Español](README.es.md) · [Português](README.pt.md) · [Русский](README.ru.md) · **日本語** · [한국어](README.ko.md) · [Bahasa Indonesia](README.id.md) · [Bahasa Melayu](README.ms.md)
 
-**YouTube の広告を取り除く Xposed モジュールです。判断はすべて Brainfuck、それ以外は XAX で書かれています。本当です。**
-
-広告、スポンサー付きショート、プロモーションは YouTube が表示する前に取り除かれ、SponsorBlock のセグメントはスキップされます。
-
-<br>
+**YouTube の広告を取り除く Xposed モジュール。判断はすべて Brainfuck で書かれ、残りは XAX です。**
 
 [![Release](https://img.shields.io/github/v/release/MrxSiN/YouTubeHideAds?color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/YouTubeHideAds/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/YouTubeHideAds/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/YouTubeHideAds/releases)
-[![Android](https://img.shields.io/badge/Android-9.0%2B-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](#必要環境)
-[![libxposed](https://img.shields.io/badge/libxposed-API%20102-E8A33D?style=for-the-badge)](https://github.com/libxposed/api)
+[![Android](https://img.shields.io/badge/Android-9.0%2B-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](README.md#install)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
+
+<img src="docs/images/settings-ads.png" width="240" alt="Ads and SponsorBlock settings">
+<img src="docs/images/settings-player.png" width="240" alt="Player settings">
+<img src="docs/images/settings-feed.png" width="240" alt="Feed and blacklist settings">
 
 </div>
 
----
+## 機能
 
-> [!NOTE]
-> YouTube はほぼ毎回のアップデートで難読化されたクラスの名前を変えます。モジュールは起動のたびに構造から対象を見つけ直します。役割が見つからない、または一意に決まらない場合は、推測せずにその機能を何も変更しません。実際に試した環境は[互換性](#互換性)の表をご覧ください。
+- **広告は表示される前に取り除かれます:** 動画とショートの広告、フィードと検索の広告、Premium やフルスクリーンのプロモーション。空白の枠は残りません。
+- **SponsorBlock を内蔵**。シークバーに色付きのセグメントを表示し、プレーヤーのボタンから手動スキップ、投票、送信ができます。
+- **プレーヤー:** 既定の速度と画質、優先する字幕言語、バックグラウンド再生、オリジナル音声、ライブの再生位置の記憶、タップでシーク、ループ、速度ボタン、Return YouTube Dislike の低評価数。
+- **ジェスチャー:** フルスクリーンで左側のスワイプは明るさ、右側は音量。ライブチャット、パネル、「その他の動画」シートの上では動作しません。
+- **フィード:** ショートの棚、投稿、プレビュー、Playables、AI チャンネルの非表示、チャンネルとキーワードのブラックリスト、DeArrow のサムネイル。
+- **ショート:** 個々のボタンやパネルを非表示にでき、ライブのショートをスキップします。
+- **設定ページは 1 つ。** **マイページ → 設定 → YouTube Hide Ads** にあり、YouTube の言語で表示されます（10 言語）。
 
-## なぜ Brainfuck？ XAX とは？
-
-- **判断は Brainfuck。** このコンポーネントは広告か、Premium の宣伝を消してよいか、プレーヤーをスポンサー部分の終わりまで進めてよいか、スワイプは明るさの変更か。Brainfuck は Android、Xposed、DexKit、JNI を呼び出せず、バイトを読んで書くだけです。ホストは完全に正しい応答を受け取ったときだけ動作します。
-- **それ以外はすべて XAX。** フック、DexKit による探索、リフレクション、設定ページ、SponsorBlock の HTTPS と JSON は、1 つの正規の [XAX](https://github.com/MrxSiN/XAX) セマンティック ストアにまとまっています。外部の XAX コンパイラが DEX に変換し、APK に署名します。このリポジトリには Java、Kotlin、C、Python、シェルのアプリ ソースはありません。
-
-遅くもありません。9 つのポリシーは [BBC](https://github.com/MrxSiN/BBC) で事前に AArch64 共有ライブラリへコンパイルされます。APK にインタプリタはありません。
-
-|  | |
-|---|---|
-| 🧹 **隠すのではなく取り除く** | 広告コンポーネントは YouTube が配置する前に置き換えられ、スポンサー付きショートはプレーヤーが作られる前にフィードから外れるので、空白や止まった動画が残りません。 |
-| ⏭️ **SponsorBlock を内蔵** | 再試行とキャッシュを制限したプレフィックス検索、カテゴリごとの動作と色、手動スキップと取り消し、セグメントの作成と投票、除外、統計、設定の移行。 |
-| 🔎 **名前の変更に強い** | DexKit が起動のたびに構造からすべてのフックを探します。役割が欠けているか一意でなければ、その機能には何もインストールしません。 |
-| 🧠 **ポリシーは Brainfuck、しかもコンパイル済み** | 手書きの 9 つのプログラムをネイティブ コードにコンパイル。ポリシーと SponsorBlock の操作は起動のたびにチェックされます。 |
-| 🛟 **失敗したら止める** | セルフチェックに失敗した機能はオフのまま。ネットワーク エラーや不明な再生タイプではシークしません。 |
-| ⚙️ **ネイティブな見た目の設定** | **マイページ → 設定** の「アカウント」の上に専用の **YouTube Hide Ads** セクション。YouTube 自身の行を使い、スイッチはすべて独立。「互換性と診断」ページもあります。 |
-| 🎛️ **プレーヤーになじむ SponsorBlock** | 自動再生の横の SponsorBlock アイコンから、設定の歯車と同じフローティング メニューが開きます。セグメントはシークバーに色付きで表示されます。 |
-| 📱 **すっきりしたショート** | ショートのボタンやパネルを個別に非表示にでき、ショート フィードのライブ配信を飛ばせます。 |
-| 👆 **ひと目でわかるスワイプ操作** | 左で明るさ、右で音量。アイコン、レベル、数値の入ったピルで表示します。 |
-| 🌐 **あなたの言語で** | YouTube の言語に従います：English、简体中文、繁體中文、Español、Português、Русский、日本語、한국어、Bahasa Indonesia、Bahasa Melayu。 |
-
----
-
-## 取り除くもの
-
-| グループ | 設定 | 既定 |
-|---|---|---|
-| 広告 | 動画とショートの広告 · フィードと検索の広告 · Premium のプロモーション · 全画面のプロモーション | オン（**広告を非表示** のマスタースイッチ配下） |
-| SponsorBlock | スポンサー、自己宣伝 | オン |
-| SponsorBlock | アクションの呼びかけ、イントロ、エンディング、予告、フィラー、音楽以外の部分 | オフ |
-| コンテンツ | Playables（ゲームの棚、カード、探索の入口） | 非表示 |
-| フィード | プレビュー動画 · 他のトピックを見る · 投稿 | 非表示 |
-| フィード | フィードのショート | 表示 |
-| フィード | AI チャンネル · AI の可能性があるチャンネル（[AiSList](https://github.com/Override92/AiSList)） | オフ |
-| プレーヤー | スワイプで明るさ（左）· スワイプで音量（右）、全画面のみ | オン |
-| プレーヤー | 多言語の動画で元の音声を優先 | オン |
-| プレーヤー | バックグラウンド再生（子ども向け動画を含む） | オン |
-| ショート | 高評価、コメント、共有、リミックス、保存、サウンド、登録、タイトル、おすすめと情報パネル、一時停止中のボタン | 表示（それぞれ非表示にできます） |
-| ショート | ライブのショートをスキップ | オフ |
-
-**広告を非表示** をオフにしてもコンテンツやプレーヤーの機能はオフになりません。フィードのスイッチを変えたらフィードを再読み込みしてください。元の音声は次のトラック リストから適用され、手動の選択を尊重します。全項目は[設定と既定値](docs/README.md#settings-and-defaults)。バックグラウンド再生は「広告を非表示」や SponsorBlock とは独立しています。変更後は YouTube を再起動してください。[実装とテスト済みの制限](docs/BACKGROUND_PLAYBACK.md)。
-
-<details open>
-<summary><b>🧱 どこで取り除くか</b></summary>
-<br>
-
-| 対象 | 場所 | 内容 |
-|---|---|---|
-| **動画広告** | プレーヤーの広告開始と広告レイアウト | Brainfuck が構造上の広告の特徴と安全な遷移を確認したときに広告枠を抑止します。 |
-| **フィード、検索、ショッピングの広告** | DexKit で見つけたコンポーネント パーサー | 確認された有料コンポーネントを YouTube 自身の空のコンポーネントに置き換えます。 |
-| **スポンサー付きショート** | ショートの応答、挿入、プレーヤーの初期データ | プレーヤーができる前に、動画・画像の広告項目をトラッキング データごと取り除きます。 |
-| **Premium、全画面、パネル** | オファー表示、全画面ダイアログ、型付き識別子によるエンゲージメント パネル | 特典や定期購入の管理には触れずに宣伝面を非表示にします。 |
-| **フィードのセクション、Playables、AI チャンネル、ショートの要素** | 同じコンポーネント フック | 一致したセクション、カード、ボタンだけを取り除きます。チャンネルの行や再生リストは残ります。 |
-| **SponsorBlock** | プレーヤーのシーク/再生時間のブリッジとネイティブのシークバー | 制限付きのプレフィックス検索、カテゴリの動作、色付きマーク、手動操作、明示的なコミュニティ操作。 |
-
-</details>
-
----
-
-## 状況
-
-**v1.2.0**（versionCode 155）は YouTube 21.43.523 に対応し、バックグラウンド再生と SponsorBlock のスキップが再び動作します。YouTube 風のダイアログによる更新チェック（既定でオン、「概要」内）と、記入済みの GitHub Issue を開く **問題を報告** ボタンを追加しました。モジュール名は **YouTube Hide Ads** になりました。[変更履歴](CHANGELOG.md)。
-
-**v1.1.0**（versionCode 153）は 1.0.0 以来の最初のリリースです。バックグラウンド再生、YouTube の設定内の専用セクション、「互換性と診断」ページ、YouTube 風の SponsorBlock 操作、ショートの要素の非表示、ライブのショートのスキップ、新しいスワイプ操作、さらに 9 言語を追加しました。スマートフォンでの負荷も大きく下がりました。Brainfuck のポリシー呼び出しは APK を開き直さなくなり、DexKit の結果はキャッシュされるため、初回以降は YouTube が約 0.35 秒早く開きます。[端末での確認](evidence/device_perf_20261028/README.md)。
-
-2 つのリリースの間の開発ビルド（111〜153）は[変更履歴](CHANGELOG.md)に、それぞれの証拠は [evidence](evidence/README.md) にあります。
-
-### 互換性
-
-Pixel 8 Pro（Android 17、Vector 2.2、libxposed API 102）で確認しています。ほかの構成で試したら、行を追加する pull request をお願いします。
-
-| YouTube | モジュール | 状態 |
-|---|---|---|
-| 21.43.523 | 1.2.0 | ✅ 動作 |
-| 21.42.243 | 1.1.0 | ✅ 動作 |
-| 21.41.525 | 1.0.0 | ✅ 動作 |
-
-### 既知の制限
-
-- HTTPS フィルタリングアプリ（AdGuard など）があると、SponsorBlock と更新チェックが接続できません。`sponsor.ajay.app` と `github.com` を HTTPS フィルタリングの除外に追加してください（[詳細](README.md#sponsorblock-or-update-check-never-connects)）。
-- Premium、全画面、エンゲージメント パネルのプロモーションは、制御したフック テストでしか除去を確認していません。実際の配信例はまだ見ていません。
-- プレビュー動画と「他のトピックを見る」の棚は英語の見出しでのみ判定します。
-- AI チャンネルのリストはコミュニティが管理しており誤判定がありうるため、既定でオフです。
-- バックグラウンド再生はスイッチを変えたあと YouTube の再起動が必要で、ショートは YouTube の動作のままです。Bluetooth 操作と着信による中断は未確認です。
-- SponsorBlock の送信と投票は本番サーバーでは試していません。[機能と制限](docs/SPONSORBLOCK_API_RESEARCH.md)をご覧ください。
-- ライブのショートのスキップはまだ実際のライブ ショートに出会っていません。この機能、スワイプのピル、YouTube の言語切り替えは開発用プローブで確認しました。
-- モジュールのページはダーク テーマでのみ確認しました。ライト テーマ、タブレット、右から左のレイアウトは未確認です。
-- YouTube またはモジュールの更新後の最初の起動ではフックのキャッシュを作り直すため、約 0.4 秒遅くなります。
-- arm64-v8a のみ。上の構成と YouTube バージョン以外は試していません。LSPatch も未確認です。
-
-詳細：[機能の対応範囲](docs/FEATURE_COVERAGE.md)と[互換性](docs/COMPATIBILITY.md)。
-
-## 必要環境
-
-| | |
-|---|---|
-| **Android** | 9.0（API 28）以降、arm64 |
-| **アプリ** | YouTube（`com.google.android.youtube`） |
-| **フレームワーク** | [Vector](https://github.com/JingMatrix/Vector) または libxposed API 102 対応の LSPosed |
-| **Root** | Vector/LSPosed に必要。モジュール自体は権限を要求しません |
+新しい追加機能は既定でオフです。すべての設定と既定値は[ドキュメント](docs/README.md#settings-and-defaults)に載っています。
 
 ## インストール
 
-```
-1. Releases または Xposed モジュール リポジトリから APK をインストール
-2. Vector または LSPosed で YouTubeHideAds を有効にし、スコープを YouTube に
-3. YouTube を一度強制停止してから開く
-```
+1. [Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) または [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) から APK を入手します。
+2. [Vector](https://github.com/JingMatrix/Vector) または LSPosed（libxposed API 102）で有効にし、スコープに YouTube を指定します。
+3. YouTube を強制停止してから、もう一度開きます。
 
-[GitHub Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) または [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads) から入手できます。設定は **YouTube → マイページ → 設定 → YouTube Hide Ads** にあります。設定と AI のキャッシュは YouTube 自身のデータに保存されるため、YouTube のデータを消去するとリセットされます。
+arm64 の Android 9 以降と、フレームワーク用の root が必要です。モジュール自体は権限を一切要求しません。
 
-フレームワークのログでは `YouTubeHideAds:` で始まる行で動作を確認できます。
+## 互換性
 
-```text
-Ad policy self-check passed (70 cases)
-SponsorBlock self-check passed (277 cases)
-Ad component hook installed
-Shorts feed removal hooks installed (paired, insert, response, restore, seed)
-Video ad suppressed
-```
+| YouTube | モジュール | 状態 |
+|---|---|---|
+| 21.45.88 | 1.3.0 (build 157) | ✅ 動作 |
+| 21.43.523 | 1.2.0 | ✅ 動作 |
+| 21.42.243 | 1.1.0 | ✅ 動作 |
 
----
+Android 17 と Vector 2.2 の Pixel 8 Pro で確認しています。YouTube はほとんどの
+アップデートで内部クラス名を変えます。モジュールは構造からもう一度対象を見つけ、見つからないときは
+推測せずにその機能をオフにします。履歴: [変更履歴](CHANGELOG.md) · 詳細: [互換性](docs/COMPATIBILITY.md)。
 
-## 仕組み
+## 既知の制限
 
-```
-YouTube process
-  XAX module (DEX) ──────────────► Bfp1Bridge.run ──JNI──► lib<policy>.so
-  hooks, DexKit roles               input bytes            nine AOT Brainfuck policies
-  settings page, HTTPS/JSON              ▲                       │
-  typed actions                          │   exact reply only    │
-                                         └───────────────────────┘
-```
+- AdGuard など HTTPS をフィルタリングするアプリは、SponsorBlock、更新チェック、低評価数、DeArrow をブロックすることがあります。[下記](README.md#sponsorblock-or-update-check-never-connects)を参照してください。
+- DeArrow が置き換えるのはサムネイルで、タイトルではありません。既定の速度を適用しても、YouTube 自身の速度メニューは 1x のままです。
+- モバイルデータでの既定画質、ライブのショート、自動字幕のブロックは、実機では未確認です。
+- 確認したのはダークテーマで、1 台のスマートフォンだけです。1.3.0 の新しい文言は英語です。
 
-コードの置き場所を決めるルールは 1 つです：**YouTube、Android、ネットワーク、JNI に触れるものは XAX が行い、XAX が見つけたものに対して動くかどうかは Brainfuck が決める。** ポリシー ライブラリ、バイト配置、フック探索の詳細は [`docs/BRAINFUCK_ABI.md`](docs/BRAINFUCK_ABI.md) と [`docs/DEXKIT_RESOLUTION.md`](docs/DEXKIT_RESOLUTION.md) にあります。
-
-セグメントの自動取得では、動画 ID の SHA-256 の先頭 4 桁（16 進数）だけを送ります。応答サイズ、レコード数、タイムアウトには上限があり、リダイレクトは無効です。手動の送信や投票では、選んだサーバーに必要なデータとプライベート ID を送ります。視聴の報告は既定でオフ、設定のエクスポートは既定でプライベート ID を含みません。
-
----
-
-## ビルド
-
-このリポジトリにビルド スクリプトはありません。リリースは外部ツールでビルドします。
-
-```text
-BBC          source/**/*.bf  ->  lib<policy>.so (AArch64)
-AAPT2        source/branding ->  branding.apk (static resources only)
-XAX          source/xax/youtubehideads.xax + pinned inputs -> signed APK
-```
-
-すべての入力はストア内で BLAKE3 により固定されているため、入力が一致しなければビルドは失敗します。再ビルドには Android libxposed プロファイル付きの [XAX](https://github.com/MrxSiN/XAX)（コミット `3cca599` または互換の branding-v2 スナップショット）を使います。手順は [`docs/BUILD.md`](docs/BUILD.md) にあります。
+確認済みの内容と未確認の内容のすべて: [機能の確認範囲](docs/FEATURE_COVERAGE.md)。
 
 ## トラブルシューティング
 
 | 問題 | 対処 |
 |---|---|
-| モジュールのログが出ない | モジュールが YouTube をスコープにして有効か確認し、YouTube を強制停止します。 |
-| 更新直後の `UnsatisfiedLinkError` | インストールの完了を待ってから YouTube を強制停止し、開き直します。 |
-| セルフチェックが `false` | その機能はオフのままです。`YouTubeHideAds:` のログ行を報告してください。 |
-| フィードのスイッチが効かない | フィードを再読み込みしてください。新しく読み込まれたコンポーネントに適用されます。 |
-| YouTube の更新後に動かない | 内部クラスが変わった可能性があります。YouTube のバージョンと一緒にログを報告するか、「互換性と診断」のレポートをコピーしてください。 |
+| フレームワークのログに `YouTubeHideAds:` の行がない | YouTube がスコープに入っているか確認し、強制停止してください。 |
+| フィードのスイッチが効いていないようだ | フィードを再読み込みしてください。 |
+| YouTube の更新後に動かない | **概要 → 互換性と診断 → 問題を報告** を使ってください。 |
 
-## クレジット
+### SponsorBlock や更新チェックがいつまでも接続できない
 
-[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed API](https://github.com/libxposed/api)、[Vector](https://github.com/JingMatrix/Vector)、[LSPosed](https://github.com/LSPosed/LSPosed)、[XAX](https://github.com/MrxSiN/XAX)、[XAX-MCP](https://github.com/MrxSiN/XAX-MCP)、[BBC](https://github.com/MrxSiN/BBC)、[SponsorBlock](https://sponsor.ajay.app)、[Override92/AiSList](https://github.com/Override92/AiSList)、[Morphe Patches](https://github.com/MorpheApp/morphe-patches)（[保持している通知](LICENSES/Morphe-NOTICE.txt)）。新たに書かれたプロジェクト素材は GPL-3.0-or-later です。第三者の条件は [NOTICE](NOTICE) をご覧ください。
+低評価数と DeArrow にも当てはまります。ログに `NOT_ENOUGH_SCTS` が出ます。HTTPS をフィルタリングするアプリが接続に再署名していて、YouTube の
+証明書の透明性チェックがそれを拒否しています。AdGuard では、**HTTPS フィルタリング → 除外** に次を追加してください:
+`sponsor.ajay.app`、`github.com`、`returnyoutubedislikeapi.com`、`dearrow-thumb.ajay.app`。その後、YouTube を再起動します。
 
-## 免責事項
+## 仕組み
 
-Google LLC や YouTube とは関係がなく、承認や後援も受けていません。教育および個人利用のために提供しています。YouTube の更新により、予告なくフックが動かなくなることがあります。
+判断するのが Brainfuck、実行するのが XAX です。9 つの Brainfuck ポリシーが、たとえばコンポーネントが
+広告かどうか、シークでセグメントをスキップしてよいか、タッチがスワイプかどうかを判断します。これらは
+[BBC](https://github.com/MrxSiN/BBC) で事前に AArch64 にコンパイルされます。フック、探索、設定、ネットワークは 1 つの
+[XAX](https://github.com/MrxSiN/XAX) ストアにまとまっていて、DEX にコンパイルされます。リポジトリには Java、Kotlin、C のアプリケーションソースはありません。
+
+[アーキテクチャ](docs/ARCHITECTURE_BRAINFUCK_XAX.md) · [ビルド](docs/BUILD.md) · [すべてのドキュメント](docs/README.md) · [エビデンス](evidence/README.md)
+
+## サポート
+
+このモジュールが役に立ったら、[開発を支援](https://github.com/sponsors/MrxSiN)できます。
+
+## クレジットとライセンス
+
+[DexKit](https://github.com/LuckyPray/DexKit)、[libxposed](https://github.com/libxposed/api)、
+[Vector](https://github.com/JingMatrix/Vector)、[SponsorBlock](https://sponsor.ajay.app)、
+[Return YouTube Dislike](https://returnyoutubedislike.com)、[DeArrow](https://dearrow.ajay.app)、
+[AiSList](https://github.com/Override92/AiSList)（CC BY-NC 4.0、同梱なし）、
+動作の参考にした [Morphe Patches](https://github.com/MorpheApp/morphe-patches)
+（[通知](LICENSES/Morphe-NOTICE.txt)）。
+
+GPL-3.0-or-later。[NOTICE](NOTICE) と[アップストリームの出典](docs/UPSTREAM_PROVENANCE.md)を参照してください。
+このプロジェクトは Google や YouTube とは関係ありません。

@@ -88,3 +88,40 @@ An independent audit read every feature script and dumped the combined carrier. 
   chat does was not looked into.
 - The test settings written during these checks were cleared from the phone afterwards. New strings are English
   only. Dark theme, this phone and YouTube 21.45.88 only.
+
+## Addendum: rebuild of 157 (same day)
+
+**Fix.** The end-of-video **More videos** sheet (`related_endscreen_results`) covers the player in fullscreen.
+Drags on it changed brightness or volume. While the sheet is shown, the swipe gate now starts no swipe, the
+same rule as for the visible play button.
+
+**Runtime work cut** (a new `polish_157` step, plus edits in the feature scripts):
+- The swipe gate resolves its two view ids once per process. Before, it called `getIdentifier` on every touch.
+- Speed, dislike and speed-button work run under one guard per progress tick instead of three. That is a
+  third of the wrapper allocations each second.
+- Speed button: with the switch off and no button attached, the tick stops after one pref read. Before, it
+  allocated a WeakReference, looked up the container, and called `Class.forName` every second. The class is now
+  resolved once at install.
+- Return YouTube Dislike: the dislike host found on an earlier tick is reused while it is still shown,
+  attached and labelled as the dislike button. Before, the whole decor tree was walked every second while the
+  feature was on. The tree walk also resolves `ViewGroup` once instead of once per view.
+- `f236`, an unused helper since build 156, is removed from the store. The compiler already left
+  it out of the DEX, so the APK did not change from that alone.
+
+**Startup, MEASURED** over three cold starts with logcat timestamps: the hook installs from the first
+self-check to `YouTube lifecycle hook installed` take about 30 ms in total. The six 1.3.0 installers add about
+1 to 2 ms each. The 383 ms seen before `Background playback self-check` is a different thread that runs after
+the hooks are installed (timestamps and thread ids: [startup timing](startup-timing.log), taken before the rebuild, which adds one `Class.forName` at install). It is not
+hook-install time. Build 156 could not be timed on the same phone, because downgrading needs an uninstall.
+
+**EXECUTED on the rebuilt APK:**
+- Startup: 22 `installed` lines and no failure line.
+- More videos sheet open: right and left drags logged no swipe. Before opening it, a right drag logged
+  `mode=2`; after closing it, a left drag logged `mode=1`.
+- Speed button: a tap logged `Speed button: 1.25x`. After the switch was turned off in settings, the next video
+  had no speed button.
+- Return YouTube Dislike, on a probe build of the same scripts (not shipped) with one pre-seeded count: `522K`
+  was drawn under the dislike icon, using the cached host.
+- 0 `FATAL EXCEPTION`.
+
+The test settings were cleared again afterwards.

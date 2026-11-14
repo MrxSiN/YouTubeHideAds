@@ -9,6 +9,10 @@ Since build 152, DexKit answers are cached in YouTube's `code_cache` and keyed b
 serialized query bytes; the cache is discarded when YouTube's base.apk or the module APK changes.
 Every role below is still validated on each start. [Design and checks](../evidence/device_perf_20261028/README.md#dexkit-result-cache-build-152).
 
+DexKit runs once per process and resolves typed roles by structure: component parser and serializer, player
+seek and duration bridges, Shorts response and pager seed, the original-audio controller. Each role must match
+exactly one target; anything missing or ambiguous leaves its feature off, and the log says so.
+
 DexKit 2.3.0 is bundled as third-party DEX/native input. Discovery and reflection are XAX. This guide describes build 77; obfuscated names below are
 observations on YouTube 21.41.525, never hardcoded selectors. [Compatibility](COMPATIBILITY.md).
 
