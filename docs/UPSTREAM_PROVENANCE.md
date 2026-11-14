@@ -67,6 +67,25 @@ RememberLiveStreamPositionPatch and SkipLiveShortsPatch at
 retries and a 3 s tolerance, at most 100 entries, and live detection from the player instead of layout.
 The XAX implementation is independent and uses this module's existing player bridges; no code was copied.
 
+Build 157 features follow the behavior of these Morphe files at
+[44031c5](https://github.com/MorpheApp/morphe-patches/tree/44031c5), read for behavior and for which YouTube
+objects exist. The XAX implementations are independent; no code was copied.
+
+- Default playback speed: `PlaybackSpeedPatch`, `RememberPlaybackSpeedPatch`, `VideoInformationPatch`, shared
+  fingerprints, `VideoInformation`, `GetMixPlaylistRequest` (music detection, not added).
+- Default video quality: `video/quality/Fingerprints.kt`, `RememberVideoQualityPatch`, `VideoInformationPatch`
+  (fingerprint names only).
+- Captions: `layout/captions` `PreferredCaptionLanguagePatch`, `AutoCaptionsPatch`, `CaptionTrackCapturePatch`,
+  `TranslatedCaptionPensPatch`, `Fingerprints.kt`, and `NativeCaptionPair` and `DualCaptionOverlay` (to size the
+  bilingual work, which was not built).
+- Return YouTube Dislike: `ReturnYouTubeDislikeAPI` (timeouts, back-off), `ReturnYouTubeDislike`,
+  `returnyoutubedislike/Fingerprints.kt`.
+- Player tweaks: `EnableTapToSeekPatch`, `LoopVideoPatch`, `LoopVideoButtonPatch`, `DoubleTapLengthPatch` (not
+  shipped), `VideoInformationPatch` and their fingerprints.
+- Blacklist: `KeywordContentFilter`, `CommentsFilter`, `CommentsSearchFilter`.
+- DeArrow: `DeArrowPatch`, `imageurlhook/Fingerprints.kt`, `originaltitles` `VideoTitlesHookPatch`, `Fingerprints.kt`
+  and `RestoreOriginalTitlesPatch` (method inventory only; titles were not built).
+
 The earlier Playables/swipe pass read moving-main LayoutComponentsFilter,
 SwipeControlsConfigurationProvider, ClassicSwipeController and PlayerType. Those reads are behavior
 references, not pinned implementation dependencies. No Java/Kotlin implementation was copied.

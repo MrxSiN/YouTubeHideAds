@@ -1,5 +1,11 @@
 # Build
 
+Development build **1.3.0 (versionCode 157)** was built with XAX `main` at `affbb53`, unchanged since 1.2.1, so the
+compiler files, native inputs, DEX and signer are the same. The branding archive was rebuilt for versionName 1.3.0
+(swipe pill drawables included). The store is the 1.2.1 carrier plus the 1.3.0 feature edits, applied in order: ui,
+speed, blacklist, captions, ryd, player, quality, dearrow, release.
+[Build record](../evidence/release_1_3_0_20261114/build.json).
+
 Development build **1.2.1 (versionCode 156)** was built with XAX `main` at `affbb53`, whose `xax_construct.py` and
 `xax_android_libxposed_jvm.py` are byte-identical to the 1.2.0 compiler; constructing the 1.2.0 carrier there
 reproduced the 1.2.0 store and APK byte for byte first. Native inputs, DEX and signer are unchanged; the branding

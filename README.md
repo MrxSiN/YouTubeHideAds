@@ -51,6 +51,7 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | 🎛️ **Player-native SponsorBlock** | A SponsorBlock icon beside autoplay opens the same floating menu as the player's settings gear; segments are colored on the seekbar. |
 | 📱 **Cleaner Shorts** | Hide individual Shorts buttons and panels, and move past live streams in the Shorts feed. |
 | 👆 **Swipe controls that read at a glance** | Brightness on the left, volume on the right, shown as a pill with an icon, a level and the value. |
+| 🎚️ **Player and feed extras** | One settings page with default speed and quality, caption languages, dislike counts, tap to seek, loop, a speed button, a channel and keyword blacklist and DeArrow thumbnails, all off or neutral by default. |
 | 🌐 **Your language** | Follows YouTube's language: English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어, Bahasa Indonesia and Bahasa Melayu. |
 
 ---
@@ -70,6 +71,13 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | Player | Force original audio on multi-language videos | On |
 | Player | Background playback, including Made for Kids videos | On |
 | Player | Remember live stream position (resume a live stream where you left it) | Off |
+| Player | Default playback speed for videos and for Shorts | YouTube default |
+| Player | Default video quality for Wi-Fi/Ethernet, mobile data, Shorts and live streams | Auto |
+| Player | Preferred caption languages · Never turn on automatic captions | Off |
+| Player | Return YouTube Dislike (count or percentage) | Off |
+| Player | Tap to seek · Loop video · Speed button | Off |
+| Feed | Blacklist by channel or keyword, optionally comments | Off |
+| Feed | DeArrow thumbnails or still frame (titles are not replaced) | Off |
 | Shorts | Like, comments, share, remix, save, sound, subscribe, title, suggestions and info panels, paused-overlay buttons | Shown (each can be hidden) |
 | Shorts | Skip live Shorts | Off |
 | About | Check for updates when YouTube opens | On |
@@ -103,6 +111,8 @@ its switch to discard native cached capabilities. [Implementation and tested lim
 
 ## Status
 
+**Development build 157 (1.3.0)** merges the settings into one page and adds default playback speed and video quality, caption languages, Return YouTube Dislike, tap to seek, loop and a speed button, a channel and keyword blacklist, and DeArrow thumbnails. Tested on YouTube 21.45.88; dislike counts could not load through an HTTPS-filtering app, and DeArrow does not replace titles. [Device checks](evidence/release_1_3_0_20261114/README.md).
+
 **Development build 156 (1.2.1)** fixes dragging live chat in fullscreen changing the volume ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)), makes Skip live Shorts work on YouTube 21.45 (it could not trigger there), and adds **Remember live stream position**. Tested on YouTube 21.45.88. [Device checks](evidence/release_1_2_1_20261114/README.md).
 
 **v1.2.0** (versionCode 155) supports YouTube 21.43.523, where background playback and SponsorBlock skipping had stopped working. It adds an update check with a YouTube-style dialog (on by default, under About) and a **Report a problem** button that opens a prefilled GitHub issue, and the module is now called **YouTube Hide Ads**. [Device checks](evidence/release_1_2_0_20261030/README.md).
@@ -117,6 +127,7 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 
 | YouTube | Module | Status |
 |---|---|---|
+| 21.45.88 | 1.3.0 (build 157) | ✅ Working |
 | 21.45.88 | 1.2.1 (build 156) | ✅ Working |
 | 21.43.523 | 1.2.0 | ✅ Working |
 | 21.42.243 | 1.1.0 | ✅ Working |
@@ -127,7 +138,8 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 - Premium, fullscreen and engagement-panel promotions have only been removed in controlled hook tests; naturally delivered ones have not appeared yet.
 - Preview-video and Explore-more-topics shelves are matched by their English headings only.
 - AI channel lists are community-maintained and can misclassify channels, which is why they default off.
-- HTTPS filtering apps (AdGuard and similar) stop SponsorBlock and the update check from connecting. See [SponsorBlock or update check never connects](#sponsorblock-or-update-check-never-connects).
+- HTTPS filtering apps (AdGuard and similar) can stop SponsorBlock, the update check, Return YouTube Dislike and DeArrow from connecting. On the test phone (AdGuard) dislike counts never loaded, while DeArrow and SponsorBlock connected; excluding `returnyoutubedislikeapi.com` should help but was not tried. See [SponsorBlock or update check never connects](#sponsorblock-or-update-check-never-connects).
+- DeArrow replaces thumbnails only, not titles. After a default speed is applied, YouTube's speed menu still shows 1x. The mobile-data path of default video quality is untested.
 - Background playback needs a YouTube restart after its switch changes and leaves Shorts to YouTube. Bluetooth controls and incoming calls are untested.
 - SponsorBlock submission and voting have not been tried against the live server. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
 - Skip live Shorts has not met a real live Short yet; it, the swipe pill and YouTube language switching were checked with development probes.
@@ -285,8 +297,8 @@ The layering is in [`docs/ARCHITECTURE_BRAINFUCK_XAX.md`](docs/ARCHITECTURE_BRAI
 
 ### SponsorBlock or update check never connects
 
-Segments never appear on the seekbar, or no update is ever offered, and the log shows
-`SponsorBlock request error` or `Update check failed` with `NOT_ENOUGH_SCTS`.
+Segments never appear on the seekbar, no update is ever offered, or dislike counts never show, and the log shows
+`SponsorBlock request error`, `Update check failed` or `RYD request failed` with `NOT_ENOUGH_SCTS`.
 
 An HTTPS-filtering app is intercepting the connection. AdGuard, for example, re-signs secure
 traffic with its own certificate, and when that certificate is installed as a system certificate
@@ -295,10 +307,12 @@ YouTube enforces Certificate Transparency, which AdGuard's certificate cannot me
 refuses the connection. The module does not weaken this check.
 
 **Fix:** in AdGuard, open **Settings → Filtering → Network → HTTPS filtering → Exclusions** (the
-path can differ by version) and add both domains:
+path can differ by version) and add these domains:
 
 - `sponsor.ajay.app` for SponsorBlock
 - `github.com` for the update check
+- `returnyoutubedislikeapi.com` for Return YouTube Dislike
+- `dearrow-thumb.ajay.app` for DeArrow thumbnails (its branding lookup uses `sponsor.ajay.app`, already listed)
 
 Then force-stop and reopen YouTube. If you use a custom SponsorBlock server, exclude that domain too.
 

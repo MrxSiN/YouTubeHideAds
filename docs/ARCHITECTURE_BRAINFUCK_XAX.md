@@ -10,7 +10,9 @@ Shorts components reuse the component hook: path names (and, for the anonymous
 comment/share/remix buttons, the existing element serializer) identify a match, a snapshot published
 on settings refresh supplies the switches, and AND3 authorizes. Live streams are recognized in the
 player progress hook (playbackType 9): once per playback, live-Short skipping advances a shown Shorts
-pager through AND3, and the remembered live position is saved or restored with the player's own seek. Every user-visible literal goes through one lookup, `tr`, which reads the
+pager through AND3, and the remembered live position is saved or restored with the player's own seek. The same hook also drives default speed, default video quality,
+dislike counts and the speed button on each tick, each call guarded so a failure cannot skip SponsorBlock's work.
+Startup installers are guarded one by one. The blacklist reuses the AI-channel component path. Every user-visible literal goes through one lookup, `tr`, which reads the
 module's string resources with YouTube's configuration and falls back to English.
 [Evidence](../evidence/ui_redesign_20261027/README.md).
 

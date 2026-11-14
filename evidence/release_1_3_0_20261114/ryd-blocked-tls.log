@@ -1,0 +1,1 @@
+11-14 11:14:28.648 30691 30706 I YouTubeHideAds: RYD request failed: java.util.concurrent.CompletionException: javax.net.ssl.SSLHandshakeException: Certificate chain does not conform to required transparency policy: NOT_ENOUGH_SCTS

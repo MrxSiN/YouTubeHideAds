@@ -1,0 +1,75 @@
+--------- beginning of main
+11-14 15:49:38.364 24837 24837 I YouTubeHideAds: Background playback authorized: eligibility
+11-14 15:49:38.368 24837 24837 I YouTubeHideAds: Captions automatic selection DEFAULT reason 2: en / .en
+11-14 15:49:38.384 24837 24837 I YouTubeHideAds: Background playback authorized: kids policy
+11-14 15:49:38.406 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:49:38.474 24837 24837 I YouTubeHideAds: Default speed applied: 1.5, player reports 1.5
+11-14 15:49:38.477 24837 24837 I YouTubeHideAds: Default video quality (quality_wifi): selected 240p
+11-14 15:49:38.477 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:49:38.477 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:49:38.479 24837 24837 I YouTubeHideAds: SponsorBlock controls attached to player overlay
+11-14 15:49:38.494 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:49:38.494 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:49:38.766 24837 25117 I YouTubeHideAds: DeArrow branding cached
+11-14 15:49:38.835 24837 25257 I YouTubeHideAds: SponsorBlock response cached
+11-14 15:49:39.130 24837 25121 I YouTubeHideAds: DeArrow branding cached
+11-14 15:49:39.130 24837 25180 I YouTubeHideAds: DeArrow branding cached
+11-14 15:49:39.690 24837 25177 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|22a7713527741fb6|
+11-14 15:49:39.748 24837 25177 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 15:49:39.748 24837 25177 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 15:49:39.961 24837 25117 I YouTubeHideAds: DeArrow branding cached
+11-14 15:49:40.044 24837 24855 I YouTubeHideAds: RYD request failed: java.util.concurrent.CompletionException: javax.net.ssl.SSLHandshakeException: Certificate chain does not conform to required transparency policy: NOT_ENOUGH_SCTS
+11-14 15:49:40.212 24837 25173 I YouTubeHideAds: DeArrow branding cached
+--------- beginning of main
+11-14 15:51:05.988 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:06.037 24837 24837 I YouTubeHideAds: Video quality list: selected 1080p60
+11-14 15:51:06.158 24837 24837 I YouTubeHideAds: Default video quality (quality_shorts): selected 240p
+11-14 15:51:06.158 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:51:06.158 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:51:06.166 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:06.166 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:06.261 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|ContainerType|ContainerType|
+11-14 15:51:06.262 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|ContainerType|ContainerType|ContainerType|ImageType|
+11-14 15:51:06.262 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|ContainerType|ContainerType|ContainerType|
+11-14 15:51:06.263 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|ContainerType|ContainerType|
+11-14 15:51:06.263 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|ContainerType|
+11-14 15:51:06.264 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|ContainerType|
+11-14 15:51:06.265 24837 25177 I YouTubeHideAds: Component replaced: statement_banner.eml-fe|68501fedacc4181a|statement_banner.eml-fe|68501fedacc4181a|CellType|
+11-14 15:51:06.390 24837 25257 I YouTubeHideAds: SponsorBlock response cached
+11-14 15:51:06.604 24837 24837 I YouTubeHideAds: Video quality list: selected 1080p60
+11-14 15:51:06.900 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:08.271 24837 24837 I YouTubeHideAds: Shorts sponsored entries removed before pager: 4
+11-14 15:51:12.838 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:12.847 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:12.853 24837 24837 I YouTubeHideAds: Default video quality (quality_shorts): selected 240p
+11-14 15:51:12.853 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:51:12.854 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:51:12.858 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:13.062 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:13.265 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:13.445 24837 25257 I YouTubeHideAds: SponsorBlock response cached
+11-14 15:51:17.656 24837 24837 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 15:51:17.656 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:17.662 24837 24837 I YouTubeHideAds: Default video quality (quality_shorts): selected 240p
+11-14 15:51:17.662 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:51:17.662 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:51:17.666 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:17.902 24837 25257 I YouTubeHideAds: SponsorBlock response cached
+11-14 15:51:18.690 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:22.706 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:22.714 24837 24837 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 15:51:22.714 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:22.720 24837 24837 I YouTubeHideAds: Default video quality (quality_shorts): selected 240p
+11-14 15:51:22.720 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:51:22.720 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:51:22.725 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:22.933 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:23.101 24837 25257 I YouTubeHideAds: SponsorBlock response cached
+11-14 15:51:26.357 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:27.461 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:27.468 24837 24837 I YouTubeHideAds: Default video quality (quality_shorts): selected 240p
+11-14 15:51:27.468 24837 24837 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 15:51:27.468 24837 24837 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 15:51:27.473 24837 24837 I YouTubeHideAds: Video quality list: selected 240p
+11-14 15:51:27.654 24837 24837 I YouTubeHideAds: Video quality list: selected Auto
+11-14 15:51:28.156 24837 25257 I YouTubeHideAds: SponsorBlock response cached

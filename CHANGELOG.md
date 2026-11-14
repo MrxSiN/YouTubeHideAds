@@ -2,6 +2,40 @@
 
 ## Unreleased
 
+### Development build 157 (1.3.0) — 2026-11-14
+
+- **One settings page.** YouTube Hide Ads now opens as a single page with sections (Ads & promotions, SponsorBlock,
+  Player, Shorts, Feed & content, About). Feature settings are inline; only Captions, SponsorBlock and Shorts
+  components keep sub-pages.
+- **Swipe pill moved.** Brightness docks at the right edge and volume at the left. With a fullscreen panel open,
+  the pill docks beside the panel.
+- **Default playback speed** (Player, YouTube default): separate speeds for videos and Shorts, 0.25x to 2x,
+  applied once per playback. A manual change is kept. Live streams are left alone.
+- **Default video quality** (Player, Auto): the highest quality not above a limit, set separately for Wi-Fi and
+  Ethernet, mobile data, Shorts and live streams.
+- **Captions** (Player, off): ordered preferred caption languages and an option to stop automatic captions.
+  Bilingual captions are not built.
+- **Return YouTube Dislike** (Player, off): dislike count, or percentage, under the dislike button on the watch page.
+  Read only, no votes are sent.
+- **Player tweaks** (Player, each off): Tap to seek, Loop video and a Speed button (1x, 1.25x, 1.5x, 2x) in the
+  player's top bar.
+- **Blacklist** (Feed & content, off): hide feed, search and related items by channel or keyword, and optionally
+  comments.
+- **DeArrow thumbnails** (Feed & content, off): community thumbnails, or YouTube's still frame from the middle of
+  the video. Titles are not replaced.
+- A double-tap seek length setting was built and removed before release; YouTube already has its own
+  **Double-tap to seek** setting with the same values.
+- Audit fixes: each startup installer is guarded on its own, so one failure no longer skips the rest; the new
+  per-tick calls cannot skip SponsorBlock's work; video quality no longer mistakes a failed selection for a manual
+  choice; DeArrow requests carry Glide's default headers.
+
+Tested on YouTube 21.45.88 (Pixel 8 Pro): startup, settings, default speed, speed button, blacklist Save, video
+quality on Wi-Fi and Shorts, captions, DeArrow thumbnails, swipes and 0 crashes. Not run or limited: Return YouTube
+Dislike could not fetch because AdGuard's HTTPS filtering on the test phone blocks it (BLOCKED); the YouTube speed
+menu still reads 1x after a default speed is applied; the mobile-data quality path, live streams and automatic-caption
+blocking were NOT RUN; DeArrow titles and music-video speed are BLOCKED. New strings are English only.
+[Evidence](evidence/release_1_3_0_20261114/README.md).
+
 ### Development build 156 (1.2.1) — 2026-11-14
 
 - **Fullscreen live chat no longer changes the volume** ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)).

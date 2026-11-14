@@ -47,6 +47,15 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Force original audio | On | No |
 | Player controls | Background playback | On | No |
 | Player controls | Remember live stream position | Off | No |
+| Player controls | Default playback speed, videos (`speed_video`, string) and Shorts (`speed_shorts`, string); 0.25 to 2, missing = YouTube default | YouTube default | No |
+| Player controls | Default video quality (`quality_wifi`, `quality_mobile`, `quality_shorts`, `quality_live`, int 0 Auto, 1 144p to 8 2160p) | 0 (Auto) | No |
+| Player controls | Preferred caption languages (`captions_languages`, string, e.g. `en,ms,ja`, at most 10) | Empty (off) | No |
+| Player controls | Never turn on auto-generated captions (`captions_no_asr`) · Do not turn captions on automatically (`captions_no_auto`) | Off | No |
+| Player controls | Return YouTube Dislike (`ryd_enabled`) · Dislikes as percentage (`ryd_percentage`) | Off | No |
+| Player controls | Tap to seek (`player_tap_seek`) · Loop video (`player_loop`) · Speed button (`player_speed_button`) | Off | No |
+| Feed | Blacklist channels (`blacklist_channels_enabled`) · keywords (`blacklist_keywords_enabled`) · comments (`blacklist_comments`) | Off | No |
+| Feed | Blacklist entries (`blacklist_channels`, `blacklist_keywords`, one per line, at most 100 of 64 characters) | Empty | No |
+| Feed | DeArrow thumbnails (`dearrow_thumbs`, int 0 Off, 1 DeArrow, 2 Still frame) | 0 (Off) | No |
 | Shorts | Hide like, comments, share, remix, save, sound, subscribe, title, suggestions/info panels, paused-overlay buttons (ten switches) | Off | No |
 | Shorts | Skip live Shorts | Off | No |
 | About | Check for updates | On | No |

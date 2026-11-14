@@ -1,5 +1,12 @@
 # Tested compatibility
 
+Development build **157 (1.3.0)** was exercised on the same Pixel 8 Pro, Android 17 and Vector 2.2/API 102 with
+YouTube **21.45.88**: 22 startup `installed` lines with no unresolved, ambiguous or exception line, the settings page,
+default speed, the speed button, blacklist Save, video quality on Wi-Fi and Shorts, captions, DeArrow thumbnails and the
+swipes, with 0 `FATAL EXCEPTION`. Return YouTube Dislike could not fetch behind the phone's HTTPS filtering. Mobile-data
+quality, live streams and automatic-caption blocking were NOT RUN.
+[Checks and limits](../evidence/release_1_3_0_20261114/README.md).
+
 Development build **156 (1.2.1)** was exercised on the same Pixel 8 Pro, Android 17 and Vector 2.2/API 102 with
 YouTube **21.45.88**: 1.2.0 itself installs every hook there; build 156 passes all startup checks, the live chat
 swipe fix, live-position save/restore and the skip mechanism (inverted probe). A real live Short was not available.
