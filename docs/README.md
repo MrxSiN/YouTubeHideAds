@@ -46,6 +46,7 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Swipe volume | On | No |
 | Player controls | Force original audio | On | No |
 | Player controls | Background playback | On | No |
+| Player controls | Remember live stream position | Off | No |
 | Shorts | Hide like, comments, share, remix, save, sound, subscribe, title, suggestions/info panels, paused-overlay buttons (ten switches) | Off | No |
 | Shorts | Skip live Shorts | Off | No |
 | About | Check for updates | On | No |

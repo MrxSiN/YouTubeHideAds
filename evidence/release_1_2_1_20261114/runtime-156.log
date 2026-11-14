@@ -1,0 +1,282 @@
+11-14 09:27:25.122 19392 19788 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:29.620 21627 21627 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-14 09:28:29.620 21627 21627 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-14 09:28:29.620 21627 21627 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-14 09:28:29.621 21627 21627 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-14 09:28:29.633 21627 21627 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+11-14 09:28:29.633 21627 21627 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+11-14 09:28:29.727 21627 21627 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+11-14 09:28:29.729 21627 21627 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+11-14 09:28:29.744 21627 21627 I YouTubeHideAds: Background playback player observer installed at startup
+11-14 09:28:29.744 21627 21627 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-14 09:28:29.745 21627 21627 I YouTubeHideAds: Video ad activation hook installed
+11-14 09:28:29.757 21627 21627 I YouTubeHideAds: Player ad layout hook installed
+11-14 09:28:29.777 21627 21627 I YouTubeHideAds: Ad component hook installed
+11-14 09:28:29.778 21627 21627 I YouTubeHideAds: Premium offer hook installed
+11-14 09:28:29.791 21627 21627 I YouTubeHideAds: Fullscreen dialog hook installed
+11-14 09:28:29.819 21627 21627 I YouTubeHideAds: Typed engagement panel identifier resolved
+11-14 09:28:29.820 21627 21627 I YouTubeHideAds: Engagement ad panel hook installed
+11-14 09:28:29.822 21627 21627 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-14 09:28:29.822 21627 21627 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-14 09:28:29.822 21627 21627 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-14 09:28:29.823 21627 21627 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-14 09:28:29.837 21627 21627 I YouTubeHideAds: SponsorBlock player hook installed
+11-14 09:28:29.852 21627 21627 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+11-14 09:28:29.852 21627 21627 I YouTubeHideAds: Player video ID and seek bridge resolved
+11-14 09:28:29.853 21627 21627 I YouTubeHideAds: Player duration and active-generation bridge resolved
+11-14 09:28:29.866 21627 21627 I YouTubeHideAds: Shorts ad selection hook installed
+11-14 09:28:29.866 21627 21627 I YouTubeHideAds: Ad hook discovery finished
+11-14 09:28:29.932 21627 21627 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+11-14 09:28:29.949 21627 21627 I YouTubeHideAds: Playables typed element serializer resolved
+11-14 09:28:29.962 21627 21627 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+11-14 09:28:29.963 21627 21627 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+11-14 09:28:29.964 21627 21627 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-14 09:28:29.988 21627 21627 I YouTubeHideAds: Original audio hook installed: public final void asam.a(apho)
+11-14 09:28:30.003 21627 21627 I YouTubeHideAds: YouTube lifecycle hook installed
+11-14 09:28:30.360 21627 21640 I YouTubeHideAds: Background playback self-check (28 cases)=true
+11-14 09:28:30.528 21627 21640 I YouTubeHideAds: Background playback candidates: [public static boolean aquz.C(bhnz)]
+11-14 09:28:30.574 21627 21640 I YouTubeHideAds: Background playback candidates: [public final void rpz.g(int, jlg, bjwl)]
+11-14 09:28:30.574 21627 21640 I YouTubeHideAds: Background playback candidates: [static void jlg.<clinit>()]
+11-14 09:28:30.652 21627 21640 I YouTubeHideAds: Background playback candidates: [public final java.lang.Object oto.a(java.lang.Object)]
+11-14 09:28:30.686 21627 21640 I YouTubeHideAds: Background playback candidates: [public final boolean jap.h()]
+11-14 09:28:30.778 21627 21640 I YouTubeHideAds: Background playback candidates: [public final boolean vaa.r()]
+11-14 09:28:30.779 21627 21640 I YouTubeHideAds: Background playback candidates: [public final boolean albv.m(int, long, boolean)]
+11-14 09:28:30.779 21627 21640 I YouTubeHideAds: Background playback candidates: [public final void com.google.android.apps.youtube.app.player.YouTubePlayerViewNotForReflection.lx(jlg)]
+11-14 09:28:30.936 21627 21640 I YouTubeHideAds: Background playback hooks installed (manager, kids, settings, scoped resume flag, player context)
+11-14 09:28:32.770 21627 21627 I YouTubeHideAds: Shorts sponsored entries removed before pager: 3
+11-14 09:28:37.057 21627 21627 I YouTubeHideAds: Player calibration playbackType=1 durationMs=117034
+11-14 09:28:37.057 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:37.057 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:37.698 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:38.087 21627 21627 I YouTubeHideAds: Player calibration playbackType=1 durationMs=117034
+11-14 09:28:39.115 21627 21627 I YouTubeHideAds: Player calibration playbackType=1 durationMs=117034
+11-14 09:28:39.976 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:39.976 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:40.415 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:42.867 21627 21627 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 09:28:42.869 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:42.869 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:43.421 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:48.643 21627 21627 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 09:28:48.644 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:48.644 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:49.215 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:51.508 21627 21627 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 09:28:51.509 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:51.510 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:52.113 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:54.371 21627 21627 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 09:28:54.372 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:54.372 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:55.169 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:28:57.256 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:28:57.256 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:28:57.834 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:29:00.255 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:29:00.255 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:29:00.801 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:29:03.128 21627 21627 I YouTubeHideAds: Original audio selected: en-US.4
+11-14 09:29:03.129 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:29:03.129 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:29:03.871 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:29:04.552 21627 21627 I YouTubeHideAds: Shorts sponsored entries removed before pager: 2
+11-14 09:29:05.983 21627 21627 I YouTubeHideAds: SponsorBlock playback generation changed
+11-14 09:29:05.983 21627 21627 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-14 09:29:06.351 21627 22058 I YouTubeHideAds: SponsorBlock response cached
+11-14 09:29:09.339 21627 21627 I YouTubeHideAds: Background playback authorized: eligibility
+11-14 09:29:09.368 21627 21627 I YouTubeHideAds: Background playback authorized: kids policy
+11-14 09:29:10.440 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:10.441 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:10.476 21627 21990 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|3a625f805d7a64aa|CellType|
+11-14 09:29:10.477 21627 21990 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|3a625f805d7a64aa|CellType|ContainerType|
+11-14 09:29:10.478 21627 21990 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|3a625f805d7a64aa|CellType|
+11-14 09:29:10.529 21627 21627 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 09:29:10.530 21627 21627 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 09:29:10.746 21627 21990 I YouTubeHideAds: Component replaced: product_carousel.eml-fe|b5003e7f8da821bf|
+11-14 09:29:10.746 21627 21814 I YouTubeHideAds: Component replaced: images_post_root_slim.eml-fe|d75be41c4200726c|CellType|
+11-14 09:29:10.747 21627 21814 I YouTubeHideAds: Component replaced: images_post_root_slim.eml-fe|d75be41c4200726c|CellType|
+11-14 09:29:10.765 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:10.766 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:11.376 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:11.377 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:12.374 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:12.375 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:13.377 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:13.377 21627 21756 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.373 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.374 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.448 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.448 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.453 21627 21627 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|3a625f805d7a64aa|CellType|
+11-14 09:29:14.454 21627 21627 I YouTubeHideAds: Component replaced: full_width_square_image_layout.eml-fe|3a625f805d7a64aa|CellType|
+11-14 09:29:14.457 21627 21627 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 09:29:14.457 21627 21627 I YouTubeHideAds: Component replaced: brand_video_singleton.eml-fe|9719c0286ce5c46d|CellType|
+11-14 09:29:14.467 21627 21627 I YouTubeHideAds: Component replaced: images_post_root_slim.eml-fe|d75be41c4200726c|CellType|
+11-14 09:29:14.467 21627 21627 I YouTubeHideAds: Component replaced: product_carousel.eml-fe|b5003e7f8da821bf|
+11-14 09:29:14.518 21627 21627 I YouTubeHideAds: Player swipe fullscreen=true
+11-14 09:29:14.520 21627 21627 I YouTubeHideAds: Fullscreen swipe touch bound to player Activity: com.google.android.apps.youtube.app.watchwhile.MainActivity
+11-14 09:29:14.535 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.535 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.538 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.543 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.547 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.550 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.552 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.554 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.731 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.815 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.816 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.819 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.839 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.923 21627 21627 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.952 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:14.952 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:15.254 21627 21627 I YouTubeHideAds: Live stream position saved: 890929226
+11-14 09:29:15.375 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:15.376 21627 21752 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:15.572 21627 21721 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:15.574 21627 21721 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:16.383 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:16.384 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:17.377 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:17.378 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:18.387 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:18.389 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:19.381 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:19.382 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:20.387 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:20.388 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:21.225 21627 21627 I YouTubeHideAds: Live stream position saved: 890935194
+11-14 09:29:21.395 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:21.396 21627 21808 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:22.394 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:22.397 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:23.399 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:23.400 21627 21753 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:26.234 21627 21627 I YouTubeHideAds: Live stream position saved: 890940202
+11-14 09:29:31.240 21627 21627 I YouTubeHideAds: Live stream position saved: 890935008
+11-14 09:29:37.252 21627 21627 I YouTubeHideAds: Live stream position saved: 890916872
+11-14 09:29:42.325 21627 21627 I YouTubeHideAds: Live stream position saved: 890921945
+11-14 09:29:47.678 21627 21627 I YouTubeHideAds: Player swipe completed mode=2 level=25
+11-14 09:29:48.266 21627 21627 I YouTubeHideAds: Live stream position saved: 890927887
+11-14 09:29:53.940 22917 22917 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-14 09:29:53.940 22917 22917 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-14 09:29:53.940 22917 22917 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-14 09:29:53.941 22917 22917 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-14 09:29:53.941 22917 22917 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+11-14 09:29:53.944 22917 22917 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+11-14 09:29:53.945 22917 22917 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+11-14 09:29:53.945 22917 22917 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+11-14 09:29:53.946 22917 22917 I YouTubeHideAds: Background playback player observer installed at startup
+11-14 09:29:53.946 22917 22917 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-14 09:29:53.947 22917 22917 I YouTubeHideAds: Video ad activation hook installed
+11-14 09:29:53.947 22917 22917 I YouTubeHideAds: Player ad layout hook installed
+11-14 09:29:53.949 22917 22917 I YouTubeHideAds: Ad component hook installed
+11-14 09:29:53.950 22917 22917 I YouTubeHideAds: Premium offer hook installed
+11-14 09:29:53.950 22917 22917 I YouTubeHideAds: Fullscreen dialog hook installed
+11-14 09:29:53.951 22917 22917 I YouTubeHideAds: Typed engagement panel identifier resolved
+11-14 09:29:53.951 22917 22917 I YouTubeHideAds: Engagement ad panel hook installed
+11-14 09:29:53.953 22917 22917 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-14 09:29:53.953 22917 22917 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-14 09:29:53.953 22917 22917 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-14 09:29:53.954 22917 22917 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-14 09:29:53.956 22917 22917 I YouTubeHideAds: SponsorBlock player hook installed
+11-14 09:29:53.956 22917 22917 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+11-14 09:29:53.956 22917 22917 I YouTubeHideAds: Player video ID and seek bridge resolved
+11-14 09:29:53.956 22917 22917 I YouTubeHideAds: Player duration and active-generation bridge resolved
+11-14 09:29:53.957 22917 22917 I YouTubeHideAds: Shorts ad selection hook installed
+11-14 09:29:53.957 22917 22917 I YouTubeHideAds: Ad hook discovery finished
+11-14 09:29:53.960 22917 22917 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+11-14 09:29:53.960 22917 22917 I YouTubeHideAds: Playables typed element serializer resolved
+11-14 09:29:53.960 22917 22917 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+11-14 09:29:53.960 22917 22917 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+11-14 09:29:53.961 22917 22917 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-14 09:29:53.962 22917 22917 I YouTubeHideAds: Original audio hook installed: public final void asam.a(apho)
+11-14 09:29:53.963 22917 22917 I YouTubeHideAds: YouTube lifecycle hook installed
+11-14 09:29:54.454 22917 22917 I YouTubeHideAds: Player swipe fullscreen=true
+11-14 09:29:54.455 22917 22917 I YouTubeHideAds: Fullscreen swipe touch bound to player Activity: com.google.android.apps.youtube.app.watchwhile.MainActivity
+11-14 09:29:54.499 22917 22938 I YouTubeHideAds: Background playback self-check (28 cases)=true
+11-14 09:29:54.505 22917 22938 I YouTubeHideAds: Background playback candidates: [public static boolean aquz.C(bhnz)]
+11-14 09:29:54.506 22917 22938 I YouTubeHideAds: Background playback candidates: [public final void rpz.g(int, jlg, bjwl)]
+11-14 09:29:54.506 22917 22938 I YouTubeHideAds: Background playback candidates: [static void jlg.<clinit>()]
+11-14 09:29:54.506 22917 22938 I YouTubeHideAds: Background playback candidates: [public final java.lang.Object oto.a(java.lang.Object)]
+11-14 09:29:54.506 22917 22938 I YouTubeHideAds: Background playback candidates: [public final boolean jap.h()]
+11-14 09:29:54.507 22917 22938 I YouTubeHideAds: Background playback candidates: [public final boolean vaa.r()]
+11-14 09:29:54.508 22917 22938 I YouTubeHideAds: Background playback candidates: [public final boolean albv.m(int, long, boolean)]
+11-14 09:29:54.508 22917 22938 I YouTubeHideAds: Background playback candidates: [public final void com.google.android.apps.youtube.app.player.YouTubePlayerViewNotForReflection.lx(jlg)]
+11-14 09:29:54.520 22917 22938 I YouTubeHideAds: Background playback hooks installed (manager, kids, settings, scoped resume flag, player context)
+11-14 09:29:55.301 22917 23003 I YouTubeHideAds: Video ad suppressed
+11-14 09:29:55.302 22917 22917 I YouTubeHideAds: Background playback authorized: eligibility
+11-14 09:29:55.336 22917 22917 I YouTubeHideAds: Background playback authorized: kids policy
+11-14 09:29:57.080 22917 23038 I YouTubeHideAds: Component replaced: full_width_square_image_carousel_layout.eml-fe|823447bc1a80ab25|CellType|
+11-14 09:29:57.081 22917 23038 I YouTubeHideAds: Component replaced: full_width_square_image_carousel_layout.eml-fe|823447bc1a80ab25|CellType|
+11-14 09:29:57.150 22917 22917 I YouTubeHideAds: Live stream position to restore: 890927887
+11-14 09:29:57.150 22917 22917 I YouTubeHideAds: Player calibration playbackType=9 durationMs=0
+11-14 09:29:57.476 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.477 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.505 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.505 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.517 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.517 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.530 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.531 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.540 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.540 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.550 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.550 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.559 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.560 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.569 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.569 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.578 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.578 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.593 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.593 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.603 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.603 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.619 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.619 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.629 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.629 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.639 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.639 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.649 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.649 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.659 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.660 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.669 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:57.669 22917 22917 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.228 22917 22917 I YouTubeHideAds: Player calibration playbackType=9 durationMs=0
+11-14 09:29:58.240 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.242 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.250 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.251 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.434 22917 22917 I YouTubeHideAds: Live stream position restored: 890925023
+11-14 09:29:58.434 22917 22917 I YouTubeHideAds: Player calibration playbackType=9 durationMs=0
+11-14 09:29:58.443 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:58.444 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:59.232 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:29:59.234 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:00.234 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:00.237 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:01.234 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:01.236 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:02.230 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:02.232 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:02.486 22917 22917 I YouTubeHideAds: Live stream position saved: 890928898
+11-14 09:30:02.641 22917 22988 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:02.642 22917 22988 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:03.239 22917 22981 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:03.241 22917 22981 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:04.240 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:04.242 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:05.238 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:05.239 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:06.239 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:06.240 22917 23004 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:07.242 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:07.243 22917 23003 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:07.486 22917 22917 I YouTubeHideAds: Live stream position saved: 890933900
+11-14 09:30:08.247 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:08.250 22917 22977 I YouTubeHideAds: Component replaced: products_in_video_with_preview.eml-js-fe|5dd8158e7e1f6a5e|ContainerType|
+11-14 09:30:12.492 22917 22917 I YouTubeHideAds: Live stream position saved: 890938903

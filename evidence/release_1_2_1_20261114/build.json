@@ -1,0 +1,21 @@
+{
+  "version_name": "1.2.1",
+  "version_code": 156,
+  "base": "release 1.2.0 store (sha256 b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c)",
+  "store_sha256": "4e19e2025aff7cf6f19c257ede7f868417ead1b1a4311d035423aa3f5aba574b",
+  "apk_sha256": "b742e10dcb6d2874d84ac1f77af0151da223ed2f07da2f82b521bbcfa3c761d8",
+  "apk_bytes": 4425572,
+  "functions_in_carrier": 350,
+  "branding_blake3": "eee4eed29a3d0469b3660f3247e1dd3e0af6acdb6d33c641b43fb63a813d5a4d",
+  "branding_sha256": "26fd3a09e75408f9b096bfe90b93d0dd83743bb958e439f650fbf2d240978cab",
+  "compiler": {
+    "xax_commit": "affbb535d23c71edca4e932cc2dc4efea813b09c",
+    "xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+    "xax_android_libxposed_jvm.py": "5760bdb4d75ed7984646f7c18e452901ab41b7bb63c0c2fb11ca7699ff1f1f2e",
+    "note": "XAX main at this commit; both files are byte-identical to the 1.2.0 compiler"
+  },
+  "roundtrip": "construct(1.2.0 carrier) -> build_module reproduced the 1.2.0 store and APK byte for byte before editing",
+  "native_dex_signer_unchanged": true,
+  "transport": "external carrier edit script (ignored build directory), applied to the 1.2.0 carrier",
+  "youtube": "21.45.88"
+}

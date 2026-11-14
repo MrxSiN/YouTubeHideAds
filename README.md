@@ -66,9 +66,10 @@ It is not slow either. The nine policies are compiled ahead of time to AArch64 s
 | Feed | Preview videos · Explore more topics · Posts | Hidden |
 | Feed | Shorts in feeds | Shown |
 | Feed | AI channels · Likely AI channels ([AiSList](https://github.com/Override92/AiSList)) | Off |
-| Player | Swipe brightness (left) · Swipe volume (right), fullscreen only | On |
+| Player | Swipe brightness (left) · Swipe volume (right), fullscreen only, never over live chat or other fullscreen panels | On |
 | Player | Force original audio on multi-language videos | On |
 | Player | Background playback, including Made for Kids videos | On |
+| Player | Remember live stream position (resume a live stream where you left it) | Off |
 | Shorts | Like, comments, share, remix, save, sound, subscribe, title, suggestions and info panels, paused-overlay buttons | Shown (each can be hidden) |
 | Shorts | Skip live Shorts | Off |
 | About | Check for updates when YouTube opens | On |
@@ -102,6 +103,8 @@ its switch to discard native cached capabilities. [Implementation and tested lim
 
 ## Status
 
+**Development build 156 (1.2.1)** fixes dragging live chat in fullscreen changing the volume ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6)), makes Skip live Shorts work on YouTube 21.45 (it could not trigger there), and adds **Remember live stream position**. Tested on YouTube 21.45.88. [Device checks](evidence/release_1_2_1_20261114/README.md).
+
 **v1.2.0** (versionCode 155) supports YouTube 21.43.523, where background playback and SponsorBlock skipping had stopped working. It adds an update check with a YouTube-style dialog (on by default, under About) and a **Report a problem** button that opens a prefilled GitHub issue, and the module is now called **YouTube Hide Ads**. [Device checks](evidence/release_1_2_0_20261030/README.md).
 
 **v1.1.0** (versionCode 153) was the first release since 1.0.0. It adds background playback, the module's own section in YouTube Settings, a Compatibility & diagnostics page, YouTube-style SponsorBlock controls, Shorts component hiding, live-Short skipping, redesigned swipe controls and nine more languages. It is also much lighter on the phone: Brainfuck policy calls no longer reopen the APK, and DexKit results are cached, so YouTube opens about 0.35 s sooner after the first launch. [Device checks](evidence/device_perf_20261028/README.md).
@@ -114,6 +117,7 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 
 | YouTube | Module | Status |
 |---|---|---|
+| 21.45.88 | 1.2.1 (build 156) | ✅ Working |
 | 21.43.523 | 1.2.0 | ✅ Working |
 | 21.42.243 | 1.1.0 | ✅ Working |
 | 21.41.525 | 1.0.0 | ✅ Working |
@@ -127,6 +131,7 @@ Tested on a Pixel 8 Pro with Android 17 and Vector 2.2 (libxposed API 102). Trie
 - Background playback needs a YouTube restart after its switch changes and leaves Shorts to YouTube. Bluetooth controls and incoming calls are untested.
 - SponsorBlock submission and voting have not been tried against the live server. See [features and limits](docs/SPONSORBLOCK_API_RESEARCH.md).
 - Skip live Shorts has not met a real live Short yet; it, the swipe pill and YouTube language switching were checked with development probes.
+- Remember live stream position was tested on a 24/7 stream only; such streams may not resume reliably.
 - Module pages were checked in dark theme only. Light theme, tablets and right-to-left layouts are untested.
 - The first launch after a YouTube or module update rebuilds the hook cache and starts about 0.4 s slower.
 - arm64-v8a only. Only the setup and YouTube versions above have been tried; LSPatch has not.

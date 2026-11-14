@@ -1,6 +1,6 @@
 # Evidence index
 
-The canonical source and release is **1.2.0, versionCode 155**
+The canonical source is development build **1.2.1, versionCode 156**; the latest release is **1.2.0, versionCode 155**
 (`io.github.mrxsin.youtubehideads`). Dated
 directories are immutable measurements of their named builds; their prose may say canonical/installed
 relative to that session. Those statements do not identify today's source store or APK. Preserve
@@ -8,6 +8,7 @@ original hashes, screenshots, logs and measurements when documentation changes.
 
 | Session | Builds and scope |
 | --- | --- |
+| [Development build 156 (1.2.1), 2026-11-14](release_1_2_1_20261114/README.md) | 156 on YouTube 21.45.88: live chat no longer starts a volume swipe (#6), Skip live Shorts keyed on the player's live state (the old trigger never fired on 21.45), Remember live stream position; real live Short not encountered |
 | [Release 1.2.0, 2026-10-30](release_1_2_0_20261030/README.md) | 154-155, released as 1.2.0: YouTube 21.43.523 background playback and SponsorBlock player discovery fixes, display name, update check (HEAD redirect, YouTube-style dialog) and prefilled problem report; live network blocked by the phone's HTTPS filter |
 | [Device performance, DexKit cache and link background playback, 2026-10-28](device_perf_20261028/README.md) | 135-153, released as 1.1.0: bridge rework (22.7 % to 0.05 % of YouTube CPU), DexKit threads and result cache (first screen 0.35 s sooner), background playback from links; A/B timings and cache invalidation checks |
 | [YouTube-style UI, Shorts and languages, 2026-10-27/28](ui_redesign_20261027/README.md) | 132: settings section above Account, shared page design, Compatibility & diagnostics, inline SponsorBlock icon and menu, Shorts components, live-Short skipping, swipe pill, nine languages; 11 startup + 64 UI checks, live skips; probes labelled; dark theme only |

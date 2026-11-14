@@ -1,5 +1,10 @@
 # Build
 
+Development build **1.2.1 (versionCode 156)** was built with XAX `main` at `affbb53`, whose `xax_construct.py` and
+`xax_android_libxposed_jvm.py` are byte-identical to the 1.2.0 compiler; constructing the 1.2.0 carrier there
+reproduced the 1.2.0 store and APK byte for byte first. Native inputs, DEX and signer are unchanged; the branding
+archive was rebuilt for versionName 1.2.1. [Build record](../evidence/release_1_2_1_20261114/build.json).
+
 Release **1.2.0 (versionCode 155)** was built with the same compiler (`xax_construct.py` and
 `xax_android_libxposed_jvm.py` at the hashes below), native inputs and signing capability as 1.1.0; only
 the store and the branding archive changed. [Build record](../evidence/release_1_2_0_20261030/README.md). Before that, release **1.1.0 (versionCode 153)** was built with the same `D:/GitHub/XAX` `3cca599` compiler SDK and a
