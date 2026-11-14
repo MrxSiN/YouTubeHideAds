@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 — 2026-11-14 (versionCode 157)
+
+Collects development builds 156 and 157, listed below, and supports YouTube 21.45.88.
 
 ### Development build 157 (1.3.0) — 2026-11-14
 

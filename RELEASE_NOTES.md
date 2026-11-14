@@ -1,3 +1,58 @@
+# YouTube Hide Ads v1.3.0
+
+## What's new since 1.2.0
+
+- **Works with YouTube 21.45.88.**
+- **One settings page.** YouTube Hide Ads opens as a single page with sections (Ads & promotions, SponsorBlock,
+  Player, Shorts, Feed & content, About) and inline settings.
+- **New, all off or neutral by default:**
+  - Default playback speed, separately for videos and Shorts.
+  - Default video quality, separately for Wi-Fi, mobile data, Shorts and live streams.
+  - Preferred caption languages, and an option to stop automatic captions.
+  - Return YouTube Dislike (read only, no votes are sent).
+  - Tap to seek, Loop video and a Speed button in the player's top bar.
+  - Channel and keyword blacklist for feed, search, related items and optionally comments.
+  - DeArrow thumbnails.
+  - Remember live stream position.
+- **Fullscreen live chat no longer changes the volume.** A drag on an open live chat, comments or description
+  panel, or on the end-of-video More videos sheet, starts no brightness or volume swipe.
+  ([#6](https://github.com/MrxSiN/YouTubeHideAds/issues/6))
+- **Skip live Shorts works again** on YouTube 21.45.
+- **Swipe pill moved:** brightness docks right and volume left, beside an open fullscreen panel.
+- Startup installers are guarded one by one, so one failure no longer skips the rest.
+
+### Known issues
+
+- YouTube's speed menu still shows 1x after a default speed is applied.
+- AdGuard and similar apps with a system HTTPS certificate stop SponsorBlock, Return YouTube Dislike and the update
+  check from connecting (`NOT_ENOUGH_SCTS`). Exclude those hosts from HTTPS filtering.
+  [Details](README.md#sponsorblock-or-update-check-never-connects).
+- New strings are English only.
+
+### Verified
+
+Pixel 8 Pro, Android 17, Vector 2.2, YouTube 21.45.88: all 22 hooks installed at startup, the settings page,
+default speed, speed button, blacklist, video quality on Wi-Fi and Shorts, captions, DeArrow thumbnails, SponsorBlock,
+both swipes and the live chat drag, with 0 crashes. Return YouTube Dislike fetching was BLOCKED on the test phone by
+HTTPS filtering; mobile-data quality, live streams and automatic-caption blocking were NOT RUN.
+[Device checks and limits](evidence/release_1_3_0_20261114/README.md).
+
+Other YouTube versions, devices and 32-bit/x86 ABIs are not certified. The APK is arm64-v8a only.
+
+### Version metadata
+
+- Version name: `1.3.0`
+- Android version code: `157`
+- Package: `io.github.mrxsin.youtubehideads`
+- Git tag: `v1.3.0`
+- APK filename: `YouTubeHideAds-v1.3.0.apk`
+- APK SHA-256: `3d11356e56eba2e8e329b248b4eaa17903eb9f0db4e64281ea154df9cce70665`
+
+### Installing
+
+Install the APK over 1.2.0; settings are kept in YouTube's data. Keep `com.google.android.youtube` as
+the only scope in Vector or LSPosed, then force-stop and reopen YouTube.
+
 # YouTube Hide Ads v1.2.0
 
 ## What's new since 1.1.0
