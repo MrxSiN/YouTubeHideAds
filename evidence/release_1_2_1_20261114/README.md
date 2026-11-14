@@ -67,3 +67,16 @@ Shorts `playbackType=1`.
   the test window. Morphe warns that 24/7 streams can fail; the setting's summary says so too.
 - The chat check used `adb input` drags. A left-docked panel (right-to-left layouts) keeps window-wide zones.
 - New strings are English only. Dark theme, this phone and YouTube 21.45.88 only.
+
+## Addendum: rebuild of 156 (same day)
+
+While testing the next build, brightness and volume swipes did nothing in fullscreen on an ordinary video. A probe of
+the swipe gate logged `margins ok=true` followed by `rejected`. The fullscreen panel holder
+(`FullscreenEngagementPanelCoordinatorLayout`) stays visible with the panel closed and spans x 151–2841 of 2992, so
+the issue 6 check treated almost every touch as a touch on the chat. The check now counts only a shown child of the
+holder with a non-zero width, and uses that child's bounds. The acceptance run above had the chat open, which is
+why it did not catch this. The first 156 identity is kept in `build.json` under `superseded`.
+
+Rebuilt 156, EXECUTED on the same phone: on an ordinary video in fullscreen a right drag logged
+`Player swipe completed mode=2` (volume) and a left drag `mode=1` (brightness). On the live stream with chat open,
+a chat drag logged no swipe and a drag on the video logged `mode=2`.

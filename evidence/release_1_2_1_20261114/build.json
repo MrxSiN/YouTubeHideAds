@@ -2,8 +2,8 @@
   "version_name": "1.2.1",
   "version_code": 156,
   "base": "release 1.2.0 store (sha256 b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c)",
-  "store_sha256": "4e19e2025aff7cf6f19c257ede7f868417ead1b1a4311d035423aa3f5aba574b",
-  "apk_sha256": "b742e10dcb6d2874d84ac1f77af0151da223ed2f07da2f82b521bbcfa3c761d8",
+  "store_sha256": "9e2e191a713cea7efea5caabe02cd1bb979cd7033e5786aeb2a68d4eece64c44",
+  "apk_sha256": "4c6f1f8f4e3c2490ffef995a7333166999d64ed0b9e93c40fa03477bf57571b9",
   "apk_bytes": 4425572,
   "functions_in_carrier": 350,
   "branding_blake3": "eee4eed29a3d0469b3660f3247e1dd3e0af6acdb6d33c641b43fb63a813d5a4d",
@@ -17,5 +17,10 @@
   "roundtrip": "construct(1.2.0 carrier) -> build_module reproduced the 1.2.0 store and APK byte for byte before editing",
   "native_dex_signer_unchanged": true,
   "transport": "external carrier edit script (ignored build directory), applied to the 1.2.0 carrier",
-  "youtube": "21.45.88"
+  "youtube": "21.45.88",
+  "superseded": {
+    "store_sha256": "4e19e2025aff7cf6f19c257ede7f868417ead1b1a4311d035423aa3f5aba574b",
+    "apk_sha256": "b742e10dcb6d2874d84ac1f77af0151da223ed2f07da2f82b521bbcfa3c761d8",
+    "reason": "panel check blocked fullscreen swipes when no panel was open; see README addendum"
+  }
 }
