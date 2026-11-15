@@ -1,6 +1,10 @@
 # Brainfuck runtime ABI
 
-Since 1.0.0 the app packages 9 policy libraries (unchanged through 1.3.0) plus the JNI bridge and DexKit. The seven AND3 rows below all call `liband3.so` ([and3.bf](../source/brainfuck/and3.bf)); their names are semantic call sites, not separate libraries. This is the shipped
+Music's video/audio activation and component gates also use the existing `and3` library and exact
+one-byte success check. Music's fullscreen path uses the existing `ad_fullscreen` library. No native
+input or ABI changes in build 158. [Music contract](../contracts/music_ads_inputs.json).
+
+Since 1.0.0 the app packages 9 policy libraries (unchanged through build 158) plus the JNI bridge and DexKit. The AND3 rows below all call `liband3.so` ([and3.bf](../source/brainfuck/and3.bf)); their names are semantic call sites, not separate libraries. This is the shipped
 runtime contract. [Build identity](../evidence/ai_audio_branding_20261018/build.json).
 
 The shipped XAX host calls external Bfp1Bridge.run(libraryPath,input,output,tape,budget,used).
@@ -28,6 +32,7 @@ Cells wrap modulo 256. Whole-line annotations are stripped before compilation.
 | filter_ai_channel | Selected list enabled, whole-handle membership, validated own card | 01 remove or 00 pass |
 | select_original_audio | Enabled, unique original, current audio context | 01 select or 00 pass |
 | authorize_background_playback | Own switch, validated restriction gate, validated playback/settings/experiment context | 01 permits only the scoped capability override; otherwise native behavior |
+| suppress_music_ad | Effective Music switch, activation/component fact, validated Music context | 01 changes the activation argument or replaces the recognized ad component; otherwise native behavior |
 
 Sponsor category order is sponsor, selfpromo, interaction, intro, outro, preview, filler,
 music_offtopic. The 16 bytes interleave configured category and one-hot category selector.

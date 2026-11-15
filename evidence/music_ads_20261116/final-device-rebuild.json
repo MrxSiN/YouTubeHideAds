@@ -1,0 +1,9 @@
+{
+  "status": "EXECUTED",
+  "XAX_REQUIRE_NATIVE": "1",
+  "native_compiler": "toolchains.json#xax",
+  "operation": "build-signed",
+  "snapshot": "Final MusicDev v9 native snapshot",
+  "byte_identical_to_device_apk": true,
+  "sha256": "ab533e50965bfdcf9851b28d8aadcea5cf1a6b458a528e34075f72ec30a48c82"
+}

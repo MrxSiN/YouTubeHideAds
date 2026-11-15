@@ -1,5 +1,11 @@
 # Testing
 
+Music build 158 adds 26 packaged startup cases: eight native AND3 combinations, six Premium path
+cases, six general-ad path cases and six own-payload compact-banner cases. It also runs the existing
+70 ad checks. [Vectors](../testdata/music_ads_vectors.json) list separate integration requirements;
+their presence does not imply every natural ad surface was delivered.
+[Music device evidence and limitations](../evidence/music_ads_20261116/README.md).
+
 Background playback adds 28 packaged startup checks to the existing 636:
 eight native AND3 inputs, fourteen player-name cases and six scoped experiment cases.
 [Fixtures](../testdata/background_playback_vectors.json) include separate integration acceptance

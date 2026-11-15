@@ -1,5 +1,10 @@
 # Architecture
 
+Development build 158 adds a separate Music host startup that shares initialization, ad discovery,
+native BF policies and the settings scaffold with YouTube. Music exposes ads only; its package-local
+preferences are read from an attached Application before UI creation. YouTube's existing feature
+startup remains separate. [Music architecture and scope](MUSIC_ADS.md).
+
 Development build 132 changes presentation only. The settings entry is a section built from
 YouTube's own group-title and icon-row layouts, attached above Account and moved with the list's
 scroll offset. Every module page shares one scaffold, heading and row vocabulary. Startup install,

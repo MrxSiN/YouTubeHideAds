@@ -1,0 +1,23 @@
+{
+  "status": "MEASURED",
+  "host": "com.google.android.apps.youtube.music",
+  "content_url": "https://music.youtube.com/watch?v=dQw4w9WgXcQ",
+  "pid": 24477,
+  "observations": [
+    {
+      "observation": 0,
+      "time_bar_text": "0:09",
+      "time_bar_description": "0 minutes 9 seconds of 3 minutes 33 seconds",
+      "music_media_session_state": "PLAYING(3)"
+    },
+    {
+      "observation": 1,
+      "time_bar_text": "0:24",
+      "time_bar_description": "0 minutes 23 seconds of 3 minutes 33 seconds",
+      "music_media_session_state": "PLAYING(3)"
+    }
+  ],
+  "activation_hook_positive": "EXECUTED: original true argument suppressed, logged by installed hook",
+  "claim_limit": "This observes activation suppression and advancing UI/media playback state. It does not measure audible output or prove a server-delivered ad would otherwise play.",
+  "cleanup": "Playback paused with KEYCODE_MEDIA_PAUSE after observations."
+}

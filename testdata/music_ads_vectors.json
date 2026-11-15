@@ -1,0 +1,49 @@
+{
+  "schema": "youtubehideads-music-ads-vectors-v1",
+  "startup_case_count": 26,
+  "shared_ad_startup_case_count": 70,
+  "columns": {
+    "and3": ["enabled", "fact", "context_valid", "expected_suppress"],
+    "classification": ["path_or_own_payload", "effective_enabled", "context_valid", "expected_suppress"]
+  },
+  "and3": [
+    [0, 0, 0, false], [0, 0, 1, false], [0, 1, 0, false], [0, 1, 1, false],
+    [1, 0, 0, false], [1, 0, 1, false], [1, 1, 0, false], [1, 1, 1, true]
+  ],
+  "premium": [
+    ["alert_banner_promo.e", 1, 1, true],
+    ["music_paid_content_overlay.e", 1, 1, true],
+    ["statement_banner", 1, 1, true],
+    ["ordinary_music_track", 1, 1, false],
+    ["alert_banner_promo.e", 0, 1, false],
+    ["music_paid_content_overlay.e", 1, 0, false]
+  ],
+  "general": [
+    ["carousel_ad", 1, 1, true],
+    ["ads_video_with_context", 1, 1, true],
+    ["ordinary_music_track", 1, 1, false],
+    ["carousel_ad", 0, 1, false],
+    ["ads_video_with_context", 1, 0, false],
+    ["alert_banner_promo.e", 1, 1, false]
+  ],
+  "compact_own_payload": [
+    ["music_circle_icon_button.e", 1, 1, true],
+    ["ordinary_music_track", 1, 1, false],
+    ["music_compact_banner.e", 1, 1, false],
+    ["music_circle_icon_button.e", 0, 1, false],
+    ["music_circle_icon_button.e", 1, 0, false],
+    ["music_paid_content_overlay.e", 1, 1, false]
+  ],
+  "integration_acceptance": [
+    "Music startup passes all 26 cases through packaged native BF and all shared 70 ad checks",
+    "All three unique ad hooks and the own-element serializer install on the tested Music APK",
+    "The settings page exposes only five ad switches; default-on values, saved changes and process-restart persistence work",
+    "Cold-start master-off preferences reach the snapshot before application onCreate",
+    "YouTube preferences remain unchanged by Music settings",
+    "Music startup installs no YouTube-only player, Shorts, SponsorBlock or networking hooks",
+    "YouTube startup still passes its existing suites and installs its original feature hooks",
+    "Compact banners with a parent-only marker or a nonzero path match index are preserved",
+    "Native video activation calls preserve false arguments and run the original method with the authorized argument",
+    "Natural ad removal, fullscreen delivery and playback require separate recorded device observations; fixture presence alone is not execution"
+  ]
+}

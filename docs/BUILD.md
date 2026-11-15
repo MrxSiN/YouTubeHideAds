@@ -1,5 +1,21 @@
 # Build
 
+Development build **158** adds YouTube Music ads. Current toolchain commits and the native Windows
+compiler identity are pinned in [toolchains.json](../toolchains.json). Native `edit` plus mandatory
+`verify` apply the checked-in transactions; native `resolve` and `build`/`build-signed` produce APKs.
+The connected MCP deployment grants no mutable store, so these operations use the compiler CLI.
+No private compiler patch or Python application generator is used.
+[Build, inputs, replay and device evidence](../evidence/music_ads_20261116/README.md).
+
+Static branding is compiled from `source/branding` with the pinned AAPT2. Its Android framework
+resource input is identified in the new build record. Native libraries and third-party DEX are
+unchanged and checked against their existing canonical BLAKE3 pins. BBC's current shared-library ABI
+is not substituted for the shipped 4,096-cell, budgeted ABI. Release signing still requires the
+external private capability matching the existing certificate; it is never stored in this repository.
+
+Earlier build records below are historical. Their SDK-only and missing-native-target statements
+describe those earlier toolchains, rather than the current build 158 workflow.
+
 Development build **1.3.0 (versionCode 157)** was built with XAX `main` at `affbb53`, unchanged since 1.2.1, so the
 compiler files, native inputs, DEX and signer are the same. The branding archive was rebuilt for versionName 1.3.0
 (swipe pill drawables included). The store is the 1.2.1 carrier plus the 1.3.0 feature edits, applied in order: ui,

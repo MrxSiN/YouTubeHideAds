@@ -1,0 +1,17 @@
+11-16 01:27:17.902 23382 23382 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-16 01:27:17.914 23382 23382 I YouTubeHideAds: Playables typed element serializer resolved
+11-16 01:27:17.916 23382 23382 I YouTubeHideAds: Ad component hook installed
+11-16 01:27:17.916 23382 23382 I YouTubeHideAds: Fullscreen dialog hook installed
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Music video ad activation hook installed
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Music ad hook discovery finished
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Settings lifecycle hook installed
+11-16 01:27:17.946 23382 23382 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+--------- beginning of main
+11-16 01:27:17.902 23382 23382 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-16 01:27:17.914 23382 23382 I YouTubeHideAds: Playables typed element serializer resolved
+11-16 01:27:17.916 23382 23382 I YouTubeHideAds: Ad component hook installed
+11-16 01:27:17.916 23382 23382 I YouTubeHideAds: Fullscreen dialog hook installed
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Music video ad activation hook installed
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Music ad hook discovery finished
+11-16 01:27:17.917 23382 23382 I YouTubeHideAds: Settings lifecycle hook installed
+11-16 01:27:17.946 23382 23382 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]

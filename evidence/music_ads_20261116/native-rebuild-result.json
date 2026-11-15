@@ -1,0 +1,182 @@
+{
+  "status": "EXECUTED",
+  "native_authority": "Pinned Windows XAX PE compiler, invoked directly; no interpreter or SDK compiler fallback",
+  "sdk_in_process_authority": {},
+  "sdk_note": "No in-process SDK helper executed in this replay/build process; SDK use elsewhere was inspection and carrier serialization, not application lowering.",
+  "XAX_REQUIRE_NATIVE": "1",
+  "transaction_replay_identical": true,
+  "stale_root_rejected": true,
+  "unsigned_rebuild_identical": true,
+  "signed_device_apk_rebuild_identical": true,
+  "commands": [
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "source\\xax\\youtubehideads.xax",
+        "build\\music\\music.batch",
+        "build\\music\\replay\\step1.xax"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "verify",
+        "build\\music\\replay\\step1.xax",
+        "build\\music\\replay\\step1.verify"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "build\\music\\replay\\step1.xax",
+        "build\\music\\metadata.edit",
+        "build\\music\\replay\\step2.xax"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "verify",
+        "build\\music\\replay\\step2.xax",
+        "build\\music\\replay\\step2.verify"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "build\\music\\replay\\step2.xax",
+        "build\\music\\ui-scope.batch",
+        "build\\music\\replay\\step3.xax"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "verify",
+        "build\\music\\replay\\step3.xax",
+        "build\\music\\replay\\step3.verify"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "build\\music\\replay\\step3.xax",
+        "build\\music\\version-label.edit",
+        "build\\music\\replay\\step4.xax"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "verify",
+        "build\\music\\replay\\step4.xax",
+        "build\\music\\replay\\step4.verify"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "build\\music\\replay\\step4.xax",
+        "build\\music\\music.batch",
+        "build\\music\\replay\\stale.rec"
+      ],
+      "exit": 1,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "edit",
+        "build\\music\\replay\\step4.xax",
+        "build\\music\\replay\\stale.rec",
+        "build\\music\\replay\\stale.txt"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "build",
+        "build\\music\\review-snapshot.xax",
+        "build\\music\\review-native.apk",
+        "build\\music\\review-native.provenance",
+        "build\\music\\inputs\\branding.apk",
+        "build\\music\\inputs\\dependencies.dex",
+        "build\\music\\inputs\\libad_component.so",
+        "build\\music\\inputs\\libad_fullscreen.so",
+        "build\\music\\inputs\\libad_panel.so",
+        "build\\music\\inputs\\liband3.so",
+        "build\\music\\inputs\\libbrainfuckc_bridge.so",
+        "build\\music\\inputs\\libdexkit.so",
+        "build\\music\\inputs\\libsettings_snapshot.so",
+        "build\\music\\inputs\\libsponsor_settings.so",
+        "build\\music\\inputs\\libsponsor_skip_pipeline.so",
+        "build\\music\\inputs\\libsponsor_time_window.so",
+        "build\\music\\inputs\\libsuppress_video_slot.so"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    },
+    {
+      "status": "EXECUTED",
+      "command": [
+        "$XAX_COMPILER",
+        "build-signed",
+        "build\\music\\test-snapshot.xax",
+        "build\\music\\test-native.apk",
+        "build\\music\\test-native.provenance",
+        "$PRIVATE_CAPABILITY",
+        "$PRIVATE_CAPABILITY",
+        "build\\music\\inputs\\branding-test.apk",
+        "build\\music\\inputs\\dependencies.dex",
+        "build\\music\\inputs\\libad_component.so",
+        "build\\music\\inputs\\libad_fullscreen.so",
+        "build\\music\\inputs\\libad_panel.so",
+        "build\\music\\inputs\\liband3.so",
+        "build\\music\\inputs\\libbrainfuckc_bridge.so",
+        "build\\music\\inputs\\libdexkit.so",
+        "build\\music\\inputs\\libsettings_snapshot.so",
+        "build\\music\\inputs\\libsponsor_settings.so",
+        "build\\music\\inputs\\libsponsor_skip_pipeline.so",
+        "build\\music\\inputs\\libsponsor_time_window.so",
+        "build\\music\\inputs\\libsuppress_video_slot.so"
+      ],
+      "exit": 0,
+      "XAX_REQUIRE_NATIVE": "1"
+    }
+  ],
+  "signed_device_apk_rebuild_scope": "Historical MusicDev v8 packaging; final MusicDev v9 uses identical code with corrected static resource namespace. Final v9 and YouTube regression were built separately with XAX_REQUIRE_NATIVE=1."
+}

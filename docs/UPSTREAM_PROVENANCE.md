@@ -1,5 +1,11 @@
 # Upstream provenance and terms
 
+Music ad support uses the behavior and structural references pinned in
+[Music design](MUSIC_ADS.md#reference-and-scope). The adaptation is native XAX plus existing BF
+policies, with no copied Java/Kotlin implementation. The existing Morphe notice remains in source
+and the branding archive. Current build pins are centralized in [toolchains.json](../toolchains.json);
+the compiler and native dependency history below remains historical.
+
 The background playback extension uses Morphe's behavior and structural fingerprints from
 `f3acc10e2691ffc4db29c6a6a651ee61fb54c047`, originally forked from ReVanced. It is a native XAX
 adaptation with the existing BF authorization gate; no Morphe patcher or extension infrastructure

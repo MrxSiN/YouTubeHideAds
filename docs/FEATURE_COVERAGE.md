@@ -1,5 +1,13 @@
 # Feature coverage
 
+Development build **158** adds YouTube Music **9.45.51** on the physical Pixel 8 Pro,
+Android 17/API 37, Vector 2.2/API 102. Its ad activation/component/fullscreen hooks resolve;
+96 startup policy checks and the five-switch settings persistence checks pass. YouTube
+**21.45.88** retains its 664 startup and 64 settings UI checks. These counts do not establish
+naturally served ads or full Morphe parity. Music SponsorBlock, player/feed extras, native Upgrade
+and Get Music Premium entries are outside this increment.
+[Exact artifacts, device checks and remaining limits](../evidence/music_ads_20261116/README.md).
+
 Development build 131 adds independent background playback: scoped runtime eligibility and kids
 policy hooks, background settings capability and automatic foreground-resume prevention. Regular
 and Pinkfong screen-off/media-control observations, policy checks, disabled behavior and remaining
