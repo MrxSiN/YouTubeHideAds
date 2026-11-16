@@ -1,0 +1,578 @@
+R 68ef0034217fd1f6ee5e497ce7f5cd19e17736a0585c83202b41076557b86c37
+F363
+define @s_unknown
+object 6 0x5b666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e670c756e6b6e6f776e2e686f73740001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_summary
+object 6 0xd101666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e678101416c6c6f7720736f6e677320616e6420766964656f7320746f20636f6e74696e756520696e20746865206261636b67726f756e64206f722077697468207468652073637265656e206f66662c20696e636c7564696e67206b69647320766964656f732e2052657374617274204d75736963206166746572206368616e67696e672e0001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_summary_key
+object 6 0x67666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67186d757369635f6261636b67726f756e645f73756d6d6172790001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_section
+object 6 0x5e666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e670f506c6179657220636f6e74726f6c730001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_section_key
+object 6 0x60666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e671175693135375f706167655f706c617965720001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_installed
+object 6 0x9301666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67444d75736963206261636b67726f756e6420706c61796261636b20686f6f6b7320696e7374616c6c65642028656c69676962696c6974792c206b69647320706f6c696379290001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_unresolved
+object 6 0x9e01666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e674f4d75736963206261636b67726f756e6420706c61796261636b20726f6c657320756e7265736f6c7665642f616d626967756f75733b206e6174697665206265686176696f72207072657365727665640001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_checks_ok
+object 6 0x8501666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67364d75736963206261636b67726f756e6420706c61796261636b2073656c662d636865636b2070617373656420283132206361736573290001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_checks_no
+object 6 0x9501666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67464d75736963206261636b67726f756e6420706c61796261636b2073656c662d636865636b204641494c45443b206e6174697665206265686176696f72207072657365727665640001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_eligibility_allowed
+object 6 0x8001666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67314d75736963206261636b67726f756e6420706c61796261636b20617574686f72697a65643a20656c69676962696c6974790001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_kids_allowed
+object 6 0x8001666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e67314d75736963206261636b67726f756e6420706c61796261636b20617574686f72697a65643a206b69647320706f6c6963790001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_shorty_kids
+object 6 0x53666f726569676e2d66756e6374696f6e2d7631076a766d2d6c6463106a6176612f6c616e672f537472696e670456494c5a0001dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @s_ready
+object 6 0x8301666f726569676e2d66756e6374696f6e2d76310d6a766d2d67657473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e67730772656164793a5a0001e6b0c92b5c583840550533a278df62e0eb67109ee57f1405b6210ec6ffc76624
+end
+define @s_set_ready
+object 6 0x8301666f726569676e2d66756e6374696f6e2d76310d6a766d2d70757473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e67730772656164793a5a01e6b0c92b5c583840550533a278df62e0eb67109ee57f1405b6210ec6ffc7662400
+end
+define @s_context
+object 6 0x9d01666f726569676e2d66756e6374696f6e2d76310d6a766d2d67657473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e677321636f6e746578743a4c616e64726f69642f636f6e74656e742f436f6e746578743b0001398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+end
+define @s_set_context
+object 6 0x9d01666f726569676e2d66756e6374696f6e2d76310d6a766d2d70757473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e677321636f6e746578743a4c616e64726f69642f636f6e74656e742f436f6e746578743b01398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a00
+end
+define @s_counts
+object 6 0xb201666f726569676e2d66756e6374696f6e2d76310d6a766d2d67657473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e6773367265706f727465643a4c6a6176612f7574696c2f636f6e63757272656e742f61746f6d69632f41746f6d69634c6f6e6741727261793b0001fe6e938aa94ea130d38170d9bf48d2c5fec0cb6de23bd5c63d395622ec283122
+end
+define @s_set_counts
+object 6 0xb201666f726569676e2d66756e6374696f6e2d76310d6a766d2d70757473746174696337696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f4d757369634261636b67726f756e6442696e64696e6773367265706f727465643a4c6a6176612f7574696c2f636f6e63757272656e742f61746f6d69632f41746f6d69634c6f6e6741727261793b01fe6e938aa94ea130d38170d9bf48d2c5fec0cb6de23bd5c63d395622ec28312200
+end
+define @music_background_host
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 P0 -> T2
+N1 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N0 -> T1
+cbr N1 B1() B2()
+B1()
+N2 call.foreign entity=5830c581d418a97ce3087d853f9b8433ae2f04e012e862ff099982f2c97af3d0 -> T0
+N3 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N2 -> T2
+N4 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N3 -> T1
+ret N4
+B2()
+N5 constant 0 -> T1
+ret N5
+
+T0 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T1 bits1
+T2 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+end
+define @music_background_report
+(T0,T1)->()
+B0(P0:T0,P1:T1)
+N0 call.foreign entity=@s_counts -> T2
+N1 call.foreign entity=caa48b8e871c724d5dff51e0c3b5b28575a954213c94a3b67bb2f5d7012d2a6d N0 P0 -> T3
+N2 constant 1 -> T3
+N3 int.compare N1 N2 -> T4 [1]
+cbr N3 B1() B2()
+B1()
+N4 call.direct entity=F188 P1
+br B2()
+B2()
+ret
+
+T0 bits32
+T1 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T2 form2 fe6e938aa94ea130d38170d9bf48d2c5fec0cb6de23bd5c63d395622ec283122
+T3 bits64
+T4 bits1
+end
+define @music_background_find_eligibility
+(T2)->(T8)
+B0(P0:T2)
+N0 call.foreign entity=27fcb68e40934e4e2f9a67bd7d336049bbf336de0d0dfddd4a5de1eb41627ad2 -> T9
+N1 call.foreign entity=8db31a75829c565175898579ce643a3b4a5440f46d30f8fd75bc7ce4230ad10d -> T8
+N2 call.foreign entity=7b441ec1c1bc51a7c4f45420068040addf0240b01a3e5519eb03f1b789f97737 N0 N1 -> T9
+N3 call.foreign entity=e8b88e9fa217521f0ab4e7e053cfa6395d4f8c8d08982c0209b466d38af19e70 -> T10
+N4 constant 18 -> T3
+N5 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N4 -> T11
+N6 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N5 -> T0
+N7 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N6 -> T1
+N8 constant 56 -> T3
+N9 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N8 -> T11
+N10 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N9 -> T0
+N11 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N10 -> T1
+N12 constant 82 -> T3
+N13 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N12 -> T11
+N14 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N13 -> T0
+N15 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N14 -> T1
+N16 constant 213 -> T3
+N17 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N16 -> T11
+N18 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N17 -> T0
+N19 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N18 -> T1
+N20 constant 56 -> T3
+N21 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N20 -> T11
+N22 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N21 -> T0
+N23 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N22 -> T1
+N24 constant 84 -> T3
+N25 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N24 -> T11
+N26 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N25 -> T0
+N27 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N26 -> T1
+N28 constant 57 -> T3
+N29 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N28 -> T11
+N30 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N29 -> T0
+N31 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N30 -> T1
+N32 constant 98 -> T3
+N33 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N32 -> T11
+N34 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N33 -> T0
+N35 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N34 -> T1
+N36 constant 82 -> T3
+N37 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N36 -> T11
+N38 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N37 -> T0
+N39 call.foreign entity=8e5a63d654d092fe5b62c902b765bfcceaafab26756b36330a7ef6b92f4a2d82 N3 N38 -> T1
+N40 call.foreign entity=1e5d613e4b1d587e1ca01fc14aaad9cc4ad29ba02cd92956593a637d4feeaf0c N3 -> T12
+N41 call.foreign entity=2c780605f15ce71bef924d4daaa3bce948e6286b2ca64e46c722c3be457c39a7 N0 N40 -> T9
+N42 constant 64657230 -> T3
+N43 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N42 -> T11
+N44 call.foreign entity=0d9c91614d0aff21daa9082a82607bac939aa23b2a3bebd0b7287335ac47251b N43 -> T13
+N45 call.foreign entity=aa8ce768da2cec3355cedeabb3b1a4b3c3eacc9546e5cbe52f0a627d233beba8 N0 N44 -> T9
+N46 call.foreign entity=7f7035384b3995052b672e136feb87daecd30d2c1f41bbfdff4de118c8e486da -> T14
+N47 call.foreign entity=df4a905fa0b161eac07cb908f000aec0172ef15817a5444309233855c79e01fb N46 N0 -> T14
+N48 call.direct entity=F158 P0 N46 -> T15
+N49 call.foreign entity=dd8c645347572f4dc9700887ed9eb61d606c395822d51cd6104421ab1e44e678 N48 -> T15
+N50 call.direct entity=F180 N49 -> T8
+ret N50
+T0 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T1 bits1
+T2 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+T3 bits32
+T4 form2 42bc64e957992e1208ad3bdcdddb4bfd033f186e6181864838cdee2e8e2deeea
+T5 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T6 form2 2a21a849c41269863c6b507f63d6be4f1ed58e423cc21ea4083734572c3962e4
+T7 form2 99e56255a000766fcf07744a4cf4f4e24aea9eacc28cc75e89b777612fbcaa80
+T8 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T9 form2 4c157c294bfa4e4e3c1810657055ab7402b16cb7d3c961e50cc28d3a87910cb5
+T10 form2 96fa35037260ad589737cc8443015e0d267f064dbf5582b9d58bc7350382e4ec
+T11 form2 b0d1f8f7b61513220ff2d749e2d38d10c57802f308655b0586651602618edf41
+T12 form2 f119c2802626433df60d8dfeaea42d8d6eb6fa7f1aed0f2c3dbfd2d4e24beef9
+T13 form2 f5f65fa26cf39b89fbf3926bdece64b3821ba3738b22204b7ee00ae330b67333
+T14 form2 acc13fc3493aaac7fc63e3fd8ba13ff9cbe3be1811cc32c18e7ef27730c7c7b1
+T15 form2 b4992ccb1717beff6ed98188524c216a9879e18c4ed7ed20563452a74b5cc1f0
+T16 form2 115977b5c4ebc81ad8739f2f911a1c1011fb6c0a7fc9e88c23ba846043e5dbeb
+T17 form2 f87b4c1696f3c51c501c0fcc83d7c458b75a4dd96dce2a0a4485a2e41e2654a9
+T18 bits64
+T19 form2 1084c5a6a7956d58945c0c1cb6553a89bb440af51677b42d6c9a34ffc9bc13e8
+T20 form2 20cce57657ab4086b3803ca35bcef004e99410ad05a2fd2dd15ac6938af7842c
+T21 form2 0d5cedb805fcf1c15e7f95652323227db8fd7763303bea9178f09915600fb09c
+T22 form2 5d9caf64090e36fc57200645d8102c810685f8fdf27fbe7836a0020621c011d1
+T23 form2 b7e3ff72a4aaab1eab5287e606835d1f8bcaf230e5558bb15027fc993b2b69d8
+end
+define @music_background_find_kids
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=27fcb68e40934e4e2f9a67bd7d336049bbf336de0d0dfddd4a5de1eb41627ad2 -> T2
+N1 call.foreign entity=@s_shorty_kids -> T1
+N2 call.foreign entity=7b441ec1c1bc51a7c4f45420068040addf0240b01a3e5519eb03f1b789f97737 N0 N1 -> T2
+N3 constant 45638079 -> T3
+N4 call.foreign entity=18cabdde2b7ba77b0f019ad3c7779f257482dc2d8d88f24c0c98507828d75b3d N3 -> T4
+N5 call.foreign entity=58a1ced1d9c954f2cc1e965d6e3adadbcd5dee17b05cd17cb923ec12d6caedf4 N4 -> T5
+N6 call.foreign entity=aa8ce768da2cec3355cedeabb3b1a4b3c3eacc9546e5cbe52f0a627d233beba8 N0 N5 -> T2
+N7 call.foreign entity=7f7035384b3995052b672e136feb87daecd30d2c1f41bbfdff4de118c8e486da -> T6
+N8 call.foreign entity=df4a905fa0b161eac07cb908f000aec0172ef15817a5444309233855c79e01fb N7 N0 -> T6
+N9 call.direct entity=F158 P0 N7 -> T7
+N10 call.direct entity=F180 N9 -> T1
+ret N10
+
+T0 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+T1 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T2 form2 4c157c294bfa4e4e3c1810657055ab7402b16cb7d3c961e50cc28d3a87910cb5
+T3 bits64
+T4 form2 1084c5a6a7956d58945c0c1cb6553a89bb440af51677b42d6c9a34ffc9bc13e8
+T5 form2 f5f65fa26cf39b89fbf3926bdece64b3821ba3738b22204b7ee00ae330b67333
+T6 form2 acc13fc3493aaac7fc63e3fd8ba13ff9cbe3be1811cc32c18e7ef27730c7c7b1
+T7 form2 b4992ccb1717beff6ed98188524c216a9879e18c4ed7ed20563452a74b5cc1f0
+end
+define @music_background_page
+(T0,T1)->()
+B0(P0:T0,P1:T1)
+N0 call.foreign entity=@s_section_key -> T2
+N1 call.foreign entity=@s_section -> T2
+N2 call.direct entity=F303 N0 N1 -> T2
+N3 call.direct entity=F132 P0 P1 N2
+N4 call.foreign entity=f502cd2b56603cd03d59d62be9b474515d6c0218bf8a61a5ab16b68ef111c087 -> T2
+N5 call.foreign entity=f5742b3208b30cd07af87eb398c86c5c8732098b57958786748158548fa12b5d -> T2
+N6 call.foreign entity=3118321a5b651794a54a6836f449e440f8eea773047ef1b614e705a41a141281 -> T2
+N7 call.direct entity=F303 N5 N6 -> T2
+N8 call.foreign entity=@s_summary_key -> T2
+N9 call.foreign entity=@s_summary -> T2
+N10 call.direct entity=F303 N8 N9 -> T2
+N11 constant 1 -> T3
+N12 call.direct entity=F418 P0 N4 N11 -> T3
+N13 call.direct entity=F344 P0 N4 N7 N10 N12 -> T4
+N14 call.foreign entity=3b3bfa78f317d7d6e94e0ac8e8f7eb1b61a8ded643641d2e6d4671244ab4aa74 P1 N13
+ret
+
+T0 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T1 form2 74b9ef32c40133b18fc9bc414cbb420352e7c1fd7d932045390be972eb065d9d
+T2 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T3 bits1
+T4 form2 8cf05c1ee2489e465ea16fb2b3f806510ec31613e4e75059b0fbaa03433ed39e
+end
+define @music_background_authorize
+(T0,T0)->(T0)
+B0(P0:T0,P1:T0)
+N0 call.foreign entity=@s_ready -> T0
+N1 bit.and N0 P0 -> T0
+N2 bit.and N1 P1 -> T0
+cbr N2 B1() B4()
+B1()
+N3 call.foreign entity=@s_context -> T1
+N4 call.foreign entity=0b66c4f5c7680c8f87c262b8041f77059e6aa2046d186e2e23d3104979ef9628 N3 -> T2
+N5 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N4 -> T0
+cbr N5 B2() B4()
+B2()
+N6 call.foreign entity=92252823ffbdd6e7058c9b3d5179fbbd661217096318ed063b145316a4f3c2ce N3 -> T3
+N7 call.direct entity=@music_background_host N6 -> T0
+cbr N7 B3() B4()
+B3()
+N8 call.foreign entity=f502cd2b56603cd03d59d62be9b474515d6c0218bf8a61a5ab16b68ef111c087 -> T3
+N9 constant 1 -> T0
+N10 call.direct entity=F418 N3 N8 N9 -> T0
+N11 call.direct entity=F36 N10 P0 P1 -> T0
+ret N11
+B4()
+N12 constant 0 -> T0
+ret N12
+
+T0 bits1
+T1 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T2 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T3 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @music_background_checks
+()->(T0)
+B0()
+N0 constant 0 -> T0
+N1 constant 0 -> T0
+N2 constant 0 -> T0
+N3 call.direct entity=F36 N0 N1 N2 -> T0
+N4 constant 0 -> T0
+N5 int.compare N3 N4 -> T0 [1]
+N6 constant 0 -> T0
+N7 constant 0 -> T0
+N8 constant 1 -> T0
+N9 call.direct entity=F36 N6 N7 N8 -> T0
+N10 constant 0 -> T0
+N11 int.compare N9 N10 -> T0 [1]
+N12 bit.and N5 N11 -> T0
+N13 constant 0 -> T0
+N14 constant 1 -> T0
+N15 constant 0 -> T0
+N16 call.direct entity=F36 N13 N14 N15 -> T0
+N17 constant 0 -> T0
+N18 int.compare N16 N17 -> T0 [1]
+N19 bit.and N12 N18 -> T0
+N20 constant 0 -> T0
+N21 constant 1 -> T0
+N22 constant 1 -> T0
+N23 call.direct entity=F36 N20 N21 N22 -> T0
+N24 constant 0 -> T0
+N25 int.compare N23 N24 -> T0 [1]
+N26 bit.and N19 N25 -> T0
+N27 constant 1 -> T0
+N28 constant 0 -> T0
+N29 constant 0 -> T0
+N30 call.direct entity=F36 N27 N28 N29 -> T0
+N31 constant 0 -> T0
+N32 int.compare N30 N31 -> T0 [1]
+N33 bit.and N26 N32 -> T0
+N34 constant 1 -> T0
+N35 constant 0 -> T0
+N36 constant 1 -> T0
+N37 call.direct entity=F36 N34 N35 N36 -> T0
+N38 constant 0 -> T0
+N39 int.compare N37 N38 -> T0 [1]
+N40 bit.and N33 N39 -> T0
+N41 constant 1 -> T0
+N42 constant 1 -> T0
+N43 constant 0 -> T0
+N44 call.direct entity=F36 N41 N42 N43 -> T0
+N45 constant 0 -> T0
+N46 int.compare N44 N45 -> T0 [1]
+N47 bit.and N40 N46 -> T0
+N48 constant 1 -> T0
+N49 constant 1 -> T0
+N50 constant 1 -> T0
+N51 call.direct entity=F36 N48 N49 N50 -> T0
+N52 constant 1 -> T0
+N53 int.compare N51 N52 -> T0 [1]
+N54 bit.and N47 N53 -> T0
+N55 call.foreign entity=5830c581d418a97ce3087d853f9b8433ae2f04e012e862ff099982f2c97af3d0 -> T1
+N56 call.direct entity=@music_background_host N55 -> T0
+N57 constant 1 -> T0
+N58 int.compare N56 N57 -> T0 [1]
+N59 bit.and N54 N58 -> T0
+N60 call.foreign entity=b12f2dc5a5be5278f2cc9a3bd247fa47ff67540a289fd689dd5118de2aeb6656 -> T1
+N61 call.direct entity=@music_background_host N60 -> T0
+N62 constant 0 -> T0
+N63 int.compare N61 N62 -> T0 [1]
+N64 bit.and N59 N63 -> T0
+N65 call.foreign entity=@s_unknown -> T1
+N66 call.direct entity=@music_background_host N65 -> T0
+N67 constant 0 -> T0
+N68 int.compare N66 N67 -> T0 [1]
+N69 bit.and N64 N68 -> T0
+N70 call.foreign entity=0c577c1eed30d9c8d3dec4ee73c87d5d7c842d124a7fa00d7407bf5c891eb4f2 -> T1
+N71 call.direct entity=@music_background_host N70 -> T0
+N72 constant 0 -> T0
+N73 int.compare N71 N72 -> T0 [1]
+N74 bit.and N69 N73 -> T0
+ret N74
+
+T0 bits1
+T1 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @music_page_with_background
+(T0)->()
+B0(P0:T0)
+N0 call.foreign entity=8864bbc05976e4cee37344576447be399fbf043c7e4439a5180b3a86fca39d6f P0 -> T1
+N1 call.direct entity=F20 N0
+N2 call.foreign entity=eae1c280b93c50f42e915bdb4353c3d83be7ef18db84bdf18943a8023514bdda -> T2
+N3 call.direct entity=F157 N0 N2 -> T3
+N4 constant 1 -> T4
+N5 call.foreign entity=e60fa7b08cca3873e99dbfe879d6af2dceda0b4b040c2bbc1a46bd2e3061ee16 N3 N4 -> T5
+N6 call.foreign entity=1a446bc20953f547a8816d3d1a72ba97b7ef6b8af8524d60a6977eb210da3983 N5 -> T6
+N7 call.direct entity=F110 N0 N6
+N8 call.direct entity=@music_background_page N0 N6
+ret
+T0 form2 8cf05c1ee2489e465ea16fb2b3f806510ec31613e4e75059b0fbaa03433ed39e
+T1 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T2 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T3 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+T4 bits32
+T5 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T6 form2 74b9ef32c40133b18fc9bc414cbb420352e7c1fd7d932045390be972eb065d9d
+end
+define @music_background_eligibility
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=fb1e188aa7bcb23c1a1e487c76e7c716091abd083335cad2a545db12a42c5bcd P0 -> T1
+N1 call.foreign entity=0bb273c06b77321c1a8ba25ec142da655bb6c8cc43d500f36ce5a2513a9ab4a0 N0 -> T2
+N2 call.foreign entity=2a48ebfdca620168ada4b80ac9ee6f5d884193249a5e82db46afbd16aab3dc70 N1 -> T3
+cbr N2 B3() B1()
+B1()
+N3 constant 0 -> T4
+N4 call.foreign entity=863ea7763eed52ee0d7b2ea1b56517bea75322373bc9dd677d9c053942797aea P0 N3 -> T1
+N5 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N4 -> T3
+N6 constant 1 -> T3
+N7 call.direct entity=@music_background_authorize N6 N5 -> T3
+cbr N7 B2() B3()
+B2()
+N8 call.foreign entity=@s_eligibility_allowed -> T5
+N9 call.direct entity=@music_background_report N3 N8
+N10 call.foreign entity=cee32cabbd3631080c4cdb97db7b8d13629c08857c5c97fc9be33ebe96d1b1f7 -> T2
+N11 call.foreign entity=3cda844b3d2a197b8e6277e2765e2f9718094b8d9bc59271c2e8c194b6499d00 N10 -> T1
+ret N11
+B3()
+ret N0
+
+T0 form2 0cc6f1ce379920ffd8ab2ff2161ab2dee840ff3e5068358945b5984a4224660c
+T1 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T2 form2 3311b243451ed298d6d976ecaad8eb46ab5f19dafa7bf5814e8a4b31db47e5cc
+T3 bits1
+T4 bits32
+T5 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @music_background_kids
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=41bce5cf67e5b721bfff3cc81a3be36160bbc4479dbbd0cfb8364bd97a6815cc P0 -> T1
+N1 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N0 -> T2
+N2 constant 1 -> T3
+N3 call.foreign entity=863ea7763eed52ee0d7b2ea1b56517bea75322373bc9dd677d9c053942797aea P0 N2 -> T1
+N4 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N3 -> T2
+N5 call.direct entity=@music_background_authorize N1 N4 -> T2
+cbr N5 B1() B2()
+B1()
+N6 call.foreign entity=@s_kids_allowed -> T4
+N7 call.direct entity=@music_background_report N2 N6
+N8 call.foreign entity=9ee00a81ae018c2dd2c4c659ce8f69b31d6ad3d820df4d889cdc41822faa5988 -> T5
+N9 constant 4 -> T3
+N10 call.foreign entity=e60fa7b08cca3873e99dbfe879d6af2dceda0b4b040c2bbc1a46bd2e3061ee16 N8 N9 -> T1
+ret N10
+B2()
+N11 call.foreign entity=fb1e188aa7bcb23c1a1e487c76e7c716091abd083335cad2a545db12a42c5bcd P0 -> T1
+ret N11
+
+T0 form2 0cc6f1ce379920ffd8ab2ff2161ab2dee840ff3e5068358945b5984a4224660c
+T1 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T2 bits1
+T3 bits32
+T4 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T5 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+end
+define @music_background_install
+(T0,T1,T2)->()
+B0(P0:T0,P1:T1,P2:T2)
+N0 constant 0 -> T3
+N1 call.foreign entity=@s_set_ready N0
+N2 constant 2 -> T4
+N3 call.foreign entity=2bb0ae2c6f704cd02ed5cfc4ed3040ff03c3925e986a675940096a93e9bebb6c N2 -> T5
+N4 call.foreign entity=@s_set_counts N3
+N5 call.direct entity=@music_background_checks -> T3
+cbr N5 B1() B6()
+B1()
+N6 call.foreign entity=@s_checks_ok -> T6
+N7 call.direct entity=F188 N6
+N8 call.direct entity=@music_background_find_eligibility P1 -> T6
+N9 call.direct entity=@music_background_find_kids P1 -> T6
+N10 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N8 -> T7
+N11 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N9 -> T7
+N12 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N10 -> T3
+N13 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N11 -> T3
+N14 bit.and N12 N13 -> T3
+cbr N14 B2() B5()
+B2()
+N15 call.direct entity=F106 N8 P2 -> T8
+N16 call.direct entity=F106 N9 P2 -> T8
+N17 call.foreign entity=f497b1c6e1b8d4431e0e47191866634bbdfc399233d8200d53709d65f7134b14 N15 -> T4
+N18 constant 9 -> T4
+N19 bit.and N17 N18 -> T4
+N20 int.compare N19 N18 -> T3 [1]
+N21 call.foreign entity=f497b1c6e1b8d4431e0e47191866634bbdfc399233d8200d53709d65f7134b14 N16 -> T4
+N22 constant 25 -> T4
+N23 bit.and N21 N22 -> T4
+N24 constant 17 -> T4
+N25 int.compare N23 N24 -> T3 [1]
+N26 call.foreign entity=762375d70f93c511e27badcb2dd79db9d586e20b56616f53e2c14ab82f5b0680 N15 -> T9
+N27 constant 0 -> T4
+N28 call.foreign entity=fc5f3eb944f4845e0b8892f13e27c57062f38158e0c46b10bf3e6664d4b9cd7f N26 N27 -> T10
+N29 call.foreign entity=f87999ef4a98319cab1b44e277fe9d89d7a9116b619521caec8197585607d13e N28 -> T3
+N30 int.compare N29 N0 -> T3 [1]
+N31 call.foreign entity=762375d70f93c511e27badcb2dd79db9d586e20b56616f53e2c14ab82f5b0680 N16 -> T9
+N32 constant 1 -> T4
+N33 call.foreign entity=fc5f3eb944f4845e0b8892f13e27c57062f38158e0c46b10bf3e6664d4b9cd7f N31 N32 -> T10
+N34 call.foreign entity=153ba12f1d0847c9964fffed15387627ce9a082449d841d61f728e47fc06aefe N33 -> T3
+N35 bit.and N20 N25 -> T3
+N36 bit.and N35 N30 -> T3
+N37 bit.and N36 N34 -> T3
+cbr N37 B3() B5()
+B3()
+N38 call.direct entity=F398 N8 -> T11
+N39 call.direct entity=F471 P0 N38 P2 -> T3
+N40 call.direct entity=F398 N9 -> T11
+N41 call.direct entity=F471 P0 N40 P2 -> T3
+N42 call.foreign entity=9dc6ed02ece2bf40acabf0ea74e7173ba863f50ac442e0d0a440abd5247cf54c N15 -> T12
+N43 call.foreign entity=f154563ee19e74f765f72c15d6ac5acdbb6712e7f6cde87113ca6eff4e5ed9e9 P0 N42 -> T3
+N44 call.foreign entity=9dc6ed02ece2bf40acabf0ea74e7173ba863f50ac442e0d0a440abd5247cf54c N16 -> T12
+N45 call.foreign entity=f154563ee19e74f765f72c15d6ac5acdbb6712e7f6cde87113ca6eff4e5ed9e9 P0 N44 -> T3
+N46 bit.and N39 N41 -> T3
+N47 bit.and N46 N43 -> T3
+N48 bit.and N47 N45 -> T3
+cbr N48 B4() B5()
+B4()
+N49 function.address entity=@music_background_eligibility -> T13
+N50 call.direct entity=F250 P0 N15 N49
+N51 function.address entity=@music_background_kids -> T13
+N52 call.direct entity=F250 P0 N16 N51
+N53 constant 1 -> T3
+N54 call.foreign entity=@s_set_ready N53
+N55 call.foreign entity=@s_installed -> T6
+N56 call.direct entity=F188 N55
+ret
+B5()
+N57 call.foreign entity=@s_unresolved -> T6
+N58 call.direct entity=F188 N57
+ret
+B6()
+N59 call.foreign entity=@s_checks_no -> T6
+N60 call.direct entity=F188 N59
+ret
+
+T0 form2 99e56255a000766fcf07744a4cf4f4e24aea9eacc28cc75e89b777612fbcaa80
+T1 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+T2 form2 2a21a849c41269863c6b507f63d6be4f1ed58e423cc21ea4083734572c3962e4
+T3 bits1
+T4 bits32
+T5 form2 fe6e938aa94ea130d38170d9bf48d2c5fec0cb6de23bd5c63d395622ec283122
+T6 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T7 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T8 form2 20cce57657ab4086b3803ca35bcef004e99410ad05a2fd2dd15ac6938af7842c
+T9 form2 0d5cedb805fcf1c15e7f95652323227db8fd7763303bea9178f09915600fb09c
+T10 form2 5d9caf64090e36fc57200645d8102c810685f8fdf27fbe7836a0020621c011d1
+T11 form2 b4992ccb1717beff6ed98188524c216a9879e18c4ed7ed20563452a74b5cc1f0
+T12 form2 6d27e382e404c52b8a4346b7c54735c7419b2d14445adffb4309086a8f3706af
+T13 form2 fe7b1b7536bb80a74179f5072cdc0d64f6dfcee6c3d17259d59e00e1994095f8
+end
+define @music_initialize_with_background
+(T0,T1)->()
+B0(P0:T0,P1:T1)
+N0 call.foreign entity=9cf96cdc45dbfeb3439b8bd8f3acf6ee6bdb4cae8ad147e41c50060311ce91aa P1 -> T2
+N1 call.direct entity=F334 P0 -> T3
+N2 constant 19 -> T4
+N3 call.foreign entity=fa946bdc386f9086f38d1cd7e1473fe9e306fb629abdd027d70750e5bad20844 N2 -> T5
+N4 call.foreign entity=64a3597908a3590a0d59499d519228d194761439e8b1a8743ab1b968bd21be82 N3
+N5 call.foreign entity=17f56ce0c40aa6d87fc2157f515ff7af32a8b2c59f1b9b2197c5290ff49c2f7b -> T5
+N6 call.foreign entity=e8b88e9fa217521f0ab4e7e053cfa6395d4f8c8d08982c0209b466d38af19e70 -> T6
+N7 constant 16 -> T4
+N8 call.foreign entity=4085baffbca019a6586d22e010f2e44d5ca753b349ec8d31e58e7abe94959f58 N6 -> T7
+N9 call.foreign entity=8bf9d93b272f15e5a32ec6b6f590607993f7575a43ff63680a0c2c450174f160 N5 N7 N8
+N10 call.foreign entity=d04dd67447ee246a7332d76781cf470f426450c77e348106b3af9fbb16c3bfc4 -> T8
+N11 constant 17 -> T4
+N12 call.foreign entity=88739eaad9e8d2a7e2b8878a4d3d22afdf38c67e6462a66940c4d10f6d311a81 N10 -> T7
+N13 call.foreign entity=8bf9d93b272f15e5a32ec6b6f590607993f7575a43ff63680a0c2c450174f160 N5 N11 N12
+N14 call.foreign entity=e362d9fcd3546882862113ffd576ee7a320caaafaf7b62b1b723d9719df63ece -> T9
+N15 constant 18 -> T4
+N16 call.foreign entity=e95be56f265b19252738b01006c3fc2a22656d721c0e9e3bb67e32e8157cbe92 N14 -> T7
+N17 call.foreign entity=8bf9d93b272f15e5a32ec6b6f590607993f7575a43ff63680a0c2c450174f160 N5 N15 N16
+N18 call.foreign entity=fee34c7e227eea5659ba37541d2a9327e1a0e03fffc6583951aa3560bfe67838 N0 -> T10
+N19 call.foreign entity=3cd2e6d6a479a0f54a6484f5f43801252345ec1a2340678a4b5f843d0fc8b219 N18 -> T3
+N20 call.foreign entity=00022986e3f1d06b3d2f342060acc2607909a713c4f532777eb1d701dd3d3902 P1 -> T11
+N21 call.direct entity=F442 N19 N18 -> T5
+N22 constant 8 -> T4
+N23 call.direct entity=F219 N21 N22
+N24 call.direct entity=F378 P0
+N25 call.direct entity=@music_background_install P0 N21 N20
+N26 call.direct entity=F65 -> T12
+N27 call.direct entity=F367 N26 -> T12
+cbr N27 B1() B2()
+B1()
+N28 call.foreign entity=212b74805041ab51e77fa5c9415028094eb5fdc2fee90383d39a8726adb4686d -> T3
+N29 call.direct entity=F188 N28
+N30 call.direct entity=F482 N21 N20
+N31 function.address entity=F100 -> T13
+N32 call.direct entity=F430 P0 N21 N20 N31
+N33 call.direct entity=F175 P0 N21 N20
+N34 call.direct entity=F217 P0 N21 N20
+N35 call.foreign entity=9271b3817672de009e89d4bc3765200fc6c4bf4409302891ce1937336991ef0a -> T3
+N36 call.direct entity=F188 N35
+N37 call.direct entity=F79 N21
+ret
+B2()
+N38 call.foreign entity=e2b55d3d8a96aa9b0d61e9aedda44e75bbcc6f9cf12c806d31a9cb979b23eb93 -> T3
+N39 call.direct entity=F188 N38
+N40 call.direct entity=F79 N21
+ret
+T0 form2 99e56255a000766fcf07744a4cf4f4e24aea9eacc28cc75e89b777612fbcaa80
+T1 form2 990e267caebc1d399fee97d792ea660cf9f32554f19f108fb100ed9f44db4c4a
+T2 form2 92ed14f543f990490df580c361c3e43a42d5ce4f9842fb0623692a5331f0a683
+T3 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T4 bits32
+T5 form2 aaa90629e1990fec87d368cf7a285791380d040df80e4181ee3164a1f7985b73
+T6 form2 96fa35037260ad589737cc8443015e0d267f064dbf5582b9d58bc7350382e4ec
+T7 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T8 form2 b7e3ff72a4aaab1eab5287e606835d1f8bcaf230e5558bb15027fc993b2b69d8
+T9 form2 42bc64e957992e1208ad3bdcdddb4bfd033f186e6181864838cdee2e8e2deeea
+T10 form2 dab96d5b70e02bd96699176fca3651263c2d474d7912df33c6e88a1c4e91fe8e
+T11 form2 2a21a849c41269863c6b507f63d6be4f1ed58e423cc21ea4083734572c3962e4
+T12 bits1
+T13 form2 fe7b1b7536bb80a74179f5072cdc0d64f6dfcee6c3d17259d59e00e1994095f8
+end
+replace F356 @music_page_with_background
+replace F238 @music_initialize_with_background

@@ -1,5 +1,14 @@
 # Architecture
 
+Development build 159 adds Music background eligibility and kids-policy hooks to Music's existing
+startup DexKit session. It shares YouTube's unchanged typed AND3 gate, preference getter, protective
+hook installer, bounded caller deoptimization and settings rows. A separate holder publishes attached
+Music Context and complete-install readiness; the independent default-on preference is read on each
+eligible call. Music owns all playback and media-session actions. [Music background design](MUSIC_BACKGROUND_PLAYBACK.md).
+Background discovery runs inside the same synchronous completed-future startup guard used by
+YouTube. Unexpected failures clear its readiness and preserve the following ad/settings startup;
+the shared DexKit session remains on its owning thread.
+
 Development build 158 adds a separate Music host startup that shares initialization, ad discovery,
 native BF policies and the settings scaffold with YouTube. Music exposes ads only; its package-local
 preferences are read from an attached Application before UI creation. YouTube's existing feature

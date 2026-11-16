@@ -1,6 +1,6 @@
 # Evidence index
 
-The canonical source is development build **1.3.0, versionCode 158**; the latest release is **1.3.0, versionCode 157**
+The canonical source is development build **1.3.0, versionCode 159**; the latest release is **1.3.0, versionCode 157**
 (`io.github.mrxsin.youtubehideads`). Dated
 directories are immutable measurements of their named builds; their prose may say canonical/installed
 relative to that session. Those statements do not identify today's source store or APK. Preserve
@@ -8,6 +8,7 @@ original hashes, screenshots, logs and measurements when documentation changes.
 
 | Session | Builds and scope |
 | --- | --- |
+| [Music background playback, build 159, 2026-11-16](music_background_20261116/README.md) | Native BF/XAX implementation and replay, independent settings, physical Music playback checks and YouTube regression; development signing distinguished from release signing |
 | [Music ads, build 158, 2026-11-16](music_ads_20261116/README.md) | Native transaction replay/build; Music 9.45.51 ad hooks and five independent settings; YouTube 21.45.88 startup/settings regression; development packaging and untested surfaces distinguished |
 | [Development build 157 (1.3.0), 2026-11-14](release_1_3_0_20261114/README.md) | 157 on YouTube 21.45.88: one settings page, default speed and quality, captions, Return YouTube Dislike, player tweaks, blacklist, DeArrow thumbnails, audit fixes, a same-day rebuild (More videos sheet swipe fix, runtime trimming); dislike fetch blocked by the phone's HTTPS filter, mobile-data quality and live streams not run |
 | [Development build 156 (1.2.1), 2026-11-14](release_1_2_1_20261114/README.md) | 156 on YouTube 21.45.88: live chat no longer starts a volume swipe (#6), Skip live Shorts keyed on the player's live state (the old trigger never fired on 21.45), Remember live stream position; real live Short not encountered |

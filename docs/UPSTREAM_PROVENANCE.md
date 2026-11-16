@@ -1,5 +1,10 @@
 # Upstream provenance and terms
 
+Music background playback adapts the two method boundaries and structural fingerprints pinned in
+[its design](MUSIC_BACKGROUND_PLAYBACK.md#upstream-reference-and-limits). It reuses the existing BF
+policy and native XAX host architecture. Existing Morphe attribution remains packaged; the separate
+shared recycled-bitmap patch is outside this increment.
+
 Music ad support uses the behavior and structural references pinned in
 [Music design](MUSIC_ADS.md#reference-and-scope). The adaptation is native XAX plus existing BF
 policies, with no copied Java/Kotlin implementation. The existing Morphe notice remains in source

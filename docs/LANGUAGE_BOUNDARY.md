@@ -1,5 +1,11 @@
 # Language boundary
 
+Build 159's Music background feature is authored as native XAX transactions and reuses the unchanged
+Brainfuck AND3 policy. Its declarations, exact-root batches, metadata and branding inputs are checked
+in for review and replay; native edit and mandatory verification produce canonical source. External
+SDK use is read-only inspection and declaration/metadata serialization, never application lowering
+or an implementation in another language. [Design](MUSIC_BACKGROUND_PLAYBACK.md).
+
 Build 158's Music hooks and settings are native XAX semantic edits; ad authorization reuses the
 unchanged AND3 and fullscreen BF policies. Static XML labels and JSON contracts/vectors are data.
 Checked-in native batches are exact-root mutation transport for the canonical store, not a separate

@@ -31,8 +31,9 @@
 
 The new extras are off by default. Every setting and its default is listed in [docs](docs/README.md#settings-and-defaults).
 
-Development source also adds **YouTube Music ad hiding**, with its own ads-only settings page and
-independent switches. See [Music support and limits](docs/MUSIC_ADS.md). The released 1.3.0 APK
+Development source also adds **YouTube Music ad hiding and background playback**, with its own
+settings page and independent switches. See [Music ad support](docs/MUSIC_ADS.md) and
+[background playback](docs/MUSIC_BACKGROUND_PLAYBACK.md). The released 1.3.0 APK
 predates this addition; Music SponsorBlock is not included in this increment.
 
 ## Install

@@ -1,5 +1,10 @@
 # Tested compatibility
 
+Development build **159** adds Music background playback on Music **9.45.51** using the same
+Pixel/Android/Vector environment below. Both typed roles resolve and the 12 new packaged checks,
+independent switch, ordinary/kids screen-off cases and native pause checks pass.
+[Exact artifacts and limits](../evidence/music_background_20261116/README.md).
+
 Development build **158** adds YouTube Music **9.45.51** on the physical Pixel 8 Pro,
 Android 17/API 37, Vector 2.2/API 102. Its ad activation/component/fullscreen hooks resolve;
 96 startup policy checks and the five-switch settings persistence checks pass. YouTube

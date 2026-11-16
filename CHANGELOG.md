@@ -1,5 +1,14 @@
 # Changelog
 
+## Development build 159 (1.3.0, unreleased) — 2026-11-16
+
+- Add **Background playback** to YouTube Music's shared settings page under Player controls,
+  default on and independent of Hide ads. Restart Music after changing it.
+- Use native XAX structural eligibility/kids-policy hooks with the existing Brainfuck authorization
+  gate and unchanged native inputs. Music keeps control of playback and media controls.
+- [Build and physical-device checks](evidence/music_background_20261116/README.md) record Music
+  9.45.51 acceptance, YouTube regression, separate development signing and untested cases.
+
 ## 1.3.0 — 2026-11-14 (versionCode 157)
 
 Collects development builds 156 and 157, listed below, and supports YouTube 21.45.88.

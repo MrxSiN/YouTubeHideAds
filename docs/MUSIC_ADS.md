@@ -1,5 +1,9 @@
 # YouTube Music ads
 
+Build 159 adds [Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) to the same shared settings
+page under Player controls. The ad master controls only ads. The build 158 description and its
+dated evidence below describe the earlier ads-only increment.
+
 Development build 158 extends the existing module to `com.google.android.apps.youtube.music`.
 This is the Hide Ads part of [issue #5](https://github.com/MrxSiN/YouTubeHideAds/issues/5).
 Music SponsorBlock and the YouTube player/feed extras are not enabled in Music.

@@ -1,0 +1,6 @@
+{
+  "status": "MEASURED",
+  "all_four_dex_and_all_static_resources_equal_in_production_and_both_device_variants": true,
+  "compared_paths": 16,
+  "differences": "Development manifest package/scope/version, signing authority and APK signing envelope"
+}

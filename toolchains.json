@@ -2,13 +2,12 @@
   "schema": "youtubehideads-toolchains-v1",
   "xax": {
     "repository": "https://github.com/MrxSiN/XAX",
-    "commit": "897002e506069d7e13063353fb3baabe36ceba5d",
+    "commit": "991ef7a6f6cff1efe825401f0365ca8be5054bd9",
     "compiler": "compiler/bootstrap/windows/xaxc-windows-x86_64.exe",
-    "compiler_sha256": "e88877d10690e171b73d9de8b94cb579820672e980b97f0bb11a88e460a7a77f",
-    "production_ledger": "0032",
-    "reason": "Native verified semantic edits and native libxposed APK build; includes the large DEX output fix.",
-    "latest_main_checked": "d47ba6d21da59a32b102b4b8d8b82d467626c293",
-    "retained_pin_reason": "Main advanced during acceptance. Its Windows seed is byte-identical; retain the exact inspected authoring/toolchain commit used for these verified transactions and device artifacts."
+    "compiler_sha256": "ae43e32f21ccd2d7e333ebf30a114d329ca5b5912c388ae167c24d12d2e9f665",
+    "production_ledger": "0035",
+    "reason": "Move to latest main and its released native Windows seed for build 159. Native verification, transaction replay, APK build and physical Music/YouTube acceptance use this exact seed.",
+    "latest_main_checked": "991ef7a6f6cff1efe825401f0365ca8be5054bd9"
   },
   "xax_mcp": {
     "repository": "https://github.com/MrxSiN/XAX-MCP",
@@ -18,7 +17,7 @@
   "bbc": {
     "repository": "https://github.com/MrxSiN/BBC",
     "commit": "0039cccc8fdfec12ba59cd570121cd0992b92673",
-    "use": "Current main inspected; executable BF and all packaged native inputs retained unchanged.",
+    "use": "Latest main checked; Brainfuck commands and every packaged native input retained unchanged. No BBC build or ABI migration.",
     "retained_abi_reason": "Current BBC shared libraries have a different tape/budget contract. This feature reuses the existing digest-pinned and3 bfc_call_v1 library; no ABI migration."
   },
   "aapt2": {

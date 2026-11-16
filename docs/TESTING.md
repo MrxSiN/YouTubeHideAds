@@ -1,5 +1,12 @@
 # Testing
 
+Music build 159 adds 12 packaged background checks: all eight native Boolean combinations and four
+host classifier cases, bringing Music startup coverage to 108 cases with the existing 96 ad cases.
+The hooks share the runtime classifier and unchanged YouTube BF gate used by those checks.
+[Fixtures](../testdata/music_background_playback_vectors.json) keep forced integration requirements
+separate from [actual device evidence](../evidence/music_background_20261116/README.md), including
+disabled behavior, ad-master independence, ordinary/kids screen-off playback and native pause.
+
 Music build 158 adds 26 packaged startup cases: eight native AND3 combinations, six Premium path
 cases, six general-ad path cases and six own-payload compact-banner cases. It also runs the existing
 70 ad checks. [Vectors](../testdata/music_ads_vectors.json) list separate integration requirements;

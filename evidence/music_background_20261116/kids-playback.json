@@ -1,0 +1,56 @@
+{
+  "status": "EXECUTED",
+  "checks": [
+    "Baby Shark: title confirmed, verified screen-off PLAYING, native position advances and kids-controller authorization observed",
+    "All six settings restored on; Back returns to native Music settings"
+  ],
+  "samples": {
+    "kids-screen-off-0": {
+      "state": 3,
+      "position": 847,
+      "speed": 1.0,
+      "updated": 250307935
+    },
+    "kids-paused": {
+      "state": 2,
+      "position": 24079,
+      "speed": 1.0,
+      "updated": 250331238
+    }
+  },
+  "screen_off_attempts": [
+    {
+      "name": "kids-screen-off",
+      "attempt": 0,
+      "before": "Dozing",
+      "after": "Dozing",
+      "media": {
+        "state": 3,
+        "position": 847,
+        "speed": 1.0,
+        "updated": 250307935
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "name": "kids-final",
+      "pid": "28746"
+    }
+  ],
+  "kids_visible_text": [
+    "Baby Shark",
+    "Pinkfong",
+    "Baby Shark Mix"
+  ],
+  "kids_test_video": "XqZsoesa55w",
+  "final_switches": {
+    "Hide ads": "true",
+    "Video and audio ads": "true",
+    "Feed and search ads": "true",
+    "Premium promotions": "true",
+    "Fullscreen promotions": "true",
+    "Background playback": "true"
+  },
+  "acceptance": "passed"
+}

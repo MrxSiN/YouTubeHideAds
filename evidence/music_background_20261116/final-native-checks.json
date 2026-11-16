@@ -1,0 +1,25 @@
+{
+  "status": "EXECUTED",
+  "previous_stage_verification": "native-checks.json",
+  "final_guard_stage": {
+    "transaction": "04-startup-guard.batch",
+    "sha256": "e1d69119904fd1bea1932b73f152b3f5adb3d066d359c050b0011f8c4200dfe7",
+    "input_root": "b747bce2f1235c833a79d21a7836e19d56ddf9e24b24a2a6a92f6c335d438a81",
+    "output_root": "a9b1dfe153555ae9ab69315d053a3b9c945158a021607d7c86406117a915b0e6",
+    "output_sha256": "a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6",
+    "verification": "EXECUTED"
+  },
+  "guard_replay_byte_identical": true,
+  "stale_root_rejected": true,
+  "XAX_REQUIRE_NATIVE": "1",
+  "native_authority": "Direct pinned Windows PE compiler; no Python compiler fallback",
+  "previous_candidate_functions": 505,
+  "final_functions": 508,
+  "previous_function_cids_retained": 503,
+  "preserved_hook_and_installer_cids": {
+    "Music background playback authorized: eligibility": "0d464ec2b8dcf048e2145dafe17e621efa4d858b13e38d76a06e1036aa338c99",
+    "Music background playback authorized: kids policy": "28b58f0a94adc3bf507ffe61ed6a063f8c57d1cf2699211983641cd175a8736e",
+    "Music background playback self-check FAILED; native behavior preserved": "61bbe02b5dd0ec533334a8b167cd6bc3c73bcd83b24d04472a8b0ba400a04269"
+  },
+  "failure_injection": "NOT RUN; exception containment checked in native graph, normal guarded path exercised on final device APK"
+}

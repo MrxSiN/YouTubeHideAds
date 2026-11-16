@@ -1,5 +1,10 @@
 # DexKit resolution
 
+Music build 159 discovers two background restriction roles in the existing Music DexKit lifetime:
+typed `ZL` eligibility with its nine-opcode sequence and protobuf discriminator, and typed `VILZ`
+kids policy with a long experiment anchor. Unique matches, reflection, bounded caller deoptimization
+and complete protective-hook installation precede readiness. [Contract](MUSIC_BACKGROUND_PLAYBACK.md#discovery-and-lifecycle).
+
 Music build 158 reuses the component/empty-component, fullscreen and own-element serializer roles.
 Its activation resolver uniquely anchors the media diagnostic and then selects the unique invoked
 `void(boolean)` method. It never selects a DEX instruction offset or an obfuscated name.
