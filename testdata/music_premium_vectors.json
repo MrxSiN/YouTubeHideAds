@@ -1,0 +1,25 @@
+{
+  "policy": "authorize_music_premium_ui",
+  "native_gate": [
+    {"input": [0,0,0], "output": [0]},
+    {"input": [0,0,1], "output": [0]},
+    {"input": [0,1,0], "output": [0]},
+    {"input": [0,1,1], "output": [0]},
+    {"input": [1,0,0], "output": [0]},
+    {"input": [1,0,1], "output": [0]},
+    {"input": [1,1,0], "output": [0]},
+    {"input": [1,1,1], "output": [1]}
+  ],
+  "navigation_names": [
+    {"name": "TAB_MUSIC_PREMIUM", "hide": true},
+    {"name": "TAB_HOME", "hide": false},
+    {"name": "TAB_SAMPLES", "hide": false},
+    {"name": "TAB_EXPLORE", "hide": false},
+    {"name": "LIBRARY_MUSIC", "hide": false},
+    {"name": "TAB_BOOKMARK", "hide": false},
+    {"name": "", "hide": false}
+  ],
+  "startup_cases": 15,
+  "integration_requirements": ["native Upgrade/account visible when Premium off", "Upgrade/account hidden when Premium on", "master off restores promotions after restart", "membership result suppressed only when authorized", "other navigation and account/settings rows preserved", "matched mealbar hidden", "non-promotion floating UI preserved", "YouTube startup and preferences preserved", "Music ads and background playback preserved"],
+  "evidence_rule": "Startup checks execute the packaged BF gate and enum classifier. Integration requirements are not execution claims; consult dated evidence."
+}

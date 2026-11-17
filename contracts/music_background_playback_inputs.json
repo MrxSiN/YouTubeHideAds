@@ -1,0 +1,67 @@
+{
+  "abi": "three-boolean-bytes-v1",
+  "policy": "authorize_music_background_playback",
+  "source": "source/brainfuck/and3.bf",
+  "library": "liband3.so",
+  "host": "com.google.android.apps.youtube.music",
+  "inputs": [
+    "background_playback_enabled",
+    "validated_restriction_gate",
+    "validated_call_context"
+  ],
+  "input_validation": "XAX bits1 values extended to bytes 00/01",
+  "output": "Status zero and exactly one byte 01 authorizes; every other response preserves native behavior",
+  "preferences": {
+    "file": "youtubehideads",
+    "background_playback": true,
+    "host_storage": "Music Application Context"
+  },
+  "ad_master_dependency": false,
+  "sponsorblock_dependency": false,
+  "settings": "Music > Account > Settings > YouTube Hide Ads > Settings > Player controls > Background playback",
+  "lifecycle": "Read the saved independent switch on each eligible callback. Restart Music after changing it to discard native cached capabilities. No automatic restart or play command.",
+  "readiness": "Both roles unique; reflection validates modifiers, reference argument and kids enum type; native policy/host self-checks pass; both methods and at most 128 direct callers per role deoptimize; both protective hooks install before ready becomes true",
+  "eligibility": {
+    "shorty": "ZL",
+    "modifiers": "public static",
+    "opcodes": [
+      18,
+      56,
+      82,
+      213,
+      56,
+      84,
+      57,
+      98,
+      82
+    ],
+    "integer_literal": 64657230,
+    "literal_role": "Background eligibility protobuf discriminator, shared with YouTube's existing structural contract",
+    "context": "Native result false, non-null reference argument, attached Music Application Context and readiness",
+    "action": "Return Boolean.TRUE only when BF authorizes; always preserve native true"
+  },
+  "kids_policy": {
+    "shorty": "VILZ",
+    "modifiers": "public final instance",
+    "long_literal": 45638079,
+    "literal_role": "Morphe's Music kids background-policy experiment anchor; identifies the method, never a global experiment override",
+    "context": "Non-null receiver and enum argument, attached Music Application Context and readiness",
+    "action": "Skip only the uniquely resolved restriction controller when BF authorizes; otherwise proceed"
+  },
+  "preserved": [
+    "YouTube host feature graphs",
+    "native pause and stop",
+    "audio focus",
+    "media notification and lock-screen controls",
+    "account and subscription management",
+    "DRM",
+    "native policy libraries and JNI ABI"
+  ],
+  "failure": "Missing/ambiguous roles, failed deoptimization, policy failure, missing host Context, disabled preference or partial installation leave both callbacks inactive or preserve the original call",
+  "reference": {
+    "repository": "https://github.com/MorpheApp/morphe-patches",
+    "commit": "44031c561ea048c8f196877f30a49c13bfd6afb6",
+    "path": "patches/src/main/kotlin/app/morphe/patches/music/misc/backgroundplayback"
+  },
+  "startup_failure_isolation": "A synchronous completed-future continuation captures discovery/installation exceptions, resets background readiness and allows Music ad/settings startup to continue on the same DexKit-owning thread."
+}

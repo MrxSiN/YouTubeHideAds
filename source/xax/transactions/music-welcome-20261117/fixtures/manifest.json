@@ -1,0 +1,18 @@
+{
+  "status": "EXECUTED",
+  "production_input_root": "6564126c8c89dca70612256cd0b4cf118a51261b527b22a77e58d68ef6c091b0",
+  "fixture_graph": {
+    "file": "fixture.batch",
+    "sha256": "939a1e28a329f64d0e000ea62dd2d7fcf34f093d7fe7048b4eefe41aa4fb4329",
+    "output_root": "28a46f5cec66dce2da9e73913ba864240eed48b05d383390f89cca03d1d04bac"
+  },
+  "fixture_fields": {
+    "file": "fields.edit",
+    "sha256": "e085348b16341faf1158a662a9e1b264d078c659dd4a873bdbc72d74e896ef97",
+    "output_root": "4db6bdcb905f8aaf8bf75f90d3e032129e4a513a605b9344778c300e5ea18f49"
+  },
+  "fixture_source_sha256": "92f09478f095fe9e22072d9689ee7a6d242448959c8b5d6c7d9fdbe0bf3384ed",
+  "purpose": "Controlled host-layout fixtures. Production scheduling/cancel functions retain identical CIDs; only the startup wrapper and its content-addressed ancestors change. Excluded from final APKs.",
+  "global_mode_key": "youtubehideads_welcome_fixture_kind",
+  "cleanup": "Delete the test mode key and reinstall the ordinary development APK after execution."
+}

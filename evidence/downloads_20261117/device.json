@@ -1,0 +1,33 @@
+{
+  "status": "EXECUTED",
+  "date": "2026-11-17",
+  "device": "Physical Pixel 8 Pro",
+  "android": "17 / API 37",
+  "framework": "Vector 2.2 / libxposed API 102",
+  "hosts": {
+    "YouTube": "21.45.88",
+    "Music": "9.45.51"
+  },
+  "new_startup_protocol_checks": 12,
+  "controlled_export_cases": 7,
+  "real_music_export": "One complete M4A, 3449447 bytes, original plain stream SHA-256 match",
+  "real_youtube_export": "Two complete mixed-container streams, original plain stream SHA-256 matches",
+  "not_run": [
+    "Actual external downloader app handoff: no supported downloader installed",
+    "Compatible audio/video pair muxing: real YouTube pair has different container families",
+    "Export playback UI and process-kill recovery",
+    "Other host versions, DRM or restricted/private media",
+    "Full Morphe album/menu/playlist-page parity"
+  ],
+  "separate_fixture_proof": "../../source/xax/transactions/downloads-20261117/fixtures/manifest.json",
+  "normal_fixture_marker_absent": true,
+  "existing_caught_progress_callback_error": "The ordinary YouTube watch log includes a caught null-receiver in the unchanged player progress callback. Vector restores native state; download dispatch/save/export complete. RYD also reports the known certificate-transparency filtering failure.",
+  "external_mode_checks": {
+    "status": "EXECUTED",
+    "music_missing_downloader_guidance": true,
+    "youtube_missing_downloader_guidance": true,
+    "both_enabled_external_priority": true,
+    "youtube_same_video_reopen_guidance": true,
+    "evidence": "Physical device UI screenshots inspected; public-video screenshots retained only in ignored build output."
+  }
+}

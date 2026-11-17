@@ -1,0 +1,66 @@
+{
+  "status": "EXECUTED",
+  "checks": [
+    "enabled-default: Upgrade/account hidden, navigation and shared settings preserved",
+    "All six saved switches remain on",
+    "premium-off-cold: Upgrade/account visible, navigation and shared settings preserved",
+    "master-off-cold: Upgrade/account visible, navigation and shared settings preserved",
+    "restored-on-cold: Upgrade/account hidden, navigation and shared settings preserved"
+  ],
+  "sessions": [
+    {
+      "name": "enabled-default",
+      "pid": "1000"
+    },
+    {
+      "name": "premium-off-cold",
+      "pid": "1523"
+    },
+    {
+      "name": "master-off-cold",
+      "pid": "2460"
+    },
+    {
+      "name": "restored-on-cold",
+      "pid": "3670"
+    }
+  ],
+  "navigation_labels": {
+    "enabled-default": [
+      "Home",
+      "Search",
+      "Library"
+    ],
+    "premium-off-cold": [
+      "Home",
+      "Search",
+      "Library"
+    ],
+    "master-off-cold": [
+      "Home",
+      "Search",
+      "Library"
+    ],
+    "restored-on-cold": [
+      "Home",
+      "Search",
+      "Library"
+    ]
+  },
+  "native_settings_premium_labels": {
+    "enabled-default": [],
+    "premium-off-cold": [
+      "Get Music Premium"
+    ],
+    "master-off-cold": [
+      "Get Music Premium"
+    ],
+    "restored-on-cold": []
+  },
+  "youtube_preferences_unchanged": true,
+  "all_six_switches_restored_on": true,
+  "mealbar_natural_positive": "NOT RUN: reference mealbar not naturally served in this session",
+  "new_audio_video_trial_dialog": "NOT SUPPORTED: separate upsell.eml Material BottomSheet observed in diagnostic build",
+  "installed_package": "io.github.mrxsin.youtubehideads.musicdev",
+  "installed_apk_sha256": "4616fb869c3f2f5b9ef1163431eb9c161e5d3e3f5e05c6a3c16ae7a54351c367"
+}

@@ -1,5 +1,50 @@
 # Build
 
+Development build **162** adds YouTube Premium header removal and shared download/export support.
+Ten [native transactions](../source/xax/transactions/downloads-20261117/README.md) extend build 161;
+independent native replay is byte-identical and rejects stale roots. Production unsigned and
+separately signed Music/YouTube development APKs have identical DEX, native libraries and static
+resources. The separate cache fixture is excluded from normal APKs.
+[Exact build and device evidence](../evidence/downloads_20261117/README.md).
+
+Development build **161** adds Music's native welcome-offer cancellation. Three native
+[transactions](../source/xax/transactions/music-welcome-20261117/README.md) extend build 160;
+native/JNI/third-party inputs and compiler pins remain unchanged. Controlled host-layout fixtures
+use a separate test-only graph and are excluded from the final development and production APKs.
+[Exact identities and checks](../evidence/music_welcome_20261117/README.md).
+
+Development build **160** extends Music Premium controls using four
+[exact-root transactions](../source/xax/transactions/music-premium-20261116/README.md).
+It retains build 159's exact toolchains and native/third-party inputs. Native edit/verify and
+resolve/build produce the production-package unsigned APK and separately signed development
+variants. [Build and device record](../evidence/music_premium_20261116/README.md).
+
+Development build **159** adds Music background playback. [toolchains.json](../toolchains.json)
+pins the latest inspected XAX main and its released native Windows seed. Five
+[exact-root transactions](../source/xax/transactions/music-background-20261116/README.md) edit and
+verify source; native resolve/build produce the production-package unsigned APK and separately
+signed development variants. Existing BF/JNI/native/third-party DEX inputs are retained unchanged.
+The connected MCP grants no mutable store, so native compiler CLI operations are used.
+[Build, replay and device evidence](../evidence/music_background_20261116/README.md).
+
+The build 158 workflow below describes the preceding Music ad increment.
+
+Development build **158** adds YouTube Music ads. Current toolchain commits and the native Windows
+compiler identity are pinned in [toolchains.json](../toolchains.json). Native `edit` plus mandatory
+`verify` apply the checked-in transactions; native `resolve` and `build`/`build-signed` produce APKs.
+The connected MCP deployment grants no mutable store, so these operations use the compiler CLI.
+No private compiler patch or Python application generator is used.
+[Build, inputs, replay and device evidence](../evidence/music_ads_20261116/README.md).
+
+Static branding is compiled from `source/branding` with the pinned AAPT2. Its Android framework
+resource input is identified in the new build record. Native libraries and third-party DEX are
+unchanged and checked against their existing canonical BLAKE3 pins. BBC's current shared-library ABI
+is not substituted for the shipped 4,096-cell, budgeted ABI. Release signing still requires the
+external private capability matching the existing certificate; it is never stored in this repository.
+
+Earlier build records below are historical. Their SDK-only and missing-native-target statements
+describe those earlier toolchains, rather than the current build 158 workflow.
+
 Development build **1.3.0 (versionCode 157)** was built with XAX `main` at `affbb53`, unchanged since 1.2.1, so the
 compiler files, native inputs, DEX and signer are the same. The branding archive was rebuilt for versionName 1.3.0
 (swipe pill drawables included). The store is the 1.2.1 carrier plus the 1.3.0 feature edits, applied in order: ui,

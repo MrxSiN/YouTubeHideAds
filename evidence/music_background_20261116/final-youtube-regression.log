@@ -1,0 +1,70 @@
+11-16 15:20:19.888 12162 12162 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-16 15:20:19.888 12162 12162 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-16 15:20:19.888 12162 12162 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-16 15:20:19.889 12162 12162 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-16 15:20:19.908 12162 12162 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+11-16 15:20:19.909 12162 12162 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+11-16 15:20:20.005 12162 12162 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+11-16 15:20:20.006 12162 12162 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+11-16 15:20:20.020 12162 12162 I YouTubeHideAds: Background playback player observer installed at startup
+11-16 15:20:20.020 12162 12162 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-16 15:20:20.021 12162 12162 I YouTubeHideAds: Video ad activation hook installed
+11-16 15:20:20.037 12162 12162 I YouTubeHideAds: Player ad layout hook installed
+11-16 15:20:20.074 12162 12162 I YouTubeHideAds: Ad component hook installed
+11-16 15:20:20.074 12162 12162 I YouTubeHideAds: Premium offer hook installed
+11-16 15:20:20.095 12162 12162 I YouTubeHideAds: Fullscreen dialog hook installed
+11-16 15:20:20.133 12162 12162 I YouTubeHideAds: Typed engagement panel identifier resolved
+11-16 15:20:20.134 12162 12162 I YouTubeHideAds: Engagement ad panel hook installed
+11-16 15:20:20.137 12162 12162 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-16 15:20:20.137 12162 12162 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-16 15:20:20.137 12162 12162 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-16 15:20:20.138 12162 12162 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-16 15:20:20.152 12162 12162 I YouTubeHideAds: SponsorBlock player hook installed
+11-16 15:20:20.169 12162 12162 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+11-16 15:20:20.169 12162 12162 I YouTubeHideAds: Player video ID and seek bridge resolved
+11-16 15:20:20.170 12162 12162 I YouTubeHideAds: Player duration and active-generation bridge resolved
+11-16 15:20:20.189 12162 12162 I YouTubeHideAds: Shorts ad selection hook installed
+11-16 15:20:20.189 12162 12162 I YouTubeHideAds: Ad hook discovery finished
+11-16 15:20:20.272 12162 12162 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+11-16 15:20:20.289 12162 12162 I YouTubeHideAds: Playables typed element serializer resolved
+11-16 15:20:20.307 12162 12162 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+11-16 15:20:20.308 12162 12162 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+11-16 15:20:20.309 12162 12162 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-16 15:20:20.337 12162 12162 I YouTubeHideAds: Original audio hook installed: public final void asam.a(apho)
+11-16 15:20:20.338 12162 12162 I YouTubeHideAds: Playback speed hook installed
+11-16 15:20:20.457 12162 12162 I YouTubeHideAds: Captions hook installed: public final void asyt.n(armo)
+11-16 15:20:20.457 12162 12162 I YouTubeHideAds: Return YouTube Dislike ready
+11-16 15:20:20.457 12162 12162 I YouTubeHideAds: Speed button hook installed
+11-16 15:20:20.459 12162 12162 I YouTubeHideAds: Loop video hook installed
+11-16 15:20:20.484 12162 12162 I YouTubeHideAds: Tap to seek hook installed
+11-16 15:20:20.517 12162 12162 I YouTubeHideAds: Default video quality hooks installed
+11-16 15:20:20.531 12162 12162 I YouTubeHideAds: DeArrow thumbnail hook installed
+11-16 15:20:20.545 12162 12162 I YouTubeHideAds: Settings lifecycle hook installed
+11-16 15:20:20.918 12162 12198 I YouTubeHideAds: Background playback self-check (28 cases)=true
+11-16 15:20:21.113 12162 12198 I YouTubeHideAds: Background playback candidates: [public static boolean aquz.C(bhnz)]
+11-16 15:20:21.160 12162 12198 I YouTubeHideAds: Background playback candidates: [public final void rpz.g(int, jlg, bjwl)]
+11-16 15:20:21.160 12162 12198 I YouTubeHideAds: Background playback candidates: [static void jlg.<clinit>()]
+11-16 15:20:21.199 12162 12198 I YouTubeHideAds: Background playback candidates: [public final java.lang.Object oto.a(java.lang.Object)]
+11-16 15:20:21.228 12162 12198 I YouTubeHideAds: Background playback candidates: [public final boolean jap.h()]
+11-16 15:20:21.376 12162 12198 I YouTubeHideAds: Background playback candidates: [public final boolean vaa.r()]
+11-16 15:20:21.377 12162 12198 I YouTubeHideAds: Background playback candidates: [public final boolean albv.m(int, long, boolean)]
+11-16 15:20:21.377 12162 12198 I YouTubeHideAds: Background playback candidates: [public final void com.google.android.apps.youtube.app.player.YouTubePlayerViewNotForReflection.lx(jlg)]
+11-16 15:20:21.532 12162 12198 I YouTubeHideAds: Background playback hooks installed (manager, kids, settings, scoped resume flag, player context)
+11-16 15:20:23.287 12162 12880 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|3fdf76c508006f22|
+11-16 15:20:23.398 12162 12881 I YouTubeHideAds: Component replaced: brand_video_shelf.eml-fe|8fc1e22871a4f013|CellType|
+11-16 15:20:23.398 12162 12881 I YouTubeHideAds: Component replaced: brand_video_shelf.eml-fe|8fc1e22871a4f013|CellType|
+11-16 15:20:23.422 12162 12162 I YouTubeHideAds: Fullscreen promotion blocked
+11-16 15:20:24.150 12162 12588 I YouTubeHideAds: Video ad suppressed
+11-16 15:20:24.162 12162 12162 I YouTubeHideAds: Captions automatic selection DEFAULT reason 2: en / a.en
+11-16 15:20:25.047 12162 12162 I YouTubeHideAds: Captions automatic selection DEFAULT reason 0: en / a.en
+11-16 15:20:25.056 12162 12162 I YouTubeHideAds: Player calibration playbackType=1 durationMs=1476742
+11-16 15:20:25.056 12162 12162 I YouTubeHideAds: SponsorBlock playback generation changed
+11-16 15:20:25.057 12162 12162 I YouTubeHideAds: SponsorBlock hash-prefix request started
+11-16 15:20:25.787 12162 12927 I YouTubeHideAds: SponsorBlock response cached
+11-16 15:20:26.140 12162 12162 I YouTubeHideAds: Player calibration playbackType=1 durationMs=1476742
+11-16 15:20:27.152 12162 12162 I YouTubeHideAds: Player calibration playbackType=1 durationMs=1476742
+11-16 15:20:28.289 12162 12880 I YouTubeHideAds: Component replaced: video_display_button_group_layout.eml-fe|3fdf76c508006f22|video_display_button_group_layout.eml-fe|3fdf76c508006f22|
+11-16 15:20:31.403 12162 12162 I YouTubeHideAds: Background playback authorized: settings capability
+11-16 15:20:31.497 12162 12162 I YouTubeHideAds: Settings section attached
+11-16 15:20:34.036 12162 12162 I YouTubeHideAds: Brainfuck policy self-check passed
+11-16 15:20:34.088 12162 12162 I YouTubeHideAds: SponsorBlock native UI self-check (64 cases)=true

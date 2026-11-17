@@ -1,0 +1,22 @@
+{
+  "policy": "authorize_music_native_welcome_cancel",
+  "native_and3_cases": 8,
+  "layout_name_cases": [
+    {"name": "interstitial_promo_view", "allowed": true},
+    {"name": "onboarding_interstitial_promo_view", "allowed": true},
+    {"name": "interstitial_edunitube_view", "allowed": false},
+    {"name": "", "allowed": false}
+  ],
+  "startup_cases": 12,
+  "integration_requirements": [
+    "enabled: attached native promo layout invokes cancel exactly once",
+    "enabled: onboarding variant invokes cancel",
+    "disabled Premium: native layout remains until manual cancellation",
+    "disabled master with Premium saved on: native layout remains",
+    "education layout excluded",
+    "lookalike view without matched layout identity preserved",
+    "purchase action never invoked",
+    "Home, other navigation, settings and background playback preserved"
+  ],
+  "evidence_rule": "Requirements are not execution claims. Test-only host-layout fixtures use controlled click listeners and do not prove naturally served offer/controller cleanup; consult dated evidence."
+}

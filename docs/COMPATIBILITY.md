@@ -1,5 +1,32 @@
 # Tested compatibility
 
+Build **162** targets YouTube **21.45.88** and Music **9.45.51** on the same physical
+Pixel 8 Pro, Android 17/API 37 and Vector 2.2/API 102 environment. Download endpoint availability
+and public stream clients can change separately from host versions. See [scope](DOWNLOADS.md).
+Other versions and restricted/DRM media remain unverified.
+
+Build **161** extends the same Music 9.45.51 environment with native welcome layout matching.
+Controlled host-layout tests are distinguished from live server/controller delivery. Other Music
+versions remain untested. [Evidence](../evidence/music_welcome_20261117/README.md).
+
+Music development build **160** uses the same physical Music **9.45.51**, Android 17/API 37 and
+Vector 2.2/API 102 environment. [Premium controls](MUSIC_PREMIUM_PROMOTIONS.md) use structural
+discovery; other Music versions and arbitrary server purchase UI are not certified.
+[Checks and artifact identities](../evidence/music_premium_20261116/README.md).
+
+Development build **159** adds Music background playback on Music **9.45.51** using the same
+Pixel/Android/Vector environment below. Both typed roles resolve and the 12 new packaged checks,
+independent switch, ordinary/kids screen-off cases and native pause checks pass.
+[Exact artifacts and limits](../evidence/music_background_20261116/README.md).
+
+Development build **158** adds YouTube Music **9.45.51** on the physical Pixel 8 Pro,
+Android 17/API 37, Vector 2.2/API 102. Its ad activation/component/fullscreen hooks resolve;
+96 startup policy checks and the five-switch settings persistence checks pass. YouTube
+**21.45.88** retains its 664 startup and 64 settings UI checks. These counts do not establish
+naturally served ads or full Morphe parity. Music SponsorBlock, player/feed extras, native Upgrade
+and Get Music Premium entries are outside this increment.
+[Exact artifacts, device checks and remaining limits](../evidence/music_ads_20261116/README.md).
+
 Development build **157 (1.3.0)** was exercised on the same Pixel 8 Pro, Android 17 and Vector 2.2/API 102 with
 YouTube **21.45.88**: 22 startup `installed` lines with no unresolved, ambiguous or exception line, the settings page,
 default speed, the speed button, blacklist Save, video quality on Wi-Fi and Shorts, captions, DeArrow thumbnails and the

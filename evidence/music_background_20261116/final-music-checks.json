@@ -1,0 +1,112 @@
+{
+  "status": "EXECUTED",
+  "sessions": [
+    {
+      "name": "defaults",
+      "pid": "4582"
+    },
+    {
+      "name": "disabled-cold",
+      "pid": "5064"
+    },
+    {
+      "name": "disabled-ordinary",
+      "pid": "5419"
+    },
+    {
+      "name": "enable",
+      "pid": "5933"
+    },
+    {
+      "name": "master-off-cold",
+      "pid": "6611"
+    },
+    {
+      "name": "enabled-ordinary-master-off",
+      "pid": "7067"
+    },
+    {
+      "name": "restore-ads-before-playback",
+      "pid": "7633"
+    },
+    {
+      "name": "enabled-ordinary",
+      "pid": "8330"
+    }
+  ],
+  "checks": [
+    "Background playback defaults on in the shared native settings page",
+    "Background playback off persisted across restart",
+    "Disabled ordinary playback pauses on Home with no background authorization",
+    "Background enabled persists independently while ad master is off",
+    "Ad master off: background authorization and Home PLAYING observed",
+    "Home and screen-off remain PLAYING, native pause updates position, foreground preserves pause"
+  ],
+  "samples": {
+    "disabled-ordinary-foreground": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251417651
+    },
+    "disabled-home": {
+      "state": 2,
+      "position": 690,
+      "speed": 1.0,
+      "updated": 251418718
+    },
+    "enabled-ordinary-master-off-foreground": {
+      "state": 3,
+      "position": 101,
+      "speed": 1.0,
+      "updated": 251461473
+    },
+    "master-off-home": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251467685
+    },
+    "enabled-ordinary-foreground": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251488189
+    },
+    "enabled-home": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251488189
+    },
+    "enabled-screen-off": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251488189
+    },
+    "enabled-paused": {
+      "state": 2,
+      "position": 29054,
+      "speed": 1.0,
+      "updated": 251517679
+    },
+    "paused-foreground": {
+      "state": 2,
+      "position": 29496,
+      "speed": 1.0,
+      "updated": 251522835
+    }
+  },
+  "screen_off_attempts": [
+    {
+      "name": "ordinary",
+      "attempt": 0,
+      "before": "Dozing",
+      "after": "Dozing"
+    }
+  ],
+  "screen_off_power": "Dozing",
+  "acceptance": "passed for completed settings, independence and ordinary playback checks",
+  "continuation": "Kids content and final settings use final-kids-playback.json; the notification shade interrupted the next UI-navigation step, after the checks recorded here."
+}
