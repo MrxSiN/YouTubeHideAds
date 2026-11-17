@@ -20,6 +20,7 @@
   "membership_context": "Non-null receiver, complete-install readiness and complete effective ad snapshot; original called first",
   "settings": "Existing Music Premium promotions switch; restart Music after changing",
   "failure": "Unexpected discovery/layout exception clears readiness. Ambiguous discovery leaves hooks inactive. Missing candidate relationships preserve that candidate. Protective hook errors preserve native execution.",
-  "unsupported": ["new audio/video-switch upsell.eml BottomSheet trial dialog", "native full-page welcome offer", "arbitrary server purchase UI", "subscription entitlements"],
+  "extensions": ["contracts/music_welcome_inputs.json"],
+  "unsupported": ["new audio/video-switch upsell.eml BottomSheet trial dialog", "arbitrary server purchase UI", "subscription entitlements"],
   "reference": {"repository": "https://github.com/MorpheApp/morphe-patches", "commit": "44031c561ea048c8f196877f30a49c13bfd6afb6"}
 }

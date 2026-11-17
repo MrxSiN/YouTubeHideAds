@@ -1,5 +1,11 @@
 # Testing
 
+Build 161 adds twelve welcome startup checks and a separate native host-layout fixture carrier.
+Seven controlled cases exercise unchanged production scheduling/cancel functions with controlled
+listeners. The final APK excludes that carrier; all four DEX payloads match production, and final
+Music/YouTube checks run again after replacing the fixture APK. Native controller/server delivery
+remains a separate unobserved positive. [Scoped evidence](../evidence/music_welcome_20261117/README.md).
+
 Build 160 adds fifteen packaged Music Premium checks: all eight native AND3 inputs and seven
 navigation enum names. Device acceptance distinguishes Upgrade/account positives, switch-off and
 master-off controls from unobserved mealbar presentation. YouTube regression uses the same

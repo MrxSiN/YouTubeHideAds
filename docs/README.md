@@ -21,7 +21,7 @@ Dated evidence describes its named build, not the current checkout.
 | [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
 | [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
 | [YouTube Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) | Independent playback switch, structural restriction hooks and shared BF policy |
-| [YouTube Music Premium promotions](MUSIC_PREMIUM_PROMOTIONS.md) | Upgrade/account/membership/mealbar controls and explicit limits |
+| [YouTube Music Premium promotions](MUSIC_PREMIUM_PROMOTIONS.md) | Upgrade/account/membership/mealbar/welcome controls and explicit limits |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |

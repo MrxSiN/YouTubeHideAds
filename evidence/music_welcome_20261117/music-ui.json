@@ -1,0 +1,16 @@
+{
+  "status": "EXECUTED",
+  "pid": "27919",
+  "six_switches": {
+    "Hide ads": "true",
+    "Video and audio ads": "true",
+    "Feed and search ads": "true",
+    "Premium promotions": "true",
+    "Fullscreen promotions": "true",
+    "Background playback": "true"
+  },
+  "native_welcome_hook_installed": true,
+  "test_harness_removed": true,
+  "fixture_global_key_removed": true,
+  "development_version_code": 20
+}

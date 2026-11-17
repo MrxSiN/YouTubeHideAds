@@ -1,0 +1,71 @@
+{
+  "status": "EXECUTED",
+  "samples": {
+    "kids": {
+      "initial": {
+        "state": 3,
+        "position": 703,
+        "speed": 1.0,
+        "updated": 319891106
+      },
+      "home": {
+        "state": 3,
+        "position": 703,
+        "speed": 1.0,
+        "updated": 319891106
+      },
+      "screen_off": null,
+      "power_before": null,
+      "power_after": null,
+      "paused": {
+        "state": 2,
+        "position": 10045,
+        "speed": 1.0,
+        "updated": 319901189
+      }
+    },
+    "ordinary": {
+      "initial": {
+        "state": 3,
+        "position": 0,
+        "speed": 1.0,
+        "updated": 319908720
+      },
+      "home": {
+        "state": 3,
+        "position": 0,
+        "speed": 1.0,
+        "updated": 319908720
+      },
+      "screen_off": {
+        "state": 3,
+        "position": 0,
+        "speed": 1.0,
+        "updated": 319908720
+      },
+      "power_before": "Dozing",
+      "power_after": "Dozing",
+      "paused": {
+        "state": 2,
+        "position": 24659,
+        "speed": 1.0,
+        "updated": 319933442
+      }
+    }
+  },
+  "checks": [
+    "kids: foreground/Home PLAYING, native pause and advanced position",
+    "ordinary: foreground/Home/screen-off PLAYING, native pause and advanced position"
+  ],
+  "sessions": [
+    {
+      "name": "kids",
+      "pid": "29732"
+    },
+    {
+      "name": "ordinary",
+      "pid": "30132"
+    }
+  ],
+  "acceptance": "passed"
+}

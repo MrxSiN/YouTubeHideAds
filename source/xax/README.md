@@ -1,4 +1,10 @@
-Current canonical source is development build **1.3.0/code 160**, extending Music Premium controls
+Current canonical source is development build **1.3.0/code 161**, adding native Music welcome
+cancellation through the shared BF gate and typed XAX hooks. Store SHA-256:
+`8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175`.
+[Native transactions](transactions/music-welcome-20261117/README.md) and
+[scoped evidence](../../evidence/music_welcome_20261117/README.md) identify the exact source.
+
+Previous build **1.3.0/code 160** extended Music Premium controls
 through the shared BF/XAX architecture. Store SHA-256:
 `4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c`.
 [Native transactions](transactions/music-premium-20261116/README.md) and

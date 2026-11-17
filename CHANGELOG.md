@@ -1,5 +1,13 @@
 # Changelog
 
+## Development build 161 (1.3.0, unreleased) — 2026-11-17
+
+- Add native Music welcome-offer cancellation under **Premium promotions**, using structural
+  discovery, runtime layout identity and the existing Brainfuck authorization.
+- Use the matched native cancel action after view attachment; preserve disabled settings,
+  excluded education layouts and candidates without a matching layout identity.
+- [Build and scoped execution evidence](evidence/music_welcome_20261117/README.md).
+
 ## Development build 160 (1.3.0, unreleased) — 2026-11-16
 
 - Extend Music's **Premium promotions** switch to the Upgrade tab, Get Music Premium account

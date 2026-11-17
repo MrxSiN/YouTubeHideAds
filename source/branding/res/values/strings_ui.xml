@@ -263,6 +263,6 @@
     <string name="s_youtubehideads_settings_40c1e2">"YouTube Hide Ads settings"</string>
     <string name="music_video_label">Video and audio ads</string>
     <string name="music_video_summary">Remove ads between songs and videos</string>
-    <string name="music_premium_summary">Hide Premium promotions, Get Music Premium entries and the Upgrade tab. Restart Music after changing.</string>
+    <string name="music_premium_summary">Hide Premium promotions, welcome offers, Get Music Premium entries and the Upgrade tab. Restart Music after changing.</string>
     <string name="music_general_summary">Remove recognized sponsored music cards and ad carousels</string>
 </resources>

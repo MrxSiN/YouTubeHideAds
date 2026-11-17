@@ -1,5 +1,9 @@
 # YouTube Music Premium promotions
 
+Development build 161 adds the native welcome-offer layout family to the same switch. It invokes
+the matched view's native cancel action after attachment. The audio/video trial BottomSheet remains
+outside this implementation. [Welcome contract](../contracts/music_welcome_inputs.json).
+
 Development build 160 extends Music's existing **Premium promotions** switch to the Upgrade tab,
 Get Music Premium account entry, membership upsell label and promotion mealbar. Existing component
 and fullscreen promotion filtering remains in place. The switch is on by default and follows the
@@ -32,6 +36,20 @@ See the [contract](../contracts/music_premium_inputs.json) and
   held root and global-layout listener inspect its first child, require the named
   `mealbar_layout_root`, then the promotion profile (inner LinearLayout, first visible ImageView).
   Only that matched child is hidden; other floating UI is preserved.
+- Native welcome offer: uniquely anchor the overlay controller by its parameter marker, shorty and
+  opcode prefix; follow its unique invoked public final one-reference-argument void binding method.
+  Its owner must have unique non-static View and int fields. That int must resolve to the named
+  `interstitial_promo_view` or `onboarding_interstitial_promo_view` resource at runtime.
+
+The welcome callback runs the original binding first and posts one Runnable against a weakly held
+candidate. After attachment it requires the main thread, named `layout_container` root, a named
+`interstitials_container` ancestor within six views, title/body/action/dismiss TextViews and a
+ScrollView. The enabled cancel control must have a click listener. A fresh shared BF gate then
+authorizes `dismiss.performClick()`. The purchase control is never invoked. Native cancellation
+owns overlay cleanup; the module does not leave a hidden container or take over navigation.
+The education interstitial layout is excluded. Role discovery bounds invoked methods and declared
+fields at 64, and direct caller deoptimization at 128. Unexpected welcome failures clear only its
+own readiness and leave existing Music startup intact.
 
 Named view checks resolve resource IDs through Music's Resources and package, then compare IDs.
 Unnamed/generated views are skipped without querying nonexistent resource names.
@@ -60,10 +78,13 @@ This hides recognized promotional surfaces; it does not provide a subscription o
 downloads, DRM content or other server entitlements. A separate audio/video-switch trial dialog
 observed in Music 9.45.51 uses `upsell.eml` and Material BottomSheet rather than the reference
 mealbar; it remains unsupported. Arbitrary future or server-selected purchase UI is not covered.
-A native full-page welcome offer ("Now with 100 million songs") was also observed during final
-acceptance and manually dismissed with its No thanks button; it remains outside the matched roles.
+Build 160 observed a native full-page welcome offer ("Now with 100 million songs") and manually
+dismissed it during acceptance. Build 161 adds its native promo layout family as described above.
 Natural mealbar presentation depends on the account/server. Requirements and controlled fixtures
 must not be reported as naturally observed device positives.
 
 [Native transactions](../source/xax/transactions/music-premium-20261116/README.md) ·
 [Build and device evidence](../evidence/music_premium_20261116/README.md)
+
+[Welcome extension transactions](../source/xax/transactions/music-welcome-20261117/README.md) ·
+[Welcome extension evidence](../evidence/music_welcome_20261117/README.md)
