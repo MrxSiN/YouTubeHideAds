@@ -1,5 +1,11 @@
 # Architecture
 
+Development build 160 extends Music's master-gated Premium switch to native account, membership,
+navigation and mealbar roles. A separate holder, structural relationships, bounded discovery,
+weak view bookkeeping and main-thread effects share the existing BF gate and guarded Music startup.
+Host-only Material classes are resolved with the Music ClassLoader through reflection.
+[Promotion design](MUSIC_PREMIUM_PROMOTIONS.md).
+
 Development build 159 adds Music background eligibility and kids-policy hooks to Music's existing
 startup DexKit session. It shares YouTube's unchanged typed AND3 gate, preference getter, protective
 hook installer, bounded caller deoptimization and settings rows. A separate holder publishes attached

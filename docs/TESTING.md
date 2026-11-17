@@ -1,5 +1,12 @@
 # Testing
 
+Build 160 adds fifteen packaged Music Premium checks: all eight native AND3 inputs and seven
+navigation enum names. Device acceptance distinguishes Upgrade/account positives, switch-off and
+master-off controls from unobserved mealbar presentation. YouTube regression uses the same
+production DEX in a temporary YouTube-only development package.
+[Requirements](../testdata/music_premium_vectors.json) ·
+[Execution evidence](../evidence/music_premium_20261116/README.md).
+
 Music build 159 adds 12 packaged background checks: all eight native Boolean combinations and four
 host classifier cases, bringing Music startup coverage to 108 cases with the existing 96 ad cases.
 The hooks share the runtime classifier and unchanged YouTube BF gate used by those checks.

@@ -1,0 +1,46 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "fe783656e72e2b5330fbe8202d2c0265031ef1aa",
+  "baseline_sha256": "a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6",
+  "baseline_root": "a9b1dfe153555ae9ab69315d053a3b9c945158a021607d7c86406117a915b0e6",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c",
+  "output_root": "92e1250946969d4ff7533b4f8cbc0750ea0fc0f15f3c3c1fb263af407ca6e144",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-premium.batch",
+      "sha256": "1b07b97164c6fa816b042db651448409c02033e06f056de3a067813a5525e6c7",
+      "input_root": "a9b1dfe153555ae9ab69315d053a3b9c945158a021607d7c86406117a915b0e6",
+      "output_root": "0608d6d343f4b08e63d22f754b2dbcce6e0eb1b549885d42e40eeaa7c81bed68",
+      "output_sha256": "6eeeaeb4fb6c2178e3c6f410c7d03eeea98d65c26809fb69b5272861ede33946",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-metadata.edit",
+      "sha256": "d29f86c0152a736b692cb8a11757bf3eefde17d2b4df45508dd0e3be44421de8",
+      "input_root": "0608d6d343f4b08e63d22f754b2dbcce6e0eb1b549885d42e40eeaa7c81bed68",
+      "output_root": "b97557f5e7f2fb0bdc371e740371795eafca060abda14424fabf07cbfc1ed156",
+      "output_sha256": "c935d0b5bba7f9d3ea5384c2d2985d565fa415b222e3c5eb48ee5a4530bf8e23",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-labels.edit",
+      "sha256": "c117090ff2d9ac0b7cd6492aed175c256c9440817d58dd13a78666864a7c415b",
+      "input_root": "b97557f5e7f2fb0bdc371e740371795eafca060abda14424fabf07cbfc1ed156",
+      "output_root": "f9b5ee50a1de545e248ea1e1e393c4d3d38b8de5395103021cbdd8800104a0af",
+      "output_sha256": "1cde329d8b6d87864edf08099cb1a76f7cbc41256cf237f09c0dd89743a73b36",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "03-resource-identity.batch",
+      "sha256": "ab002cd409cfe3be206377ba7371364c4fcd1aeed5103799803b2446078e27bd",
+      "input_root": "f9b5ee50a1de545e248ea1e1e393c4d3d38b8de5395103021cbdd8800104a0af",
+      "output_root": "92e1250946969d4ff7533b4f8cbc0750ea0fc0f15f3c3c1fb263af407ca6e144",
+      "output_sha256": "4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: final bytes identical to accepted production source",
+  "stale_root": "EXECUTED: status 1 and XAX.WORKSPACE.STALE_ROOT diagnostic record; no store published"
+}

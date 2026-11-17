@@ -1,0 +1,140 @@
+11-17 08:55:12.556  1000  1000 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:55:12.562  1000  1000 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:55:12.563  1000  1000 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:55:12.567  1000  1000 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:55:12.567  1000  1000 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:55:12.567  1000  1000 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:55:12.567  1000  1000 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 08:55:12.567  1000  1000 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:55:12.568  1000  1000 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:55:12.569  1000  1000 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:55:12.571  1000  1000 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:55:12.572  1000  1000 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:55:12.573  1000  1000 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:55:12.574  1000  1000 I YouTubeHideAds: Ad component hook installed
+11-17 08:55:12.574  1000  1000 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:55:12.575  1000  1000 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:55:12.575  1000  1000 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:55:12.575  1000  1000 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:55:12.597  1000  1000 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-17 08:55:12.791  1000  1000 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-17 08:55:12.916  1000  1000 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:55:14.430  1000  1000 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:55:26.315  1000  1000 I YouTubeHideAds: Music Premium UI hidden: Get Music Premium
+11-17 08:55:29.073  1000  1000 I YouTubeHideAds: Music Premium UI hidden: membership label
+11-17 08:55:29.207  1000  1000 I YouTubeHideAds: Settings section attached
+11-17 08:55:40.850  1523  1523 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:55:40.856  1523  1523 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:55:40.856  1523  1523 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:55:40.860  1523  1523 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:55:40.860  1523  1523 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:55:40.861  1523  1523 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:55:40.861  1523  1523 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 08:55:40.861  1523  1523 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:55:40.861  1523  1523 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:55:40.862  1523  1523 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:55:40.865  1523  1523 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:55:40.865  1523  1523 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:55:40.866  1523  1523 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:55:40.867  1523  1523 I YouTubeHideAds: Ad component hook installed
+11-17 08:55:40.867  1523  1523 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:55:40.868  1523  1523 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:55:40.868  1523  1523 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:55:40.868  1523  1523 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:55:40.888  1523  1523 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 0, 1, 1, 1, 0, 1]
+11-17 08:55:41.211  1523  1523 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:55:53.379  1523  1523 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:56:05.949  1523  1523 I YouTubeHideAds: Settings section attached
+11-17 08:56:20.059  2460  2460 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:56:20.065  2460  2460 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:56:20.065  2460  2460 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:56:20.069  2460  2460 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:56:20.069  2460  2460 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:56:20.070  2460  2460 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:56:20.070  2460  2460 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 08:56:20.070  2460  2460 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:56:20.070  2460  2460 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:56:20.072  2460  2460 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:56:20.074  2460  2460 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:56:20.075  2460  2460 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:56:20.076  2460  2460 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:56:20.077  2460  2460 I YouTubeHideAds: Ad component hook installed
+11-17 08:56:20.077  2460  2460 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:56:20.078  2460  2460 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:56:20.078  2460  2460 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:56:20.078  2460  2460 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:56:20.099  2460  2460 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-17 08:56:20.360  2460  2460 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:56:21.513  2460  2460 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:56:35.313  2460  2460 I YouTubeHideAds: Settings section attached
+11-17 08:56:46.406  3670  3670 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:56:46.412  3670  3670 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:56:46.412  3670  3670 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:56:46.416  3670  3670 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:56:46.416  3670  3670 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:56:46.417  3670  3670 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:56:46.417  3670  3670 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 08:56:46.417  3670  3670 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:56:46.417  3670  3670 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:56:46.419  3670  3670 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:56:46.421  3670  3670 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:56:46.422  3670  3670 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:56:46.423  3670  3670 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:56:46.423  3670  3670 I YouTubeHideAds: Ad component hook installed
+11-17 08:56:46.424  3670  3670 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:56:46.424  3670  3670 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:56:46.424  3670  3670 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:56:46.424  3670  3670 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:56:46.445  3670  3670 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-17 08:56:46.647  3670  3670 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-17 08:56:46.786  3670  3670 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:56:48.128  3670  3670 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:56:59.080  3670  3670 I YouTubeHideAds: Music Premium UI hidden: Get Music Premium
+11-17 08:57:01.891  3670  3670 I YouTubeHideAds: Music Premium UI hidden: membership label
+11-17 08:57:02.016  3670  3670 I YouTubeHideAds: Settings section attached
+11-17 08:57:41.622  6827  6827 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:57:41.628  6827  6827 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:57:41.628  6827  6827 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:57:41.633  6827  6827 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:57:41.633  6827  6827 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:57:41.634  6827  6827 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:57:41.634  6827  6827 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 08:57:41.634  6827  6827 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:57:41.634  6827  6827 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:57:41.640  6827  6827 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:57:41.645  6827  6827 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:57:41.647  6827  6827 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:57:41.648  6827  6827 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:57:41.649  6827  6827 I YouTubeHideAds: Ad component hook installed
+11-17 08:57:41.649  6827  6827 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:57:41.650  6827  6827 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:57:41.650  6827  6827 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:57:41.650  6827  6827 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:57:41.711  6827  6827 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-17 08:57:41.993  6827  6827 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-17 08:57:42.041  6827  6827 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:57:42.973  6827  6827 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:57:42.985  6827  6827 I YouTubeHideAds: Music video ad activation suppressed
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 08:57:59.811  7372  7372 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 08:57:59.813  7372  7372 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 08:57:59.814  7372  7372 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 08:57:59.815  7372  7372 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 08:57:59.815  7372  7372 I YouTubeHideAds: Ad component hook installed
+11-17 08:57:59.816  7372  7372 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 08:57:59.816  7372  7372 I YouTubeHideAds: Music video ad activation hook installed
+11-17 08:57:59.816  7372  7372 I YouTubeHideAds: Music ad hook discovery finished
+11-17 08:57:59.816  7372  7372 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 08:57:59.838  7372  7372 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-17 08:58:00.060  7372  7372 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-17 08:58:00.108  7372  7372 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 08:58:00.964  7372  7372 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 08:58:00.976  7372  7372 I YouTubeHideAds: Music video ad activation suppressed
+11-17 08:57:59.798  7372  7372 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 08:57:59.804  7372  7372 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 08:57:59.805  7372  7372 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 08:57:59.809  7372  7372 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;

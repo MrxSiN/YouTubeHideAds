@@ -6,8 +6,8 @@
     "compiler": "compiler/bootstrap/windows/xaxc-windows-x86_64.exe",
     "compiler_sha256": "ae43e32f21ccd2d7e333ebf30a114d329ca5b5912c388ae167c24d12d2e9f665",
     "production_ledger": "0035",
-    "reason": "Move to latest main and its released native Windows seed for build 159. Native verification, transaction replay, APK build and physical Music/YouTube acceptance use this exact seed.",
-    "latest_main_checked": "991ef7a6f6cff1efe825401f0365ca8be5054bd9"
+    "reason": "Retain the exact build 159 compiler commit for reproducibility of build 160 native edits, replay and APK builds. Latest main checked on 2026-11-17 is a03a427; only XAX_HANDOFF.md and XAX_STATE.md changed since this pin. Compiler, SDK and native seed are byte-identical. No compiler or native ABI migration.",
+    "latest_main_checked": "a03a4274bbe31c01992898bf807f13930dfba596"
   },
   "xax_mcp": {
     "repository": "https://github.com/MrxSiN/XAX-MCP",

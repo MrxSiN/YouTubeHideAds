@@ -1,4 +1,10 @@
-Current canonical source is development build **1.3.0/code 159**, adding Music background playback
+Current canonical source is development build **1.3.0/code 160**, extending Music Premium controls
+through the shared BF/XAX architecture. Store SHA-256:
+`4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c`.
+[Native transactions](transactions/music-premium-20261116/README.md) and
+[build/device evidence](../../evidence/music_premium_20261116/README.md) identify the exact source.
+
+Previous build **1.3.0/code 159** added Music background playback
 through the existing BF gate, XAX discovery and shared settings scaffold. Store SHA-256:
 `a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6`.
 [Native transactions](transactions/music-background-20261116/README.md) and

@@ -1,5 +1,14 @@
 # Changelog
 
+## Development build 160 (1.3.0, unreleased) — 2026-11-16
+
+- Extend Music's **Premium promotions** switch to the Upgrade tab, Get Music Premium account
+  entry, membership label and reference promotion mealbar. Restart Music after changing it.
+- Reuse shared settings, BF authorization and native XAX discovery/hook architecture.
+  [Scope and limits](docs/MUSIC_PREMIUM_PROMOTIONS.md) include the separate unsupported
+  audio/video-switch trial dialog; this does not unlock paid entitlements.
+- [Build and physical-device evidence](evidence/music_premium_20261116/README.md).
+
 ## Development build 159 (1.3.0, unreleased) — 2026-11-16
 
 - Add **Background playback** to YouTube Music's shared settings page under Player controls,

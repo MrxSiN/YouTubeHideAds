@@ -1,5 +1,8 @@
 # YouTube Music ads
 
+Build 160 extends the existing Premium switch to native Upgrade/account/membership/reference-mealbar
+surfaces. [Premium controls, architecture and limits](MUSIC_PREMIUM_PROMOTIONS.md).
+
 Build 159 adds [Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) to the same shared settings
 page under Player controls. The ad master controls only ads. The build 158 description and its
 dated evidence below describe the earlier ads-only increment.

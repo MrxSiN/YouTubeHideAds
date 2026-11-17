@@ -21,6 +21,7 @@ Dated evidence describes its named build, not the current checkout.
 | [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
 | [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
 | [YouTube Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) | Independent playback switch, structural restriction hooks and shared BF policy |
+| [YouTube Music Premium promotions](MUSIC_PREMIUM_PROMOTIONS.md) | Upgrade/account/membership/mealbar controls and explicit limits |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |
@@ -77,6 +78,10 @@ Music's build 159 switch follows the same preference design in Music's private s
 after changing it. [Music implementation and limits](MUSIC_BACKGROUND_PLAYBACK.md).
 
 ## Source and contracts
+
+Music build 160 extends its existing **Premium promotions** switch to native Upgrade, account,
+membership and reference-mealbar surfaces. It stays on by default and follows Hide ads;
+restart Music after changing it. [Coverage and limits](MUSIC_PREMIUM_PROMOTIONS.md).
 
 [Canonical XAX source](../source/xax/README.md) · [Static branding](../source/branding/README.md)
 

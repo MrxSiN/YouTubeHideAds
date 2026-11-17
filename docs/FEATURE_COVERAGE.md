@@ -1,5 +1,11 @@
 # Feature coverage
 
+Development build **160** implements Music Upgrade/account/membership/reference-mealbar promotion
+controls under the existing Premium switch. [Dated evidence](../evidence/music_premium_20261116/README.md)
+separates physical Upgrade/account on/off/master checks, packaged checks and unobserved surfaces.
+The newer audio/video-switch trial BottomSheet remains unsupported; this is not full Morphe parity.
+[Design and scope](MUSIC_PREMIUM_PROMOTIONS.md).
+
 Development build **159** adds Music background playback on the same physical Music **9.45.51**
 environment. Twelve new packaged checks, independent on/off persistence, ad-master independence,
 ordinary Home/screen-off playback, a Baby Shark/Pinkfong screen-off case and native pause behavior

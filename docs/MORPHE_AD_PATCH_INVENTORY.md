@@ -1,5 +1,9 @@
 # Morphe behavior-reference inventory
 
+Build 160 additionally adapts Music native Upgrade, account, membership and reference-mealbar
+controls at the same `44031c5` commit. [Implementation and limits](MUSIC_PREMIUM_PROMOTIONS.md);
+the new audio/video trial BottomSheet remains unsupported.
+
 The Music pass additionally inspected `HideAdsPatch.kt`, its `Fingerprints.kt` and Music
 `components/AdsFilter.java` at `44031c561ea048c8f196877f30a49c13bfd6afb6`. Runtime activation, bounded
 components and fullscreen filtering are adapted to XAX/BF; native account/settings Premium labels
