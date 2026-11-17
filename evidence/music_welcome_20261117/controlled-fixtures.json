@@ -1,0 +1,71 @@
+{
+  "status": "EXECUTED",
+  "proof": "controlled host-layout fixtures with test-only click listeners; not a naturally served offer",
+  "cases": [
+    {
+      "name": "enabled-promo",
+      "pid": "22942",
+      "layout": "promo",
+      "automatically_cancelled": true,
+      "automatic_cancel_callbacks": 1,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "enabled-onboarding",
+      "pid": "23274",
+      "layout": "onboarding",
+      "automatically_cancelled": true,
+      "automatic_cancel_callbacks": 1,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "excluded-education",
+      "pid": "23562",
+      "layout": "education",
+      "automatically_cancelled": false,
+      "automatic_cancel_callbacks": 0,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "unmatched-layout-identity",
+      "pid": "23908",
+      "layout": "ordinary",
+      "automatically_cancelled": false,
+      "automatic_cancel_callbacks": 0,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "premium-off-promo",
+      "pid": "24836",
+      "layout": "promo",
+      "automatically_cancelled": false,
+      "automatic_cancel_callbacks": 0,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "master-off-promo",
+      "pid": "25583",
+      "layout": "promo",
+      "automatically_cancelled": false,
+      "automatic_cancel_callbacks": 0,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    },
+    {
+      "name": "restored-promo",
+      "pid": "26628",
+      "layout": "promo",
+      "automatically_cancelled": true,
+      "automatic_cancel_callbacks": 1,
+      "purchase_callbacks": 0,
+      "account_interaction_after_cleanup": true
+    }
+  ],
+  "acceptance": "passed",
+  "all_six_settings_left_on": true
+}

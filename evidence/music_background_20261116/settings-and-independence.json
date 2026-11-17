@@ -1,0 +1,37 @@
+{
+  "status": "EXECUTED",
+  "checks": [
+    "Background playback defaults on in the shared native settings page",
+    "Background playback off persisted across restart",
+    "Disabled ordinary playback pauses on Home with no background authorization",
+    "Background enabled persists independently while ad master is off",
+    "Ad master off: background authorization and Home PLAYING observed"
+  ],
+  "samples": {
+    "disabled-ordinary-foreground": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 249883173
+    },
+    "disabled-home": {
+      "state": 2,
+      "position": 829,
+      "speed": 1.0,
+      "updated": 249884982
+    },
+    "enabled-ordinary-master-off-foreground": {
+      "state": 3,
+      "position": 39,
+      "speed": 1.0,
+      "updated": 249923821
+    },
+    "master-off-home": {
+      "state": 3,
+      "position": 39,
+      "speed": 1.0,
+      "updated": 249923821
+    }
+  },
+  "note": "The following screen-off phase of this earlier driver was interrupted by a wake-state assertion. Screen-off acceptance is recorded separately in playback-final-result.json."
+}

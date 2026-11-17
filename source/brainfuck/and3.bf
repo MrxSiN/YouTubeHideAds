@@ -6,7 +6,7 @@
 # @cells 0=accumulator; 1=next input; 2=product and action; all 8bit wrapping
 # @invariant pointer returns to cell 0 after each AND; cells 0 and 2 are always Boolean before emission
 # @safety host MUST validate all input bits; invalid or missing inputs MUST fail closed; no host action without valid ABI
-# @note callers: Premium upsell, Shorts ad slot, Playables, fullscreen swipe, feed section, AI channel, original audio, background playback
+# @note callers: Premium upsell, Shorts ad slot, Playables, fullscreen swipe, feed section, AI channel, original audio, background playback, YouTube Music ad activation and components
 
 # @section seed
 # A single input byte decides whether policy evaluation can proceed. No feature constants here.

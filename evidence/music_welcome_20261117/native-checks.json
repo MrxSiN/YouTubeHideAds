@@ -1,0 +1,19 @@
+{
+  "status": "EXECUTED",
+  "XAX_REQUIRE_NATIVE": "1",
+  "baseline_functions": 545,
+  "production_functions": 563,
+  "baseline_function_cids_retained": 535,
+  "only_expected_direct_edits_and_content_addressed_ancestors_changed": true,
+  "direct_existing_edits": [
+    "Music startup",
+    "diagnostic version",
+    "Music Premium summary"
+  ],
+  "main_thread_helper_cid": "53d2bda9f177b44f7b2eeef7a5104c977ea51d17154a032905867b979bdb03e6",
+  "main_thread_helper_has_five_platform_only_nodes_and_no_getstatic": true,
+  "fixture_changes_only_startup_wrapper_and_content_addressed_ancestors": true,
+  "production_function_cids_retained_in_fixture": 561,
+  "transaction_and_fixture_replay": "byte identical; native verification passed",
+  "stale_root": "status 1 and structured diagnostic"
+}

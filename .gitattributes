@@ -1,2 +1,4 @@
 *.xax binary
 *.png binary
+*.edit binary
+*.batch text eol=lf

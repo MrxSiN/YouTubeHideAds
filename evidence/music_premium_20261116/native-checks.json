@@ -1,0 +1,42 @@
+{
+  "status": "EXECUTED",
+  "XAX_REQUIRE_NATIVE": "1",
+  "native_authority": "Pinned native Windows PE compiler; SDK limited to inspection and declaration/metadata serialization",
+  "baseline_functions": 508,
+  "final_functions": 545,
+  "baseline_function_cids_retained": 498,
+  "changed_function_cids": [
+    "1452fe5367962cb8545a04c04b82820b8273bf225982eb879f86140b172ae3b5",
+    "3b6220f8e8da8126772501e49cb20603752c52e7f553a98b93b760ed2632b67c",
+    "407511af2a587b5bf58d8c8c187f59c2b07235600bab3a2ba260b6fdfabe478a",
+    "72ee4983ae3dd7b25a938684cf7d1a68256216b356ac0503004e6f51d6533e3f",
+    "7ed5f1e404dd98695a76c3f21ff1cfe42df497c4e3e7cb3651873fd52fbcbcb4",
+    "869d2998ef27086c1dae2e8dd27c3aa0585fd14e0715411d3f01174250c9f7d1",
+    "a17b91fbef8ca499fc14c68f4e25aa590f343530b7b5edc7c96c87e7919303d4",
+    "ab924f7e0b1b322349e25a29a085e6c01f8471759c478a758140378711ba1334",
+    "b78b442b82e0ab94094ce13b1f4168b84f89a6d03e81c2fc612d32f1405a3435",
+    "ef6d50c68d59f6f8515144699084388efac1b1c792e8c02dca8d8da31e2f30b9"
+  ],
+  "directly_edited_roles": [
+    "Music startup",
+    "shared diagnostic version literal",
+    "Music Premium summary fallback"
+  ],
+  "only_direct_edits_and_content_addressed_ancestors_changed": true,
+  "shared_helper_cids_preserved": {
+    "gate": "129470cd497a6205a51b15bf64bc702c1fe0146fd0a9e8b28b85da1c0f3f15e5",
+    "logger": "640b39de06f8027a59c38680ea26d7bf8819680b195716189d71a9b70618b3d7",
+    "hook": "8601dde99b35033ef0ace4a9aef146927e951579f38a81b2ae144c7818851d57",
+    "method": "3883fa31c9a9dce2081b2ebf0677b780a3bc4779959d19c1ae7495f47c2499cc",
+    "methods": "50a31f48c6f4b94ca4bcff73178ae5c855865374bf94bfb8f1bcbce8d9e1585d",
+    "invokes": "cbfa8ca4ae1b559f93edefdf690b00c5ef2b2cc36a6af9f455045848e75ffd23",
+    "callers": "cb9bc189684aadd230893040534fa9db3e6269bf5fe88cefc91f047e6fa8811d",
+    "deopt_callers": "f4e48ad659e36542c4a0d53b39c02d542c7870fe0115f5eeedb46236cf2d8bef",
+    "class": "c14822d2350f8ca4490b563ef4643de3238f6882b466b2083cbcefb4491a267c",
+    "fields": "25c22be4ac14029028577f0f89f2f7406bdb1d432cb50be48d208fed4fb98a9c",
+    "field": "4f79ca8fc56b62cde11f21ee9949630b5ab4ccbf43198e17d6655deb85db1114"
+  },
+  "transaction_replay": "byte identical",
+  "stale_root": "status 1 with structured XAX.WORKSPACE.STALE_ROOT diagnostic",
+  "failure_injection": "NOT RUN: guarded normal startup exercised; ambiguous-role and exception branches inspected in native graph"
+}

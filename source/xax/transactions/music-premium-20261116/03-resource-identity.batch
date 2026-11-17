@@ -1,0 +1,22 @@
+R f9b5ee50a1de545e248ea1e1e393c4d3d38b8de5395103021cbdd8800104a0af
+F534
+define @named_resource_identity
+(T0,T1)->(T3)
+B0(P0:T0,P1:T1)
+N0 call.foreign entity=94c8248ccbdb0cacea4fa4e02ad3e23eba7e43a12ecc695f2d8c7a2f078ce491 P0 -> T2
+N1 call.foreign entity=adec2cea765c0ee546a77729ec66e35d09d667ee216b9bf9573f8a72b42510f2 -> T1
+N2 call.foreign entity=5830c581d418a97ce3087d853f9b8433ae2f04e012e862ff099982f2c97af3d0 -> T1
+N3 call.foreign entity=cc8084304efe61944f5a5806195624bfe1808d7791ae04c40ae3c9cce6b87e3a N0 P1 N1 N2 -> T4
+N4 constant 0 -> T4
+N5 int.compare N4 N3 -> T3 [3]
+N6 call.foreign entity=d4405c25bbc6fe0e5b1c111dc1613fad30d63ee2751f324a2692b20b6235d26b P0 -> T4
+N7 int.compare N6 N3 -> T3 [1]
+N8 bit.and N5 N7 -> T3
+ret N8
+T0 form2 8cf05c1ee2489e465ea16fb2b3f806510ec31613e4e75059b0fbaa03433ed39e
+T1 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T2 form2 f87b4c1696f3c51c501c0fcc83d7c458b75a4dd96dce2a0a4485a2e41e2654a9
+T3 bits1
+T4 bits32
+end
+replace F534 @named_resource_identity

@@ -1,6 +1,34 @@
+Current canonical source is development build **1.3.0/code 161**, adding native Music welcome
+cancellation through the shared BF gate and typed XAX hooks. Store SHA-256:
+`8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175`.
+[Native transactions](transactions/music-welcome-20261117/README.md) and
+[scoped evidence](../../evidence/music_welcome_20261117/README.md) identify the exact source.
+
+Previous build **1.3.0/code 160** extended Music Premium controls
+through the shared BF/XAX architecture. Store SHA-256:
+`4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c`.
+[Native transactions](transactions/music-premium-20261116/README.md) and
+[build/device evidence](../../evidence/music_premium_20261116/README.md) identify the exact source.
+
+Previous build **1.3.0/code 159** added Music background playback
+through the existing BF gate, XAX discovery and shared settings scaffold. Store SHA-256:
+`a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6`.
+[Native transactions](transactions/music-background-20261116/README.md) and
+[build/device evidence](../../evidence/music_background_20261116/README.md) identify the exact source.
+Music has independent ad and player settings; YouTube keeps its existing feature startup.
+
+The following source history describes earlier development builds.
+
 # XAX source
 
-Canonical source is development build **1.3.0/code 157** (store SHA-256 `41c36cb4bc0db56b523d315e21eb624005968c50e8b4ea76a31a2254cabfbee7`, 473 functions in the carrier, the same 11 native paths; the first 157 store, `d94bccd9...b722` with 474 functions, was replaced the same day by a rebuild that fixes the More videos sheet swipe and trims runtime work). Build 157 merges the settings into one page and adds default speed and quality, captions, Return YouTube Dislike, player tweaks, the blacklist and DeArrow thumbnails. [Evidence](../../evidence/release_1_3_0_20261114/README.md).
+Canonical source is development build **1.3.0/code 158**, adding YouTube Music Hide Ads through the
+same BF policies, structural discovery and settings scaffold used by YouTube. Store SHA-256:
+`1286f3498052ff3f94a23e54f2247190503d52b2e997a6e5b82ba4ad482051e5`.
+Both hosts are declared in module scope; Music starts only its ad features.
+[Native transaction records](transactions/music-ads-20261116/README.md) and
+[build/device evidence](../../evidence/music_ads_20261116/README.md) record the exact tested identities.
+
+Before it, canonical source was development build **1.3.0/code 157** (store SHA-256 `41c36cb4bc0db56b523d315e21eb624005968c50e8b4ea76a31a2254cabfbee7`, 473 functions in the carrier, the same 11 native paths; the first 157 store, `d94bccd9...b722` with 474 functions, was replaced the same day by a rebuild that fixes the More videos sheet swipe and trims runtime work). Build 157 merges the settings into one page and adds default speed and quality, captions, Return YouTube Dislike, player tweaks, the blacklist and DeArrow thumbnails. [Evidence](../../evidence/release_1_3_0_20261114/README.md).
 Before it, the canonical source was development build **1.2.1/code 156** (store SHA-256 `9e2e191a713cea7efea5caabe02cd1bb979cd7033e5786aeb2a68d4eece64c44`, 350 functions in the exported carrier, the same 11 native paths). Build 156 fixes the fullscreen live chat swipe, rebuilds live-Short skipping on the player's live state and adds Remember live stream position. [Evidence](../../evidence/release_1_2_1_20261114/README.md).
 Before it, the canonical source was release **1.2.0/code 155** (store SHA-256 `b292847eeab9cfde0571f91f79c6962eee7d401f784dc69e1ae9b2e3b2b6b12c`), with 354 functions and the
 same 11 native paths. Build 154 fixed two YouTube 21.43 discovery filters and the display name; build 155

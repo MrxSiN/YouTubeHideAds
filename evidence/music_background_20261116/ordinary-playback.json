@@ -1,0 +1,54 @@
+{
+  "status": "EXECUTED",
+  "checks": [
+    "Ordinary playback: Home and verified screen-off remain PLAYING; paused native position advances over 10 seconds; returning foreground preserves pause"
+  ],
+  "samples": {
+    "ordinary-home": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 250204428
+    },
+    "ordinary-screen-off-0": {
+      "state": 3,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 250204428
+    },
+    "ordinary-paused": {
+      "state": 2,
+      "position": 29051,
+      "speed": 1.0,
+      "updated": 250233698
+    },
+    "ordinary-foreground-paused": {
+      "state": 2,
+      "position": 29212,
+      "speed": 1.0,
+      "updated": 250238640
+    }
+  },
+  "screen_off_attempts": [
+    {
+      "name": "ordinary-screen-off",
+      "attempt": 0,
+      "before": "Dozing",
+      "after": "Dozing",
+      "media": {
+        "state": 3,
+        "position": 0,
+        "speed": 1.0,
+        "updated": 250204428
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "name": "ordinary-final",
+      "pid": "27972"
+    }
+  ],
+  "acceptance": "passed for ordinary playback",
+  "capture_note": "Full streamed PID-scoped logs retain startup authorization; a later logcat ring query had already lost those earlier lines."
+}

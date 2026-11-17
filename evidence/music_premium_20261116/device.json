@@ -1,0 +1,12 @@
+{
+  "status": "EXECUTED",
+  "device_date": "2026-11-17",
+  "physical_device": "Pixel 8 Pro",
+  "android": "17",
+  "api": "37",
+  "music": "9.45.51",
+  "youtube": "21.45.88",
+  "installed_development_package": "io.github.mrxsin.youtubehideads.musicdev",
+  "installed_apk_sha256": "4616fb869c3f2f5b9ef1163431eb9c161e5d3e3f5e05c6a3c16ae7a54351c367",
+  "installed_apk_matches_build": true
+}

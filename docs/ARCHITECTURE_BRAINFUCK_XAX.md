@@ -1,5 +1,31 @@
 # Architecture
 
+Build 161 extends the shared Music Premium gate to native welcome offers. A bounded structural
+binding hook retains a candidate weakly and posts one native UI callback. It revalidates layout,
+attachment, ancestry, controls and BF authorization before invoking the host cancel handler.
+Separate welcome readiness isolates discovery/callback failure from existing Music features.
+[Design](MUSIC_PREMIUM_PROMOTIONS.md).
+
+Development build 160 extends Music's master-gated Premium switch to native account, membership,
+navigation and mealbar roles. A separate holder, structural relationships, bounded discovery,
+weak view bookkeeping and main-thread effects share the existing BF gate and guarded Music startup.
+Host-only Material classes are resolved with the Music ClassLoader through reflection.
+[Promotion design](MUSIC_PREMIUM_PROMOTIONS.md).
+
+Development build 159 adds Music background eligibility and kids-policy hooks to Music's existing
+startup DexKit session. It shares YouTube's unchanged typed AND3 gate, preference getter, protective
+hook installer, bounded caller deoptimization and settings rows. A separate holder publishes attached
+Music Context and complete-install readiness; the independent default-on preference is read on each
+eligible call. Music owns all playback and media-session actions. [Music background design](MUSIC_BACKGROUND_PLAYBACK.md).
+Background discovery runs inside the same synchronous completed-future startup guard used by
+YouTube. Unexpected failures clear its readiness and preserve the following ad/settings startup;
+the shared DexKit session remains on its owning thread.
+
+Development build 158 adds a separate Music host startup that shares initialization, ad discovery,
+native BF policies and the settings scaffold with YouTube. Music exposes ads only; its package-local
+preferences are read from an attached Application before UI creation. YouTube's existing feature
+startup remains separate. [Music architecture and scope](MUSIC_ADS.md).
+
 Development build 132 changes presentation only. The settings entry is a section built from
 YouTube's own group-title and icon-row layouts, attached above Account and moved with the list's
 scroll offset. Every module page shares one scaffold, heading and row vocabulary. Startup install,

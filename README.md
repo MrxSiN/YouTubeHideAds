@@ -31,6 +31,12 @@
 
 The new extras are off by default. Every setting and its default is listed in [docs](docs/README.md#settings-and-defaults).
 
+Development source also adds **YouTube Music ad hiding, Premium controls and background playback**, with its own
+settings page and independent switches. See [Music ad support](docs/MUSIC_ADS.md),
+[background playback](docs/MUSIC_BACKGROUND_PLAYBACK.md), and
+[Premium controls and limits](docs/MUSIC_PREMIUM_PROMOTIONS.md). The released 1.3.0 APK
+predates this addition; Music SponsorBlock is not included in this increment.
+
 ## Install
 
 1. Get the APK from [Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads).

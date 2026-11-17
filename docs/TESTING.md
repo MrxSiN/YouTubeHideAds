@@ -1,5 +1,31 @@
 # Testing
 
+Build 161 adds twelve welcome startup checks and a separate native host-layout fixture carrier.
+Seven controlled cases exercise unchanged production scheduling/cancel functions with controlled
+listeners. The final APK excludes that carrier; all four DEX payloads match production, and final
+Music/YouTube checks run again after replacing the fixture APK. Native controller/server delivery
+remains a separate unobserved positive. [Scoped evidence](../evidence/music_welcome_20261117/README.md).
+
+Build 160 adds fifteen packaged Music Premium checks: all eight native AND3 inputs and seven
+navigation enum names. Device acceptance distinguishes Upgrade/account positives, switch-off and
+master-off controls from unobserved mealbar presentation. YouTube regression uses the same
+production DEX in a temporary YouTube-only development package.
+[Requirements](../testdata/music_premium_vectors.json) ·
+[Execution evidence](../evidence/music_premium_20261116/README.md).
+
+Music build 159 adds 12 packaged background checks: all eight native Boolean combinations and four
+host classifier cases, bringing Music startup coverage to 108 cases with the existing 96 ad cases.
+The hooks share the runtime classifier and unchanged YouTube BF gate used by those checks.
+[Fixtures](../testdata/music_background_playback_vectors.json) keep forced integration requirements
+separate from [actual device evidence](../evidence/music_background_20261116/README.md), including
+disabled behavior, ad-master independence, ordinary/kids screen-off playback and native pause.
+
+Music build 158 adds 26 packaged startup cases: eight native AND3 combinations, six Premium path
+cases, six general-ad path cases and six own-payload compact-banner cases. It also runs the existing
+70 ad checks. [Vectors](../testdata/music_ads_vectors.json) list separate integration requirements;
+their presence does not imply every natural ad surface was delivered.
+[Music device evidence and limitations](../evidence/music_ads_20261116/README.md).
+
 Background playback adds 28 packaged startup checks to the existing 636:
 eight native AND3 inputs, fourteen player-name cases and six scoped experiment cases.
 [Fixtures](../testdata/background_playback_vectors.json) include separate integration acceptance

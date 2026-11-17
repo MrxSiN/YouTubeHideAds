@@ -1,0 +1,22 @@
+{
+  "status": "EXECUTED",
+  "date": "2026-11-17",
+  "model": "Pixel 8 Pro",
+  "android": "17",
+  "api": "37",
+  "music": "9.45.51",
+  "youtube": "21.45.88",
+  "installed_package": "io.github.mrxsin.youtubehideads.musicdev",
+  "installed_apk_sha256": "f5b5d3dd28e106bcb5f079a65c40ef773361d981cdf12e2d2315017a662e1fbc",
+  "six_switches_restored_on": true,
+  "fixture_apk_replaced_with_normal_apk": true,
+  "fixture_mode_key_removed": true,
+  "screen_timeout_restored_ms": "600000",
+  "rotation_restored": "free",
+  "final_media_state": 2,
+  "production_youtube_module_restored": true,
+  "regression_module_removed": true,
+  "naturally_served_welcome_positive": "NOT RUN: offer not served again after prior manual dismissal",
+  "controlled_host_layout_cases_passed": 7,
+  "controller_live_binding_positive": "NOT RUN: fixture directly exercises unchanged production scheduling/cancel functions with controlled listeners"
+}

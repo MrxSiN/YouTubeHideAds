@@ -1,0 +1,34 @@
+{
+  "status": "EXECUTED",
+  "kind": "physical device",
+  "revision": "final guarded startup",
+  "model": "Pixel 8 Pro",
+  "android": "17",
+  "api": 37,
+  "architecture": "arm64-v8a",
+  "framework": "Vector 2.2 / libxposed API 102 (existing accepted environment)",
+  "music_version": "9.45.51",
+  "youtube_version": "21.45.88",
+  "music_policy_cases": 108,
+  "youtube_policy_cases": 664,
+  "youtube_settings_ui_cases": 64,
+  "installed_music_apk_sha256": "efd1e60c0475accfa52a0f875a546153bf612d4f6b94abd164533250f875c3e1",
+  "installed_music_matches_built_test_variant": true,
+  "installed_music_scope": [
+    "com.google.android.apps.youtube.music"
+  ],
+  "final_state": {
+    "all_six_music_switches_on": true,
+    "music_playback_state": {
+      "state": 1,
+      "position": 0,
+      "speed": 1.0,
+      "updated": 251725808
+    },
+    "music_not_playing": true,
+    "production_youtube_module_enabled": true,
+    "temporary_youtube_regression_module_uninstalled": true,
+    "youtube_preferences_unchanged": true,
+    "music_development_module_installed_music_only": true
+  }
+}
