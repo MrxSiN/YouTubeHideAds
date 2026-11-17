@@ -1,0 +1,38 @@
+11-17 23:02:35.996  9368  9368 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 23:02:36.087  9368  9368 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 23:02:36.095  9368  9368 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 23:02:36.139  9368  9368 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 23:02:36.139  9368  9368 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 23:02:36.210  9368  9368 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 23:02:36.210  9368  9368 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 23:02:36.210  9368  9368 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 23:02:36.210  9368  9368 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 23:02:36.225  9368  9368 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 23:02:36.252  9368  9368 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 23:02:36.252  9368  9368 I YouTubeHideAds: Downloads protocol self-check passed (12 cases)
+11-17 23:02:36.261  9368  9368 I YouTubeHideAds: Downloads command hook installed
+11-17 23:02:36.271  9368  9368 I YouTubeHideAds: Downloads offlineability hook installed
+11-17 23:02:36.285  9368  9368 I YouTubeHideAds: Downloads host protobuf parser resolved
+11-17 23:02:36.286  9368  9368 I YouTubeHideAds: Downloads offline response hook installed
+11-17 23:02:36.294  9368  9368 I YouTubeHideAds: Music download current-track hook installed
+11-17 23:02:36.304  9368  9368 I YouTubeHideAds: Downloads policy refresh hooks installed
+11-17 23:02:36.306  9368  9368 I YouTubeHideAds: Downloads plain-stream request hook installed
+11-17 23:02:36.314  9368  9368 I YouTubeHideAds: Downloads activity command router installed
+11-17 23:02:36.315  9368  9368 I YouTubeHideAds: Music welcome offer self-check passed (12 cases)
+11-17 23:02:36.323  9368  9368 I YouTubeHideAds: Music welcome offer binding: Lsug;->d(Lamlw;)V
+11-17 23:02:36.324  9368  9368 I YouTubeHideAds: Music welcome offer hook installed
+11-17 23:02:36.325  9368  9368 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 23:02:36.335  9368  9368 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 23:02:36.347  9368  9368 I YouTubeHideAds: Ad component hook installed
+11-17 23:02:36.356  9368  9368 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 23:02:36.365  9368  9368 I YouTubeHideAds: Music video ad activation hook installed
+11-17 23:02:36.365  9368  9368 I YouTubeHideAds: Music ad hook discovery finished
+11-17 23:02:36.377  9368  9368 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 23:02:36.422  9368  9368 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-17 23:02:36.682  9368  9368 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 23:02:39.116  9368  9368 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 23:02:39.127  9368  9368 I YouTubeHideAds: Music download current-track binding published
+11-17 23:02:39.991  9368  9368 I YouTubeHideAds: Downloads resolver callback active
+11-17 23:02:39.999  9368  9368 I YouTubeHideAds: Downloads command context captured
+11-17 23:02:45.838  9368  9368 I YouTubeHideAds: Settings section attached
+11-17 23:02:54.839  9368  9406 I YouTubeHideAds: Export finished. Files are in your chosen folder.

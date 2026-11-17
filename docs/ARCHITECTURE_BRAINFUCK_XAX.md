@@ -1,5 +1,12 @@
 # Architecture
 
+Development build 162 adds shared native XAX download command, player-response, public-stream,
+external intent and bounded cache-export paths, reusing the existing BF AND3 authorization.
+Each host owns its settings, offline database, scheduler and media lifecycle. Retained player,
+router/logger and view identities are weak. Guarded installers and current-item revalidation
+isolate failures. YouTube Premium header rewriting uses the shared component architecture.
+[Downloads](DOWNLOADS.md) · [Premium controls](YOUTUBE_PREMIUM_PROMOTIONS.md).
+
 Build 161 extends the shared Music Premium gate to native welcome offers. A bounded structural
 binding hook retains a candidate weakly and posts one native UI callback. It revalidates layout,
 attachment, ancestry, controls and BF authorization before invoking the host cancel handler.

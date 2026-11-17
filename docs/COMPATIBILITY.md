@@ -1,5 +1,10 @@
 # Tested compatibility
 
+Build **162** targets YouTube **21.45.88** and Music **9.45.51** on the same physical
+Pixel 8 Pro, Android 17/API 37 and Vector 2.2/API 102 environment. Download endpoint availability
+and public stream clients can change separately from host versions. See [scope](DOWNLOADS.md).
+Other versions and restricted/DRM media remain unverified.
+
 Build **161** extends the same Music 9.45.51 environment with native welcome layout matching.
 Controlled host-layout tests are distinguished from live server/controller delivery. Other Music
 versions remain untested. [Evidence](../evidence/music_welcome_20261117/README.md).

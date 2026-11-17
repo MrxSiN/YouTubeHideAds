@@ -1,4 +1,10 @@
-Current canonical source is development build **1.3.0/code 161**, adding native Music welcome
+Current canonical source is development build **1.3.0/code 162**, adding YouTube Premium header
+removal and shared downloads/export. Store SHA-256:
+`0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037`.
+[Native transactions](transactions/downloads-20261117/README.md) and
+[scoped evidence](../../evidence/downloads_20261117/README.md) identify the exact source.
+
+Previous development build **1.3.0/code 161** added native Music welcome
 cancellation through the shared BF gate and typed XAX hooks. Store SHA-256:
 `8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175`.
 [Native transactions](transactions/music-welcome-20261117/README.md) and

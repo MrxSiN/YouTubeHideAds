@@ -1,5 +1,11 @@
 # Language boundary
 
+Build 162's Premium, download, public request, offline policy, export and Android UI effects are
+native XAX semantic graph transactions. The existing BF AND3 library authorizes effects. Its
+separate controlled cache fixture graph exercises the exporter without adding a fixture to normal
+APKs. External drivers only transport literal native edits, inspect SDK/host declarations, package
+inputs, operate ADB and collect evidence. JSON contracts and documentation are data.
+
 Build 161's welcome discovery, queued callback and typed cancel effect are native XAX graph edits;
 the existing BF gate authorizes the action. Its controlled host-view harness is a separate native
 test graph, with controlled click listeners, and is excluded from final APKs. External drivers only

@@ -1,5 +1,8 @@
 # YouTube Music Premium promotions
 
+Build 162 adds [separate download modes and export](DOWNLOADS.md). The promotion switch described
+here still controls promotional UI; download modes have their own independent settings.
+
 Development build 161 adds the native welcome-offer layout family to the same switch. It invokes
 the matched view's native cancel action after attachment. The audio/video trial BottomSheet remains
 outside this implementation. [Welcome contract](../contracts/music_welcome_inputs.json).

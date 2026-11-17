@@ -1,0 +1,94 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "2a7cefdf657da2c0e0423121159f2bc0c048165c",
+  "baseline_sha256": "8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175",
+  "baseline_root": "6564126c8c89dca70612256cd0b4cf118a51261b527b22a77e58d68ef6c091b0",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037",
+  "output_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-premium.batch",
+      "sha256": "fc3b44996389a3648a287422880c45c4174b5e9129749d55f5d7c0c3ac3d22b3",
+      "input_root": "6564126c8c89dca70612256cd0b4cf118a51261b527b22a77e58d68ef6c091b0",
+      "output_root": "0f81bb694a6aae1eb8fc77f92af3ab049f8e9ba7c1cd25ba6a5493477580c75d",
+      "output_sha256": "e7bc22afc98cc0f659ef1bd091cbb96b4a5501da199eb8dea4ca0141a98f3c88",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-downloads-F314.batch",
+      "sha256": "48ff488ecc3eb2100c12b2f2b913547fbfc387230f7701f39cdacaadef5caf49",
+      "input_root": "0f81bb694a6aae1eb8fc77f92af3ab049f8e9ba7c1cd25ba6a5493477580c75d",
+      "output_root": "964eaa6c92f59aea523b4c4c12d0365df9e3f74046e40efaab4fdc9ad3deda41",
+      "output_sha256": "69348a25714127e6458f6ddbd785979881bdf4b7f90848134c8d45d4527ef087",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-downloads-F456.batch",
+      "sha256": "766ebbd0554802b4b3a214ab1b56e32c31d75dcef2bc2d183bbf7c7e5e1cbf06",
+      "input_root": "964eaa6c92f59aea523b4c4c12d0365df9e3f74046e40efaab4fdc9ad3deda41",
+      "output_root": "ffa1ec2fe664dfc7bed6dd51587c3186c94ab0de85db1572992be70ae0036a29",
+      "output_sha256": "0f8fa5b2e8bce9a89cdb7a0fafe9ff6541e670416148d1e265d18f662c316dec",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "03-downloads-F128.batch",
+      "sha256": "70974fe3e0e8d9db2abe7f9866734bbc2f3bcad1122f0dea152afaf1a0271366",
+      "input_root": "ffa1ec2fe664dfc7bed6dd51587c3186c94ab0de85db1572992be70ae0036a29",
+      "output_root": "c88fc93bd4e5d63495147e4f4dd80917e7ceb3850a6fbc3212dbfd3286cabc1a",
+      "output_sha256": "779421ebff2aead4c28af7535bd7ffd7b77d42b86a9c1cb9a486e4a4a245c32e",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "04-downloads-F22.batch",
+      "sha256": "6109745fe9694b372bbff0e10ee2f0f5b596d19bc0cc1eaa17a7e95a1003aec1",
+      "input_root": "c88fc93bd4e5d63495147e4f4dd80917e7ceb3850a6fbc3212dbfd3286cabc1a",
+      "output_root": "4328a73c242f637bf346157145233c3b29e9a32acc09adc5bacaa36c2b3705d0",
+      "output_sha256": "b132a65531642291fe66053243b7eeb346c4bfff094dc0fc0250cc2af966f4ac",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "05-downloads-F134.batch",
+      "sha256": "bffbe45112ab3989eac9c27c07c82dcaf81de2c65ebf98828a982ad94e585c99",
+      "input_root": "4328a73c242f637bf346157145233c3b29e9a32acc09adc5bacaa36c2b3705d0",
+      "output_root": "dadae0c9ea279af9c562727f8586aa88dc7d931f4acfa7b273bb4e71d4bd52ba",
+      "output_sha256": "42b6f146804634fd35f58fcfe55341c53a2d7e4d11fb0ddeda2eab8581928a91",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "06-metadata.edit",
+      "sha256": "01e38f98d8e6852d5252de04d640e5a38a4f9871aaaa7a5729ee4fbbc238abdd",
+      "input_root": "dadae0c9ea279af9c562727f8586aa88dc7d931f4acfa7b273bb4e71d4bd52ba",
+      "output_root": "8d9ff2c785fd5a5e2889737ca12e2dbcb7980b13d8e0acb64bc526ffbb3b65d5",
+      "output_sha256": "e185b0e46fdea29bdaf3abeaff4b6d46930a68a0014922ffe5c1190384347b4b",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "07-labels.edit",
+      "sha256": "b31663311cd6c379c44e4dd710141df170ca5d2f0aa58b1c6f93dcb756dd82c2",
+      "input_root": "8d9ff2c785fd5a5e2889737ca12e2dbcb7980b13d8e0acb64bc526ffbb3b65d5",
+      "output_root": "7c3e44f5297f70295880b564dc7949a1ca88f6639008bc3c3d047c4232fc67fa",
+      "output_sha256": "d22595fadf471229d4be521345df52721138fa66ce8179ad32029e9ebd6beba6",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "08-repair-router.batch",
+      "sha256": "9af0f252ef0094926c6aaa6dcb80601734362cb7830c5948cb5d29c56a439262",
+      "input_root": "7c3e44f5297f70295880b564dc7949a1ca88f6639008bc3c3d047c4232fc67fa",
+      "output_root": "633446df7a371271f694b89b8c62ecd178c7161783fd30f18a247d365c4bf92a",
+      "output_sha256": "0da5756e1c86839d1e11169aa29e699024bbb0d0671817d34a6320c2a25101b6",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "09-repair-navigation.batch",
+      "sha256": "91105d5b08913aabdb2632da5e9c18cadf407faf20f773c9177a9220a7cb7e50",
+      "input_root": "633446df7a371271f694b89b8c62ecd178c7161783fd30f18a247d365c4bf92a",
+      "output_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+      "output_sha256": "0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: byte-identical final source",
+  "stale_root": "EXECUTED: status 1 and structured stale-root diagnostic"
+}

@@ -1,5 +1,10 @@
 # Feature coverage
 
+Development build **162** adds [YouTube Premium header coverage](YOUTUBE_PREMIUM_PROMOTIONS.md)
+and [shared download modes/export](DOWNLOADS.md). The download guide lists supported entry
+points and bounded export behavior. It does not claim complete Morphe menu parity, restricted/DRM
+content, arbitrary cache revisions or process-death recovery.
+
 Build **161** adds cancellation for Music's native welcome promo layout family. Seven controlled
 host-layout cases cover both accepted layouts, education and unmatched-layout exclusions, Premium
 off, master off and restoration. Final APK startup/settings, playback and YouTube regression are

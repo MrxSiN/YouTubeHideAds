@@ -1,0 +1,28 @@
+{
+  "source": "source/xax/youtubehideads.xax",
+  "host": "com.google.android.youtube",
+  "preference": "premium_promotions",
+  "snapshot": {"length": 9, "premium_index": 7, "master_gated": true},
+  "header": {
+    "root_uri_prefix": "page_header.e",
+    "element_template_path": [1, 168777401, 3, 172035250, 1],
+    "button_view_model": 461054335,
+    "target_browse_id_leaf": "SPunlimited",
+    "preserved_subscribe_view_model": 518912898,
+    "effect": "remove only the immediate action wrapper of the matching button before layout",
+    "maximum_root_bytes": 1048576,
+    "maximum_button_bytes": 65536,
+    "maximum_leaf_bytes": 256,
+    "maximum_depth": 12,
+    "maximum_rewrite_steps": 8192
+  },
+  "own_thumbnail_promotion": {
+    "image_path": [1, 168777401, 5, 413471385, 1, 8179, 2, 1036, 1],
+    "image_marker": "gstatic.com/youtube/img/promos/",
+    "required_own_payload_marker": "SPunlimited",
+    "effect": "existing native EmptyComponent replacement"
+  },
+  "decoder_discovery": "unique private static Field getter using buf and Class.getDeclaredField; related unique static byte-array decoder using Field.get",
+  "unmatched_or_malformed": "preserve the entire original payload",
+  "authorization": "existing Brainfuck AND3 policy and fresh shared Premium snapshot"
+}

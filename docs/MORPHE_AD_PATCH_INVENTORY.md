@@ -1,5 +1,10 @@
 # Morphe behavior-reference inventory
 
+Build 162 adapts YouTube Premium header/own-thumbnail behavior and shared YouTube/Music downloads
+and export to XAX/BF from Morphe `31234a8465683a389bcfba25ad636fd1cd38fd02`.
+[Premium coverage](YOUTUBE_PREMIUM_PROMOTIONS.md) · [Downloads and explicit limits](DOWNLOADS.md).
+These additions do not establish complete Morphe patch parity.
+
 Build 160 additionally adapts Music native Upgrade, account, membership and reference-mealbar
 controls at the same `44031c5` commit. [Implementation and limits](MUSIC_PREMIUM_PROMOTIONS.md);
 the new audio/video trial BottomSheet remains unsupported.

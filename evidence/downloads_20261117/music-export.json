@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTED",
+  "source": "real Music native download, clear cache key type 0",
+  "bytes": 3449447,
+  "sha256": "51aa762a3254bcbad8813d2badff2f301ed0127a61643a0ab16f387c883e6394",
+  "matches_original_plain_stream": true,
+  "tracks": [
+    {
+      "duration_seconds": 213.0895238095238,
+      "handler": "soun"
+    }
+  ],
+  "output_count": 1
+}

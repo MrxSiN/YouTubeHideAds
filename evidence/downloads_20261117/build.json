@@ -1,0 +1,143 @@
+{
+  "status": "EXECUTED",
+  "development_version": "1.3.0 / code 162, unreleased",
+  "source_sha256": "0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037",
+  "source_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+  "transactions": "../../source/xax/transactions/downloads-20261117/manifest.json",
+  "unsigned_production_apk": {
+    "file": "YouTubeHideAds-162-unsigned.apk",
+    "sha256": "d02df34bc87db6b0b228939c89d7635cd0ef14a90285cb12b737d111d2e35534",
+    "release_signed": false
+  },
+  "device_apks": {
+    "music": {
+      "file": "YouTubeHideAds-music-162.apk",
+      "sha256": "17d5f7f5fd691a61fbc354d5cd12b693598a8bdcde6f1c88e05f08834b8fb7e4",
+      "package": "io.github.mrxsin.youtubehideads.musicdev",
+      "version_code": 43,
+      "release_signed": false
+    },
+    "regression": {
+      "file": "YouTubeHideAds-regression-162.apk",
+      "sha256": "e71656060ffa189968f7572fbcd42231eb720f023624f380c5d5387a22001ce2",
+      "package": "io.github.mrxsin.youtubehideads.regressiondev",
+      "version_code": 17,
+      "release_signed": false
+    }
+  },
+  "variant_payload_comparison": {
+    "music": {
+      "all_dex_equal": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex"
+      ],
+      "all_native_libraries_equal": [
+        "lib/arm64-v8a/libad_component.so",
+        "lib/arm64-v8a/libad_fullscreen.so",
+        "lib/arm64-v8a/libad_panel.so",
+        "lib/arm64-v8a/liband3.so",
+        "lib/arm64-v8a/libbrainfuckc_bridge.so",
+        "lib/arm64-v8a/libdexkit.so",
+        "lib/arm64-v8a/libsettings_snapshot.so",
+        "lib/arm64-v8a/libsponsor_settings.so",
+        "lib/arm64-v8a/libsponsor_skip_pipeline.so",
+        "lib/arm64-v8a/libsponsor_time_window.so",
+        "lib/arm64-v8a/libsuppress_video_slot.so"
+      ],
+      "all_static_resources_equal": [
+        "res/drawable/ic_module_foreground.xml",
+        "res/drawable/ic_sponsorblock.xml",
+        "res/drawable/sb_card.xml",
+        "res/drawable/sb_handle.xml",
+        "res/drawable/sb_slider_thumb.xml",
+        "res/drawable/sb_slider_track.xml",
+        "res/drawable/swipe_hud.xml",
+        "res/drawable/swipe_track.xml",
+        "res/layout/sb_slider.xml",
+        "res/mipmap-anydpi-v26/ic_module.xml",
+        "res/raw/morphe_notice.txt"
+      ],
+      "download_fixture_marker_absent": true
+    },
+    "regression": {
+      "all_dex_equal": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex"
+      ],
+      "all_native_libraries_equal": [
+        "lib/arm64-v8a/libad_component.so",
+        "lib/arm64-v8a/libad_fullscreen.so",
+        "lib/arm64-v8a/libad_panel.so",
+        "lib/arm64-v8a/liband3.so",
+        "lib/arm64-v8a/libbrainfuckc_bridge.so",
+        "lib/arm64-v8a/libdexkit.so",
+        "lib/arm64-v8a/libsettings_snapshot.so",
+        "lib/arm64-v8a/libsponsor_settings.so",
+        "lib/arm64-v8a/libsponsor_skip_pipeline.so",
+        "lib/arm64-v8a/libsponsor_time_window.so",
+        "lib/arm64-v8a/libsuppress_video_slot.so"
+      ],
+      "all_static_resources_equal": [
+        "res/drawable/ic_module_foreground.xml",
+        "res/drawable/ic_sponsorblock.xml",
+        "res/drawable/sb_card.xml",
+        "res/drawable/sb_handle.xml",
+        "res/drawable/sb_slider_thumb.xml",
+        "res/drawable/sb_slider_track.xml",
+        "res/drawable/swipe_hud.xml",
+        "res/drawable/swipe_track.xml",
+        "res/layout/sb_slider.xml",
+        "res/mipmap-anydpi-v26/ic_module.xml",
+        "res/raw/morphe_notice.txt"
+      ],
+      "download_fixture_marker_absent": true
+    }
+  },
+  "production_dex_sha256": {
+    "classes.dex": "c4308207e4da268746f51917aec6d2c9b61a28ad620df8480a55f4ca732d65b2",
+    "classes2.dex": "349f0358729fe8efd87473080b91d2abf632711114c4ee4fc3dd1bfc1142813c",
+    "classes3.dex": "06774cc6c4cb31e8d6d79017e104778f4bfd97315db7a127edc968a6e720a69b",
+    "classes4.dex": "6537bd6a18aea4344313569c8d10797a3bfadc943d19921629b430f6b4b2803e"
+  },
+  "fixture_apk": {
+    "file": "YouTubeHideAds-music-162.apk",
+    "sha256": "a16e972bd8af80a036f800555104f3ebf74a1c6366bf33e2d89c93d3c18f9a2b",
+    "version_code": 39,
+    "source_sha256": "2827800001341c0831089f92a8c19c302597ab19b0b315722792c8916e9a821f",
+    "fixture_marker_present": true
+  },
+  "graph": {
+    "baseline_functions": 563,
+    "production_functions": 761,
+    "baseline_function_cids_retained": 544
+  },
+  "unchanged_inputs": {
+    "third_party_dex_blake3": [
+      "07f22ff643ac6c650036550355084f3b02034493201a2e5a8c8e487a393d4b90"
+    ],
+    "native_libraries_blake3": {
+      "lib/arm64-v8a/libad_component.so": "3ef4eeb64a1af8aa33c3aef67d6b8b5551a6aa1288324852ebd9292f188a46d2",
+      "lib/arm64-v8a/libad_fullscreen.so": "865c192fb2e36a6301c0a961755ff98531f7e1945d068ca2a7e8ae12ec14357b",
+      "lib/arm64-v8a/libad_panel.so": "bdbaca2798bc02ef2c66046c2c1f2575fcb17a0437017cc4da4dbabe360118aa",
+      "lib/arm64-v8a/liband3.so": "3c31b9d7b4ca123f12c8ed714309763484587b8ed10907680ad8e5061dc1c598",
+      "lib/arm64-v8a/libbrainfuckc_bridge.so": "f1057aef3827764e44616a1f64bdad84e43ad35b2f342b46af72252469377fec",
+      "lib/arm64-v8a/libdexkit.so": "69e142100d6599c48b7315941ce4c3fea72784a55f6ed013177efb5ec015a159",
+      "lib/arm64-v8a/libsettings_snapshot.so": "174f1a556d05d0f30319ecfc436e26e5dfc323435d3f1dce29373c8b3ded0ac3",
+      "lib/arm64-v8a/libsponsor_settings.so": "17017fe54e5399cd29845848e14856bac8fa3aa558431c0c1e3b3024612696ef",
+      "lib/arm64-v8a/libsponsor_skip_pipeline.so": "70e67af9a119ffae598f651654f522cb2178801aecc5934dd24906c83cd9d1f4",
+      "lib/arm64-v8a/libsponsor_time_window.so": "a18767e9583587cf6315234ac4976e2ddc99c7cb83e116ab62547f17c1428428",
+      "lib/arm64-v8a/libsuppress_video_slot.so": "34cb3b55ba4d10a0ff20c71e8edc2ed5ab2f0bdb239d2e67d41fc280f0ff9c22"
+    }
+  },
+  "toolchains": "../../toolchains.json",
+  "latest_inspected": {
+    "XAX": "a03a4274bbe31c01992898bf807f13930dfba596",
+    "XAX-MCP": "abc12e43150befffe32a1f3957e2b9d984e8fb8c",
+    "BBC": "0039cccc8fdfec12ba59cd570121cd0992b92673"
+  },
+  "pin_retention_reason": "Latest inspected XAX main differs from the pinned compiler commit only in documentation; compiler sources and native seed are unchanged. Exact existing native/JNI/third-party input contracts remain in use. No toolchain mutation."
+}

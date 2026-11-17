@@ -1,5 +1,14 @@
 # Changelog
 
+## Development build 162 (1.3.0, unreleased) — 2026-11-17
+
+- Extend YouTube Premium promotion removal to the You-page header and typed promotion thumbnails.
+- Add independent, default-off in-app and external download modes to YouTube and Music, with
+  current-item actions, native offline quality selection and external downloader guidance.
+- Add folder selection, completed-download export and cooperative cancellation using the shared
+  XAX/BF host architecture. [Scope and bounds](docs/DOWNLOADS.md).
+- [Native replay, artifact identities and scoped physical-device evidence](evidence/downloads_20261117/README.md).
+
 ## Development build 161 (1.3.0, unreleased) — 2026-11-17
 
 - Add native Music welcome-offer cancellation under **Premium promotions**, using structural
