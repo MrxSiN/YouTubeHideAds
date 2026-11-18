@@ -1,5 +1,10 @@
 # Upstream provenance and terms
 
+Build 162 adapts YouTube Premium header behavior and the shared YouTube/Music download,
+visitor, offline schema, cache export and command-router references at Morphe
+`31234a8465683a389bcfba25ad636fd1cd38fd02` into native XAX/BF. No upstream Java/Kotlin is packaged.
+[Download reference and limits](DOWNLOADS.md#reference) · [Premium scope](YOUTUBE_PREMIUM_PROMOTIONS.md).
+
 Music build 160 adapts native Premium account/membership/mealbar behavior and navigation enums
 from Morphe `44031c561ea048c8f196877f30a49c13bfd6afb6`, independently in XAX/BF.
 [Exact reference links and limits](MUSIC_PREMIUM_PROMOTIONS.md#reference-and-limits).

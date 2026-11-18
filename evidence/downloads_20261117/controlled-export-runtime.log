@@ -1,0 +1,54 @@
+11-17 20:31:56.780  9197  9197 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-17 20:31:56.861  9197  9197 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-17 20:31:56.869  9197  9197 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-17 20:31:56.918  9197  9197 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-17 20:31:56.918  9197  9197 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-17 20:31:56.992  9197  9197 I YouTubeHideAds: Music Premium role account: Liuk;->l()V
+11-17 20:31:56.992  9197  9197 I YouTubeHideAds: Music Premium role membership: Lahzu;->am()Ljava/lang/CharSequence;
+11-17 20:31:56.992  9197  9197 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-17 20:31:56.992  9197  9197 I YouTubeHideAds: Music Premium role navigation enum converter: Lalpn;->a(I)Lalpn;
+11-17 20:31:57.004  9197  9197 I YouTubeHideAds: Music Premium role navigation: Lhhw;->a(Ljava/lang/Object;)V
+11-17 20:31:57.029  9197  9197 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-17 20:31:57.029  9197  9197 I YouTubeHideAds: Downloads protocol self-check passed (12 cases)
+11-17 20:31:57.042  9197  9197 I YouTubeHideAds: Downloads command hook installed
+11-17 20:31:57.052  9197  9197 I YouTubeHideAds: Downloads offlineability hook installed
+11-17 20:31:57.069  9197  9197 I YouTubeHideAds: Downloads offline response hook installed
+11-17 20:31:57.081  9197  9197 I YouTubeHideAds: Music download current-track hook installed
+11-17 20:31:57.092  9197  9197 I YouTubeHideAds: Downloads policy refresh hooks installed
+11-17 20:31:57.095  9197  9197 I YouTubeHideAds: Downloads plain-stream request hook installed
+11-17 20:31:57.095  9197  9197 I YouTubeHideAds: Music welcome offer self-check passed (12 cases)
+11-17 20:31:57.104  9197  9197 I YouTubeHideAds: Music welcome offer binding: Lsug;->d(Lamlw;)V
+11-17 20:31:57.105  9197  9197 I YouTubeHideAds: Music welcome offer hook installed
+11-17 20:31:57.106  9197  9197 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-17 20:31:57.119  9197  9197 I YouTubeHideAds: Playables typed element serializer resolved
+11-17 20:31:57.134  9197  9197 I YouTubeHideAds: Ad component hook installed
+11-17 20:31:57.144  9197  9197 I YouTubeHideAds: Fullscreen dialog hook installed
+11-17 20:31:57.154  9197  9197 I YouTubeHideAds: Music video ad activation hook installed
+11-17 20:31:57.154  9197  9197 I YouTubeHideAds: Music ad hook discovery finished
+11-17 20:31:57.171  9197  9197 I YouTubeHideAds: Settings lifecycle hook installed
+11-17 20:31:57.204  9197  9197 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-17 20:31:57.426  9197  9197 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-17 20:31:57.509  9197  9197 I YouTubeHideAds: Music background playback authorized: kids policy
+11-17 20:31:59.414  9197  9197 I YouTubeHideAds: Music background playback authorized: eligibility
+11-17 20:31:59.421  9197  9197 I YouTubeHideAds: Music download current-track binding published
+11-17 20:32:00.132  9197  9197 I YouTubeHideAds: Downloads resolver callback active
+11-17 20:32:04.258  9197  9197 I YouTubeHideAds: Music Premium UI hidden: Get Music Premium
+11-17 20:32:07.240  9197  9197 I YouTubeHideAds: Music Premium UI hidden: membership label
+11-17 20:32:07.358  9197  9197 I YouTubeHideAds: Settings section attached
+11-17 20:32:13.284  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:14.205  9197  9214 I YouTubeHideAds: Export finished. Files are in your chosen folder.
+11-17 20:32:19.366  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:19.369  9197  9214 I YouTubeHideAds: Downloads export failure class: java.lang.NumberFormatException
+11-17 20:32:19.370  9197  9214 I YouTubeHideAds: Export stopped. Incomplete, protected or unsupported downloads cannot be exported.
+11-17 20:32:25.299  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:25.301  9197  9214 I YouTubeHideAds: Downloads export failure class: java.lang.NumberFormatException
+11-17 20:32:25.302  9197  9214 I YouTubeHideAds: Export stopped. Incomplete, protected or unsupported downloads cannot be exported.
+11-17 20:32:31.342  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:31.343  9197  9214 I YouTubeHideAds: Downloads export failure class: java.lang.NumberFormatException
+11-17 20:32:31.344  9197  9214 I YouTubeHideAds: Export stopped. Incomplete, protected or unsupported downloads cannot be exported.
+11-17 20:32:37.256  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:37.258  9197  9214 I YouTubeHideAds: No complete downloads to export.
+11-17 20:32:43.202  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:43.203  9197  9214 I YouTubeHideAds: No complete downloads to export.
+11-17 20:32:50.035  9197  9214 I YouTubeHideAds: Controlled export cache fixture prepared
+11-17 20:32:50.116  9197  9214 I YouTubeHideAds: Export cancelled. Completed files were kept.

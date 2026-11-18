@@ -1,5 +1,12 @@
 # Build
 
+Development build **162** adds YouTube Premium header removal and shared download/export support.
+Ten [native transactions](../source/xax/transactions/downloads-20261117/README.md) extend build 161;
+independent native replay is byte-identical and rejects stale roots. Production unsigned and
+separately signed Music/YouTube development APKs have identical DEX, native libraries and static
+resources. The separate cache fixture is excluded from normal APKs.
+[Exact build and device evidence](../evidence/downloads_20261117/README.md).
+
 Development build **161** adds Music's native welcome-offer cancellation. Three native
 [transactions](../source/xax/transactions/music-welcome-20261117/README.md) extend build 160;
 native/JNI/third-party inputs and compiler pins remain unchanged. Controlled host-layout fixtures

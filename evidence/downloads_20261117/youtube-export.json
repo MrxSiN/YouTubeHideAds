@@ -1,0 +1,47 @@
+{
+  "status": "EXECUTED",
+  "source": "Real YouTube native download",
+  "test_video": "jNQXAC9IVRw",
+  "streams": [
+    [
+      251,
+      252182,
+      252182,
+      0
+    ],
+    [
+      395,
+      223779,
+      223779,
+      0
+    ]
+  ],
+  "files": [
+    {
+      "itag": 251,
+      "bytes": 252182,
+      "sha256": "8e18a126899cfb98cfd10f5e1dcdeabfa97e368ca9645f52fd802ba24b07e4f9",
+      "extension": ".webm",
+      "original_plain_stream_comparison": {
+        "status": "EXECUTED",
+        "matches": true
+      },
+      "native_media_extractor_single_track_validation": "EXECUTED during export"
+    },
+    {
+      "itag": 395,
+      "bytes": 223779,
+      "sha256": "a871dba570321bed927efc12f50783971391957b33d7c5c8a30015b2291bba58",
+      "extension": ".mp4",
+      "original_plain_stream_comparison": {
+        "status": "EXECUTED",
+        "matches": true
+      },
+      "native_media_extractor_single_track_validation": "EXECUTED during export"
+    }
+  ],
+  "output_count": 2,
+  "result": "Mixed Opus/WebM and AV1/MP4 streams exported separately, matching the documented fallback",
+  "partial_files": 0,
+  "compatible_pair_muxing": "NOT RUN: real saved pair uses different container families"
+}

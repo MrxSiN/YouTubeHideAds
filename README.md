@@ -37,6 +37,10 @@ settings page and independent switches. See [Music ad support](docs/MUSIC_ADS.md
 [Premium controls and limits](docs/MUSIC_PREMIUM_PROMOTIONS.md). The released 1.3.0 APK
 predates this addition; Music SponsorBlock is not included in this increment.
 
+Development build 162 also adds [in-app and external downloads with export](docs/DOWNLOADS.md)
+to both apps, and extends [YouTube Premium promotion removal](docs/YOUTUBE_PREMIUM_PROMOTIONS.md)
+to the You-page header. Download modes are off by default.
+
 ## Install
 
 1. Get the APK from [Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads).

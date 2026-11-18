@@ -1,0 +1,52 @@
+{
+  "status": "EXECUTED",
+  "outcome": "passed",
+  "controlled": true,
+  "host": "Music",
+  "cases": [
+    {
+      "case": "success",
+      "new_files": 1,
+      "partial_files": 0,
+      "bytes": 309288,
+      "sha256": "a01b38c896d27707ef852301f1ccc6c39cebe792852c868109e85753ef159e47",
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "gap",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "duplicate",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "bad_checksum",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "incomplete",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "drm",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    },
+    {
+      "case": "cancel",
+      "new_files": 0,
+      "partial_files": 0,
+      "temporary_fixture_directories": 0
+    }
+  ]
+}

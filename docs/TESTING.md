@@ -1,5 +1,11 @@
 # Testing
 
+Build 162 adds twelve packaged download protocol checks. Native cache fixtures are a separate
+test graph: a valid export, a gap, duplicate spans, bad index checksum, incomplete stream, rejected
+encryption type and cancellation exercise the shared exporter. Real host downloads and exports
+are recorded separately from those controlled cases. The ordinary APK must exclude the fixture
+mode marker and match production DEX. [Behavior and limits](DOWNLOADS.md).
+
 Build 161 adds twelve welcome startup checks and a separate native host-layout fixture carrier.
 Seven controlled cases exercise unchanged production scheduling/cancel functions with controlled
 listeners. The final APK excludes that carrier; all four DEX payloads match production, and final

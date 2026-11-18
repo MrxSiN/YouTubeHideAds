@@ -1,0 +1,15 @@
+{
+  "status": "EXECUTED",
+  "production_input_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+  "transaction_sha256": "78d5d5848d2c1aff60e6cba4debf6f38c7395a2433460b87a81483c98a817933",
+  "replayed_fixture_root": "0f3b7397762faf57055b7ae20a05b1aff3304a4abd9444043767438d7cd7e7c4",
+  "replayed_fixture_sha256": "f5c902495d3a84cd877464d814186430c9941072b3660507243bdd52fa87b4f7",
+  "tested_fixture_version_code": 39,
+  "tested_fixture_source_sha256": "2827800001341c0831089f92a8c19c302597ab19b0b315722792c8916e9a821f",
+  "fixture_entry_cid": "ec3ee4c43f25f957cc02fd767cde0306a9feb7acfcdd9f64861de9324f7ca999",
+  "transitive_function_count": 71,
+  "tested_and_replayed_fixture_transitive_functions_identical": true,
+  "purpose": "Seven controlled cache-export cases. Separate graph, excluded from normal APKs. Tested fixture source differs from current fixture in unrelated host startup/router functions.",
+  "test_mode_key": "youtubehideads_downloads_fixture",
+  "cleanup": "Delete test mode key, remove owned fixture inputs, reinstall normal Music development APK."
+}

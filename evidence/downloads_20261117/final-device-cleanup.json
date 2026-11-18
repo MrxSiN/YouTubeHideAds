@@ -1,0 +1,27 @@
+{
+  "status": "EXECUTED",
+  "music_installed_apk": {
+    "package": "io.github.mrxsin.youtubehideads.musicdev",
+    "version_code": 43,
+    "sha256": "17d5f7f5fd691a61fbc354d5cd12b693598a8bdcde6f1c88e05f08834b8fb7e4",
+    "matches_accepted_apk": true
+  },
+  "final_music_export": {
+    "bytes": 3449447,
+    "sha256": "51aa762a3254bcbad8813d2badff2f301ed0127a61643a0ab16f387c883e6394",
+    "matches_previously_verified_plain_stream": true
+  },
+  "cleanup": {
+    "fixture_mode_key_removed": true,
+    "owned_fixture_inputs_removed": true,
+    "owned_fixture_outputs_removed": 2,
+    "fixture_directories_remaining": 0,
+    "partial_files_remaining": 0,
+    "screen_off_timeout_restored": 600000,
+    "stay_on_while_plugged_in_restored": 0,
+    "rotation_restored": "free",
+    "media_pause_command_executed": true,
+    "test_host_downloads_and_real_exports_retained": true,
+    "export_folder_grants_retained": true
+  }
+}

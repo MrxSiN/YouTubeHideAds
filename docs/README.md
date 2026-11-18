@@ -22,6 +22,8 @@ Dated evidence describes its named build, not the current checkout.
 | [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
 | [YouTube Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) | Independent playback switch, structural restriction hooks and shared BF policy |
 | [YouTube Music Premium promotions](MUSIC_PREMIUM_PROMOTIONS.md) | Upgrade/account/membership/mealbar/welcome controls and explicit limits |
+| [YouTube Premium promotions](YOUTUBE_PREMIUM_PROMOTIONS.md) | You-page header actions and own-thumbnail payload coverage |
+| [Downloads and export](DOWNLOADS.md) | Both hosts, modes, current-item actions, cache export and bounds |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |
@@ -50,6 +52,9 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Force original audio | On | No |
 | Player controls | Background playback | On | No |
 | Music / Player controls | Background playback (`background_playback`, Music's own storage) | On | No |
+| Both hosts / Downloads | In-app downloads (`in_app_downloads`) | Off | No |
+| Both hosts / Downloads | External downloads (`external_downloads`, takes priority) | Off | No |
+| Both hosts / Downloads | Export folder (`downloads_export_tree`) | Unset | No |
 | Player controls | Remember live stream position | Off | No |
 | Player controls | Default playback speed, videos (`speed_video`, string) and Shorts (`speed_shorts`, string); 0.25 to 2, missing = YouTube default | YouTube default | No |
 | Player controls | Default video quality (`quality_wifi`, `quality_mobile`, `quality_shorts`, `quality_live`, int 0 Auto, 1 144p to 8 2160p) | 0 (Auto) | No |
