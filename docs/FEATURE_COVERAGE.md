@@ -1,5 +1,12 @@
 # Feature coverage
 
+Development build **159** adds Music background playback on the same physical Music **9.45.51**
+environment. Twelve new packaged checks, independent on/off persistence, ad-master independence,
+ordinary Home/screen-off playback, a Baby Shark/Pinkfong screen-off case and native pause behavior
+are recorded in [dated evidence](../evidence/music_background_20261116/README.md). The same page now
+has ads and Player controls; YouTube keeps its existing startup and settings suites. This is a
+development build, with separate device signing and explicit untested interruption/version cases.
+
 Development build **158** adds YouTube Music **9.45.51** on the physical Pixel 8 Pro,
 Android 17/API 37, Vector 2.2/API 102. Its ad activation/component/fullscreen hooks resolve;
 96 startup policy checks and the five-switch settings persistence checks pass. YouTube

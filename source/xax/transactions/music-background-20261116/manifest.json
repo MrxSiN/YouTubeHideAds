@@ -1,0 +1,51 @@
+{
+  "schema": "youtubehideads-native-transactions-v1",
+  "baseline_commit": "86d83b78079c2229f3afddf43839a0aea997eb62",
+  "baseline_source_sha256": "1286f3498052ff3f94a23e54f2247190503d52b2e997a6e5b82ba4ad482051e5",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-background.batch",
+      "sha256": "436fd70c580c1b9ae03e7925dd4e0e57c091cbc7d1d6475738b5f085a3cfc3ce",
+      "input_root": "68ef0034217fd1f6ee5e497ce7f5cd19e17736a0585c83202b41076557b86c37",
+      "output_root": "ae700180d49cde9ea7c7cefb6049094b6fe9712e030183748f15aa602e9f8b51",
+      "output_sha256": "c5a118cd8f91053c8aaabd5253c6ac13807dcdbb973efe77d43ea827ad870832",
+      "verification": "EXECUTED"
+    },
+    {
+      "transaction": "01-context.batch",
+      "sha256": "053cd5107ad7745d3fff100575931b6f7b2d082308f6a82e8d5eecaef256fb64",
+      "input_root": "ae700180d49cde9ea7c7cefb6049094b6fe9712e030183748f15aa602e9f8b51",
+      "output_root": "bbd021b2c8153844564f34a1841c38d588d2392a9a22616995b6afb453917d05",
+      "output_sha256": "8a55bba4974ab68a0ddb04e61dab499b5e9dc540206afc6dfc917b737aa3189d",
+      "verification": "EXECUTED"
+    },
+    {
+      "transaction": "02-metadata.edit",
+      "sha256": "c3152056721b86da502e64d6db42f096478db46e48a37e9def84999a03e8b5a5",
+      "input_root": "bbd021b2c8153844564f34a1841c38d588d2392a9a22616995b6afb453917d05",
+      "output_root": "ea26e7bc85de709f0df71317330b3e7c17f9be9d723597599c831d8ba3cabb7c",
+      "output_sha256": "f79a48caf14b7c342712de1d35a6a895c75e9c2c9789cef91e453c0df8a74d26",
+      "verification": "EXECUTED"
+    },
+    {
+      "transaction": "03-version.edit",
+      "sha256": "9cfd5f9d8a7c885671ab622e37803d83a690c31c91f74ac000bff91379c59b2e",
+      "input_root": "ea26e7bc85de709f0df71317330b3e7c17f9be9d723597599c831d8ba3cabb7c",
+      "output_root": "b747bce2f1235c833a79d21a7836e19d56ddf9e24b24a2a6a92f6c335d438a81",
+      "output_sha256": "333d5afd95a2a479b6bf9c1f65e8b96476abe03ba0c5aa4cb2bb1a0c2bf104f7",
+      "verification": "EXECUTED"
+    },
+    {
+      "transaction": "04-startup-guard.batch",
+      "sha256": "e1d69119904fd1bea1932b73f152b3f5adb3d066d359c050b0011f8c4200dfe7",
+      "input_root": "b747bce2f1235c833a79d21a7836e19d56ddf9e24b24a2a6a92f6c335d438a81",
+      "output_root": "a9b1dfe153555ae9ab69315d053a3b9c945158a021607d7c86406117a915b0e6",
+      "output_sha256": "a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6",
+      "verification": "EXECUTED"
+    }
+  ],
+  "final_root": "a9b1dfe153555ae9ab69315d053a3b9c945158a021607d7c86406117a915b0e6",
+  "final_source_sha256": "a516c7d0356c6eab876af95d9466cbcd188551092dc9228cda3fe7e6824e12b6",
+  "XAX_REQUIRE_NATIVE": "1"
+}

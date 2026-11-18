@@ -1,5 +1,9 @@
 # Brainfuck runtime ABI
 
+Music background playback in build 159 shares YouTube's existing typed Boolean AND3 gate, the
+same `liband3.so` and exact reply validation. No BF commands, native library or bridge ABI changes.
+[Music background contract](../contracts/music_background_playback_inputs.json).
+
 Music's video/audio activation and component gates also use the existing `and3` library and exact
 one-byte success check. Music's fullscreen path uses the existing `ad_fullscreen` library. No native
 input or ABI changes in build 158. [Music contract](../contracts/music_ads_inputs.json).

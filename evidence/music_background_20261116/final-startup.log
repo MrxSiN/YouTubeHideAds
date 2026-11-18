@@ -1,0 +1,15 @@
+--------- beginning of main
+11-16 15:14:28.153  3890  3890 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-16 15:14:28.252  3890  3890 I YouTubeHideAds: Background playback candidates: [public static boolean aake.m(amca)]
+11-16 15:14:28.259  3890  3890 I YouTubeHideAds: Background playback candidates: [public final void jko.c(int, hui, boolean)]
+11-16 15:14:28.301  3890  3890 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-16 15:14:28.302  3890  3890 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-16 15:14:28.317  3890  3890 I YouTubeHideAds: Playables typed element serializer resolved
+11-16 15:14:28.350  3890  3890 I YouTubeHideAds: Ad component hook installed
+11-16 15:14:28.359  3890  3890 I YouTubeHideAds: Fullscreen dialog hook installed
+11-16 15:14:28.372  3890  3890 I YouTubeHideAds: Music video ad activation hook installed
+11-16 15:14:28.372  3890  3890 I YouTubeHideAds: Music ad hook discovery finished
+11-16 15:14:28.381  3890  3890 I YouTubeHideAds: Settings lifecycle hook installed
+11-16 15:14:28.426  3890  3890 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-16 15:14:28.690  3890  3890 I YouTubeHideAds: Music background playback authorized: kids policy
+11-16 15:14:31.387  3890  3890 I YouTubeHideAds: Music background playback authorized: eligibility

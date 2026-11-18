@@ -1,5 +1,15 @@
 # Build
 
+Development build **159** adds Music background playback. [toolchains.json](../toolchains.json)
+pins the latest inspected XAX main and its released native Windows seed. Five
+[exact-root transactions](../source/xax/transactions/music-background-20261116/README.md) edit and
+verify source; native resolve/build produce the production-package unsigned APK and separately
+signed development variants. Existing BF/JNI/native/third-party DEX inputs are retained unchanged.
+The connected MCP grants no mutable store, so native compiler CLI operations are used.
+[Build, replay and device evidence](../evidence/music_background_20261116/README.md).
+
+The build 158 workflow below describes the preceding Music ad increment.
+
 Development build **158** adds YouTube Music ads. Current toolchain commits and the native Windows
 compiler identity are pinned in [toolchains.json](../toolchains.json). Native `edit` plus mandatory
 `verify` apply the checked-in transactions; native `resolve` and `build`/`build-signed` produce APKs.

@@ -1,0 +1,25 @@
+{
+  "status": "EXECUTED",
+  "native_authority": "direct pinned native Windows PE compiler; XAX_REQUIRE_NATIVE=1",
+  "canonical_replay_byte_identical": true,
+  "stale_root_rejected": true,
+  "baseline_functions": 495,
+  "candidate_functions": 505,
+  "baseline_function_cids_retained": 484,
+  "explicit_preserved_functions": {
+    "F36": "129470cd497a6205a51b15bf64bc702c1fe0146fd0a9e8b28b85da1c0f3f15e5",
+    "F418": "d3586e91bb8c374fcb75b454ca574f8ece331bede12893cb36d2625d666008f9",
+    "F250": "8601dde99b35033ef0ace4a9aef146927e951579f38a81b2ae144c7818851d57",
+    "F471": "f4e48ad659e36542c4a0d53b39c02d542c7870fe0115f5eeedb46236cf2d8bef",
+    "F157": "4ff7063e250004c7446398578f7914fd9cc06e386d8a6f11b93ee88c662b2d01",
+    "F344": "adf84012800992e03f4c7fc709be9f2541d851f18e3da12bbcf7c5403e5c7e6d",
+    "F132": "465542a0ae32d4fb048fd16110e117e0b88590319181f3c2a1f31e58d5c14bf4",
+    "F303": "9ae869967ac62d35d308e5611337a306af97a27d2931ad592d4f1758b4eb0a45",
+    "F110": "3b6220f8e8da8126772501e49cb20603752c52e7f553a98b93b760ed2632b67c",
+    "F409": "cf1170ff94342e3030048fecf32f3ac0906baa594a1c30bcd46c6f3e0e72eee5",
+    "F326": "a62d792841e876a8a1bb3af850c8dae5e417c88df3bc3a2886d02f6013c2065d",
+    "F81": "2e31765aeea0db4dd06c2cbf4c5269164c81f6e95990d4d64ca3f647913b4f6f"
+  },
+  "all_three_application_dex_identical": true,
+  "all_11_native_libraries_and_dependency_dex_unchanged": true
+}

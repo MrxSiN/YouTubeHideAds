@@ -1,8 +1,8 @@
 # Documentation
 
-Current release: **YouTube Hide Ads 1.2.0, versionCode 155** (tag `v1.2.0`).
-[Build identity](../evidence/device_perf_20261028/build.json) owns artifact digests and counts;
-[phone evidence](../evidence/device_perf_20261028/README.md) owns its scoped validation claims.
+Current release: **YouTube Hide Ads 1.3.0, versionCode 157** (tag `v1.3.0`).
+[Build identity](../evidence/release_1_3_0_20261114/build.json) owns artifact digests and counts;
+[phone evidence](../evidence/release_1_3_0_20261114/README.md) owns its scoped validation claims.
 Development builds 111 to 152 between 1.0.0 and 1.1.0, and 154 before 1.2.0, are named by build number.
 Dated evidence describes its named build, not the current checkout.
 
@@ -20,6 +20,7 @@ Dated evidence describes its named build, not the current checkout.
 | [SponsorBlock](SPONSORBLOCK_API_RESEARCH.md) | Retrieval, playback controls, community actions and settings transfer |
 | [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
 | [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
+| [YouTube Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) | Independent playback switch, structural restriction hooks and shared BF policy |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |
@@ -47,6 +48,7 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Swipe volume | On | No |
 | Player controls | Force original audio | On | No |
 | Player controls | Background playback | On | No |
+| Music / Player controls | Background playback (`background_playback`, Music's own storage) | On | No |
 | Player controls | Remember live stream position | Off | No |
 | Player controls | Default playback speed, videos (`speed_video`, string) and Shorts (`speed_shorts`, string); 0.25 to 2, missing = YouTube default | YouTube default | No |
 | Player controls | Default video quality (`quality_wifi`, `quality_mobile`, `quality_shorts`, `quality_live`, int 0 Auto, 1 144p to 8 2160p) | 0 (Auto) | No |
@@ -71,6 +73,8 @@ Reload feeds for removal changes. Original audio applies to a fresh track list/c
 the next video; a manual choice on the current loaded list remains usable.
 Background playback reads its independent saved switch on each eligible call. Restart YouTube
 after changing it to discard native cached capabilities. [Implementation and limits](BACKGROUND_PLAYBACK.md).
+Music's build 159 switch follows the same preference design in Music's private storage. Restart Music
+after changing it. [Music implementation and limits](MUSIC_BACKGROUND_PLAYBACK.md).
 
 ## Source and contracts
 

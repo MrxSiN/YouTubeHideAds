@@ -1,0 +1,36 @@
+{
+  "policy": "authorize_music_background_playback",
+  "native_gate": [
+    {"input": [0, 0, 0], "output": [0]},
+    {"input": [0, 0, 1], "output": [0]},
+    {"input": [0, 1, 0], "output": [0]},
+    {"input": [0, 1, 1], "output": [0]},
+    {"input": [1, 0, 0], "output": [0]},
+    {"input": [1, 0, 1], "output": [0]},
+    {"input": [1, 1, 0], "output": [0]},
+    {"input": [1, 1, 1], "output": [1]}
+  ],
+  "host_context": [
+    {"package": "com.google.android.apps.youtube.music", "allowed": true},
+    {"package": "com.google.android.youtube", "allowed": false},
+    {"package": "unknown.host", "allowed": false},
+    {"package": "", "allowed": false}
+  ],
+  "startup_cases": 12,
+  "integration_cases": [
+    {"case": "missing_or_ambiguous_role", "expected": "native behavior"},
+    {"case": "failed_deoptimization_or_self_check", "expected": "native behavior"},
+    {"case": "partial_install", "expected": "ready remains false"},
+    {"case": "unattached_application", "expected": "native behavior"},
+    {"case": "null_eligibility_argument", "expected": "native result"},
+    {"case": "native_eligibility_true", "expected": "native result"},
+    {"case": "null_kids_enum", "expected": "native controller executes"},
+    {"case": "disabled_after_restart", "expected": "native restrictions"},
+    {"case": "ad_master_off", "expected": "background playback remains independently enabled"},
+    {"case": "home_and_screen_off", "expected": "native media session continues when authorized"},
+    {"case": "kids_video_screen_off", "expected": "native media session continues when authorized"},
+    {"case": "pause_then_foreground", "expected": "pause remains; no module resume"},
+    {"case": "youtube_regression", "expected": "existing startup/settings suites and independent preferences preserved"}
+  ],
+  "evidence_rule": "Startup cases execute the packaged native BF gate and host classifier. Integration entries are requirements, not claims of device execution; consult dated evidence."
+}
