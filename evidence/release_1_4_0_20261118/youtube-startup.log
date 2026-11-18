@@ -1,0 +1,60 @@
+11-18 21:00:52.636 16335 16335 D VectorModuleManager: Loading module io.github.mrxsin.youtubehideads
+11-18 21:00:52.655 16335 16335 V VectorModuleManager: Loading class class io.github.mrxsin.youtubehideads.Module
+11-18 21:00:52.656 16335 16335 D VectorModuleManager: Loaded module io.github.mrxsin.youtubehideads successfully.
+11-18 21:00:52.718 16335 16335 D VectorLifecycle: dispatchPackageReady d1@e63a0bc
+11-18 21:00:52.762 16335 16335 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-18 21:00:52.762 16335 16335 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-18 21:00:52.762 16335 16335 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-18 21:00:52.763 16335 16335 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-18 21:00:52.764 16335 16335 I YouTubeHideAds: Downloads protocol self-check passed (12 cases)
+11-18 21:00:52.771 16335 16335 I YouTubeHideAds: Downloads command hook installed
+11-18 21:00:52.775 16335 16335 I YouTubeHideAds: Downloads offlineability hook installed
+11-18 21:00:52.777 16335 16335 I YouTubeHideAds: Downloads host protobuf parser resolved
+11-18 21:00:52.779 16335 16335 I YouTubeHideAds: Downloads offline response hook installed
+11-18 21:00:52.779 16335 16335 I YouTubeHideAds: Music download current-track hook installed
+11-18 21:00:52.781 16335 16335 I YouTubeHideAds: Downloads policy refresh hooks installed
+11-18 21:00:52.782 16335 16335 I YouTubeHideAds: Downloads plain-stream request hook installed
+11-18 21:00:52.783 16335 16335 I YouTubeHideAds: Downloads plain-stream request hook installed
+11-18 21:00:52.783 16335 16335 I YouTubeHideAds: Downloads activity command router installed
+11-18 21:00:52.785 16335 16335 I YouTubeHideAds: YouTube Premium header hook installed
+11-18 21:00:52.785 16335 16335 I YouTubeHideAds: SponsorBlock seekbar constructor candidates=1
+11-18 21:00:52.785 16335 16335 I YouTubeHideAds: SponsorBlock seekbar draw candidates=1
+11-18 21:00:52.787 16335 16335 I YouTubeHideAds: SponsorBlock seekbar rectangle candidates=1
+11-18 21:00:52.787 16335 16335 I YouTubeHideAds: SponsorBlock seekbar Canvas hook installed with typed rectangle
+11-18 21:00:52.788 16335 16335 I YouTubeHideAds: Background playback player observer installed at startup
+11-18 21:00:52.788 16335 16335 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-18 21:00:52.788 16335 16335 I YouTubeHideAds: Video ad activation hook installed
+11-18 21:00:52.789 16335 16335 I YouTubeHideAds: Player ad layout hook installed
+11-18 21:00:52.790 16335 16335 I YouTubeHideAds: Ad component hook installed
+11-18 21:00:52.791 16335 16335 I YouTubeHideAds: Premium offer hook installed
+11-18 21:00:52.792 16335 16335 I YouTubeHideAds: Fullscreen dialog hook installed
+11-18 21:00:52.792 16335 16335 I YouTubeHideAds: Typed engagement panel identifier resolved
+11-18 21:00:52.793 16335 16335 I YouTubeHideAds: Engagement ad panel hook installed
+11-18 21:00:52.797 16335 16335 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-18 21:00:52.797 16335 16335 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-18 21:00:52.797 16335 16335 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-18 21:00:52.800 16335 16335 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-18 21:00:52.801 16335 16335 I YouTubeHideAds: SponsorBlock player hook installed
+11-18 21:00:52.802 16335 16335 I YouTubeHideAds: Player seek source: SEEK_SOURCE_UNKNOWN
+11-18 21:00:52.802 16335 16335 I YouTubeHideAds: Player video ID and seek bridge resolved
+11-18 21:00:52.802 16335 16335 I YouTubeHideAds: Player duration and active-generation bridge resolved
+11-18 21:00:52.803 16335 16335 I YouTubeHideAds: Shorts ad selection hook installed
+11-18 21:00:52.803 16335 16335 I YouTubeHideAds: Ad hook discovery finished
+11-18 21:00:52.809 16335 16335 I YouTubeHideAds: Shorts feed removal hooks installed (paired, insert, response, restore, seed)
+11-18 21:00:52.809 16335 16335 I YouTubeHideAds: Playables typed element serializer resolved
+11-18 21:00:52.809 16335 16335 I YouTubeHideAds: Fullscreen swipe state hook installed; touch binds to the actual player Activity
+11-18 21:00:52.810 16335 16335 I YouTubeHideAds: Feed context bindings resolved height=d touch=k
+11-18 21:00:52.811 16335 16335 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-18 21:00:52.814 16335 16335 I YouTubeHideAds: Original audio hook installed: public final void asam.a(apho)
+11-18 21:00:52.815 16335 16335 I YouTubeHideAds: Playback speed hook installed
+11-18 21:00:52.816 16335 16335 I YouTubeHideAds: Captions hook installed: public final void asyt.n(armo)
+11-18 21:00:52.817 16335 16335 I YouTubeHideAds: Return YouTube Dislike ready
+11-18 21:00:52.817 16335 16335 I YouTubeHideAds: Speed button hook installed
+11-18 21:00:52.818 16335 16335 I YouTubeHideAds: Loop video hook installed
+11-18 21:00:52.821 16335 16335 I YouTubeHideAds: Tap to seek hook installed
+11-18 21:00:52.823 16335 16335 I YouTubeHideAds: Default video quality hooks installed
+11-18 21:00:52.824 16335 16335 I YouTubeHideAds: DeArrow thumbnail hook installed
+11-18 21:00:52.825 16335 16335 I YouTubeHideAds: Settings lifecycle hook installed
+11-18 21:00:53.661 16335 16395 D VectorLifecycle: dispatchPackageReady d1@da06f99
+11-18 21:00:54.234 16335 16382 I YouTubeHideAds: Downloads resolver callback active
+11-18 21:00:54.408 16335 16498 I YouTubeHideAds: Component replaced: video_display_full_buttoned_layout.eml-fe|ff7f4ba0950e1e1|

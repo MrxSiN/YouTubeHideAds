@@ -1,0 +1,70 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "b0476b3",
+  "baseline_sha256": "3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316",
+  "baseline_root": "521ed3cc23b3dadabe8bb63dd52b7ed2b8eefcaa8d9459d57ab71ff8b0ccf7ee",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "955e18b9e59c99330c2f5b2bfef1bcf0e99df3becda16bfca10f690311e43205",
+  "output_root": "c3369a31da0d8a9cb6ed83f978cd73f3a73b65e4551c6accaed5a3ed0a5f5bdf",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-label.edit",
+      "sha256": "54f2c34ebb4c6f73989314334bf345001b23978f61129cdb80f84c8466d11948",
+      "input_root": "521ed3cc23b3dadabe8bb63dd52b7ed2b8eefcaa8d9459d57ab71ff8b0ccf7ee",
+      "output_root": "cdf81dd2a83eac34dd2bd2bddd56adec90b6b9fd75c72eae9831630f1df25ad2",
+      "output_sha256": "96825157053196ea8c5bcb10734dcf54f1861b9505e3fb4b617eaca341ffc60b",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-label.edit",
+      "sha256": "9a8e502414199792b8ad0f25b8fa9a0a66115c6151775ad03aa1d4a3289ec4df",
+      "input_root": "cdf81dd2a83eac34dd2bd2bddd56adec90b6b9fd75c72eae9831630f1df25ad2",
+      "output_root": "08b6558190912c89e09db024158792f60f301b60896888befd8a00d961c4482a",
+      "output_sha256": "50360af5240b78f87e7f5d134ccd69aba57cd278b907b0f1582e1fe52d717c14",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-label.edit",
+      "sha256": "3901914dfa4de5995f754f0143ba3f3c34cf7dd958ae1cec0edafc7d5c1c6757",
+      "input_root": "08b6558190912c89e09db024158792f60f301b60896888befd8a00d961c4482a",
+      "output_root": "f3c0144315576974935e4e3732cdb283c5c414b89bc1a513a0b11a166a187a07",
+      "output_sha256": "c4904dc55428d048e1a1fdd938828c39119ab505ded6a76459e232e5fd021c26",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "03-label.edit",
+      "sha256": "67f28a9bda66f85295e0e8ee4a663cd8e891be2a3e4ef182bef4904ce81860a5",
+      "input_root": "f3c0144315576974935e4e3732cdb283c5c414b89bc1a513a0b11a166a187a07",
+      "output_root": "bce757caa3e69ae8828bcee6e8fbec7f21f8672e78210ef16cbfebdd165a9b68",
+      "output_sha256": "5382cee316e55bf456a9f42f2411b9210c089d3ea59d1e2889d9e5c0278f26e4",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "04-label.edit",
+      "sha256": "c5e77aee435c6116846d1e3704b8e31b95ab26b61ba9d71c1c2ccc7911ced5fd",
+      "input_root": "bce757caa3e69ae8828bcee6e8fbec7f21f8672e78210ef16cbfebdd165a9b68",
+      "output_root": "546065bcc25e3ded0b18387ba5ea058c96a5814be6d0722b84099ba9782f0758",
+      "output_sha256": "0146209e6621fdcdb5d8ab64812fe9be239d905ae7e6d7b3947f9a2b469987f1",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "05-update-check.edit",
+      "sha256": "b7601af275431f61130b07dc4d151a53bff642015b27fe4d88963ec99f143aac",
+      "input_root": "546065bcc25e3ded0b18387ba5ea058c96a5814be6d0722b84099ba9782f0758",
+      "output_root": "4232dab949e1ba7b97c7ee3b9e27a1042d062442258bf28792c6298bfef4dd8d",
+      "output_sha256": "918bfff656f014341c39d25985c36d1d1816ef7f390b89a190107e2213f8631e",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "06-metadata.edit",
+      "sha256": "4d5c72fd5a1d83a2904b8784628f56573f0f5bd9e4df6dfef8c9399a0678369d",
+      "input_root": "4232dab949e1ba7b97c7ee3b9e27a1042d062442258bf28792c6298bfef4dd8d",
+      "output_root": "c3369a31da0d8a9cb6ed83f978cd73f3a73b65e4551c6accaed5a3ed0a5f5bdf",
+      "output_sha256": "955e18b9e59c99330c2f5b2bfef1bcf0e99df3becda16bfca10f690311e43205",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: byte-identical final source",
+  "stale_root": "EXECUTED: status 1 and WORKSPACE-EXPECTED-ROOT"
+}

@@ -1,4 +1,8 @@
-Current canonical source is development build **1.3.0/code 164**: build 163 plus hot-path fixes
+Current canonical source is release **1.4.0/code 165** (store SHA-256
+`955e18b9e59c99330c2f5b2bfef1bcf0e99df3becda16bfca10f690311e43205`): build 164 with 1.4.0 version strings.
+[Version transactions](transactions/release-1.4.0/manifest.json) · [release evidence](../../evidence/release_1_4_0_20261118/README.md).
+
+Previously the canonical source was development build **1.3.0/code 164**: build 163 plus hot-path fixes
 (progress-hook null guard, no per-call regex compiles or resource lookups). Store SHA-256
 `3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316`.
 [Native transactions](transactions/perf-20261118/README.md) ·

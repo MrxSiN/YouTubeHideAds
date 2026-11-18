@@ -1,5 +1,9 @@
 # Build
 
+Release **1.4.0 (versionCode 165)** applies seven [version transactions](../source/xax/transactions/release-1.4.0/manifest.json)
+to build 164 and is built the same way as build 164 below, with the branding archive rebuilt for versionName 1.4.0.
+[Release record](../evidence/release_1_4_0_20261118/README.md).
+
 Development build **164** applies nine [native transactions](../source/xax/transactions/perf-20261118/README.md)
 to build 163 with the latest XAX seed (ledger 0036). The canonical source root is a snapshot without
 external digests; a build snapshot adds the BLAKE3 of the 13 pinned inputs and of the signing

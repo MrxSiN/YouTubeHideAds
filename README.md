@@ -31,25 +31,18 @@
 
 The new extras are off by default. Every setting and its default is listed in [docs](docs/README.md#settings-and-defaults).
 
-Development source also adds **YouTube Music ad hiding, Premium controls and background playback**, with its own
-settings page and independent switches. See [Music ad support](docs/MUSIC_ADS.md),
-[background playback](docs/MUSIC_BACKGROUND_PLAYBACK.md), and
-[Premium controls and limits](docs/MUSIC_PREMIUM_PROMOTIONS.md). The released 1.3.0 APK
-predates this addition; Music SponsorBlock is not included in this increment.
-
-Development build 162 also adds [in-app and external downloads with export](docs/DOWNLOADS.md)
-to both apps, and extends [YouTube Premium promotion removal](docs/YOUTUBE_PREMIUM_PROMOTIONS.md)
-to the You-page header. Download modes are off by default.
-
-Development build 163 adds Music [exclusive audio playback and an Audio/Video switch](docs/MUSIC_AUDIO_PLAYBACK.md).
-Exclusive audio is on by default. Enable the optional switch in Player controls, then tap the
-left half of Music's Song/Video pill to select a verified matching version in the native queue.
+**YouTube Music** (since 1.4.0), with its own settings page under **Account → Settings → YouTube Hide Ads**:
+ad hiding, Premium promotions, [background playback](docs/MUSIC_BACKGROUND_PLAYBACK.md),
+[exclusive audio and an optional Audio/Video switch](docs/MUSIC_AUDIO_PLAYBACK.md). Both apps also get optional
+[in-app and external downloads with export](docs/DOWNLOADS.md), off by default. SponsorBlock is YouTube only.
+Details: [Music ads](docs/MUSIC_ADS.md) · [Premium controls](docs/MUSIC_PREMIUM_PROMOTIONS.md) ·
+[YouTube Premium header](docs/YOUTUBE_PREMIUM_PROMOTIONS.md).
 
 ## Install
 
 1. Get the APK from [Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads).
-2. Enable it in [Vector](https://github.com/JingMatrix/Vector) or LSPosed (libxposed API 102) with YouTube in scope.
-3. Force-stop YouTube and open it again.
+2. Enable it in [Vector](https://github.com/JingMatrix/Vector) or LSPosed (libxposed API 102) with YouTube, and YouTube Music if you want it, in scope.
+3. Force-stop the app and open it again.
 
 Needs Android 9 or newer on arm64, and root for the framework. The module itself asks for no permissions.
 
@@ -57,6 +50,7 @@ Needs Android 9 or newer on arm64, and root for the framework. The module itself
 
 | YouTube | Module | Status |
 |---|---|---|
+| 21.45.88, YouTube Music 9.46.51 | 1.4.0 (build 165) | ✅ Working |
 | 21.45.88 | 1.3.0 (build 157) | ✅ Working |
 | 21.43.523 | 1.2.0 | ✅ Working |
 | 21.42.243 | 1.1.0 | ✅ Working |
@@ -70,7 +64,7 @@ when it can't. History: [changelog](CHANGELOG.md) · details: [compatibility](do
 - HTTPS-filtering apps such as AdGuard can block SponsorBlock, the update check, dislike counts and DeArrow; see [below](#sponsorblock-or-update-check-never-connects).
 - DeArrow replaces thumbnails, not titles. YouTube's own speed menu still shows 1x after a default speed is applied.
 - Default quality on mobile data, live Shorts and automatic-caption blocking have not been tested on a phone.
-- Checked in dark theme on one phone only. New 1.3.0 text is in English.
+- Checked in dark theme on one phone only. Text added in 1.3.0 and 1.4.0 is in English.
 
 Everything tested and untested: [feature coverage](docs/FEATURE_COVERAGE.md).
 

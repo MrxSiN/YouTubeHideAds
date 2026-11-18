@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 — 2026-11-18 (versionCode 165)
+
+Release of development builds 158-164: YouTube Music support (ads, Premium promotions, background playback,
+exclusive audio, Audio/Video switch), downloads and export in both apps, the YouTube Premium header, the
+progress-hook crash fix and the hot-path performance work. Version strings, the update-check version and the
+branding archive move to 1.4.0. [Release checks](evidence/release_1_4_0_20261118/README.md).
+
 ## Development build 164 (1.3.0, unreleased) — 2026-11-18
 
 - Fix the player progress hook throwing `NullPointerException: null receiver` when YouTube reports

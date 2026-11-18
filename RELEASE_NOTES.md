@@ -1,3 +1,56 @@
+# YouTube Hide Ads v1.4.0
+
+## What's new since 1.3.0
+
+- **YouTube Music support** ([#5](https://github.com/MrxSiN/YouTubeHideAds/issues/5)). Add YouTube Music to the module's
+  scope to get its own settings page (Account → Settings → YouTube Hide Ads) with:
+  - ad hiding: audio/video ads, sponsored and Premium components, fullscreen promotions;
+  - Premium promotions: Upgrade tab, Get Music Premium entries, membership upsell, promotion mealbar, welcome offer;
+  - background playback (on by default);
+  - exclusive audio playback (on by default) and an optional Audio/Video switch on the left half of the player pill.
+- **Downloads in YouTube and YouTube Music**, off by default: in-app downloads with native quality selection, or
+  hand-off to Seal, YTDLnis or NewPipe, plus export of completed downloads to a folder you choose.
+- **YouTube Premium promotions:** the Premium button in the You-page header is removed too.
+- **Fixed:** a crash inside the player progress hook at the start of every video, which skipped that moment's
+  SponsorBlock and player work.
+- **Faster:** no regex compiling or resource-name lookups on hot paths. While scrolling, the module's share of YouTube's
+  CPU from its layout listener fell from about 1.3 % to 0.3 %, and in YouTube Music from about 1.9 % to 0.4 %.
+
+### Known issues
+
+- SponsorBlock, Return YouTube Dislike and DeArrow are YouTube only.
+- In Music, restart the app after changing a switch.
+- Downloads: private, paid, DRM or restricted videos are not supported; an export stops if the app is closed.
+- AdGuard and similar apps with a system HTTPS certificate stop SponsorBlock, dislikes, Audio/Video search and the
+  update check from connecting. [Details](README.md#sponsorblock-or-update-check-never-connects).
+- New strings are English only.
+
+### Verified
+
+Pixel 8 Pro, Android 17, Vector 2.2, YouTube 21.45.88 and YouTube Music 9.46.51: this APK installed over 1.3.0, all
+startup checks passed and every hook installed in both apps with 0 hook crashes, and a video ad was suppressed. The
+same code (build 164) passed ad and component removal, SponsorBlock, the download button, the Music Audio/Video switch
+and Music background playback after Home and screen off. Music Premium/welcome surfaces were not served during testing;
+download save/export was verified by the development builds, not re-run on this APK.
+[Release checks](evidence/release_1_4_0_20261118/README.md) · [Performance and feature checks](evidence/perf_20261118/README.md).
+
+Other app versions, devices and 32-bit/x86 ABIs are not certified. The APK is arm64-v8a only.
+
+### Version metadata
+
+- Version name: `1.4.0`
+- Android version code: `165`
+- Package: `io.github.mrxsin.youtubehideads`
+- Git tag: `v1.4.0`
+- APK filename: `YouTubeHideAds-v1.4.0.apk`
+- APK SHA-256: `a9a3ffc23217a35e7c0f0e1071cc9ce89fe60787d4fc10e9ec481ced3e8853a0`
+
+### Installing
+
+Install the APK over 1.3.0; settings are kept in each app's data. In Vector or LSPosed keep
+`com.google.android.youtube` in scope and add `com.google.android.apps.youtube.music` for Music, then force-stop
+and reopen the app. If you used a YouTube Hide Ads development package for Music, disable it first.
+
 # YouTube Hide Ads v1.3.0
 
 ## What's new since 1.2.0

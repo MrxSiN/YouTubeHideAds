@@ -1,0 +1,34 @@
+{
+  "status": "EXECUTED",
+  "version_name": "1.4.0",
+  "version_code": 165,
+  "package": "io.github.mrxsin.youtubehideads",
+  "source_sha256": "955e18b9e59c99330c2f5b2bfef1bcf0e99df3becda16bfca10f690311e43205",
+  "transactions": "../../source/xax/transactions/release-1.4.0/manifest.json",
+  "base": "build 164 (main b0476b3)",
+  "toolchains": "../../toolchains.json",
+  "native_compiler_sha256": "8f0d23e1b749a10969b7cdd1db4d4a57705c4aa9a15cc04906ad497963409f9f",
+  "apk": {
+    "file": "YouTubeHideAds-v1.4.0.apk",
+    "sha256": "a9a3ffc23217a35e7c0f0e1071cc9ce89fe60787d4fc10e9ec481ced3e8853a0",
+    "bytes": 4623714,
+    "signer_certificate_sha256": "3c4644a021b4e1994d4f31c36d41854f86bf6a471a8f3d667fbfc62b7e42926b",
+    "dex_sha256": {
+      "classes.dex": "d7d53e2fdfb2572dd220afaf855b39cdc83c4cf39bd366a93cadaae14a007914",
+      "classes2.dex": "547e28f274892036dc4fc4e67c5faf2454fb1a3c40377cf0bd4b240c50b4ecd9",
+      "classes3.dex": "06774cc6c4cb31e8d6d79017e104778f4bfd97315db7a127edc968a6e720a69b",
+      "classes4.dex": "6537bd6a18aea4344313569c8d10797a3bfadc943d19921629b430f6b4b2803e"
+    }
+  },
+  "branding": {
+    "blake3": "6316cbd26eb4ed4a29e82c8b5bbd65dec63217d36a6f3110138c3e110b6d8698",
+    "aapt2": "9.3.1-15703166",
+    "framework_input_sha256": "168d5badbe7b2289164ce64913704dd938754e5b27655aa00aae2507e15781be"
+  },
+  "differs_from_tested_build_164": [
+    "AndroidManifest.xml",
+    "classes.dex",
+    "classes2.dex (version strings and update-check constant only)"
+  ],
+  "other_inputs": "unchanged 11 native libraries and third-party DEX"
+}
