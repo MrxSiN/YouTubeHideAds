@@ -1,6 +1,6 @@
 # Evidence index
 
-The canonical source is development build **1.3.0, versionCode 157**; the latest release is **1.2.0, versionCode 155**
+The canonical source is development build **1.3.0, versionCode 158**; the latest release is **1.3.0, versionCode 157**
 (`io.github.mrxsin.youtubehideads`). Dated
 directories are immutable measurements of their named builds; their prose may say canonical/installed
 relative to that session. Those statements do not identify today's source store or APK. Preserve
@@ -8,6 +8,7 @@ original hashes, screenshots, logs and measurements when documentation changes.
 
 | Session | Builds and scope |
 | --- | --- |
+| [Music ads, build 158, 2026-11-16](music_ads_20261116/README.md) | Native transaction replay/build; Music 9.45.51 ad hooks and five independent settings; YouTube 21.45.88 startup/settings regression; development packaging and untested surfaces distinguished |
 | [Development build 157 (1.3.0), 2026-11-14](release_1_3_0_20261114/README.md) | 157 on YouTube 21.45.88: one settings page, default speed and quality, captions, Return YouTube Dislike, player tweaks, blacklist, DeArrow thumbnails, audit fixes, a same-day rebuild (More videos sheet swipe fix, runtime trimming); dislike fetch blocked by the phone's HTTPS filter, mobile-data quality and live streams not run |
 | [Development build 156 (1.2.1), 2026-11-14](release_1_2_1_20261114/README.md) | 156 on YouTube 21.45.88: live chat no longer starts a volume swipe (#6), Skip live Shorts keyed on the player's live state (the old trigger never fired on 21.45), Remember live stream position; real live Short not encountered |
 | [Release 1.2.0, 2026-10-30](release_1_2_0_20261030/README.md) | 154-155, released as 1.2.0: YouTube 21.43.523 background playback and SponsorBlock player discovery fixes, display name, update check (HEAD redirect, YouTube-style dialog) and prefilled problem report; live network blocked by the phone's HTTPS filter |
@@ -28,9 +29,9 @@ release.
 
 ## Current authoritative records
 
-- [Current development identity and native hashes](background_playback_20261027/build.json)
+- [Current development identity and native hashes](music_ads_20261116/build.json)
 - [Tagged baseline identity](sponsorblock_slider_device_20261022/build.json)
-- [Current external compiler and pinned inputs](background_playback_20261027/toolchain.json)
+- [Current external compiler and pinned inputs](../toolchains.json)
 - [Build 77 device settings](ai_audio_branding_20261018/device-checks.json) and [verification](ai_audio_branding_20261018/verification.json)
 
 A component-replacement log alone does not prove all layout/blank-space behavior. Progress movement

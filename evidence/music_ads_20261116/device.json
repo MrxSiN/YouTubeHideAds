@@ -1,0 +1,36 @@
+{
+  "status": "EXECUTED",
+  "kind": "physical device",
+  "model": "Pixel 8 Pro",
+  "codename": "husky",
+  "android": 17,
+  "api": 37,
+  "architecture": "arm64",
+  "framework": "Vector 2.2 / libxposed API 102",
+  "music_version": "9.45.51",
+  "youtube_version": "21.45.88",
+  "music_policy_cases": {
+    "new": 26,
+    "shared_ad": 70,
+    "total": 96,
+    "observation": "The success branch includes the shared 70-case result; the log labels the 26 additional cases."
+  },
+  "youtube_policy_cases": 664,
+  "youtube_settings_ui_cases": 64,
+  "final_state": {
+    "production_module_enabled": true,
+    "production_youtube_preferences_unchanged": true,
+    "temporary_youtube_regression_module_uninstalled": true,
+    "music_development_module_installed_enabled": true,
+    "music_development_scope_only": true,
+    "music_all_five_switches_on": true,
+    "music_playback_paused": true
+  },
+  "not_run": [
+    "Natural Music feed/search ad replacement and resulting layout",
+    "Natural Music compact/Premium component removal",
+    "Natural Music fullscreen promotion suppression",
+    "Light theme, additional devices or Music versions",
+    "Release-signed package installation with both apps scoped"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "name": "defaults",
+      "pid": "22217"
+    },
+    {
+      "name": "defaults",
+      "pid": "22887"
+    },
+    {
+      "name": "master-off",
+      "pid": "23382"
+    },
+    {
+      "name": "individual-off",
+      "pid": "23907"
+    }
+  ],
+  "checks": [
+    "default-on five switches and all startup hooks",
+    "master-off persisted and BF gates zero before Application.onCreate",
+    "four individual switches persisted independently",
+    "all switches restored on, screenshot captured, Back returns to native settings without a crash",
+    "YouTube module preferences unchanged"
+  ],
+  "apk_sha256": "ab533e50965bfdcf9851b28d8aadcea5cf1a6b458a528e34075f72ec30a48c82",
+  "youtube_preferences_sha256_after_music_tests": "04dd8ac91e3d09d499942dc69249838734962b0e9accea504628ef9e6391e89c"
+}

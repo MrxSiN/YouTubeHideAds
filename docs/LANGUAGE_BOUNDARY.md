@@ -1,11 +1,18 @@
 # Language boundary
 
+Build 158's Music hooks and settings are native XAX semantic edits; ad authorization reuses the
+unchanged AND3 and fullscreen BF policies. Static XML labels and JSON contracts/vectors are data.
+Checked-in native batches are exact-root mutation transport for the canonical store, not a separate
+source language. Native verification precedes publication, and the compiler builds the APK natively.
+The external SDK only inspects/serializes declarations and packaging/edit carriers; no application
+implementation in another language is added. [Music design](MUSIC_ADS.md).
+
 Background playback remains in the canonical XAX store and the existing authored AND3 BF policy.
 New contracts, fixtures and packaged attribution are data. Its typed graph transport, BBC/compiler
 invocations and device test drivers were kept outside this repository. Native/JNI/third-party DEX
 inputs are unchanged. [Design](BACKGROUND_PLAYBACK.md).
 
-All application implementation is **Brainfuck and XAX**. The source tree contains 22 BF files,
+All application implementation is **Brainfuck and XAX**. The source tree contains nine BF files,
 one canonical XAX store, and static XML resources. JSON contracts/fixtures and prose are data.
 No Java, Kotlin, C, Python or shell application source is tracked; `Release CI` fails if one appears.
 The two GitHub Actions workflows only check the repository and verify and mirror the published APK;

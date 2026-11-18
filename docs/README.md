@@ -19,6 +19,7 @@ Dated evidence describes its named build, not the current checkout.
 | [Testing](TESTING.md) | Startup checks, fixtures and device acceptance |
 | [SponsorBlock](SPONSORBLOCK_API_RESEARCH.md) | Retrieval, playback controls, community actions and settings transfer |
 | [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
+| [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
 | [Morphe inventory](MORPHE_AD_PATCH_INVENTORY.md) | Inspected references and implemented equivalents |
 | [Provenance](UPSTREAM_PROVENANCE.md) | References, mutable lists, licenses and compiler history |
 | [Evidence index](../evidence/README.md) | Dated milestones and rejected experiments |

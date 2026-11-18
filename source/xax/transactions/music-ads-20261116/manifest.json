@@ -1,0 +1,47 @@
+{
+  "schema": "youtubehideads-native-transactions-v1",
+  "baseline_commit": "1de3af9804717499ac5f809b54f5978fa9fee677",
+  "baseline_source": "source/xax/youtubehideads.xax",
+  "baseline_sha256": "41c36cb4bc0db56b523d315e21eb624005968c50e8b4ea76a31a2254cabfbee7",
+  "final_sha256": "1286f3498052ff3f94a23e54f2247190503d52b2e997a6e5b82ba4ad482051e5",
+  "toolchains": "../../../../toolchains.json",
+  "native_required": "XAX_REQUIRE_NATIVE=1",
+  "stages": [
+    {
+      "file": "00-music.batch",
+      "sha256": "4864bcaa63b2c38a0cd6c172ac448a87ed366f68bdbc5b112e4ec3e660964d0e",
+      "input_root": "aa2551fddddb7f9f363aab31e7af1c6ba61ab150d9a65f1258e53973b992624b",
+      "output_root": "31e536d3776431b093f312f4f9ffecc838c36603a69e6dcaf7483048ab38e055",
+      "output_sha256": "e7847fcf5cfeaaa1235a33351408e7a7cff22a1d6b21db96f4c3350eebf74fb4",
+      "native_edit": "EXECUTED",
+      "native_verify": "EXECUTED"
+    },
+    {
+      "file": "01-module-metadata.edit",
+      "sha256": "64cca8b83b963f1a7541fbb5ba598be562111d47830410230298302c17be8e2e",
+      "input_root": "31e536d3776431b093f312f4f9ffecc838c36603a69e6dcaf7483048ab38e055",
+      "output_root": "b22ac6dc69795012d6076a59155ed7f11f0a0ec30cf86da2135518368bb9a4de",
+      "output_sha256": "55ec6e8507167bf0eabd64a7576bcddb615e8aa4c7cf6d94e2212a6b22ba2620",
+      "native_edit": "EXECUTED",
+      "native_verify": "EXECUTED"
+    },
+    {
+      "file": "02-ui-scope.batch",
+      "sha256": "cc16398771b9fd33627b3be50e2c5fd22e3827acd56c9eb324b02f9b36df0267",
+      "input_root": "b22ac6dc69795012d6076a59155ed7f11f0a0ec30cf86da2135518368bb9a4de",
+      "output_root": "199315662a374bbff88a3014b879b81b63ccd8933b0c4bcd8c4e25340ebec902",
+      "output_sha256": "c7b218eca7175d1617a4899a451f438d9e074e1a0c964f03599e2e3405d7419c",
+      "native_edit": "EXECUTED",
+      "native_verify": "EXECUTED"
+    },
+    {
+      "file": "03-version-label.edit",
+      "sha256": "163082c91dd154ea2b3549e453a8e8d4c5303a673cbdf092b06a576fc36b176e",
+      "input_root": "199315662a374bbff88a3014b879b81b63ccd8933b0c4bcd8c4e25340ebec902",
+      "output_root": "68ef0034217fd1f6ee5e497ce7f5cd19e17736a0585c83202b41076557b86c37",
+      "output_sha256": "1286f3498052ff3f94a23e54f2247190503d52b2e997a6e5b82ba4ad482051e5",
+      "native_edit": "EXECUTED",
+      "native_verify": "EXECUTED"
+    }
+  ]
+}

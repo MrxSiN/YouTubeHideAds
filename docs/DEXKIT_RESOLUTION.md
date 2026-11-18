@@ -1,5 +1,10 @@
 # DexKit resolution
 
+Music build 158 reuses the component/empty-component, fullscreen and own-element serializer roles.
+Its activation resolver uniquely anchors the media diagnostic and then selects the unique invoked
+`void(boolean)` method. It never selects a DEX instruction offset or an obfuscated name.
+[Music contract and failure behavior](MUSIC_ADS.md#discovery-and-effects).
+
 Background playback adds five validated runtime roles, with typed opcode/numeric fingerprints,
 dynamic background resource IDs and explicit caller deoptimization. Its full discovery contract,
 runtime contexts, fail-closed publication and observed-version limits are in

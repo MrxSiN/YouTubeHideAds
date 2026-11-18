@@ -1,0 +1,51 @@
+{
+  "schema": "youtubehideads-music-ads-v1",
+  "host": "com.google.android.apps.youtube.music",
+  "entry": "First package only; exact YouTube or Music package identity. Each process takes exactly one host startup path.",
+  "policy": {
+    "source": "source/brainfuck/and3.bf",
+    "library": "and3",
+    "abi": "bfc_call_v1",
+    "inputs": ["effective_enabled:u8 Boolean", "matched_ad_fact:u8 Boolean", "validated_context:u8 Boolean"],
+    "reply": "Only native status zero and exactly one output byte 01 authorize an effect. Every other reply preserves native behavior.",
+    "authorization": "effective_enabled AND matched_ad_fact AND validated_context"
+  },
+  "preferences": {
+    "file": "youtubehideads",
+    "storage": "Music's own Context; independent of YouTube's preferences",
+    "snapshot": "Existing Brainfuck settings_snapshot, exactly nine bytes",
+    "keys": ["hide_ads", "video_ads", "component_ads", "premium_promotions", "fullscreen_promotions"],
+    "defaults": [true, true, true, true, true],
+    "effective_offsets": {"video_ads": 5, "component_ads": 6, "premium_promotions": 7, "fullscreen_promotions": 8},
+    "startup": "Effects disabled until Instrumentation.callApplicationOnCreate supplies an attached Context and a valid BF snapshot; UI changes publish another snapshot."
+  },
+  "discovery": {
+    "shared": ["component parser", "ConversionContext path field", "EmptyComponent factory and value field", "fullscreen dialog", "bounded own-element serializer"],
+    "video_anchor": "maybeRegenerateCpnAndStatsClient called unexpectedly, but no error.",
+    "video_role": "Unique void one-argument anchored method, then its unique invoked method with descriptor suffix (Z)V; fewer than 512 invoked methods",
+    "failure": "Missing or ambiguous roles leave that surface unchanged; hooks use protective exception mode",
+    "selectors": "Semantic diagnostics, prototypes, platform API names and named resources; no obfuscated names or instruction offsets"
+  },
+  "components": {
+    "maximum_path_characters": 4096,
+    "general_markers": ["carousel_ad", "ads_video_with_context"],
+    "premium_markers": ["alert_banner_promo.e", "music_paid_content_overlay.e", "statement_banner"],
+    "compact": {
+      "path_prefix": "music_compact_banner.e",
+      "own_element_marker": "music_circle_icon_button.e",
+      "maximum_payload_bytes": 1048576,
+      "requirements": "Prefix match at content index zero, unique typed serializer, current candidate's argument 2 payload only; never an ancestor buffer"
+    },
+    "effect": "Shared validated typed EmptyComponent replacement"
+  },
+  "video_effect": "Call the original boolean activation method with false only when BF authorizes suppression; preserve the original call and its side effects otherwise, including native false arguments.",
+  "fullscreen": "Existing bounded serialized _interstitial classification and BF ad_fullscreen policy; effective fullscreen switch includes the master.",
+  "settings": {
+    "activity": "com.google.android.apps.youtube.music.settings.SettingsCompatActivity",
+    "theme": "Theme.YouTubeMusic resolved by name; no numeric host resource IDs",
+    "presentation": "Shared settings entry, dialog scaffold, section and toggle vocabulary; Music exposes ads only",
+    "shared_dialog_state": "Initialize existing UI holder slots 16 (page stack), 17 (UI check guard), 18 (dialog reference); no SponsorBlock player/network initialization",
+    "ui_checks": "Existing SponsorBlock color-picker checks run in YouTube only"
+  },
+  "out_of_scope": ["Music SponsorBlock", "Music player/feed extras", "Upgrade tab and native Get Music Premium account/settings labels", "native Premium bottom sheets without a recognized serialized ad payload"]
+}

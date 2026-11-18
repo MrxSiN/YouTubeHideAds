@@ -1,0 +1,9 @@
+11-16 01:28:41.808 24477 24477 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-16 01:28:41.818 24477 24477 I YouTubeHideAds: Playables typed element serializer resolved
+11-16 01:28:41.820 24477 24477 I YouTubeHideAds: Ad component hook installed
+11-16 01:28:41.820 24477 24477 I YouTubeHideAds: Fullscreen dialog hook installed
+11-16 01:28:41.821 24477 24477 I YouTubeHideAds: Music video ad activation hook installed
+11-16 01:28:41.821 24477 24477 I YouTubeHideAds: Music ad hook discovery finished
+11-16 01:28:41.821 24477 24477 I YouTubeHideAds: Settings lifecycle hook installed
+11-16 01:28:41.852 24477 24477 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-16 01:28:44.717 24477 24477 I YouTubeHideAds: Music video ad activation suppressed

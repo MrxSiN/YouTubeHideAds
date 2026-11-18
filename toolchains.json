@@ -1,0 +1,32 @@
+{
+  "schema": "youtubehideads-toolchains-v1",
+  "xax": {
+    "repository": "https://github.com/MrxSiN/XAX",
+    "commit": "897002e506069d7e13063353fb3baabe36ceba5d",
+    "compiler": "compiler/bootstrap/windows/xaxc-windows-x86_64.exe",
+    "compiler_sha256": "e88877d10690e171b73d9de8b94cb579820672e980b97f0bb11a88e460a7a77f",
+    "production_ledger": "0032",
+    "reason": "Native verified semantic edits and native libxposed APK build; includes the large DEX output fix.",
+    "latest_main_checked": "d47ba6d21da59a32b102b4b8d8b82d467626c293",
+    "retained_pin_reason": "Main advanced during acceptance. Its Windows seed is byte-identical; retain the exact inspected authoring/toolchain commit used for these verified transactions and device artifacts."
+  },
+  "xax_mcp": {
+    "repository": "https://github.com/MrxSiN/XAX-MCP",
+    "commit": "abc12e43150befffe32a1f3957e2b9d984e8fb8c",
+    "use": "Capability inspection only. The connected server grants read access without a store; native compiler CLI performs edits and builds."
+  },
+  "bbc": {
+    "repository": "https://github.com/MrxSiN/BBC",
+    "commit": "0039cccc8fdfec12ba59cd570121cd0992b92673",
+    "use": "Current main inspected; executable BF and all packaged native inputs retained unchanged.",
+    "retained_abi_reason": "Current BBC shared libraries have a different tape/budget contract. This feature reuses the existing digest-pinned and3 bfc_call_v1 library; no ABI migration."
+  },
+  "aapt2": {
+    "version": "9.5.1-16666295",
+    "repository": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/",
+    "use": "Static XML resources and branding only; no generated Java source.",
+    "executable_sha256": "dbe077d10e4b386ba4b08d692885b883320f6409f724498d8087b884b97ee1f5",
+    "framework_input_sha256": "168d5badbe7b2289164ce64913704dd938754e5b27655aa00aae2507e15781be",
+    "framework_input": "Android 17 API 37 framework-res.apk, read from the physical test device; static resource linking only."
+  }
+}
