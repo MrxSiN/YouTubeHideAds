@@ -1,5 +1,10 @@
 # DexKit resolution
 
+Music build 163 resolves the exclusive-audio capability, caller-scoped external restriction and
+native queue roles by unique structural relationships. Its gesture uses MusicActivity's public
+dispatcher, matching YouTube's existing architecture below. Missing or ambiguous roles leave the
+affected feature off. [Discovery and lifecycle](MUSIC_AUDIO_PLAYBACK.md#native-queue-and-lifecycle).
+
 Music build 159 discovers two background restriction roles in the existing Music DexKit lifetime:
 typed `ZL` eligibility with its nine-opcode sequence and protobuf discriminator, and typed `VILZ`
 kids policy with a long experiment anchor. Unique matches, reflection, bounded caller deoptimization

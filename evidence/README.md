@@ -1,6 +1,6 @@
 # Evidence index
 
-The canonical source is development build **1.3.0, versionCode 162**; the latest release is **1.3.0, versionCode 157**
+The canonical source is development build **1.3.0, versionCode 163**. The latest release is **1.3.0, versionCode 157**
 (`io.github.mrxsin.youtubehideads`). Dated
 directories are immutable measurements of their named builds; their prose may say canonical/installed
 relative to that session. Those statements do not identify today's source store or APK. Preserve
@@ -8,6 +8,7 @@ original hashes, screenshots, logs and measurements when documentation changes.
 
 | Session | Builds and scope |
 | --- | --- |
+| [Music audio playback](music_audio_20261118/README.md) | 163. Native replay, both queue transitions, exclusive-audio hooks, negative controls and YouTube regression |
 | [Premium controls and downloads](downloads_20261117/README.md) | 162; native replay, real Music/YouTube saves and exports, seven controlled cache cases, scoped device checks and limits |
 | [Music native welcome, build 161, 2026-11-17](music_welcome_20261117/README.md) | Native transactions and fixture replay, seven controlled host-layout cancellation cases, final APK checks and YouTube regression; naturally served controller acceptance remains unobserved |
 | [Music Premium controls, build 160, 2026-11-16–17](music_premium_20261116/README.md) | Native BF/XAX transactions, physical Upgrade/account/settings on/off/master controls, playback and YouTube regression; reference-mealbar observation and release signing limits explicit |

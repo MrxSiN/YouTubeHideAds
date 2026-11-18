@@ -1,5 +1,10 @@
 # Language boundary
 
+Build 163's Music audio discovery, scoped hooks, public metadata, native queue operations,
+gesture lifecycle and settings are native XAX semantic graph transactions, with the existing BF
+AND3 authorizing effects. Literal transaction transport and read-only SDK/host inspection remain
+outside tracked application source. Contracts and expected synthetic vectors are JSON data.
+
 Build 162's Premium, download, public request, offline policy, export and Android UI effects are
 native XAX semantic graph transactions. The existing BF AND3 library authorizes effects. Its
 separate controlled cache fixture graph exercises the exporter without adding a fixture to normal

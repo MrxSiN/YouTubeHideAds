@@ -1,5 +1,11 @@
 # Testing
 
+Build 163 adds 51 packaged Music audio checks: twelve Boolean authorization/caller-scope cases and
+39 title, ID, publisher, candidate-selection, bounded-response, identity and wire-encoding cases.
+Physical queue and gesture acceptance is recorded separately, including native presentation control
+and the process cache. [Evidence and limits](../evidence/music_audio_20261118/README.md) ·
+[Expected vectors](../testdata/music_audio_vectors.json).
+
 Build 162 adds twelve packaged download protocol checks. Native cache fixtures are a separate
 test graph: a valid export, a gap, duplicate spans, bad index checksum, incomplete stream, rejected
 encryption type and cancellation exercise the shared exporter. Real host downloads and exports

@@ -1,5 +1,15 @@
 # Changelog
 
+## Development build 163 (1.3.0, unreleased) — 2026-11-18
+
+- Add **Exclusive audio playback** to Music, on by default, with a scoped external-controller
+  restriction override and independent BF authorization.
+- Add **Enable Audio/Video switch**, off by default. Tap the left half of the native player pill
+  to find a matching song or music video and switch through Music's native queue.
+- Verify counterpart type, title and publisher; guard jobs against stale tracks and paused
+  Activities, and limit rollback to newly inserted queue items. [Design and limits](docs/MUSIC_AUDIO_PLAYBACK.md).
+- [Native replay, APK identities and device evidence](evidence/music_audio_20261118/README.md).
+
 ## Development build 162 (1.3.0, unreleased) — 2026-11-17
 
 - Extend YouTube Premium promotion removal to the You-page header and typed promotion thumbnails.

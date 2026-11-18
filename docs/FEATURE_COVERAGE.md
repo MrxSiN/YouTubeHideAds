@@ -1,5 +1,10 @@
 # Feature coverage
 
+Development build **163** adds Music [exclusive audio and counterpart switching](MUSIC_AUDIO_PLAYBACK.md).
+The left-half gesture changes the native queue entry; the right-half presentation control remains
+native. It does not add Always play song mode or support remote queues. Device observations and
+untested external controllers are listed in [the evidence](../evidence/music_audio_20261118/README.md).
+
 Development build **162** adds [YouTube Premium header coverage](YOUTUBE_PREMIUM_PROMOTIONS.md)
 and [shared download modes/export](DOWNLOADS.md). The download guide lists supported entry
 points and bounded export behavior. It does not claim complete Morphe menu parity, restricted/DRM

@@ -1,0 +1,17 @@
+11-18 17:55:16.646 11423 11423 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-18 17:55:16.702 11423 11455 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 17:55:21.434 11423 11423 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction
+11-18 17:55:45.877 12191 12191 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-18 17:56:01.898 12768 12768 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-18 17:56:27.957 13295 13295 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-18 17:56:28.065 13295 13386 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 17:56:32.246 13295 13295 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction
+11-18 17:56:41.130 13295 13295 I YouTubeHideAds: Music Audio/Video repeated tap declined while busy
+11-18 17:56:42.215 13295 13295 I YouTubeHideAds: Music Audio/Video exact previous source entry removal observed
+11-18 17:56:44.880 14171 14171 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-18 17:56:44.937 14171 14276 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 17:56:49.496 14171 14171 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction
+11-18 17:56:56.822 14171 14171 I YouTubeHideAds: Music Audio/Video active job cancelled
+11-18 17:57:09.830 15030 15030 I YouTubeHideAds: Music application ad snapshot: [0, 1, 1, 1, 1, 0, 0, 0, 0]
+11-18 17:57:09.889 15030 15115 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 17:57:14.777 15030 15030 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction

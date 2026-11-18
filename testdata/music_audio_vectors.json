@@ -1,0 +1,53 @@
+{
+  "schema": "music-audio-fixtures-v1",
+  "titles": [
+    ["Example Song (Official Video)", "Example Song", true],
+    ["Example Song [Audio]", "EXAMPLE SONG", true],
+    ["Blue Summer Song", "Song Blue Summer", true],
+    ["Blue Summer Song", "Blue Winter Song", false],
+    ["Example Song", "Unrelated Music", false],
+    ["", "Example Song", false],
+    ["(Official Video)", "[Audio]", false],
+    ["Artist Example Song", "Example Song", true]
+  ],
+  "ids": [
+    ["abcdefghijk", true], ["aB_12-45678", true], ["", false],
+    ["abcdefghij", false], ["abcdefghijkl", false], ["abc/efghijk", false]
+  ],
+  "authors": [
+    ["Example - Topic", "example"], ["ExampleVEVO", "example"],
+    ["Other Publisher", "other publisher"]
+  ],
+  "publishers": [
+    ["Example - Topic", "ExampleVEVO", true],
+    ["Example", "EXAMPLE", true],
+    ["Example", "Other Publisher", false],
+    ["", "Example", false],
+    ["", "", false],
+    ["- Topic", "VEVO", false]
+  ],
+  "selection": [
+    {"source":"aaaaaaaaaaa","source_type":"MUSIC_VIDEO_TYPE_ATV","target_type":"MUSIC_VIDEO_TYPE_OMV","title":"Example Song (Official Video)","author":"Example - Topic","expected":"bbbbbbbbbbb"},
+    {"source":"aaaaaaaaaaa","source_type":"MUSIC_VIDEO_TYPE_OMV","target_type":"MUSIC_VIDEO_TYPE_ATV","title":"Example Song [Audio]","author":"Example","expected":"bbbbbbbbbbb"},
+    {"source":"aaaaaaaaaaa","source_type":"MUSIC_VIDEO_TYPE_ATV","target_type":"MUSIC_VIDEO_TYPE_ATV","title":"Example Song","author":"Example - Topic","expected":""},
+    {"source":"aaaaaaaaaaa","source_type":"MUSIC_VIDEO_TYPE_ATV","target_type":"MUSIC_VIDEO_TYPE_OMV","title":"Unrelated Music","author":"Example - Topic","expected":""},
+    {"source":"aaaaaaaaaaa","source_type":"UNKNOWN","target_type":"MUSIC_VIDEO_TYPE_OMV","title":"Example Song","author":"Example","expected":""},
+    {"source":"aaaaaaaaaaa","source_type":"UNKNOWN","target_type":"MUSIC_VIDEO_TYPE_OMV","title":"Example Song","author":"Example - Topic","expected":"bbbbbbbbbbb"},
+    {"source":"bbbbbbbbbbb","source_type":"MUSIC_VIDEO_TYPE_ATV","target_type":"MUSIC_VIDEO_TYPE_OMV","title":"Example Song","author":"Example - Topic","expected":""}
+  ],
+  "response_shapes": [
+    {"nested_wrappers":47,"wide_keys":140,"container_depth":52,"walk_depth":50,"expected":"bbbbbbbbbbb"},
+    {"nested_wrappers":62,"wide_keys":140,"container_depth":67,"walk_depth":65,"expected":""},
+    {"nested_wrappers":47,"wide_keys":257,"container_depth":52,"walk_depth":50,"expected":""}
+  ],
+  "scope": [
+    ["fixture.Caller", "handle", "fixture.Caller", "handle", true],
+    ["fixture.Caller", "handle", "fixture.Other", "handle", false],
+    ["fixture.Caller", "handle", "fixture.Caller", "other", false],
+    ["fixture.Caller", "handle", "", "", false]
+  ],
+  "policy": "All eight AND3 truth-table vectors are evaluated through the existing native BF bridge.",
+  "identity": "Two separately constructed equal Strings must compare unequal by identity. The original-item identity snapshot contains only the exact original object (five cases, including ordinary equality as fixture sanity).",
+  "queue_command": {"video_id":"aaaaaaaaaaa", "expected_hex":"928fb5ee04110a0d0a0b61616161616161616161611001", "expected_base64":"ko+17gQRCg0KC2FhYWFhYWFhYWFhEAE="},
+  "device_cases": ["video-to-audio", "audio-to-video", "disabled", "independent-ad-master", "cancel-on-pause", "repeated-tap"]
+}

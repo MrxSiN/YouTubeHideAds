@@ -1,0 +1,37 @@
+{
+  "schema": "music-audio-inputs-v1",
+  "host": "com.google.android.apps.youtube.music",
+  "preferences": {
+    "music_exclusive_audio": {"default": true, "independent_of_ad_master": true},
+    "music_audio_video_switch": {"default": false, "independent_of_ad_master": true}
+  },
+  "authorization": "The existing native BF AND3 bridge authorizes a preference, resolved feature and fresh context. Any malformed or failed policy reply denies the effect.",
+  "exclusive_audio": {
+    "capability": {"shorty":"Z", "access_flags":17, "contiguous_opcodes":[110,12,31,57,84,31,110,10]},
+    "external_controller": {"shorty":"VL", "opcodes":[113,10,56,84,31,84,31,84,84,110,12,113,12,34,112,114,10], "required_public_invokes":["j$.util.concurrent.ConcurrentHashMap.keySet", "j$.util.stream.Stream.anyMatch", "j$.util.Objects.equals"]},
+    "restriction": "Unique static boolean predicate with the exact playability model parameter from the Null initialPlayabilityStatus initializer. Override only while the discovered external controller is on the bounded current stack.",
+    "stack_limit":128
+  },
+  "audio_video_switch": {
+    "gesture":"Intercept MusicActivity.dispatchTouchEvent using the existing YouTube gesture architecture. Claim a single-pointer tap within Android touch slop in the left half of the visible native audio_video_switch_pill_container under player_page; pass unclaimed gestures to the original Activity dispatcher.",
+    "activity_binding":"Main thread and exact Music Activity. A stale binding may refresh only on a new DOWN from a nonfinishing, focused Activity with shown and attached decor. Pausing cancels jobs and clears weak UI state.",
+    "source":"Weakly captured native queue manager, LOCAL mode, valid current ID/index and exact current item identity.",
+    "discovery":"Unique enqueue diagnostic anchor and signature; storage items shape and enum getter with a LOCAL constant; forwarding current-index opcodes; paired display-controller fields whose types hold native storage and an Android Handler; unique remover using both displays; unique inherited ID getter interface; unique Executor field and constructor.",
+    "enqueue_protocol":{"extension":163162354,"item_field":1,"video_id_field":1,"position_field":2,"play_next":1},
+    "counterpart":"Public oEmbed metadata plus Android Music search, opposite ATV/OMV type, normalized full-title score, same normalized publisher verified by target oEmbed. Only complete verified pairs enter the bidirectional in-process cache.",
+    "advance":"Enqueue PLAY_NEXT on the queue executor, observe the target at current+1, dispatch media NEXT on main, observe actual advancement on the same manager, then remove only the exact prior source entry.",
+    "cancellation":"Pause, stale source, changed manager/index, disabled setting, detached Activity or exception prevents further switching. Roll back only the observed owned next item if the unchanged source remains current and the item is absent from the original queue identity snapshot.",
+    "presentation":"The custom gesture selects the counterpart track ID. The right half retains Music's native presentation toggle; returning to a video track may retain audio-only presentation until that control is used.",
+    "unsupported":"Cast/remote queue, ambiguous roles, missing native pill, unavailable metadata or no verified counterpart decline the custom switch. No autoplay mode, deep-link fallback or server entitlement/offline change."
+  },
+  "bounds": {
+    "reflected_fields":64,"declared_methods":64,"inherited_methods":256,"queue_items":4096,
+    "search_nodes":32768,"search_depth":64,"diagnostic_slots":32,
+    "view_lookup_nodes":1024,"view_children":64,
+    "json_keys_per_object":256,"json_array_items":512,"candidate_entries":512,
+    "metadata_bytes":4194304,"connect_timeout_ms":4000,"read_timeout_ms":4000,
+    "body_deadline_ms":8000,"queue_wait_ms":3000,"executor_wait_ms":5000,"pair_cache_entries":600
+  },
+  "privacy":"No account credentials, cookies, API keys, stream URLs or user titles in logs. Public metadata IDs/query remain in transient request objects. Weak Activity/view references; cache lasts only for the process.",
+  "reference":{"repository":"https://github.com/MorpheApp/morphe-patches","commit":"31234a8465683a389bcfba25ad636fd1cd38fd02"}
+}

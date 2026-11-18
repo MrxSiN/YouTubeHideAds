@@ -1,5 +1,10 @@
 # Build
 
+Development build **163** adds Music exclusive audio and counterpart switching. Four
+[native transactions](../source/xax/transactions/music-audio-20261118/README.md) extend build 162.
+The native compiler pin and every BF/JNI/third-party input remain unchanged; the retention reason
+records the newer inspected toolchain main. [Build and scoped device evidence](../evidence/music_audio_20261118/README.md).
+
 Development build **162** adds YouTube Premium header removal and shared download/export support.
 Ten [native transactions](../source/xax/transactions/downloads-20261117/README.md) extend build 161;
 independent native replay is byte-identical and rejects stale roots. Production unsigned and

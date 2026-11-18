@@ -21,6 +21,7 @@ Dated evidence describes its named build, not the current checkout.
 | [Background playback](BACKGROUND_PLAYBACK.md) | Runtime gates, independent switch, policy, upstream research and limits |
 | [YouTube Music ads](MUSIC_ADS.md) | Music host startup, shared ad architecture, settings and limits |
 | [YouTube Music background playback](MUSIC_BACKGROUND_PLAYBACK.md) | Independent playback switch, structural restriction hooks and shared BF policy |
+| [YouTube Music audio playback](MUSIC_AUDIO_PLAYBACK.md) | Exclusive audio, optional Audio/Video switch and native queue lifecycle |
 | [YouTube Music Premium promotions](MUSIC_PREMIUM_PROMOTIONS.md) | Upgrade/account/membership/mealbar/welcome controls and explicit limits |
 | [YouTube Premium promotions](YOUTUBE_PREMIUM_PROMOTIONS.md) | You-page header actions and own-thumbnail payload coverage |
 | [Downloads and export](DOWNLOADS.md) | Both hosts, modes, current-item actions, cache export and bounds |
@@ -52,6 +53,8 @@ Dated evidence describes its named build, not the current checkout.
 | Player controls | Force original audio | On | No |
 | Player controls | Background playback | On | No |
 | Music / Player controls | Background playback (`background_playback`, Music's own storage) | On | No |
+| Music / Player controls | Exclusive audio playback (`music_exclusive_audio`) | On | No |
+| Music / Player controls | Enable Audio/Video switch (`music_audio_video_switch`) | Off | No |
 | Both hosts / Downloads | In-app downloads (`in_app_downloads`) | Off | No |
 | Both hosts / Downloads | External downloads (`external_downloads`, takes priority) | Off | No |
 | Both hosts / Downloads | Export folder (`downloads_export_tree`) | Unset | No |

@@ -1,5 +1,10 @@
 # Upstream provenance and terms
 
+Build 163 adapts Music exclusive-audio fingerprints, Audio/Video counterpart selection and native
+queue behavior from Morphe `31234a8465683a389bcfba25ad636fd1cd38fd02` into native XAX/BF. It adds
+publisher verification and guarded queue rollback. [Reference paths and limits](MUSIC_AUDIO_PLAYBACK.md#reference-and-limits).
+Existing Morphe notice and licensing remain packaged; no upstream Java/Kotlin is packaged.
+
 Build 162 adapts YouTube Premium header behavior and the shared YouTube/Music download,
 visitor, offline schema, cache export and command-router references at Morphe
 `31234a8465683a389bcfba25ad636fd1cd38fd02` into native XAX/BF. No upstream Java/Kotlin is packaged.
