@@ -1,5 +1,11 @@
 # Architecture
 
+Development build 163 adds independent Music exclusive-audio and Audio/Video controls. Native XAX
+discovers unique host roles, limits the shared restriction override to the discovered caller,
+fetches public counterpart metadata off main and uses Music's native queue executor to advance.
+The existing BF AND3 authorizes effects. Weak UI/queue bindings, single-job ownership and exact
+item identities bound lifecycle and rollback. [Design and limits](MUSIC_AUDIO_PLAYBACK.md).
+
 Development build 162 adds shared native XAX download command, player-response, public-stream,
 external intent and bounded cache-export paths, reusing the existing BF AND3 authorization.
 Each host owns its settings, offline database, scheduler and media lifecycle. Retained player,

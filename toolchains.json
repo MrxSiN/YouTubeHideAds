@@ -2,12 +2,12 @@
   "schema": "youtubehideads-toolchains-v1",
   "xax": {
     "repository": "https://github.com/MrxSiN/XAX",
-    "commit": "991ef7a6f6cff1efe825401f0365ca8be5054bd9",
+    "commit": "fa6d2edf9794eb7911e2944c793940faaa80fec3",
     "compiler": "compiler/bootstrap/windows/xaxc-windows-x86_64.exe",
-    "compiler_sha256": "ae43e32f21ccd2d7e333ebf30a114d329ca5b5912c388ae167c24d12d2e9f665",
-    "production_ledger": "0035",
-    "reason": "Retain the exact build 159 compiler commit for reproducibility of builds 160 and 161 native edits, replay and APK builds. Latest main checked on 2026-11-17 is a03a427; only XAX_HANDOFF.md and XAX_STATE.md changed since this pin. Compiler, SDK and native seed are byte-identical. No compiler or native ABI migration.",
-    "latest_main_checked": "a03a4274bbe31c01992898bf807f13930dfba596"
+    "compiler_sha256": "8f0d23e1b749a10969b7cdd1db4d4a57705c4aa9a15cc04906ad497963409f9f",
+    "production_ledger": "0036",
+    "reason": "Build 164 moves to the latest main and its validated ledger 0036 Windows seed. Building the unchanged build 163 store with it reproduces the recorded build 163 production DEX byte for byte (all four files), so the move changes no application bytes by itself. Latest main checked 2026-11-18.",
+    "latest_main_checked": "fa6d2edf9794eb7911e2944c793940faaa80fec3"
   },
   "xax_mcp": {
     "repository": "https://github.com/MrxSiN/XAX-MCP",
@@ -17,7 +17,7 @@
   "bbc": {
     "repository": "https://github.com/MrxSiN/BBC",
     "commit": "0039cccc8fdfec12ba59cd570121cd0992b92673",
-    "use": "Latest main checked; Brainfuck commands and every packaged native input retained unchanged. No BBC build or ABI migration.",
+    "use": "Latest main checked 2026-11-18 (unchanged since build 163); Brainfuck commands and every packaged native input retained unchanged. No BBC build or ABI migration.",
     "retained_abi_reason": "Current BBC shared libraries have a different tape/budget contract. This feature reuses the existing digest-pinned and3 bfc_call_v1 library; no ABI migration."
   },
   "aapt2": {
@@ -26,6 +26,7 @@
     "use": "Static XML resources and branding only; no generated Java source.",
     "executable_sha256": "dbe077d10e4b386ba4b08d692885b883320f6409f724498d8087b884b97ee1f5",
     "framework_input_sha256": "168d5badbe7b2289164ce64913704dd938754e5b27655aa00aae2507e15781be",
-    "framework_input": "Android 17 API 37 framework-res.apk, read from the physical test device; static resource linking only."
+    "framework_input": "Android 17 API 37 framework-res.apk, read from the physical test device; static resource linking only.",
+    "note": "Build 164 keeps the build 163 branding archive. AAPT2 9.3.1-15703166 with the pinned framework input reproduces it byte for byte (BLAKE3 f1365989...e661)."
   }
 }

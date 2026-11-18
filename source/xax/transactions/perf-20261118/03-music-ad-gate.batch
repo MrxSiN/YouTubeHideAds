@@ -1,0 +1,64 @@
+R b754df6a78c9d430c5b13911ebfa2a88cbe84efb9ff525e736f53859c459bfd2
+F0
+define @music_ad_gate_0
+(T0,T1,T1)->(T2)
+B0(P0:T0,P1:T1,P2:T1)
+N0 call.foreign entity=c09c89fe9a5e8e770a94d1c3a40edab2640c8c0549de61627d17505ad718748b P0 -> T3
+N1 constant 4096 -> T3
+N2 int.compare N0 N1 -> T2 [4]
+cbr N2 B1() B2()
+B1()
+N3 call.foreign entity=6718a88edc30b50c74e46ad356b34ffc28dea3c86e057489728c2abc22ab1e9b -> T0
+N4 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N3 -> T4
+N5 call.foreign entity=e2bbc3a65bf52d7dd3e1305ed85dfeee64e4bd9ec3d4a5c56bc1b71e1f567032 P0 N4 -> T2
+N6 call.foreign entity=406cddf6289a10c8c58c8975351a8420595b808e5ae69ce5a12c8ee9a9149f1a -> T0
+N7 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N6 -> T4
+N8 call.foreign entity=e2bbc3a65bf52d7dd3e1305ed85dfeee64e4bd9ec3d4a5c56bc1b71e1f567032 P0 N7 -> T2
+N9 call.foreign entity=36f0edd61eb6bc953c01b966bcfcdb551ede0ee53b297686f44a1579fa1a8ee2 -> T0
+N10 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N9 -> T4
+N11 call.foreign entity=e2bbc3a65bf52d7dd3e1305ed85dfeee64e4bd9ec3d4a5c56bc1b71e1f567032 P0 N10 -> T2
+N12 bit.or N5 N8 -> T2
+N13 bit.or N12 N11 -> T2
+cbr N13 B3() B2()
+B2()
+N14 constant 0 -> T2
+ret N14
+B3()
+N15 call.direct entity=F175 P1 N13 P2 -> T2
+ret N15
+T0 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T1 bits8
+T2 bits1
+T3 bits32
+T4 form2 4c217ab08a085f6a695ef07607efe5b367d1034f0a7772f4849017bddf2da72f
+end
+define @music_ad_gate_1
+(T0,T1,T1)->(T2)
+B0(P0:T0,P1:T1,P2:T1)
+N0 call.foreign entity=c09c89fe9a5e8e770a94d1c3a40edab2640c8c0549de61627d17505ad718748b P0 -> T3
+N1 constant 4096 -> T3
+N2 int.compare N0 N1 -> T2 [4]
+cbr N2 B1() B2()
+B1()
+N3 call.foreign entity=5b50c9af709cca76f1af01835a5400ad09f01bafc1d4edd7c11402a1c8f33516 -> T0
+N4 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N3 -> T4
+N5 call.foreign entity=e2bbc3a65bf52d7dd3e1305ed85dfeee64e4bd9ec3d4a5c56bc1b71e1f567032 P0 N4 -> T2
+N6 call.foreign entity=9cfd9b6e2dbb949832d0fb9a678e0960a071830377ff3357102c9d4f8608429e -> T0
+N7 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N6 -> T4
+N8 call.foreign entity=e2bbc3a65bf52d7dd3e1305ed85dfeee64e4bd9ec3d4a5c56bc1b71e1f567032 P0 N7 -> T2
+N9 bit.or N5 N8 -> T2
+cbr N9 B3() B2()
+B2()
+N10 constant 0 -> T2
+ret N10
+B3()
+N11 call.direct entity=F175 P1 N9 P2 -> T2
+ret N11
+T0 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T1 bits8
+T2 bits1
+T3 bits32
+T4 form2 4c217ab08a085f6a695ef07607efe5b367d1034f0a7772f4849017bddf2da72f
+end
+replace F785 @music_ad_gate_0
+replace F745 @music_ad_gate_1

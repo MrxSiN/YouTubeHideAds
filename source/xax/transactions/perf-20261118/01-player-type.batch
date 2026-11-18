@@ -1,0 +1,38 @@
+R c724eeedf34f231c4e887cf4d4a8f6342bfb065ddd772bf0e481c82d83ac7f64
+F0
+define @player_type_names
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=a7302a32acdc26ad6149e1cdeeec89932fc44b59949a227b3ebe9ca22d679881 -> T0
+N1 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N0 -> T2
+N2 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N1 -> T1
+N3 call.foreign entity=6c8fdaba5284a77d9c4811f019ab0a4d395ed34d9b3ff73193875cda8edc3f74 -> T0
+N4 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N3 -> T2
+N5 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N4 -> T1
+N6 bit.or N2 N5 -> T1
+N7 call.foreign entity=758e7576d2ab3e17245f24db89c4d3ed4c207b3636c01dbc399d4cb3c4b44eb5 -> T0
+N8 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N7 -> T2
+N9 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N8 -> T1
+N10 bit.or N6 N9 -> T1
+N11 call.foreign entity=bd70ec3518b36da3c836d0c9837e423a8d821410eeea2aeb924d4e2e2f932a03 -> T0
+N12 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N11 -> T2
+N13 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N12 -> T1
+N14 bit.or N10 N13 -> T1
+N15 call.foreign entity=0417e6d2e9688a2d0984746b6f792f01dffcf545bf211f0aa9582fb9f7492372 -> T0
+N16 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N15 -> T2
+N17 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N16 -> T1
+N18 bit.or N14 N17 -> T1
+N19 call.foreign entity=b55b6ef65c693d7528b503b5429b06de03ca4a4c1429fcd375bcbb206c4f429e -> T0
+N20 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N19 -> T2
+N21 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N20 -> T1
+N22 bit.or N18 N21 -> T1
+N23 call.foreign entity=b3dc3cbdbc4ff348e1b3f605d818a45438204b5a6562222f1455f534c43aedb4 -> T0
+N24 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N23 -> T2
+N25 call.foreign entity=c579b6488a36b6bcc1b9572591004341d7a2b182a32c1250c98c6970aacee6e6 P0 N24 -> T1
+N26 bit.or N22 N25 -> T1
+ret N26
+T0 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T1 bits1
+T2 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+end
+replace F121 @player_type_names

@@ -1,5 +1,10 @@
 # Brainfuck runtime ABI
 
+Build 163 authorizes Music exclusive audio and counterpart switching through the existing Boolean
+AND3 gate and exact reply validation. Caller, queue, window, identity and freshness validation is
+XAX. No BF commands, native library or bridge ABI changes.
+[Audio input contract](../contracts/music_audio_inputs.json).
+
 Music background playback in build 159 shares YouTube's existing typed Boolean AND3 gate, the
 same `liband3.so` and exact reply validation. No BF commands, native library or bridge ABI changes.
 [Music background contract](../contracts/music_background_playback_inputs.json).

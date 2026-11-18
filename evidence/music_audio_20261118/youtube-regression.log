@@ -1,0 +1,17 @@
+11-18 18:46:44.210 28093 28093 I YouTubeHideAds: Playables self-check (16 cases)=true
+11-18 18:46:44.210 28093 28093 I YouTubeHideAds: Playables complete self-check (24 cases)=true
+11-18 18:46:44.210 28093 28093 I YouTubeHideAds: Player swipe self-check (28 cases)=true
+11-18 18:46:44.211 28093 28093 I YouTubeHideAds: Feed content self-check (72 cases)=true
+11-18 18:46:44.211 28093 28093 I YouTubeHideAds: Downloads protocol self-check passed (12 cases)
+11-18 18:46:44.607 28093 28093 I YouTubeHideAds: Ad policy self-check passed (70 cases)
+11-18 18:46:44.608 28093 28093 I YouTubeHideAds: Video ad activation hook installed
+11-18 18:46:44.672 28093 28093 I YouTubeHideAds: Ad component hook installed
+11-18 18:46:44.731 28093 28093 I YouTubeHideAds: SponsorBlock self-check passed (277 cases)
+11-18 18:46:44.731 28093 28093 I YouTubeHideAds: SponsorBlock network self-check (18 cases)=true
+11-18 18:46:44.731 28093 28093 I YouTubeHideAds: SponsorBlock controls self-check (20 cases)=true
+11-18 18:46:44.732 28093 28093 I YouTubeHideAds: SponsorBlock integration self-check (67 cases)=true
+11-18 18:46:44.957 28093 28093 I YouTubeHideAds: AI/audio self-check (60 cases)=true
+11-18 18:46:45.682 28093 28111 I YouTubeHideAds: Background playback self-check (28 cases)=true
+11-18 18:46:55.558 28093 28093 I YouTubeHideAds: Settings section attached
+11-18 18:46:58.413 28093 28093 I YouTubeHideAds: Brainfuck policy self-check passed
+11-18 18:46:58.453 28093 28093 I YouTubeHideAds: SponsorBlock native UI self-check (64 cases)=true

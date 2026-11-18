@@ -1,5 +1,15 @@
 # Tested compatibility
 
+Build **164** changes no discovery role. On the same Pixel 8 Pro, YouTube 21.45.88 passed its startup
+suites, and Music **9.46.51** (newer than the 9.45.51 used for build 163) installed every Music hook
+and passed every Music self-check at startup. Music playback features were not re-run on 9.46.51.
+[Evidence](../evidence/perf_20261118/README.md).
+
+Build **163** targets Music **9.45.51** on the physical Pixel 8 Pro, Android 17/API 37 and
+Vector 2.2/API 102. Structural roles and public metadata availability are separate compatibility
+conditions. Other Music versions, Cast queues and real head-unit controllers remain untested.
+[Scoped checks](../evidence/music_audio_20261118/README.md).
+
 Build **162** targets YouTube **21.45.88** and Music **9.45.51** on the same physical
 Pixel 8 Pro, Android 17/API 37 and Vector 2.2/API 102 environment. Download endpoint availability
 and public stream clients can change separately from host versions. See [scope](DOWNLOADS.md).

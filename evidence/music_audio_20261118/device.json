@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-18",
+  "phone": "Pixel 8 Pro",
+  "android": "17 / API 37",
+  "framework": "Vector 2.2 / API 102",
+  "music": "9.45.51",
+  "youtube": {
+    "status": "EXECUTED",
+    "startup_and_unified_settings": "passed",
+    "sponsorblock_ui_checks": 64,
+    "youtube_preferences_unchanged": true,
+    "production_module_enabled_again": true,
+    "temporary_regression_module_uninstalled": true
+  },
+  "packaged_music_checks": {
+    "policy_and_caller_scope": 12,
+    "counterpart_and_queue_contract": 39
+  },
+  "music_install": {
+    "status": "EXECUTED",
+    "package": "io.github.mrxsin.youtubehideads.musicdev",
+    "version_code": 67,
+    "installed_apk_sha256": "13ffb227d7d7998aa100195a30eff91a39d2ab8caab7315753307752e3af613a",
+    "matches_accepted_apk": true
+  },
+  "cycle": {
+    "status": "EXECUTED",
+    "steps": [
+      {
+        "direction": "video-to-song",
+        "before": [
+          "Now playing videos"
+        ],
+        "after": [
+          "Now playing songs"
+        ],
+        "elapsed_seconds": 2.26,
+        "source_metadata_requests": 1,
+        "native_advance_verified": true,
+        "source_removal_observed": true
+      },
+      {
+        "direction": "song-to-video",
+        "before": [
+          "Now playing songs"
+        ],
+        "after": [
+          "Now playing songs"
+        ],
+        "elapsed_seconds": 0.56,
+        "source_metadata_requests": 0,
+        "native_advance_verified": true,
+        "source_removal_observed": true
+      }
+    ],
+    "native_right_after_return": {
+      "mode": [
+        "Now playing videos"
+      ],
+      "custom_switch_messages": 0
+    }
+  },
+  "controls": {
+    "status": "EXECUTED",
+    "cases": [
+      {
+        "case": "both features disabled across restart",
+        "custom_switch_jobs": 0,
+        "exclusive_authorizations": 0
+      },
+      {
+        "case": "drag beyond touch slop",
+        "custom_switch_jobs": 0,
+        "ad_master": false,
+        "exclusive_audio_authorized": true
+      },
+      {
+        "case": "repeated tap while busy, ad master off",
+        "completed_jobs": 1,
+        "second_tap_declined": true,
+        "source_removal_observed": true
+      },
+      {
+        "case": "Activity pause during lookup",
+        "cancelled": true,
+        "target_advance": false
+      }
+    ],
+    "restored_preferences": {
+      "Hide ads": true,
+      "Exclusive audio playback": true,
+      "Enable Audio/Video switch": true
+    }
+  },
+  "youtube_install": {
+    "status": "EXECUTED",
+    "package": "io.github.mrxsin.youtubehideads.regressiondev",
+    "version_code": 18,
+    "installed_apk_sha256": "841da67a25046c1a37230bc8c0dcfa7a8b874fbbb6c0bbc84c4ae536d1913f91",
+    "matches_accepted_apk": true
+  },
+  "device_restore": {
+    "status": "EXECUTED",
+    "device_settings": {
+      "screen_off_timeout": "restored original value",
+      "stay_on_while_plugged_in": "restored original value",
+      "rotation": "restored original free rotation"
+    },
+    "temporary_ui_captures_removed": true
+  }
+}

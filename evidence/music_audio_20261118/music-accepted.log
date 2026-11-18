@@ -1,0 +1,17 @@
+11-18 17:52:25.890  8375  8375 I YouTubeHideAds: Music audio policy/scope self-check passed (12 cases)
+11-18 17:52:25.894  8375  8375 I YouTubeHideAds: Music exclusive audio hooks installed (capability, scoped external restriction)
+11-18 17:52:25.900  8375  8375 I YouTubeHideAds: Music Audio/Video counterpart self-check passed (39 cases)
+11-18 17:52:25.903  8375  8375 I YouTubeHideAds: Music Audio/Video Activity dispatcher installed
+11-18 17:52:25.994  8375  8428 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 17:52:30.101  8375  8375 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction
+11-18 17:52:39.530  8375  8403 I YouTubeHideAds: Music Audio/Video source metadata ready
+11-18 17:52:40.456  8375  8403 I YouTubeHideAds: Music Audio/Video matching counterpart verified
+11-18 17:52:41.259  8375  8403 I YouTubeHideAds: Music Audio/Video counterpart observed at play-next position
+11-18 17:52:41.324  8375  8403 I YouTubeHideAds: Music Audio/Video target playback advancement verified
+11-18 17:52:41.338  8375  8375 I YouTubeHideAds: Music Audio/Video exact previous source entry removal observed
+11-18 17:52:41.338  8375  8403 I YouTubeHideAds: Music Audio/Video switch completed with native queue advancement
+11-18 17:52:45.792  8375  8403 I YouTubeHideAds: Music Audio/Video matching counterpart verified
+11-18 17:52:45.960  8375  8403 I YouTubeHideAds: Music Audio/Video counterpart observed at play-next position
+11-18 17:52:46.022  8375  8403 I YouTubeHideAds: Music Audio/Video target playback advancement verified
+11-18 17:52:46.041  8375  8375 I YouTubeHideAds: Music Audio/Video exact previous source entry removal observed
+11-18 17:52:46.041  8375  8403 I YouTubeHideAds: Music Audio/Video switch completed with native queue advancement

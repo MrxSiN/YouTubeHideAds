@@ -1,0 +1,138 @@
+R 44c631754e2c35454cf05b75e6f928490c7035f050c2af3e8d7615139cb0b99f
+F0
+define @s_container_get
+object 6 0x8f01666f726569676e2d66756e6374696f6e2d76310d6a766d2d6765747374617469632e696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f506f6c69736842696e64696e67731c636f6e7461696e65723a4c6a6176612f6c616e672f4f626a6563743b0001aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+end
+define @s_container_put
+object 6 0x8f01666f726569676e2d66756e6374696f6e2d76310d6a766d2d7075747374617469632e696f2f6769746875622f6d727873696e2f796f7574756265686964656164732f506f6c69736842696e64696e67731c636f6e7461696e65723a4c6a6176612f6c616e672f4f626a6563743b01aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe12700
+end
+define @player_container_id
+(T0)->(T1)
+B0(P0:T0)
+N0 call.foreign entity=@s_container_get -> T2
+N1 call.foreign entity=2c1f2039f9502d90b1e87719b92ecfd67bc4fb66ceeb500df247408020fd3186 N0 -> T2
+N2 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N1 -> T3
+cbr N2 B1() B2()
+B1()
+N3 call.foreign entity=3700210a1c0bb843d1c8330bdd6363534049aedbcde335145380da3935fb66a9 N0 -> T4
+N4 call.foreign entity=0c42fea7eb9c8c665db29282b1d1b931a9d254e79536f02cbaeba099a1c57393 N3 -> T1
+ret N4
+B2()
+N5 call.foreign entity=3072517b1622f8b12b09ffb60a0ed649fe5ca225ad1759d6088edc8132d39143 -> T5
+N6 call.foreign entity=adec2cea765c0ee546a77729ec66e35d09d667ee216b9bf9573f8a72b42510f2 -> T5
+N7 constant 0 -> T1
+N8 call.direct entity=F826 P0 N5 N6 N7 -> T1
+N9 call.foreign entity=db5aea97bddfdcf7acb5862eb3b3665d8cdcec8ec56ea04da93a8bfba3b5b755 N8 -> T4
+N10 call.foreign entity=953262f8bc9c85290befd8e72f88b06dcc82fe1f0dd8d2e5e215d07f868579cf N9 -> T2
+N11 call.foreign entity=@s_container_put N10
+ret N8
+T0 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T1 bits32
+T2 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T3 bits1
+T4 form2 b0d1f8f7b61513220ff2d749e2d38d10c57802f308655b0586651602618edf41
+T5 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+end
+define @downloads_attach
+(T0)->(T0)
+B0(P0:T0)
+N0 call.direct entity=F295 -> T1
+cbr N0 B1() B11()
+B1()
+N1 call.direct entity=F112 -> T0
+N2 call.foreign entity=708537e0dd40a5d3ddb36d3e20e4616bc7f27f2764efdf1216e0fc4574c1d4d2 N1 -> T1
+cbr N2 B2() B11()
+B2()
+N3 call.foreign entity=be08cab0e2209436664a8ef5a8c222bc5ff9da8ab520dd81a30c27bc11ed47ca N1 -> T2
+N4 call.foreign entity=60faf899aebd0488bef0cdb2c31a150e1f6aa07df99ef6d56131e8663f3f91af N1 -> T3
+N5 call.foreign entity=3072517b1622f8b12b09ffb60a0ed649fe5ca225ad1759d6088edc8132d39143 -> T4
+N6 call.foreign entity=adec2cea765c0ee546a77729ec66e35d09d667ee216b9bf9573f8a72b42510f2 -> T4
+N7 constant 0 -> T5
+N8 call.direct entity=@player_container_id N4 -> T5
+N9 int.compare N7 N8 -> T1 [3]
+cbr N9 B3() B11()
+B3()
+N10 call.foreign entity=dbda4d7e3bbfaf7bbb6fe2a40391a4818ddaae5f9e692c77cce7c4fb430ab314 N3 N8 -> T6
+N11 call.foreign entity=f78de4ddc377103d6501998d738412d23e31a2ce0ce7dd8ef6e80fa556fae50a N10 -> T0
+N12 call.foreign entity=65e38a29100bc9ca1be7a719b67da4e21610a4a1320c17f8eb3f3651b5237d5d N11 -> T1
+cbr N12 B4() B11()
+B4()
+N13 call.foreign entity=bd33cea026eba929017a49588514f226c56e3506a3e8c8e3a4aaf295a0f09609 N10 -> T7
+N14 call.foreign entity=8a45366a73ce876f1948eb540fbfd6695a7226a1b6e5db3b55c463770f566370 -> T4
+N15 call.foreign entity=fda2a2aa73d5041d1c6c8156152c9c648f91dc52695135e9973feac79603b2b8 N14 -> T0
+N16 call.foreign entity=a6d93a6f23bb0cd3fa03fa2519cb4f6a9c333367f27a149e72b5bedc327893d1 N10 N15 -> T6
+N17 call.foreign entity=f78de4ddc377103d6501998d738412d23e31a2ce0ce7dd8ef6e80fa556fae50a N16 -> T0
+N18 call.foreign entity=92286b7703bbf8a794e4c2874a171380f2ce9c9972e63ff3026c819f25c3cda4 N17 -> T1
+N19 call.direct entity=F213 -> T5
+N20 int.compare N19 N7 -> T1 [2]
+cbr N20 B7() B5()
+B5()
+cbr N18 B6() B11()
+B6()
+N21 call.foreign entity=4c6dcf9d1ffd6fb22554caef882f0a7bbb9e58f543a95601a7bb429247285a57 N13 N16
+br B11()
+B7()
+cbr N18 B11() B8()
+B8()
+N22 call.foreign entity=902518fb7a02d797e2bb03c44e8ef6118969f98754367103973cbe25907ff8ea N4 -> T8
+N23 call.foreign entity=cbf1ddbb43ad915c117b01e20c6d374f66167df91fcb4a06da466778ef64a1c2 -> T4
+N24 call.foreign entity=f95bcdc995b54fcc7422ebfc419cc39d00edf65f9a7e12ed13a99c65ec8f039f -> T4
+N25 call.foreign entity=92252823ffbdd6e7058c9b3d5179fbbd661217096318ed063b145316a4f3c2ce N4 -> T4
+N26 call.foreign entity=cc8084304efe61944f5a5806195624bfe1808d7791ae04c40ae3c9cce6b87e3a N22 N23 N24 N25 -> T5
+N27 int.compare N7 N26 -> T1 [3]
+cbr N27 B10(N26) B9()
+B9()
+N28 call.foreign entity=f16e32d54e5eb78e2870470b53c970d4dbd6473a318937bc011df91868bd7e6c -> T4
+N29 call.foreign entity=058af06a98dbc67dc8f12e1b9ddc6d9604b37ebd22f77a28d25a83ba3eeeb645 -> T4
+N30 call.foreign entity=cc8084304efe61944f5a5806195624bfe1808d7791ae04c40ae3c9cce6b87e3a N22 N28 N24 N29 -> T5
+N31 int.compare N7 N30 -> T1 [3]
+cbr N31 B10(N30) B11()
+B10(P1:T5)
+N32 call.foreign entity=65dd9a4cac7f5bc14437900ceaf3c2e56af620555507c4423002197b0732711a N4 -> T9
+N33 call.foreign entity=9467fed1f9053152e40e22502596e3f238fc7bf709ba6507d421ad163989172b N32 -> T10
+N34 call.foreign entity=61069899a3dd67a80af549cdd531fb8f673fed2ea890d740d9b7577305dbb559 N33 P1
+N35 constant 4294967295 -> T5
+N36 call.foreign entity=d9219c2d625d8f769b30b5171c4b3828a4d850781feb4800fd55145f0a6acbe4 N33 N35
+N37 call.foreign entity=9a2cd28d3db84706d3cc5fd9b2f5b073642fa6ea9a15c47e1159ba98d32e2a24 N32 -> T6
+N38 call.foreign entity=68fd346eed77f326efde27c9c6194ff1a6effec76bdb81cae4973d7249b960cd N37 N15
+N39 call.foreign entity=813ff96ef82d78f44780305952d72f2045325d54e3b56998e0a7a7ca0a57d1bc -> T4
+N40 call.foreign entity=72ff4121f3685b97cee6ad119caf45eb17400ced1f42646ee82200b7d4de4219 N39 -> T11
+N41 call.foreign entity=87bd9fc7156a62841dfa50b0e3ee2a3542d9081d84b77954ed4613fad1e29228 N37 N40
+N42 function.address entity=F446 -> T12
+N43 call.foreign entity=f5ca400a00daa4e2743f95d54ef8dbe7c47d99497d7654e9001882ed2a7025a9 N37 N42
+N44 constant 12 -> T5
+N45 call.direct entity=F753 N4 N44 -> T5
+N46 call.foreign entity=68ec0c46cbdc205418ecdac28661a6db25066b79461be47653d5c90e4bd1cf88 N37 N45 N45 N45 N45
+N47 constant 16843868 -> T5
+N48 call.direct entity=F258 N4 N47 -> T13
+N49 call.foreign entity=14c5c29e575c1576a4c42aa926f29f2674ed258f137c54e3563bd34b2951f5a6 N37 N48
+N50 constant 48 -> T5
+N51 call.direct entity=F753 N4 N50 -> T5
+N52 call.foreign entity=d0a74a4cb3d61f039d9943eacab35e22553bee64d6a38a8627c859bf2af3a6d6 N51 N51 -> T14
+N53 call.foreign entity=77beb69f9d44a8286585916e302897a6947f5265125922b4f9c24880bda16187 N52 -> T15
+N54 call.foreign entity=0ae66cdfd05bfc632db4411c3b3e6877978c486687b3db6fa27f66127f5868bc N13 N37 N7 N53
+N55 constant 6 -> T5
+N56 call.foreign entity=585eac9d61e1b7da5f1ccec503ea2d923885a47f987d4009e61569e3031019ca -> T4
+N57 call.direct entity=F506 N55 N56
+br B11()
+B11()
+N58 call.direct entity=F853 -> T0
+ret N58
+T0 form2 aa2c05c07379e5eb8672fd2c37d668bbfd46872b56fb6327c63fba8ad11fe127
+T1 bits1
+T2 form2 57622f832ac7fcd3b8437e6bfdaa3800b97e4a8b712330a55285f8be6ecf7a44
+T3 form2 398a22175eda65762cc801dcbe146f316fd6360c08c899b6bc260e49c290887a
+T4 form2 dc505a06f2802d6ec42fa8c159f8c828345ce2cb62acdb6cf0864f34809f2777
+T5 bits32
+T6 form2 8cf05c1ee2489e465ea16fb2b3f806510ec31613e4e75059b0fbaa03433ed39e
+T7 form2 74b9ef32c40133b18fc9bc414cbb420352e7c1fd7d932045390be972eb065d9d
+T8 form2 f87b4c1696f3c51c501c0fcc83d7c458b75a4dd96dce2a0a4485a2e41e2654a9
+T9 form2 61139af3580d059377d7686e7451d601abf14a5f2fd7d491a32d722e4697607e
+T10 form2 6524a56067dff8fe45a6621d45d6d5bdfef53239cac8c5ca2001fe67069b1b99
+T11 form2 4c217ab08a085f6a695ef07607efe5b367d1034f0a7772f4849017bddf2da72f
+T12 form2 663b9df305ceb56bdad843f4bc579b240a978b794a5465a80566349d749e30c3
+T13 form2 7d7fe91f8ae45136cc2bc9f8c2653719c8519ddefd2bcbae291a32a6324b93eb
+T14 form2 cebeb1ba5e2856226c7e54041cf48c71a9e66a9948370c9cebd2e755a8b5a52c
+T15 form2 ab1f4e27376208aa9264f49a15ea4e25078b3c90502b80544017497fc9013b63
+end
+replace F357 @downloads_attach

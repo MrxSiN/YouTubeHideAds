@@ -1,5 +1,18 @@
 # Build
 
+Development build **164** applies nine [native transactions](../source/xax/transactions/perf-20261118/README.md)
+to build 163 with the latest XAX seed (ledger 0036). The canonical source root is a snapshot without
+external digests; a build snapshot adds the BLAKE3 of the 13 pinned inputs and of the signing
+material, then `xaxc build-signed SNAPSHOT APK PROVENANCE CAPABILITY CAPABILITY INPUT...` builds
+it (the capability is both the transport and a declared input; it is never stored). Built that
+way, the unchanged build 163 store reproduces its recorded production DEX byte for byte.
+[Build record](../evidence/perf_20261118/build.json).
+
+Development build **163** adds Music exclusive audio and counterpart switching. Four
+[native transactions](../source/xax/transactions/music-audio-20261118/README.md) extend build 162.
+The native compiler pin and every BF/JNI/third-party input remain unchanged; the retention reason
+records the newer inspected toolchain main. [Build and scoped device evidence](../evidence/music_audio_20261118/README.md).
+
 Development build **162** adds YouTube Premium header removal and shared download/export support.
 Ten [native transactions](../source/xax/transactions/downloads-20261117/README.md) extend build 161;
 independent native replay is byte-identical and rejects stale roots. Production unsigned and

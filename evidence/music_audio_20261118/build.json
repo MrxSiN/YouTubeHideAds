@@ -1,0 +1,169 @@
+{
+  "status": "EXECUTED",
+  "development_version": "1.3.0 / code 163, unreleased",
+  "source_sha256": "ff4e75aeb9462917fdfb93d7bc57f8a2cd8d249a9e86fde26bb557aa67a54284",
+  "source_root": "3a9de8f45fefa3a218cc302809077528824a37bbe2f73a86a0c477f15a6ebc40",
+  "transactions": "../../source/xax/transactions/music-audio-20261118/manifest.json",
+  "toolchains": "../../toolchains.json",
+  "native_compiler_sha256": "ae43e32f21ccd2d7e333ebf30a114d329ca5b5912c388ae167c24d12d2e9f665",
+  "unsigned_production_apk": {
+    "file": "YouTubeHideAds-163-unsigned.apk",
+    "sha256": "112a794aa2bb885d5e82838c7f6de8a14388ea578b1b90a43e3eb592ff030bdf",
+    "release_signed": false
+  },
+  "variants": {
+    "music": {
+      "file": "YouTubeHideAds-music-163.apk",
+      "sha256": "13ffb227d7d7998aa100195a30eff91a39d2ab8caab7315753307752e3af613a",
+      "package": "io.github.mrxsin.youtubehideads.musicdev",
+      "version_code": 67,
+      "release_signed": false
+    },
+    "regression": {
+      "file": "YouTubeHideAds-regression-163.apk",
+      "sha256": "841da67a25046c1a37230bc8c0dcfa7a8b874fbbb6c0bbc84c4ae536d1913f91",
+      "package": "io.github.mrxsin.youtubehideads.regressiondev",
+      "version_code": 18,
+      "release_signed": false
+    }
+  },
+  "payload_comparison": {
+    "music": {
+      "identical_payloads": {
+        "dex": [
+          "classes.dex",
+          "classes2.dex",
+          "classes3.dex",
+          "classes4.dex"
+        ],
+        "native_libraries": [
+          "lib/arm64-v8a/libad_component.so",
+          "lib/arm64-v8a/libad_fullscreen.so",
+          "lib/arm64-v8a/libad_panel.so",
+          "lib/arm64-v8a/liband3.so",
+          "lib/arm64-v8a/libbrainfuckc_bridge.so",
+          "lib/arm64-v8a/libdexkit.so",
+          "lib/arm64-v8a/libsettings_snapshot.so",
+          "lib/arm64-v8a/libsponsor_settings.so",
+          "lib/arm64-v8a/libsponsor_skip_pipeline.so",
+          "lib/arm64-v8a/libsponsor_time_window.so",
+          "lib/arm64-v8a/libsuppress_video_slot.so"
+        ],
+        "static_resources": [
+          "res/drawable/ic_module_foreground.xml",
+          "res/drawable/ic_sponsorblock.xml",
+          "res/drawable/sb_card.xml",
+          "res/drawable/sb_handle.xml",
+          "res/drawable/sb_slider_thumb.xml",
+          "res/drawable/sb_slider_track.xml",
+          "res/drawable/swipe_hud.xml",
+          "res/drawable/swipe_track.xml",
+          "res/layout/sb_slider.xml",
+          "res/mipmap-anydpi-v26/ic_module.xml",
+          "res/raw/morphe_notice.txt"
+        ]
+      },
+      "differing_entries": [
+        "AndroidManifest.xml",
+        "META-INF/xposed/scope.list"
+      ],
+      "added_entries": [],
+      "removed_entries": [],
+      "fixture_and_temporary_diagnostics_absent": true,
+      "requested_permissions": [],
+      "resource_namespaces": {
+        "production": [
+          "io.github.mrxsin.youtubehideads"
+        ],
+        "development": [
+          "io.github.mrxsin.youtubehideads"
+        ]
+      },
+      "all_resolved_resource_strings_equal": true
+    },
+    "regression": {
+      "identical_payloads": {
+        "dex": [
+          "classes.dex",
+          "classes2.dex",
+          "classes3.dex",
+          "classes4.dex"
+        ],
+        "native_libraries": [
+          "lib/arm64-v8a/libad_component.so",
+          "lib/arm64-v8a/libad_fullscreen.so",
+          "lib/arm64-v8a/libad_panel.so",
+          "lib/arm64-v8a/liband3.so",
+          "lib/arm64-v8a/libbrainfuckc_bridge.so",
+          "lib/arm64-v8a/libdexkit.so",
+          "lib/arm64-v8a/libsettings_snapshot.so",
+          "lib/arm64-v8a/libsponsor_settings.so",
+          "lib/arm64-v8a/libsponsor_skip_pipeline.so",
+          "lib/arm64-v8a/libsponsor_time_window.so",
+          "lib/arm64-v8a/libsuppress_video_slot.so"
+        ],
+        "static_resources": [
+          "res/drawable/ic_module_foreground.xml",
+          "res/drawable/ic_sponsorblock.xml",
+          "res/drawable/sb_card.xml",
+          "res/drawable/sb_handle.xml",
+          "res/drawable/sb_slider_thumb.xml",
+          "res/drawable/sb_slider_track.xml",
+          "res/drawable/swipe_hud.xml",
+          "res/drawable/swipe_track.xml",
+          "res/layout/sb_slider.xml",
+          "res/mipmap-anydpi-v26/ic_module.xml",
+          "res/raw/morphe_notice.txt"
+        ]
+      },
+      "differing_entries": [
+        "AndroidManifest.xml",
+        "META-INF/xposed/scope.list"
+      ],
+      "added_entries": [],
+      "removed_entries": [],
+      "fixture_and_temporary_diagnostics_absent": true,
+      "requested_permissions": [],
+      "resource_namespaces": {
+        "production": [
+          "io.github.mrxsin.youtubehideads"
+        ],
+        "development": [
+          "io.github.mrxsin.youtubehideads"
+        ]
+      },
+      "all_resolved_resource_strings_equal": true
+    }
+  },
+  "production_dex_sha256": {
+    "classes.dex": "e1bf77407ddc365fb683b735edd2abe834395d5b3e9be26f944114f555631f81",
+    "classes2.dex": "9d25c421fef4366f0a6e9197bb841d410b2a649aa5547ea904bd361a84fcbb76",
+    "classes3.dex": "06774cc6c4cb31e8d6d79017e104778f4bfd97315db7a127edc968a6e720a69b",
+    "classes4.dex": "6537bd6a18aea4344313569c8d10797a3bfadc943d19921629b430f6b4b2803e"
+  },
+  "graph": {
+    "baseline_functions": 761,
+    "production_functions": 871,
+    "retained_baseline_function_cids": 751,
+    "development_function_cids_identical": true
+  },
+  "unchanged_inputs": {
+    "third_party_dex_blake3": [
+      "07f22ff643ac6c650036550355084f3b02034493201a2e5a8c8e487a393d4b90"
+    ],
+    "native_libraries_blake3": {
+      "lib/arm64-v8a/libad_component.so": "3ef4eeb64a1af8aa33c3aef67d6b8b5551a6aa1288324852ebd9292f188a46d2",
+      "lib/arm64-v8a/libad_fullscreen.so": "865c192fb2e36a6301c0a961755ff98531f7e1945d068ca2a7e8ae12ec14357b",
+      "lib/arm64-v8a/libad_panel.so": "bdbaca2798bc02ef2c66046c2c1f2575fcb17a0437017cc4da4dbabe360118aa",
+      "lib/arm64-v8a/liband3.so": "3c31b9d7b4ca123f12c8ed714309763484587b8ed10907680ad8e5061dc1c598",
+      "lib/arm64-v8a/libbrainfuckc_bridge.so": "f1057aef3827764e44616a1f64bdad84e43ad35b2f342b46af72252469377fec",
+      "lib/arm64-v8a/libdexkit.so": "69e142100d6599c48b7315941ce4c3fea72784a55f6ed013177efb5ec015a159",
+      "lib/arm64-v8a/libsettings_snapshot.so": "174f1a556d05d0f30319ecfc436e26e5dfc323435d3f1dce29373c8b3ded0ac3",
+      "lib/arm64-v8a/libsponsor_settings.so": "17017fe54e5399cd29845848e14856bac8fa3aa558431c0c1e3b3024612696ef",
+      "lib/arm64-v8a/libsponsor_skip_pipeline.so": "70e67af9a119ffae598f651654f522cb2178801aecc5934dd24906c83cd9d1f4",
+      "lib/arm64-v8a/libsponsor_time_window.so": "a18767e9583587cf6315234ac4976e2ddc99c7cb83e116ab62547f17c1428428",
+      "lib/arm64-v8a/libsuppress_video_slot.so": "34cb3b55ba4d10a0ff20c71e8edc2ed5ab2f0bdb239d2e67d41fc280f0ff9c22"
+    }
+  },
+  "foreign_declaration_audit": "Read-only foreign declarations inspected 3579 errors 0"
+}

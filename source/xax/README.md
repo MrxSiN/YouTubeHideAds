@@ -1,4 +1,16 @@
-Current canonical source is development build **1.3.0/code 162**, adding YouTube Premium header
+Current canonical source is development build **1.3.0/code 164**: build 163 plus hot-path fixes
+(progress-hook null guard, no per-call regex compiles or resource lookups). Store SHA-256
+`3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316`.
+[Native transactions](transactions/perf-20261118/README.md) ·
+[evidence](../../evidence/perf_20261118/README.md).
+
+Previous development build **1.3.0/code 163**, adding Music exclusive audio and
+matching song/video selection. The store SHA-256 is
+`ff4e75aeb9462917fdfb93d7bc57f8a2cd8d249a9e86fde26bb557aa67a54284`.
+[Native transactions](transactions/music-audio-20261118/README.md) and
+[scoped evidence](../../evidence/music_audio_20261118/README.md) identify the exact source.
+
+Previous development build **1.3.0/code 162** added YouTube Premium header
 removal and shared downloads/export. Store SHA-256:
 `0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037`.
 [Native transactions](transactions/downloads-20261117/README.md) and

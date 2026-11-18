@@ -1,0 +1,46 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "428adba0af389e005cc215a2624708dcabdcdcd0",
+  "baseline_sha256": "0856d74cda08076a32a5949ba205ea54b2e08fe3bd228cf8c1191e3538617037",
+  "baseline_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "ff4e75aeb9462917fdfb93d7bc57f8a2cd8d249a9e86fde26bb557aa67a54284",
+  "output_root": "3a9de8f45fefa3a218cc302809077528824a37bbe2f73a86a0c477f15a6ebc40",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-startup.batch",
+      "sha256": "9499db478e8524ff1922be6e05bf117b41db69aa7c3d3a07f35895482672a2f2",
+      "input_root": "08cd2508901f9cbba4d410bdc1fb3c411ab80bb2c4fa5858f82642dbdcf2c493",
+      "output_root": "d415d0f02f2fb41876a5d11b250b45fb2be7b96c0992523aebf4e9bb4edc4a05",
+      "output_sha256": "e388e66e1e3742165457a83a2fbd9dec70ad9b357852abf3b4d82ed05c6a17ea",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-settings.batch",
+      "sha256": "864ee2c05b67c309997e56a0e78850321f0cf350f1c8a28856f204c119d7e625",
+      "input_root": "d415d0f02f2fb41876a5d11b250b45fb2be7b96c0992523aebf4e9bb4edc4a05",
+      "output_root": "69f384e07185b5fb703db22b1887fe28bc9a12d43e3489fa161302018ccbb427",
+      "output_sha256": "ae59ab6d52cb47b8fe6b755d02e1c149ecea99f0edc83c677173e46e58da7f06",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-metadata.edit",
+      "sha256": "5caacaf07d0d9021292d0541a7587598d7531a81d8127a58629d840559971a81",
+      "input_root": "69f384e07185b5fb703db22b1887fe28bc9a12d43e3489fa161302018ccbb427",
+      "output_root": "ae7813db968886b26bd5ba6729de291171bbc7a3d2c1c86826bc7793e9c85181",
+      "output_sha256": "a5af60317863d52b274a32748ad7d08b658b35668224bc862af083f19c2551c1",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "03-labels.edit",
+      "sha256": "40df6b11e2ee4425b568e2e0ba3341a68fceafa4d30c661eb0783cc54d256585",
+      "input_root": "ae7813db968886b26bd5ba6729de291171bbc7a3d2c1c86826bc7793e9c85181",
+      "output_root": "3a9de8f45fefa3a218cc302809077528824a37bbe2f73a86a0c477f15a6ebc40",
+      "output_sha256": "ff4e75aeb9462917fdfb93d7bc57f8a2cd8d249a9e86fde26bb557aa67a54284",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: byte-identical final source",
+  "stale_root": "EXECUTED: status 1 and structured stale-root diagnostic"
+}

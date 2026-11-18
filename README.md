@@ -41,6 +41,10 @@ Development build 162 also adds [in-app and external downloads with export](docs
 to both apps, and extends [YouTube Premium promotion removal](docs/YOUTUBE_PREMIUM_PROMOTIONS.md)
 to the You-page header. Download modes are off by default.
 
+Development build 163 adds Music [exclusive audio playback and an Audio/Video switch](docs/MUSIC_AUDIO_PLAYBACK.md).
+Exclusive audio is on by default. Enable the optional switch in Player controls, then tap the
+left half of Music's Song/Video pill to select a verified matching version in the native queue.
+
 ## Install
 
 1. Get the APK from [Releases](https://github.com/MrxSiN/YouTubeHideAds/releases) or [modules.lsposed.org](https://modules.lsposed.org/module/io.github.mrxsin.youtubehideads).

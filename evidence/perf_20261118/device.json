@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-18",
+  "phone": "Pixel 8 Pro",
+  "android": "17 / API 37",
+  "framework": "Vector 2.2 / API 102",
+  "youtube": "21.45.88",
+  "music": "9.46.51",
+  "method": "Same scripted session for both variants: 1 cache-rebuild start + 3 cold starts, 3 link opens of one public video (18 s each), 30 s simpleperf (cpu-cycles, 2 kHz, call graph) while scrolling Home",
+  "results": {
+    "startup_main_thread_ms": {
+      "before": [
+        53,
+        52,
+        52
+      ],
+      "after": [
+        52,
+        54,
+        53
+      ],
+      "cache_rebuild_first_start": {
+        "before": 794,
+        "after": 880
+      },
+      "status": "MEASURED"
+    },
+    "startup_checks": {
+      "before": "52 startup lines, no failure",
+      "after": "52 startup lines, no failure",
+      "status": "EXECUTED"
+    },
+    "progress_hook_crashes_per_link_open": {
+      "before": [
+        2,
+        2,
+        1
+      ],
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "status": "MEASURED"
+    },
+    "sponsorblock_requests_per_link_open": {
+      "before": [
+        1,
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1,
+        1
+      ],
+      "status": "MEASURED"
+    },
+    "removals_in_session": {
+      "components_replaced": {
+        "before": 21,
+        "after": 21
+      },
+      "video_ads_suppressed": {
+        "before": 7,
+        "after": 7
+      },
+      "status": "MEASURED"
+    },
+    "scroll_profile": {
+      "String.matches_inclusive_pct": {
+        "before": 0.1,
+        "after": 0.02
+      },
+      "module_frames_calling_Pattern.compile": {
+        "before": "f121 (player type), f306, f683 among top callers",
+        "after": "none; remaining callers are YouTube code"
+      },
+      "Pattern.compile_inclusive_pct_total": {
+        "before": 0.35,
+        "after": 0.58,
+        "note": "total includes YouTube's own regex use, which differed between sessions"
+      },
+      "status": "MEASURED"
+    },
+    "music_9_46_51_startup": {
+      "status": "EXECUTED",
+      "all_hooks_installed": true,
+      "self_checks_passed": true,
+      "hook_crashes": 0
+    },
+    "youtube_global_layout": {
+      "status": "MEASURED",
+      "module_onGlobalLayout_inclusive_pct": {
+        "before": 1.32,
+        "after": 0.27
+      },
+      "Resources.getIdentifier_pct": {
+        "before": 1.13,
+        "after": 0.05
+      },
+      "note": "same scripted YouTube scroll profile"
+    },
+    "youtube_final_build": {
+      "status": "EXECUTED",
+      "startup_main_thread_ms": [
+        57,
+        54,
+        53
+      ],
+      "hook_crashes_per_link_open": [
+        0,
+        0,
+        0
+      ],
+      "components_replaced": 17,
+      "video_ads_suppressed": 3,
+      "sponsorblock_controls_attached": 3,
+      "download_button_visible_in_player": true,
+      "dislike_count_visible": true
+    },
+    "music_session_profile": {
+      "status": "MEASURED",
+      "method": "40 s simpleperf, Home scroll then a linked track, same script both runs",
+      "top_module_hook_inclusive_pct": {
+        "before": 1.86,
+        "after": 0.42
+      },
+      "Resources.getIdentifier_pct": {
+        "before": 1.21,
+        "after": 0.08
+      },
+      "Bfp1Bridge.run_pct": {
+        "before": 0.08,
+        "after": 0.01
+      },
+      "stack_trace_capture_pct": 0.03
+    },
+    "music_features": {
+      "status": "EXECUTED",
+      "audio_video_switch": "video to song: pill found, counterpart verified, queue advanced, previous entry removed",
+      "background_playback": "PLAYING after Home and after screen off",
+      "startup": "no failure, no hook crash"
+    }
+  },
+  "restoration": {
+    "status": "EXECUTED",
+    "release_module_enabled_for": [
+      "com.google.android.youtube"
+    ],
+    "musicdev_enabled_for": [
+      "com.google.android.apps.youtube.music"
+    ],
+    "temporary_package_uninstalled": true
+  },
+  "not_run": [
+    "Music Premium/welcome surfaces (not served during the run)",
+    "downloads save/export end to end",
+    "external downloader handoff",
+    "light theme",
+    "other devices or host versions",
+    "release publication"
+  ]
+}
