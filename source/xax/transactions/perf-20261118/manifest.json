@@ -1,0 +1,86 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "501cc23fe178849f23552580faa80a3b2c3aa277",
+  "baseline_sha256": "ff4e75aeb9462917fdfb93d7bc57f8a2cd8d249a9e86fde26bb557aa67a54284",
+  "baseline_root": "3a9de8f45fefa3a218cc302809077528824a37bbe2f73a86a0c477f15a6ebc40",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316",
+  "output_root": "521ed3cc23b3dadabe8bb63dd52b7ed2b8eefcaa8d9459d57ab71ff8b0ccf7ee",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-hot-paths.batch",
+      "sha256": "ee6d66440a8c6d7c4a8acc856311393abdeb224b2cbf2233e33861f05d0fd913",
+      "input_root": "3a9de8f45fefa3a218cc302809077528824a37bbe2f73a86a0c477f15a6ebc40",
+      "output_root": "c724eeedf34f231c4e887cf4d4a8f6342bfb065ddd772bf0e481c82d83ac7f64",
+      "output_sha256": "4ccb3549b2701ec2607c2342e666f1d7c52ea2a5e0c095bd5b61e396926f51aa",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-player-type.batch",
+      "sha256": "2537c8daf5f7237df02339907c263f8578b110ae639ed7a0fbfb4c07f2a0fe40",
+      "input_root": "c724eeedf34f231c4e887cf4d4a8f6342bfb065ddd772bf0e481c82d83ac7f64",
+      "output_root": "0ab0ba4c5061b8af91f8009ca5d90cf22c6b14287e50b4c6cb34d9ca1cb1cf68",
+      "output_sha256": "45c4e7d3e4664703e7fbf9b0de635db7dd4753e31c214fd49a26998848f768f9",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-music-pill.batch",
+      "sha256": "a26e9c591c82dd4593abaa6c2ef27d8040e73c1542c64dca247f33c53e77f0ed",
+      "input_root": "0ab0ba4c5061b8af91f8009ca5d90cf22c6b14287e50b4c6cb34d9ca1cb1cf68",
+      "output_root": "b754df6a78c9d430c5b13911ebfa2a88cbe84efb9ff525e736f53859c459bfd2",
+      "output_sha256": "19ebd92ef8d3cdef9e60526aa9b5e9910be7b1be07375dcea113bfb4eec53580",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "03-music-ad-gate.batch",
+      "sha256": "be6e7cfb8ffff9d2bd7943be534300a963e74f4338ff494c15f2e780a84845f8",
+      "input_root": "b754df6a78c9d430c5b13911ebfa2a88cbe84efb9ff525e736f53859c459bfd2",
+      "output_root": "ff61e756615b60c3f2c2237c36a6148041039fc6c133cd3bb5a0e52a6bec8ffb",
+      "output_sha256": "d979fe5deece59cd2649ffcacfd2a400cc0df96433441ca6ef614a93f36ca5c5",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "04-metadata.edit",
+      "sha256": "c8156fecc7739ee833a436018537eee4091c000b217a4794313a913f6a4db7c5",
+      "input_root": "ff61e756615b60c3f2c2237c36a6148041039fc6c133cd3bb5a0e52a6bec8ffb",
+      "output_root": "44c631754e2c35454cf05b75e6f928490c7035f050c2af3e8d7615139cb0b99f",
+      "output_sha256": "cfee85e8ce9819626223a9fc5ccaef33fccef70c69a6e13d5df9871ee90fb939",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "05-downloads-container.batch",
+      "sha256": "3d90fc2832c4ded1e0a25d1934ddfd5bd672a4e21a32368299244894d744e463",
+      "input_root": "44c631754e2c35454cf05b75e6f928490c7035f050c2af3e8d7615139cb0b99f",
+      "output_root": "9636d20d4bf2bbf9c50bd32de7af522c63cb9525b503e9be8a040aedcd78f65b",
+      "output_sha256": "adbe640777c47ecb420891d311be9f2998c2865fb31309c57f00f149a790c8b8",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "06-speed-container.batch",
+      "sha256": "493c00d5975c681f0e2e6c27c4b239283b689d718ac5a10be18152476d7a02d1",
+      "input_root": "9636d20d4bf2bbf9c50bd32de7af522c63cb9525b503e9be8a040aedcd78f65b",
+      "output_root": "a10923abfc3913dfb92b4d5bd388f876fb6e917127b3456bf725a634eb54a745",
+      "output_sha256": "5b10fc604de077411825beacb0405fb2cc93e18be6d6cdc866399bae7321268c",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "07-sponsorblock-container.batch",
+      "sha256": "868e26b8913e70149ac8863dd34722b5d3c13cf5beb6c0a2735f1e5a3a03235c",
+      "input_root": "a10923abfc3913dfb92b4d5bd388f876fb6e917127b3456bf725a634eb54a745",
+      "output_root": "55e27ea50864044fd761262f8af34ee86b88c50d2558384151d235826d00f3f3",
+      "output_sha256": "26583c62ff2577bd0febdc8231b56a1acd3c72b8aa09ed75e821b7b0ce577834",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "08-labels.edit",
+      "sha256": "fa32af9c77afd42e3a622d2548288907f4a58f08c3f18b5911b524d6230dda6c",
+      "input_root": "55e27ea50864044fd761262f8af34ee86b88c50d2558384151d235826d00f3f3",
+      "output_root": "521ed3cc23b3dadabe8bb63dd52b7ed2b8eefcaa8d9459d57ab71ff8b0ccf7ee",
+      "output_sha256": "3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: byte-identical final source",
+  "stale_root": "EXECUTED: status 1 and structured WORKSPACE-EXPECTED-ROOT diagnostic"
+}

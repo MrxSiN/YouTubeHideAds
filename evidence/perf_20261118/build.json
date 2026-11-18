@@ -1,0 +1,58 @@
+{
+  "status": "EXECUTED",
+  "development_version": "1.3.0 / code 164, unreleased",
+  "source_sha256": "3fa31b5a8d719fdc0b8f3b05e1211f314365df9fbbb52145b484f242dc422316",
+  "source_root": "521ed3cc23b3dadabe8bb63dd52b7ed2b8eefcaa8d9459d57ab71ff8b0ccf7ee",
+  "transactions": "../../source/xax/transactions/perf-20261118/manifest.json",
+  "toolchains": "../../toolchains.json",
+  "native_compiler_sha256": "8f0d23e1b749a10969b7cdd1db4d4a57705c4aa9a15cc04906ad497963409f9f",
+  "inputs": "Unchanged from build 163: 11 native libraries, third-party DEX and branding archive, matched by their pinned BLAKE3 digests.",
+  "build_163_reproduction": {
+    "status": "EXECUTED",
+    "note": "Unchanged build 163 store built with this compiler and inputs",
+    "dex_sha256": {
+      "classes.dex": "e1bf77407ddc365fb683b735edd2abe834395d5b3e9be26f944114f555631f81",
+      "classes2.dex": "9d25c421fef4366f0a6e9197bb841d410b2a649aa5547ea904bd361a84fcbb76",
+      "classes3.dex": "06774cc6c4cb31e8d6d79017e104778f4bfd97315db7a127edc968a6e720a69b",
+      "classes4.dex": "6537bd6a18aea4344313569c8d10797a3bfadc943d19921629b430f6b4b2803e"
+    },
+    "matches_build_163_record": true
+  },
+  "production_package_apk": {
+    "file": "YouTubeHideAds-164.apk",
+    "sha256": "c4f8310d54ee413b2b8634bb44a0debd6ccf96a51cac598aaab382fa4e0f2e3b",
+    "bytes": 4623714,
+    "package": "io.github.mrxsin.youtubehideads",
+    "version_code": 164,
+    "signed_with": "release capability (external, not stored)",
+    "published": false,
+    "dex_sha256": {
+      "classes.dex": "316ff20c83b6782a818fa901c893a5df0889c49d3c829fef0f67ae32e204f3f8",
+      "classes2.dex": "997ec121183efd47818e39bfd2971e92d43be22242025bce06a25f59183e8262",
+      "classes3.dex": "06774cc6c4cb31e8d6d79017e104778f4bfd97315db7a127edc968a6e720a69b",
+      "classes4.dex": "6537bd6a18aea4344313569c8d10797a3bfadc943d19921629b430f6b4b2803e"
+    }
+  },
+  "application_dex_growth_bytes": 436,
+  "device_variants": {
+    "before": {
+      "file": "perfdev-163.apk",
+      "sha256": "593c2e2f37c51fdea9825b4d8b35735fd3d73f3497c356547fb1e27fec824a36",
+      "source": "build 163 store, package renamed"
+    },
+    "after": {
+      "file": "perfdev-164.apk",
+      "sha256": "c35e8acc931114aa2b2b426d4b0fb65dcdeaadcd9510ec4ab7a8e9a00b97225c",
+      "source": "build 164 store, package renamed",
+      "differs_from_production_package_apk": [
+        "AndroidManifest.xml"
+      ]
+    },
+    "package": "io.github.mrxsin.youtubehideads.perfdev",
+    "branding": "same resources, manifest package renamed with aapt2 --rename-manifest-package",
+    "stage_3_music": {
+      "sha256": "eff296b44d249ad7da0b91ac32a172db1c6e0a6320c136e0065cb69276e74340",
+      "source": "stages 00-03, used for the Music profile and feature checks"
+    }
+  }
+}
