@@ -1,5 +1,14 @@
 # Language boundary
 
+Build 161's welcome discovery, queued callback and typed cancel effect are native XAX graph edits;
+the existing BF gate authorizes the action. Its controlled host-view harness is a separate native
+test graph, with controlled click listeners, and is excluded from final APKs. External drivers only
+transport native edits, package inputs, operate ADB and collect evidence.
+
+Build 160's Music promotion controls extend the canonical graph through native XAX batches and
+reuse the unchanged Brainfuck AND3 gate and BF ad snapshot. New JSON contracts, static XML text
+and packaging metadata are data. [Design and bounds](MUSIC_PREMIUM_PROMOTIONS.md).
+
 Build 159's Music background feature is authored as native XAX transactions and reuses the unchanged
 Brainfuck AND3 policy. Its declarations, exact-root batches, metadata and branding inputs are checked
 in for review and replay; native edit and mandatory verification produce canonical source. External

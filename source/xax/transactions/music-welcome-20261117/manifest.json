@@ -1,0 +1,38 @@
+{
+  "schema": "exact-root-native-transactions-v1",
+  "baseline_commit": "6997de2e438ee27b9438c37c867adce3cd87518d",
+  "baseline_sha256": "4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c",
+  "baseline_root": "92e1250946969d4ff7533b4f8cbc0750ea0fc0f15f3c3c1fb263af407ca6e144",
+  "output_source": "source/xax/youtubehideads.xax",
+  "output_sha256": "8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175",
+  "output_root": "6564126c8c89dca70612256cd0b4cf118a51261b527b22a77e58d68ef6c091b0",
+  "toolchains": "../../../../toolchains.json",
+  "stages": [
+    {
+      "transaction": "00-welcome.batch",
+      "sha256": "8443c3d9dccd6b46ccda6cc9d3a1542db37190306dc9b29156f5af37183cdfb3",
+      "input_root": "92e1250946969d4ff7533b4f8cbc0750ea0fc0f15f3c3c1fb263af407ca6e144",
+      "output_root": "9df8c543cc31b89142fa9c04b67ad025f4c8e74919b42bb53a6176f1699a9cd7",
+      "output_sha256": "8eb4e95520ab3aeb2bbceb3bacf06288c2dd0a8610f13a19861dd70b33e5fdfe",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "01-metadata.edit",
+      "sha256": "35aab751d4dad2bc7c0d77c6732b69ff5478c8a63a2ab7ecbfdec49d392f26a0",
+      "input_root": "9df8c543cc31b89142fa9c04b67ad025f4c8e74919b42bb53a6176f1699a9cd7",
+      "output_root": "0fb09504406f338f62ab9ccc7763a53894b117d5947810679d0616759d45eb4b",
+      "output_sha256": "04f8a831e487d9ff22bca903a7fee0c7e4f6231e5206ea59c67973eba8344c1f",
+      "status": "EXECUTED"
+    },
+    {
+      "transaction": "02-labels.edit",
+      "sha256": "d1d4411e5036ade73538a29ea61f7096cbeb7045ee72dc6af82551fafadba1b8",
+      "input_root": "0fb09504406f338f62ab9ccc7763a53894b117d5947810679d0616759d45eb4b",
+      "output_root": "6564126c8c89dca70612256cd0b4cf118a51261b527b22a77e58d68ef6c091b0",
+      "output_sha256": "8e23c7e9cf8d5b0a795af4cd982febe6a269be8d5c53df587fc914b4926a3175",
+      "status": "EXECUTED"
+    }
+  ],
+  "replay": "EXECUTED: byte-identical final source",
+  "stale_root": "EXECUTED: status 1 and structured stale-root diagnostic"
+}

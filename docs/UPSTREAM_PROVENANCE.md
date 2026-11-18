@@ -1,5 +1,10 @@
 # Upstream provenance and terms
 
+Music build 160 adapts native Premium account/membership/mealbar behavior and navigation enums
+from Morphe `44031c561ea048c8f196877f30a49c13bfd6afb6`, independently in XAX/BF.
+[Exact reference links and limits](MUSIC_PREMIUM_PROMOTIONS.md#reference-and-limits).
+No additional native dependency or upstream application code is bundled.
+
 Music background playback adapts the two method boundaries and structural fingerprints pinned in
 [its design](MUSIC_BACKGROUND_PLAYBACK.md#upstream-reference-and-limits). It reuses the existing BF
 policy and native XAX host architecture. Existing Morphe attribution remains packaged; the separate

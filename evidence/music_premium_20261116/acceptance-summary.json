@@ -1,0 +1,24 @@
+{
+  "status": "EXECUTED",
+  "date": "2026-11-17",
+  "source_sha256": "4768fd4586c197dcc6a6bf839c21bea37cfcc17ae650ad1929252add60d8e37c",
+  "source_root": "92e1250946969d4ff7533b4f8cbc0750ea0fc0f15f3c3c1fb263af407ca6e144",
+  "music_apk_sha256": "4616fb869c3f2f5b9ef1163431eb9c161e5d3e3f5e05c6a3c16ae7a54351c367",
+  "music_premium_startup_cases": 15,
+  "music_ad_startup_cases_logged": 26,
+  "music_background_startup_cases": 12,
+  "youtube_startup_cases": 664,
+  "youtube_ui_cases": 64,
+  "music_six_switches_restored_on": true,
+  "youtube_preferences_unchanged": true,
+  "production_youtube_module_restored": true,
+  "regression_module_removed": true,
+  "no_final_runtime_hook_errors": true,
+  "natural_mealbar_positive": "NOT RUN: no matched reference mealbar naturally served",
+  "kids_screen_off_on_final_apk": "NOT RUN: final APK tested kids Home/pause; earlier build 159 screen-off evidence remains scoped to that build",
+  "unsupported": [
+    "audio/video-switch trial BottomSheet",
+    "native full-page welcome offer"
+  ],
+  "test_setup": "Native welcome offer manually dismissed using No thanks. No purchase flow entered. Secure lock required owner unlock before final UI checks; ordinary screen-off test runs last."
+}

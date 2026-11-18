@@ -1,5 +1,17 @@
 # Feature coverage
 
+Build **161** adds cancellation for Music's native welcome promo layout family. Seven controlled
+host-layout cases cover both accepted layouts, education and unmatched-layout exclusions, Premium
+off, master off and restoration. Final APK startup/settings, playback and YouTube regression are
+separate from that test harness. Naturally served welcome/controller cancellation was not observed
+again after the prior dismissal. [Exact scope and evidence](../evidence/music_welcome_20261117/README.md).
+
+Development build **160** implements Music Upgrade/account/membership/reference-mealbar promotion
+controls under the existing Premium switch. [Dated evidence](../evidence/music_premium_20261116/README.md)
+separates physical Upgrade/account on/off/master checks, packaged checks and unobserved surfaces.
+The newer audio/video-switch trial BottomSheet remains unsupported; this is not full Morphe parity.
+[Design and scope](MUSIC_PREMIUM_PROMOTIONS.md).
+
 Development build **159** adds Music background playback on the same physical Music **9.45.51**
 environment. Twelve new packaged checks, independent on/off persistence, ad-master independence,
 ordinary Home/screen-off playback, a Baby Shark/Pinkfong screen-off case and native pause behavior

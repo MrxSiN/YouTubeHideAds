@@ -1,5 +1,17 @@
 # Build
 
+Development build **161** adds Music's native welcome-offer cancellation. Three native
+[transactions](../source/xax/transactions/music-welcome-20261117/README.md) extend build 160;
+native/JNI/third-party inputs and compiler pins remain unchanged. Controlled host-layout fixtures
+use a separate test-only graph and are excluded from the final development and production APKs.
+[Exact identities and checks](../evidence/music_welcome_20261117/README.md).
+
+Development build **160** extends Music Premium controls using four
+[exact-root transactions](../source/xax/transactions/music-premium-20261116/README.md).
+It retains build 159's exact toolchains and native/third-party inputs. Native edit/verify and
+resolve/build produce the production-package unsigned APK and separately signed development
+variants. [Build and device record](../evidence/music_premium_20261116/README.md).
+
 Development build **159** adds Music background playback. [toolchains.json](../toolchains.json)
 pins the latest inspected XAX main and its released native Windows seed. Five
 [exact-root transactions](../source/xax/transactions/music-background-20261116/README.md) edit and

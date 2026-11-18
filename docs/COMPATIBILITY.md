@@ -1,5 +1,14 @@
 # Tested compatibility
 
+Build **161** extends the same Music 9.45.51 environment with native welcome layout matching.
+Controlled host-layout tests are distinguished from live server/controller delivery. Other Music
+versions remain untested. [Evidence](../evidence/music_welcome_20261117/README.md).
+
+Music development build **160** uses the same physical Music **9.45.51**, Android 17/API 37 and
+Vector 2.2/API 102 environment. [Premium controls](MUSIC_PREMIUM_PROMOTIONS.md) use structural
+discovery; other Music versions and arbitrary server purchase UI are not certified.
+[Checks and artifact identities](../evidence/music_premium_20261116/README.md).
+
 Development build **159** adds Music background playback on Music **9.45.51** using the same
 Pixel/Android/Vector environment below. Both typed roles resolve and the 12 new packaged checks,
 independent switch, ordinary/kids screen-off cases and native pause checks pass.
