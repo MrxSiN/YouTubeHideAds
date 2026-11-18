@@ -1,5 +1,17 @@
 # Changelog
 
+## Development build 164 (1.3.0, unreleased) — 2026-11-18
+
+- Fix the player progress hook throwing `NullPointerException: null receiver` when YouTube reports
+  progress before the player response exists. It happened 1-2 times per video open; each one made
+  Vector log a stack trace and skip that tick's work.
+- Stop compiling regular expressions per feed component and per player-state call; results unchanged.
+- Resolve the player button container once per process, shared by the download, speed and
+  SponsorBlock buttons, instead of on every layout pass (about 1 % of YouTube's CPU while scrolling).
+- Music: find the Audio/Video pill with two resource lookups per tap instead of two per visible
+  view, and skip the ad gate's native call when no ad marker matched.
+- Build with the latest XAX (`fa6d2ed`, ledger 0036 seed). [Evidence](evidence/perf_20261118/README.md).
+
 ## Development build 163 (1.3.0, unreleased) — 2026-11-18
 
 - Add **Exclusive audio playback** to Music, on by default, with a scoped external-controller

@@ -1,0 +1,58 @@
+11-18 20:43:49.785 10065 10065 D VectorModuleManager: Loading module io.github.mrxsin.youtubehideads.perfdev
+11-18 20:43:49.797 10065 10065 V VectorModuleManager: Loading class class io.github.mrxsin.youtubehideads.Module
+11-18 20:43:49.798 10065 10065 D VectorModuleManager: Loaded module io.github.mrxsin.youtubehideads.perfdev successfully.
+11-18 20:43:49.845 10065 10065 D VectorLifecycle: dispatchPackageReady d1@e63a0bc
+11-18 20:43:49.861 10065 10065 I YouTubeHideAds: Music background playback self-check passed (12 cases)
+11-18 20:43:49.954 10065 10065 I YouTubeHideAds: Background playback candidates: [public static boolean aanf.n(amfo)]
+11-18 20:43:49.962 10065 10065 I YouTubeHideAds: Background playback candidates: [public final void jpy.c(int, hzi, boolean)]
+11-18 20:43:50.013 10065 10065 I YouTubeHideAds: Music background playback hooks installed (eligibility, kids policy)
+11-18 20:43:50.013 10065 10065 I YouTubeHideAds: Music Premium UI self-check passed (15 cases)
+11-18 20:43:50.082 10065 10065 I YouTubeHideAds: Music Premium role account: Lizn;->l()V
+11-18 20:43:50.082 10065 10065 I YouTubeHideAds: Music Premium role membership: Laidl;->am()Ljava/lang/CharSequence;
+11-18 20:43:50.082 10065 10065 I YouTubeHideAds: Music Premium role floating layout: Lcom/google/android/apps/youtube/music/activities/MusicActivity;->d()Landroid/view/View;
+11-18 20:43:50.083 10065 10065 I YouTubeHideAds: Music Premium role navigation enum converter: Laltd;->a(I)Laltd;
+11-18 20:43:50.095 10065 10065 I YouTubeHideAds: Music Premium role navigation: Lhmv;->a(Ljava/lang/Object;)V
+11-18 20:43:50.119 10065 10065 I YouTubeHideAds: Music Premium UI hooks installed (account, membership, Upgrade tab, mealbar)
+11-18 20:43:50.119 10065 10065 I YouTubeHideAds: Music audio policy/scope self-check passed (12 cases)
+11-18 20:43:50.159 10065 10065 I YouTubeHideAds: Music exclusive audio hooks installed (capability, scoped external restriction)
+11-18 20:43:50.164 10065 10065 I YouTubeHideAds: Music Audio/Video counterpart self-check passed (39 cases)
+11-18 20:43:50.174 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: enqueue
+11-18 20:43:50.175 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: storage
+11-18 20:43:50.176 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: index and displays
+11-18 20:43:50.177 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: remover
+11-18 20:43:50.178 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: ID, executor and constructor
+11-18 20:43:50.178 10065 10065 I YouTubeHideAds: Music Audio/Video queue discovery accepted: deoptimization
+11-18 20:43:50.179 10065 10065 I YouTubeHideAds: Music Audio/Video queue roles installed
+11-18 20:43:50.179 10065 10065 I YouTubeHideAds: Music Audio/Video Activity dispatcher installed
+11-18 20:43:50.180 10065 10065 I YouTubeHideAds: Downloads protocol self-check passed (12 cases)
+11-18 20:43:50.189 10065 10065 I YouTubeHideAds: Downloads command hook installed
+11-18 20:43:50.200 10065 10065 I YouTubeHideAds: Downloads offlineability hook installed
+11-18 20:43:50.213 10065 10065 I YouTubeHideAds: Downloads host protobuf parser resolved
+11-18 20:43:50.214 10065 10065 I YouTubeHideAds: Downloads offline response hook installed
+11-18 20:43:50.215 10065 10065 I YouTubeHideAds: Music download current-track hook installed
+11-18 20:43:50.223 10065 10065 I YouTubeHideAds: Downloads policy refresh hooks installed
+11-18 20:43:50.225 10065 10065 I YouTubeHideAds: Downloads plain-stream request hook installed
+11-18 20:43:50.233 10065 10065 I YouTubeHideAds: Downloads activity command router installed
+11-18 20:43:50.234 10065 10065 I YouTubeHideAds: Music welcome offer self-check passed (12 cases)
+11-18 20:43:50.242 10065 10065 I YouTubeHideAds: Music welcome offer binding: Lsum;->d(Lampo;)V
+11-18 20:43:50.242 10065 10065 I YouTubeHideAds: Music welcome offer hook installed
+11-18 20:43:50.243 10065 10065 I YouTubeHideAds: Music ad self-check passed (26 cases)
+11-18 20:43:50.253 10065 10065 I YouTubeHideAds: Playables typed element serializer resolved
+11-18 20:43:50.266 10065 10065 I YouTubeHideAds: Ad component hook installed
+11-18 20:43:50.274 10065 10065 I YouTubeHideAds: Fullscreen dialog hook installed
+11-18 20:43:50.282 10065 10065 I YouTubeHideAds: Music video ad activation hook installed
+11-18 20:43:50.282 10065 10065 I YouTubeHideAds: Music ad hook discovery finished
+11-18 20:43:50.293 10065 10065 I YouTubeHideAds: Settings lifecycle hook installed
+11-18 20:43:50.345 10065 10065 I YouTubeHideAds: Music application ad snapshot: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+11-18 20:43:50.412 10065 10239 I YouTubeHideAds: Music exclusive audio authorized: audio-only capability
+11-18 20:43:50.495 10065 10065 I YouTubeHideAds: Music Audio/Video queue captured
+11-18 20:43:50.527 10065 10239 D VectorLifecycle: dispatchPackageReady d1@b2721f6
+11-18 20:43:50.536 10065 10065 I YouTubeHideAds: Music Audio/Video Activity resume callback received
+11-18 20:43:50.536 10065 10065 I YouTubeHideAds: Music Audio/Video Music Activity matched
+11-18 20:43:50.575 10065 10065 I YouTubeHideAds: Downloads command context captured
+11-18 20:43:50.575 10065 10065 I YouTubeHideAds: Downloads resolver callback active
+11-18 20:43:50.583 10065 10065 I YouTubeHideAds: Music Premium UI hidden: Upgrade tab
+11-18 20:43:50.714 10065 10065 I YouTubeHideAds: Music background playback authorized: kids policy
+11-18 20:43:59.685 10065 10065 I YouTubeHideAds: Music background playback authorized: eligibility
+11-18 20:43:59.703 10065 10065 I YouTubeHideAds: Music download current-track binding published
+11-18 20:43:59.715 10065 10065 I YouTubeHideAds: Music exclusive audio authorized: external playback restriction
